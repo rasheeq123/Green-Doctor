@@ -5,9 +5,8 @@ import Navbar from './Navbar'
 const Main = () => {
   return (
     <>
-
     <Navbar/>
-     <Outlet/>  {/*srf child route ka result show hoga */}
+     <Outlet/>  {/*srf saare child route ka result show hoga*/}
     </>
   )
 }
