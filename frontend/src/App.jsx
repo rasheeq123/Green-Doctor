@@ -5,12 +5,18 @@ import Home from './components/main/Home'
 import Login from './components/main/Login'
 import User from './components/user'
 import Profile from './components/user/Profile'
+import { ThemeProvider, createTheme } from '@mui/material';
 
 
 function App() {
 
+  const theme = createTheme({
+      
+  });
+
   return (
     <>
+    <ThemeProvider theme={theme}>
       <BrowserRouter>
         <Routes>
           <Route path='main' element={<Main/>}>
@@ -24,6 +30,7 @@ function App() {
           </Route>
         </Routes>
       </BrowserRouter>
+      </ThemeProvider>
     </>
   )
 }
