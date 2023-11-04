@@ -2,8 +2,10 @@ import React from 'react'
 
 const Navbar = () => {
   return (
-    <div></div>
+    <>
+    <h1>Main Navbar</h1>
+    </>
   )
 }
 
-export default Navbar
+export default Navbar;

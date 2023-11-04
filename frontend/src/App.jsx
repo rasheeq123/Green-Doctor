@@ -18,21 +18,25 @@ function App() {
     <>
     <ThemeProvider theme={theme}>
       <BrowserRouter>
-        <Routes>
-          <Route path='main' element={<Main/>}>
-             <Route path='home' element={<Home/>}/>
-             <Route path='login' element={<Login/>}/>
-
+        <Routes> 
+          <Route path="main" element={<Main />}>
+            <Route path="home" element={<Home />} />
+            <Route path="login" element={<Login />} />
           </Route>
-          <Route path='user' element={<User/>}>
-             <Route path='profile' element={<Profile/>}/>
 
+          <Route path="user" element={<User />}>
+            <Route path="profile" element={<Profile />} />
           </Route>
+
+          <Route path="admin" element={<Admin />}>
+            <Route path="manageuser" element={<ManageUser />}/>
+          </Route>
+
         </Routes>
       </BrowserRouter>
       </ThemeProvider>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
