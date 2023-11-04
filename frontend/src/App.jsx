@@ -6,6 +6,8 @@ import Login from './components/main/Login'
 import User from './components/user'
 import Profile from './components/user/Profile'
 import { ThemeProvider, createTheme } from '@mui/material';
+import Admin from './components/admin'
+import ManageUser from './components/admin/ManageUser'
 
 
 function App() {
