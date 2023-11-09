@@ -3,7 +3,7 @@ import React from 'react'
 
 const Login = () => {
   return (
-    <Paper>Please Login 
+    <Paper>
         <Button variant="contained">Outlined</Button>
         <TextField sx={{mt: 10}} label="Email Address" variant='filled' color='error' helperText="enter something" fullWidth />
     </Paper>

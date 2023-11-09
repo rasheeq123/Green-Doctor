@@ -4,10 +4,10 @@ import Navbar from './Navbar'
 
 const Main = () => {
   return (
-    <>
+    <div>
     <Navbar/>
      <Outlet/>  {/*srf saare child route ka result show hoga*/}
-    </>
+    </div>
   )
 }
 
