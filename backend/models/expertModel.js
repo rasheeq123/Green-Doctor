@@ -5,7 +5,7 @@ const myschema= new Schema({
     email:{ type:String, require:true},
     name: String,
     password: String,
-    avatar:{type:String, default:"avatar_placeholder.png"},
+    avatar:{type:String, default: 'avatar_placeholder.png'},
     createdAt: Date
 });
-module.exports=model('users', myschema);
+module.exports=model('experts', myschema);

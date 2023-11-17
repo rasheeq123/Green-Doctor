@@ -69,18 +69,7 @@ router.delete('/delete/:id', (req, res) => {
         });
 });
 
-router.post('/authenticate', (req, res) => { // authenticate means check krna ki user shi h ki nhi and authoorize me dekhna ki permission deni h ki nhi
-    Model.findOne(req.body)
-        .then((result) => {
-            if (result)
-                res.json(result);
-            else res.status(400).json({ message: "login failed" });
-        })
-        .catch((err) => {
-            console.log(err);
-            res.json(err)
-        });
-});
+
 
 
 
