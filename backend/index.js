@@ -21,8 +21,8 @@ app.use(cors({
 
 app.use('/user', userRouter);
 app.use('/order', orderRouter);
-app.use('image', imageRouter);
-app.use('expert', expertRouter);
+app.use('/image', imageRouter);
+app.use('/expert', expertRouter);
 
 
 
