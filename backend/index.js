@@ -1,6 +1,9 @@
 
 const express = require('express'); 
 const userRouter=require('./routers/userRouter');
+const orderRouter=require('./routers/orderRouter');
+const imageRouter=require('./routers/imageRouter');
+const expertRouter=require('./routers/expertRouter');
 
 
 const cors = require('cors');
@@ -17,6 +20,9 @@ app.use(cors({
 }));
 
 app.use('/user', userRouter);
+app.use('/order', orderRouter);
+app.use('image', imageRouter);
+app.use('expert', expertRouter);
 
 
 
@@ -24,32 +30,6 @@ app.get('/', (req , res)=>{
     res.send('response from express')
 });
 
-app.get('/home', (req , res)=>{
-    res.send('Welcome to home')
-});
-app.get('/add', (req , res)=>{
-    res.send('Wanna Add something')
-});
-
-app.get('/getall', (req , res)=>{
-    res.send('response from getall')
-});
-
-app.get('/getbyslot', (req , res)=>{
-    res.send('response from getbyslot')
-});
-
-app.get('/getbyid', (req , res)=>{
-    res.send('response from getbyid')
-});
-
-app.get('/update', (req , res)=>{
-    res.send('response from update')
-});
-
-app.get('/delete', (req , res)=>{
-    res.send('response from delete')
-});
 
 app.listen(port, ()=>{
     console.log('server started')

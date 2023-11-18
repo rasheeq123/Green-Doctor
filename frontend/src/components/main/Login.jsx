@@ -1,31 +1,37 @@
-import { Button, Card, CardContent, Paper, TextField } from '@mui/material'
+import { Button, Card, CardContent, Grid, Paper, TextField } from '@mui/material'
 import React from 'react'
 
 const Login = () => {
   return (
-    <div className='py-5 vh-100 bg-body-secondary'>
-      <div className="col-md-4 mx-auto">
-        <div className="card">
-          <div className="card-body">
-            <h2 className="my-3">Login form</h2>
+    <div >
+            <h2 className="my-3"><center>Login form</center></h2>
 
-            <Paper>
-              <Card>
-                <CardContent>
-                  
-              <TextField label="Email Address" variant='outlined' color='error' helperText="enter mail Id" fullWidth />
-              <Button variant="contained" disableElevation>
-              Login
-            </Button>
-                </CardContent>
-              </Card>
+            <Paper sx={{boxShadow:0}}>
+              <Grid container>
+                <Grid item md={3} sx={{mx: 'auto'}}>
+
+                  <Card sx={{
+                    height: 200, bgcolor: 'background.card',
+                    boxShadow: 4,
+                    borderRadius: 3,
+                    p: 2
+                  }}>
+                    <CardContent>
+
+                      <TextField label="Email Address" variant='outlined' color='error'  fullWidth />
+                      <TextField label="Password" variant='outlined' color='error'  fullWidth sx={{mt:2}} />
+                      <Button variant="contained" disableElevation sx={{mt:2}}>
+                        Login
+                      </Button>
+                    </CardContent>
+                  </Card>
+                </Grid>
+              </Grid>
             </Paper>
-            
+
 
           </div>
-        </div>
-      </div>
-    </div>
+        
 
   )
 }

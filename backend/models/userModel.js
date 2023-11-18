@@ -3,9 +3,9 @@ const { Schema, model } = require('../connection');
 const myschema= new Schema({
 
     email:{ type:String, require:true},
-    name: String,
-    password: String,
+    name: { type:String, require:true},
+    password: { type:String, require:true},
     avatar:{type:String, default:"avatar_placeholder.png"},
     createdAt: Date
 });
-module.exports=model('users', myschema);
+module.exports=model('user', myschema);

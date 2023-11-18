@@ -8,4 +8,4 @@ const myschema= new Schema({
     avatar:{type:String, default: 'avatar_placeholder.png'},
     createdAt: Date
 });
-module.exports=model('experts', myschema);
+module.exports=model('expert', myschema);
