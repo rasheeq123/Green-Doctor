@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Main from './components/main'
 import Home from './components/main/Home'
 import Login from './components/main/Login'
+import Signup from './components/main/Signup'
 import User from './components/user'
 import Profile from './components/user/Profile'
 import { ThemeProvider, createTheme } from '@mui/material';
@@ -24,6 +25,7 @@ function App() {
           <Route path="main" element={<Main />}>
             <Route path="home" element={<Home />} />
             <Route path="login" element={<Login />} />
+            <Route path="signup" element={<Signup />} />
           </Route>
 
           <Route path="user" element={<User />}>
