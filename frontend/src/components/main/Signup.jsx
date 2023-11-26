@@ -19,8 +19,8 @@ const Login = () => {
                     <CardContent>
 
                       <TextField required label="Email Address" variant='outlined' color='error'  fullWidth sx={{mt:2}}/>
-                      <TextField required label="Password" variant='outlined' color='error'  fullWidth sx={{mt:2}} />
-                      <TextField required label="Confirm Password" variant='outlined' color='error'  fullWidth sx={{mt:2}} />
+                      <TextField required type="password" label="Password" variant='outlined' color='error'  fullWidth sx={{mt:2}} />
+                      <TextField required type="password" label="Confirm Password" variant='outlined' color='error'  fullWidth sx={{mt:2}} />
                       <center><Button variant="contained" disableElevation sx={{mt:3}}>
                         Create Account
                       </Button>
