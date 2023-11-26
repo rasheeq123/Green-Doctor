@@ -12,13 +12,22 @@ import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
+import { NavLink, useNavigate } from 'react-router-dom';
 
 const pages = ['Home', 'Admin', 'User', 'Expert','Signup', 'Login'];
-const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
+const settings = [{
+  text: 'Profile',
+  link : '/user/profile'
+},
+{
+  text: 'Dashboard',
+  link : '/user/dashboard'
+}];
 
 function ResponsiveAppBar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
+  const navigate = useNavigate();
 
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
@@ -148,8 +157,8 @@ function ResponsiveAppBar() {
               onClose={handleCloseUserMenu}
             >
               {settings.map((setting) => (
-                <MenuItem key={setting} onClick={handleCloseUserMenu}>
-                  <Typography textAlign="center">{setting}</Typography>
+                <MenuItem key={setting.text} onClick={handleCloseUserMenu}>
+                  <Typography textAlign="center" onClick={() => navigate(setting.link)} >{setting.text}</Typography>
                 </MenuItem>
               ))}
             </Menu>
