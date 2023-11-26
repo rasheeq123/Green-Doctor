@@ -26,12 +26,7 @@ const Login = () => {
                 </Grid>
               </Grid>
             </Paper>
-
-
           </div>
-        
-
   )
 }
-
 export default Login;
