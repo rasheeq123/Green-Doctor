@@ -6,7 +6,7 @@ const Login = () => {
   return (
     <div >
 
-      <h2 className="my-3"><center>Login Form</center></h2>
+      <h1 className="my-3"><center>Login Form</center></h1>
       <Paper sx={{ boxShadow: 0 }}>
         <Grid container>
           <Grid item md={4} sx={{ mx: 'auto' }}>

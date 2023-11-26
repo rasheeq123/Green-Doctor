@@ -6,7 +6,7 @@ import VisibilityIcon from '@mui/icons-material/Visibility';
 const Signup = () => {
   return (
     <div >
-            <h2 className="my-3"><center>Signup To Continue</center></h2>
+            <h1 className="my-3"><center>Signup To Continue</center></h1>
 
             <Paper sx={{boxShadow:0}}>
               <Grid container>

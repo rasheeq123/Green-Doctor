@@ -3,9 +3,9 @@ import React from 'react'
 const Home = () => {
   return (
     <>
-    <h1>This is Main ka Home</h1>
+    <center><h1>Main ka Home</h1></center>
     </>
   )
 }
 
-export default Home
+export default Home;
