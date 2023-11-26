@@ -1,7 +1,9 @@
-import { Button, Card, CardContent, Grid, Paper, TextField } from '@mui/material'
+import { Button, Card, CardContent, Grid, InputAdornment, Paper, TextField } from '@mui/material'
 import React from 'react'
+import { AccountCircle } from '@mui/icons-material';
+import VisibilityIcon from '@mui/icons-material/Visibility';
 
-const Login = () => {
+const Signup = () => {
   return (
     <div >
             <h2 className="my-3"><center>Signup To Continue</center></h2>
@@ -18,10 +20,34 @@ const Login = () => {
                   }}>
                     <CardContent>
 
-                      <TextField required label="Email Address" variant='outlined' color='error'  fullWidth sx={{mt:2}}/>
-                      <TextField required type="password" label="Password" variant='outlined' color='error'  fullWidth sx={{mt:2}} />
-                      <TextField required type="password" label="Confirm Password" variant='outlined' color='error'  fullWidth sx={{mt:2}} />
-                      <center><Button variant="contained" disableElevation sx={{mt:3}}>
+                      <TextField 
+                      InputProps={{
+                        endAdornment: (
+                          <InputAdornment position="start" >
+                            <AccountCircle />
+                          </InputAdornment>
+                        )
+                      }}
+                      required label="Email Address" variant='outlined' color='error'  fullWidth sx={{mt:2}}/>
+                      <TextField 
+                      InputProps={{
+                        endAdornment: (
+                          <InputAdornment position="start" >
+                            <VisibilityIcon />
+                          </InputAdornment>
+                        )
+                      }}
+                      required type="password" label="Password" variant='outlined' color='error'  fullWidth sx={{mt:2}} />
+                      <TextField 
+                      InputProps={{
+                        endAdornment: (
+                          <InputAdornment position="start" >
+                            <VisibilityIcon />
+                          </InputAdornment>
+                        )
+                      }}
+                      required type="password" label="Confirm Password" variant='outlined' color='error'  fullWidth sx={{mt:2}} />
+                      <center><Button variant="contained" disableElevation sx={{mt:3}} fullWidth>
                         Create Account
                       </Button>
                       </center>
@@ -42,4 +68,4 @@ const Login = () => {
   )
 }
 
-export default Login;
+export default Signup;
