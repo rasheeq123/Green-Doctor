@@ -79,14 +79,14 @@ function ResponsiveAppBar(){
     <AppBar elevation={0} position="static" sx={{ bgcolor: 'white'}}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 20, }} />
+          <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 18, }} />
           <Typography
             variant="h5"
             noWrap
             component="a"
             href="/main/home"
             sx={{
-              mr: 30,
+              mr: 27,
               display: { xs: 'none', md: 'flex' },
               fontFamily: 'Roboto',
               fontWeight: 500,
@@ -171,7 +171,7 @@ function ResponsiveAppBar(){
 
           <Box sx={{ flexGrow: 0}}>
             <Tooltip title="Open settings">
-              <IconButton onClick={handleOpenUserMenu} sx={{ pr: 20 }}>
+              <IconButton onClick={handleOpenUserMenu} sx={{ pr: 18 }}>
                 <Avatar alt="Remy Sharp" src="https://avatars.githubusercontent.com/u/108568853?v=4" />
               </IconButton>
             </Tooltip>
