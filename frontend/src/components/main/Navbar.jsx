@@ -79,17 +79,18 @@ function ResponsiveAppBar(){
     <AppBar elevation={0} position="static" sx={{ bgcolor: 'white'}}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 16, }} />
+          <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 20, }} />
           <Typography
-            variant="h6"
+            variant="h5"
             noWrap
             component="a"
             href="/main/home"
             sx={{
-              mr: 25,
+              mr: 30,
               display: { xs: 'none', md: 'flex' },
               fontFamily: 'Roboto',
               fontWeight: 500,
+              fontSize: 'h5.fontSize',
               // letterSpacing: '.3rem',
               color: 'black',
               textDecoration: 'none',
@@ -124,12 +125,12 @@ function ResponsiveAppBar(){
               open={Boolean(anchorElNav)}
               onClose={handleCloseNavMenu}
               sx={{
-                display: { xs: 'block', md: 'none' },
+                display: { xs: 'block', md: 'none'},
               }}
             >
               {pages.map((page) => (
                 <MenuItem key={page.text} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center"  onClick={() => navigate(page.link)}>{page.text}</Typography>
+                  <Typography textAlign="center" onClick={() => navigate(page.link)}>{page.text}</Typography>
                 </MenuItem>
               ))}
             </Menu>
@@ -147,6 +148,7 @@ function ResponsiveAppBar(){
               flexGrow: 1,
               fontFamily: 'Roboto',
               fontWeight: 700,
+              // fontSize: 'h6.fontSize',
               // letterSpacing: '.3rem',
               color: 'black',
               textDecoration: 'none',
@@ -160,16 +162,16 @@ function ResponsiveAppBar(){
                 onClick={() => navigate(page.link)}
                 key={page.text}
                 // onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: 'black', display: 'block' }}
+                sx={{ my: 2, color: 'black', display: 'block', fontSize:'17px' }}
               >
                 {page.text}
               </Button>
             ))}
           </Box>
 
-          <Box sx={{ flexGrow: 0 }}>
+          <Box sx={{ flexGrow: 0}}>
             <Tooltip title="Open settings">
-              <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
+              <IconButton onClick={handleOpenUserMenu} sx={{ pr: 20 }}>
                 <Avatar alt="Remy Sharp" src="https://avatars.githubusercontent.com/u/108568853?v=4" />
               </IconButton>
             </Tooltip>
