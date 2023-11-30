@@ -76,17 +76,17 @@ function ResponsiveAppBar(){
   };
 
   return (
-    <AppBar elevation={1} position="static" sx={{ bgcolor: 'white'}}>
+    <AppBar elevation={0} position="static" sx={{ bgcolor: 'white'}}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
+          <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 16, }} />
           <Typography
             variant="h6"
             noWrap
             component="a"
             href="/main/home"
             sx={{
-              mr: 10,
+              mr: 25,
               display: { xs: 'none', md: 'flex' },
               fontFamily: 'Roboto',
               fontWeight: 500,
@@ -129,7 +129,7 @@ function ResponsiveAppBar(){
             >
               {pages.map((page) => (
                 <MenuItem key={page.text} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center" onClick={() => navigate(page.link)}>{page.text}</Typography>
+                  <Typography textAlign="center"  onClick={() => navigate(page.link)}>{page.text}</Typography>
                 </MenuItem>
               ))}
             </Menu>
