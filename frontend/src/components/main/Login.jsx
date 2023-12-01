@@ -1,4 +1,4 @@
-import { Box, Button, Card, CardContent, Grid, InputAdornment, Paper, TextField } from '@mui/material'
+import { Box, Button, Card, CardContent, Grid, InputAdornment, Paper, TextField, Typography } from '@mui/material'
 import React from 'react';
 import { AccountCircle } from '@mui/icons-material';
 import VisibilityIcon from '@mui/icons-material/Visibility';
@@ -6,12 +6,12 @@ const Login = () => {
   return (
     <div >
 
-      <h1 className="my-3"><center>Login Form</center></h1>
-      <Paper sx={{ boxShadow: 0 }}>
+      <Typography variant='h2' sx={{textAlign: 'center', mt: 5}}>Begin with Login</Typography>
+      <Paper sx={{ boxShadow: 0, mt: 5 }}>
         <Grid container>
           <Grid item md={4} sx={{ mx: 'auto' }}>
             <Card sx={{
-              height: 250, bgcolor: 'background.card',
+              height: 250, 
               boxShadow: 5,
               borderRadius: 1,
               p: 4
@@ -25,7 +25,7 @@ const Login = () => {
                       </InputAdornment>
                     )
                   }}
-                  required label="Email Address" variant='outlined' color='error' fullWidth sx={{ mt: 2 }} />
+                  required label="Email Address" variant='outlined' color='success' fullWidth sx={{ mt: 2 }} />
 
                 <TextField 
                 InputProps={{
@@ -35,9 +35,9 @@ const Login = () => {
                     </InputAdornment>
                   )
                 }}
-                required type="password" label="Password" variant='outlined' color='error' fullWidth sx={{ mt: 2 }} />
+                required type="password" label="Password" variant='outlined' color='success' fullWidth sx={{ mt: 2 }} />
                 <Box sx={{ textAlign: 'center' }}>
-                  <Button variant="contained" disableElevation sx={{ mt: 3}} fullWidth >
+                  <Button variant="contained" disableElevation sx={{ mt: 3}} fullWidth color="success">
                     Login
                   </Button>
                 </Box>

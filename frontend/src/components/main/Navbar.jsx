@@ -172,7 +172,8 @@ function ResponsiveAppBar(){
           <Box sx={{ flexGrow: 0}}>
             <Tooltip title="Open settings">
               <IconButton onClick={handleOpenUserMenu} sx={{ pr: 18 }}>
-                <Avatar alt="Remy Sharp" src="https://avatars.githubusercontent.com/u/108568853?v=4" />
+                {/* <Avatar alt="Remy Sharp" src="https://avatars.githubusercontent.com/u/108568853?v=4" /> */}
+                <link rel="icon" type="image/png" href="https://plantix.net/en/favicon.png" />
               </IconButton>
             </Tooltip>
             <Menu
