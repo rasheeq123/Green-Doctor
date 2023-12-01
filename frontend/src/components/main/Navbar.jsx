@@ -76,17 +76,18 @@ function ResponsiveAppBar(){
   };
 
   return (
-    <AppBar elevation={0} position="static" sx={{ bgcolor: 'white'}}>
+    <AppBar elevation={5} position="static" sx={{ bgcolor: '#f0f8ff'}}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 18, }} />
+          {/* <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 18, }} /> */}
           <Typography
             variant="h5"
             noWrap
             component="a"
             href="/main/home"
             sx={{
-              mr: 27,
+              ml: 12,
+              mr: 35,
               display: { xs: 'none', md: 'flex' },
               fontFamily: 'Roboto',
               fontWeight: 500,
@@ -99,7 +100,7 @@ function ResponsiveAppBar(){
             Green Doctor
           </Typography>
 
-          <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none'} }}>
+          <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none'}, justifyContent: 'center' }}>
             <IconButton
               size="large"
               aria-label="account of current user"
@@ -135,8 +136,8 @@ function ResponsiveAppBar(){
               ))}
             </Menu>
           </Box>
-          {/* <Image src={logo} alt="logo" /> */}
-          <AdbIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} />
+          {/* <AdbIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} /> */}
+          {/* <img src="/images/GD_Logo-.png" alt="" /> */}
           <Typography
             variant="h5"
             noWrap
@@ -162,7 +163,7 @@ function ResponsiveAppBar(){
                 onClick={() => navigate(page.link)}
                 key={page.text}
                 // onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: 'black', display: 'block', fontSize:'17px' }}
+                sx={{ my: 2, color: 'black', display: 'block', fontSize:'16px' }}
               >
                 {page.text}
               </Button>
@@ -171,7 +172,7 @@ function ResponsiveAppBar(){
 
           <Box sx={{ flexGrow: 0}}>
             <Tooltip title="Open settings">
-              <IconButton onClick={handleOpenUserMenu} sx={{ pr: 18 }}>
+              <IconButton onClick={handleOpenUserMenu} sx={{ pr: 12 }}>
                 <Avatar alt="Remy Sharp" src="https://avatars.githubusercontent.com/u/108568853?v=4" />
                 {/* <link rel="icon" type="image/png" href="https://plantix.net/en/favicon.png" /> */}
               </IconButton>

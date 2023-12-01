@@ -76,10 +76,10 @@ function ResponsiveAppBar(){
   };
 
   return (
-    <AppBar elevation={1} position="static" sx={{ bgcolor: 'white'}}>
+    <AppBar elevation={5} position="static" sx={{ bgcolor: '#f0f8ff'}}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
+          {/* <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} /> */}
           <Typography
             variant="h6"
             noWrap
@@ -135,7 +135,7 @@ function ResponsiveAppBar(){
             </Menu>
           </Box>
           {/* <Image src={logo} alt="logo" /> */}
-          <AdbIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} />
+          {/* <AdbIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} /> */}
           <Typography
             variant="h5"
             noWrap

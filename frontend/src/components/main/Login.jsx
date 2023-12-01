@@ -2,6 +2,8 @@ import { Box, Button, Card, CardContent, Grid, InputAdornment, Paper, TextField,
 import React from 'react';
 import { AccountCircle } from '@mui/icons-material';
 import VisibilityIcon from '@mui/icons-material/Visibility';
+
+
 const Login = () => {
   return (
     <div >
@@ -40,6 +42,8 @@ const Login = () => {
                   <Button variant="contained" disableElevation sx={{ mt: 3}} fullWidth color="success">
                     Login
                   </Button>
+                  <p variant='h6' >Dont Have an account - 
+                    <a href="/main/signup"> Create account</a></p>
                 </Box>
               </CardContent>
             </Card>
