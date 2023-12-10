@@ -13,6 +13,15 @@ const mystorage = multer.diskStorage({
     cb(null, file.originalname);
   },
 });
+
+const mailconfig = {
+    service: 'gmail',
+    auth:{
+        user: process.env.EMAIL_ID,
+        pass: process.env.EMAIL_PASSWORD
+    }
+}
+
 const transporter = nodemailer.createTransport(mailconfig);
 const generateOTP = () =>{
     const otp = Math.floor(Math.random() * 1000000)
@@ -45,4 +54,14 @@ router.post('/sendotp',(req,res)=>{
         return res.status(500).json({msg: err});
     });
 })
+
+router.get('/verifyotp/:email/otp', (req,res) => {
+    const oldOTP = generatedOTP[req.params.email];
+    if(oldOTP == req.params.otp){
+        return res.status(200).json({msg : 'OPT verified'})
+    }else{
+        return res.status(401).json({msg : 'OPT not verified'})
+    }
+})
+
 module.exports = router;

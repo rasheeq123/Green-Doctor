@@ -9,4 +9,6 @@ const myschema= new Schema({
     createdAt: Date,
     email_verified: {type: Boolean, default: false},
 });
+
+
 module.exports=model('user', myschema);
