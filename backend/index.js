@@ -4,6 +4,7 @@ const userRouter=require('./routers/userRouter');
 const orderRouter=require('./routers/orderRouter');
 const imageRouter=require('./routers/imageRouter');
 const expertRouter=require('./routers/expertRouter');
+const utilRouter=require('./routers/util');
 
 
 const cors = require('cors');
@@ -16,13 +17,14 @@ const port= 5000;
 app.use(express.json());  
 
 app.use(cors({
-    origin:['http://localhost:3000']
+    origin:['http://localhost:5173', '*']
 }));
 
 app.use('/user', userRouter);
 app.use('/order', orderRouter);
 app.use('/image', imageRouter);
 app.use('/expert', expertRouter);
+app.use('/util', utilRouter);
 
 
 

@@ -37,6 +37,10 @@ const pages = [{
 {
   text: 'Login',
   link: '/main/login'
+},
+{
+  text: 'ResetPassword',
+  link: '/main/resetpassword'
 }];
 
 const settings = [{

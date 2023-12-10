@@ -9,6 +9,7 @@ import Profile from './components/user/Profile'
 import { ThemeProvider, createTheme } from '@mui/material';
 import Admin from './components/admin'
 import ManageUser from './components/admin/ManageUser'
+import ResetPassword from './components/main/ResetPassword'
 
 
 function App() {
@@ -26,6 +27,7 @@ function App() {
             <Route path="home" element={<Home />} />
             <Route path="login" element={<Login />} />
             <Route path="signup" element={<Signup />} />
+            <Route path="resetpassword" element={<ResetPassword />} />
           </Route>
 
           <Route path="user" element={<User />}>
