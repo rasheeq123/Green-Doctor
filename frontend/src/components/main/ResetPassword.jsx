@@ -12,7 +12,7 @@ const ResetPassword = () => {
             }
         });
         const verifyOTP = async () =>{
-            const res = await fetch(`${import.meta.env.VITE_API_URL}/util/verifyotp/$`{emailRef.current.value}/${otpRef.current.value})
+            const res = await fetch(`${import.meta.env.VITE_API_URL}/util/verifyotp/${emailRef.current.value}/${otpRef.current.value}`)
             console.log(res.status)
         }
     }
