@@ -43,16 +43,17 @@ router.post('/sendotp',(req,res)=>{
         to: req.body.email,
         subject: 'OTP for Reset Password',
         html: `<p>OTP for Reset Password is <b>${otp}</b></p>`
-    });
-})
-.then((info) => {
-    return res.status(201).json({
-        msg: "OTP Sent",
-        info: info.messageId,
-        preview: nodemailer.getTestMessageUrl(info)
-    }).catch((err) =>{
-        return res.status(500).json({msg: err});
-    });
+    })
+    .then((info) => {
+        return res.status(201).json({
+            msg: "OTP Sent",
+            info: info.messageId,
+            preview: nodemailer.getTestMessageUrl(info)
+        })
+        }).catch((err) =>{
+            return res.status(500).json({msg: err});
+        });
+    
 })
 
 router.get('/verifyotp/:email/otp', (req,res) => {
