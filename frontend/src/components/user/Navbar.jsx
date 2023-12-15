@@ -53,7 +53,12 @@ const settings = [{
 },
 {
   text: 'Logout'
-}];
+},
+{
+  text: 'Prediction',
+  link: 'user/prediction'
+}
+];
 
 function ResponsiveAppBar(){
   const [anchorElNav, setAnchorElNav] = React.useState(null);

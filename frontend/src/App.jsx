@@ -10,6 +10,7 @@ import { ThemeProvider, createTheme } from '@mui/material';
 import Admin from './components/admin'
 import ManageUser from './components/admin/ManageUser'
 import ResetPassword from './components/main/ResetPassword'
+import Prediction from './components/user/Prediction'
 
 
 function App() {
@@ -32,6 +33,7 @@ function App() {
 
           <Route path="user" element={<User />}>
             <Route path="profile" element={<Profile />} />
+            <Route path="prediction" element={<Prediction />} />
           </Route>
 
           <Route path="admin" element={<Admin />}>
