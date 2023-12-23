@@ -52,7 +52,7 @@ const Prediction = () => {
   const uploadFile = (file) => {
     const fd = new FormData();
     fd.append('myfile', file);
-    fetch(`${process.env.REACT_APP_API_URL}/util/uploadfile`, {
+    fetch(`${import.meta.env.VITE_API_URL}/util/uploadfile`, {
       method: 'POST',
       body: fd
     }).then((res) => {
@@ -63,7 +63,7 @@ const Prediction = () => {
   };
 
   const saveHistory = async (res) => {
-    const response = await fetch(`${process.env.REACT_APP_API_URL}/prediction/add`, {
+    const response = await fetch(`${import.meta.env.VITE_API_URL}/prediction/add`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
@@ -103,7 +103,7 @@ const Prediction = () => {
     //   res = { className: 'Sorry! Unknown Plant', probability: 0 };
     // }
     setResult(res);
-    saveHistory(predictionResultExtractor(prediction));
+    // saveHistory(predictionResultExtractor(prediction));
     Swal.fire({
       title: 'Success',
       icon: 'success',
