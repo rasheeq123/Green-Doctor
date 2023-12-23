@@ -1,11 +1,11 @@
-import React, { useCallback, useRef, useState } from 'react'
+import React, { useCallback, useEffect, useRef, useState } from 'react'
 import app_config from '../../config';
 import { NavLink, useNavigate } from 'react-router-dom';
 import Webcam from 'react-webcam';
 
 const Prediction = () => {
   
-    const { apiUrl, modelPath, cureData } = app_config;
+    const {  modelPath, cureData } = app_config;
 
   const [model, setModel] = useState(null);
   const [maxPredictions, setMaxPredictions] = useState(null);

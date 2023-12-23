@@ -12,7 +12,7 @@ router.post('/authenticate' , (req, res) => {
         
         if(result){
 
-        const payload = {_id: result._id, email: result._email, role: result.role};
+        const payload = {_id: result._id, email: result.email, role: result.role};
 
         // create token
         jwt.sign(
