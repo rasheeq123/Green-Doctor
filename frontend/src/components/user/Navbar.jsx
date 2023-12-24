@@ -37,6 +37,10 @@ const pages = [{
 {
   text: 'Login',
   link: '/main/login'
+},
+{
+  text: 'Prediction',
+  link: '/user/prediction'
 }];
 
 const settings = [{
@@ -54,10 +58,7 @@ const settings = [{
 {
   text: 'Logout'
 },
-{
-  text: 'Prediction',
-  link: 'user/prediction'
-}
+
 ];
 
 function ResponsiveAppBar(){
