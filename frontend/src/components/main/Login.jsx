@@ -4,6 +4,8 @@ import { AccountCircle } from '@mui/icons-material';
 import VisibilityIcon from '@mui/icons-material/Visibility';
 import { useNavigate } from 'react-router-dom';
 import useAppContext from '../../context/AppContext';
+import { useFormik } from 'formik';
+import Swal from 'sweetalert2';
 
 const Login = () => {
   const navigate = useNavigate();
@@ -72,7 +74,11 @@ const loginform= useFormik ({
               p: 4
             }}>
               <CardContent>
+              <form onSubmit={loginform.handleSubmit} >
                 <TextField
+                id="email" 
+                onChange={loginform.handleChange}
+                value={loginform.values.email}
                   InputProps={{
                     endAdornment: (
                       <InputAdornment position="start" >
@@ -80,7 +86,7 @@ const loginform= useFormik ({
                       </InputAdornment>
                     )
                   }}
-                  required label="Email Address" variant='outlined' color='success' fullWidth sx={{ mt: 2 }} />
+                  required label="Email Address" error={loginform.touched.email && loginform.error.email} helperText={loginform.touched.email && loginform.error.email} variant='outlined' color='success' fullWidth sx={{ mt: 2 }} />
 
                 <TextField 
                 InputProps={{
@@ -98,6 +104,7 @@ const loginform= useFormik ({
                   <p variant='h6' >Dont Have an account - 
                     <a href="/main/signup"> Create account</a></p>
                 </Box>
+                </form>
               </CardContent>
             </Card>
           </Grid>
