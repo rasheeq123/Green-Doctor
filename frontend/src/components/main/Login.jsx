@@ -4,66 +4,60 @@ import { AccountCircle } from '@mui/icons-material';
 import VisibilityIcon from '@mui/icons-material/Visibility';
 import { useNavigate } from 'react-router-dom';
 import useAppContext from '../../context/AppContext';
-import * as Yup from "yup";
-
-const LoginSchema = Yup.object().shape({
-  password: Yup.string()
-    .min(2, "Too Short!")
-    .max(50, "Too Long!")
-    .required("Required"),
-
-  email: Yup.string().email("Invalid email").required("Required"),
-});
 
 const Login = () => {
   const navigate = useNavigate();
-  const { setLoggedIn } = useAppContext();
+  const{ setloggedIn}= useAppContext();
 
-  const loginForm = useFormik({
-    initialValues: {
-      email: "",
-      password: ""
-    },
-    // call back hmko nhi pta kb call hoga lekin aap call hoga sb condition met hogi  jaise isme submit kr  rhe
-    onSubmit: async (values, { resetForm }) => {
+
+const loginform= useFormik ({
+  initialValues: {
+      email:'',
+      password:''
+  },
+  onSubmit: async (values, {resetForm})=> {
       console.log(values);
 
-      const res = await fetch(`${process.env.REACT_APP_VINTIMART_URL}/user/authenticate`, {
-        method: "POST",
-        body: JSON.stringify(values),
-        headers: {
-          "Content-Type": "application/json",
-        },
+      const res = await fetch('http://localhost:5000/user/authenticate',{
+          method: 'POST',
+          body:JSON.stringify(values),
+          headers:{
+              'Content-Type':'application/json'
+          }
       });
       console.log(res.status);
-      if (res.status === 200) {
-        Swal.fire({
-          icon: "success",
-          title: "Login success",
-        });
-        navigate("/");
-        setLoggedIn(true);
-        const data = await res.json();
-        console.log(data);
-        sessionStorage.setItem("user", JSON.stringify(data));
-      } else if (res.status === 400) {
-        Swal.fire({
-          icon: "error",
-          title: "Login Failed",
-          text: "Email or Password is inavalid",
-        });
-      } else {
-        Swal.fire({
-          icon: "error",
-          title: "Error",
-          text: "Something went wrong",
-        });
-      }
-      resetForm();
-      // send values to backened.
-    },
-    validationSchema: LoginSchema,
-  });
+          if(res.status===200){
+              Swal.fire({
+                  icon:'success',
+                  title:'Login Successfully'
+                  
+              })
+              const data= await res.json();
+              console.log(data);
+              sessionStorage.setItem('user', JSON.stringify(data));
+              setloggedIn(true);
+              navigate("/slotlist");
+          }
+      
+          else if(res.status===400){
+              Swal.fire({
+                  icon:'error',
+                  title:'Login failed',
+                  text:'Email or password is invalid'
+                  
+              })
+          }
+          else{  
+              Swal.fire({
+                  icon:'error', 
+                  title:'Error',
+                  text:'Something went wrong!!'
+              })
+          
+          }
+          resetForm();
+  }
+});
   return (
     <div >
 
