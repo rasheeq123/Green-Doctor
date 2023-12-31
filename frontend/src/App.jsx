@@ -11,6 +11,8 @@ import Admin from './components/admin'
 import ManageUser from './components/admin/ManageUser'
 import ResetPassword from './components/main/ResetPassword'
 import Prediction from './components/user/Prediction'
+import { AppProvider } from "./AppContext";
+
 
 
 function App() {
@@ -23,6 +25,7 @@ function App() {
     <>
     <ThemeProvider theme={theme}>
       <BrowserRouter>
+      <AppProvider>
         <Routes> 
           <Route path="main" element={<Main />}>
             <Route path="home" element={<Home />} />
@@ -41,6 +44,7 @@ function App() {
           </Route>
 
         </Routes>
+        </AppProvider>
       </BrowserRouter>
       </ThemeProvider>
     </>
