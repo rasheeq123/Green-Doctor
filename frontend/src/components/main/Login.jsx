@@ -89,6 +89,9 @@ const loginform= useFormik ({
                   required label="Email Address" error={loginform.touched.email && loginform.error.email} helperText={loginform.touched.email && loginform.error.email} variant='outlined' color='success' fullWidth sx={{ mt: 2 }} />
 
                 <TextField 
+                id="password" 
+                onChange={loginform.handleChange} 
+                value={loginform.values.password}
                 InputProps={{
                   endAdornment: (
                     <InputAdornment position="start" >

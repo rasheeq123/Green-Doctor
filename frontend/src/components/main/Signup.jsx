@@ -4,6 +4,7 @@ import { AccountCircle } from '@mui/icons-material';
 import VisibilityIcon from '@mui/icons-material/Visibility';
 import * as Yup from 'yup';
 import { useNavigate } from 'react-router-dom';
+import { useFormik } from 'formik';
 
 const SignupSchema = Yup.object().shape({
   name: Yup.string()
@@ -25,7 +26,8 @@ const Signup = () => {
     initialValues: {
       name: '',
       email: '',
-      password: ''
+      password: '',
+      confirm:''
     },
 
     onSubmit: async (values, { resetForm }) => {
@@ -48,7 +50,7 @@ const Signup = () => {
         navigate('/login');
         resetForm();
       }
-      else { // yaha pe ye condution jab address me kuch glti kr denge tb chlegi, basocally jab error occur hoga 
+      else {  
         Swal.fire({
           icon: 'error', // error defaullt h yaha
           title: 'Error',
@@ -75,8 +77,22 @@ const Signup = () => {
                     p: 4
                   }}>
                     <CardContent>
+                    <form onSubmit={signupform.handleSubmit}>
+                    <TextField 
+                      id="name" onChange={signupform.handleChange} 
+                      value={signupform.values.name} 
+                      InputProps={{
+                        endAdornment: (
+                          <InputAdornment position="start" >
+                            <AccountCircle />
+                          </InputAdornment>
+                        )
+                      }}
+                      required label="Name" variant='outlined' color='success'  fullWidth sx={{mt:2}}/>
 
                       <TextField 
+                      id="email" onChange={signupform.handleChange} 
+                      value={signupform.values.email} 
                       InputProps={{
                         endAdornment: (
                           <InputAdornment position="start" >
@@ -86,6 +102,8 @@ const Signup = () => {
                       }}
                       required label="Email Address" variant='outlined' color='success'  fullWidth sx={{mt:2}}/>
                       <TextField 
+                      id="password" onChange={signupform.handleChange} 
+                      value={signupform.values.password}
                       InputProps={{
                         endAdornment: (
                           <InputAdornment position="start" >
@@ -95,6 +113,8 @@ const Signup = () => {
                       }}
                       required type="password" label="Password" variant='outlined' color='success'  fullWidth sx={{mt:2}} />
                       <TextField 
+                      id="confirm" onChange={signupform.handleChange} 
+                      value={signupform.values.confirm}
                       InputProps={{
                         endAdornment: (
                           <InputAdornment position="start" >
@@ -103,13 +123,15 @@ const Signup = () => {
                         )
                       }}
                       required type="password" label="Confirm Password" variant='outlined' color='success'  fullWidth sx={{mt:2}} />
-                      <Button variant="contained" color='success' disableElevation sx={{mt:5, p:2}} fullWidth>
+                      
+                      <Button variant="contained" color='success'  sx={{mt:5, p:2}} fullWidth>
                         Create Account
                       </Button>
                       <center><p>Already an existing user -  
                         <a href="/main/login">Login Here</a>
                       </p>
                       </center>
+                      </form>
                     </CardContent>
                   </Card>
                 </Grid>
