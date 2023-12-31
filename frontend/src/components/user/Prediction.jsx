@@ -80,8 +80,8 @@ const Prediction = () => {
   };
 
   async function init() {
-    const modelURL = modelPath + '/model.json';
-    const metadataURL = modelPath + '/metadata.json';
+    const modelURL = modelPath + '/apple/model.json';
+    const metadataURL = modelPath + '/apple/metadata.json';
 
     // load the model and metadata
     // Refer to tmImage.loadFromFiles() in the API to support files from a file picker
@@ -103,6 +103,7 @@ const Prediction = () => {
     //   res = { className: 'Sorry! Unknown Plant', probability: 0 };
     // }
     setResult(res);
+    
     // saveHistory(predictionResultExtractor(prediction));
     Swal.fire({
       title: 'Success',

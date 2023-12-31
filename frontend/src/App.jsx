@@ -11,7 +11,7 @@ import Admin from './components/admin'
 import ManageUser from './components/admin/ManageUser'
 import ResetPassword from './components/main/ResetPassword'
 import Prediction from './components/user/Prediction'
-import { AppProvider } from "./AppContext";
+import { AppProvider } from './context/AppContext'
 
 
 
