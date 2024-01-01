@@ -7,10 +7,10 @@ import useAppContext from '../../context/AppContext';
 import { useFormik } from 'formik';
 import Swal from 'sweetalert2';
 
-const Login = () => {
-  const navigate = useNavigate();
-  const{ setloggedIn}= useAppContext();
 
+const Login = () => {  
+const navigate = useNavigate();
+const { setLoggedIn } = useAppContext();
 
 const loginform= useFormik ({
   initialValues: {
@@ -34,11 +34,12 @@ const loginform= useFormik ({
                   title:'Login Successfully'
                   
               })
+              navigate("/main/Home");
+              setloggedIn(true);
               const data= await res.json();
               console.log(data);
               sessionStorage.setItem('user', JSON.stringify(data));
-              setloggedIn(true);
-              navigate("/slotlist");
+            
           }
       
           else if(res.status===400){
@@ -86,7 +87,7 @@ const loginform= useFormik ({
                       </InputAdornment>
                     )
                   }}
-                  required label="Email Address" error={loginform.touched.email && loginform.error.email} helperText={loginform.touched.email && loginform.error.email} variant='outlined' color='success' fullWidth sx={{ mt: 2 }} />
+                  required type="email" label="Email Address" error={loginform.touched.email && loginform.error.email} helperText={loginform.touched.email && loginform.error.email} variant='outlined' color='success' fullWidth sx={{ mt: 2 }} />
 
                 <TextField 
                 id="password" 
@@ -99,7 +100,7 @@ const loginform= useFormik ({
                     </InputAdornment>
                   )
                 }}
-                required type="password" label="Password" variant='outlined' color='success' fullWidth sx={{ mt: 2 }} />
+                required type="password" label="Password" error={loginform.touched.password && loginform.error.password} helperText={loginform.touched.password && loginform.error.password} variant='outlined' color='success' fullWidth sx={{ mt: 2 }} />
                 <Box sx={{ textAlign: 'center' }}>
                   <Button variant="contained" disableElevation sx={{ mt: 3}} fullWidth color="success">
                     Login
@@ -111,9 +112,10 @@ const loginform= useFormik ({
               </CardContent>
             </Card>
           </Grid>
+
         </Grid>
       </Paper>
     </div >
   )
-}
+};
 export default Login;
