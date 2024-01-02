@@ -102,7 +102,7 @@ const loginform= useFormik ({
                 }}
                 required type="password" label="Password" error={loginform.touched.password && loginform.error.password} helperText={loginform.touched.password && loginform.error.password} variant='outlined' color='success' fullWidth sx={{ mt: 2 }} />
                 <Box sx={{ textAlign: 'center' }}>
-                  <Button variant="contained" disableElevation sx={{ mt: 3}} fullWidth color="success">
+                  <Button type="submit" variant="contained" disableElevation sx={{ mt: 3}} fullWidth color="success">
                     Login
                   </Button>
                   <p variant='h6' >Dont Have an account - 

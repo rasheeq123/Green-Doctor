@@ -124,7 +124,7 @@ const Signup = () => {
                       }}
                       required type="password" label="Confirm Password" variant='outlined' color='success'  fullWidth sx={{mt:2}} />
                       
-                      <Button variant="contained" color='success'  sx={{mt:5, p:2}} fullWidth>
+                      <Button type="submit" variant="contained" color='success'  sx={{mt:5, p:2}} fullWidth>
                         Create Account
                       </Button>
                       <center><p>Already an existing user -  
