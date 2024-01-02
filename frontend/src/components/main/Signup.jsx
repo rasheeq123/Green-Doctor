@@ -5,6 +5,7 @@ import VisibilityIcon from '@mui/icons-material/Visibility';
 import * as Yup from 'yup';
 import { useNavigate } from 'react-router-dom';
 import { useFormik } from 'formik';
+import Swal from 'sweetalert2';
 
 const SignupSchema = Yup.object().shape({
   name: Yup.string()
@@ -26,8 +27,8 @@ const Signup = () => {
     initialValues: {
       name: '',
       email: '',
-      password: '',
-      confirm:''
+      password: ''
+      
     },
 
     onSubmit: async (values, { resetForm }) => {
@@ -47,7 +48,7 @@ const Signup = () => {
           title: 'Registered Successfully',
           text: 'Login to continue'
         })
-        navigate('/login');
+        navigate('/main/login');
         resetForm();
       }
       else {  
@@ -71,7 +72,7 @@ const Signup = () => {
                 <Grid item md={5} sx={{mx: 'auto'}}>
 
                   <Card sx={{
-                    height: 350,
+                    height: 450,
                     boxShadow: 5,
                     borderRadius: 1,
                     p: 4
@@ -88,7 +89,7 @@ const Signup = () => {
                           </InputAdornment>
                         )
                       }}
-                      required label="Name" variant='outlined' color='success'  fullWidth sx={{mt:2}}/>
+                      required type="name" label="Name" variant='outlined' color='success'  fullWidth sx={{mt:2}}  helperText={signupform.touched.name && signupform.errors.name}/>
 
                       <TextField 
                       id="email" onChange={signupform.handleChange} 
@@ -100,7 +101,7 @@ const Signup = () => {
                           </InputAdornment>
                         )
                       }}
-                      required label="Email Address" variant='outlined' color='success'  fullWidth sx={{mt:2}}/>
+                      required type="email" label="Email Address" variant='outlined' color='success'  fullWidth sx={{mt:2}} helperText={signupform.touched.email && signupform.errors.email}/>
                       <TextField 
                       id="password" onChange={signupform.handleChange} 
                       value={signupform.values.password}
@@ -111,10 +112,10 @@ const Signup = () => {
                           </InputAdornment>
                         )
                       }}
-                      required type="password" label="Password" variant='outlined' color='success'  fullWidth sx={{mt:2}} />
+                      required type="password" label="Password" variant='outlined' color='success'  fullWidth sx={{mt:2}} helperText={signupform.touched.password && signupform.errors.password}/>
                       <TextField 
                       id="confirm" onChange={signupform.handleChange} 
-                      value={signupform.values.confirm}
+                      value={signupform.values.confirm} 
                       InputProps={{
                         endAdornment: (
                           <InputAdornment position="start" >
@@ -122,9 +123,9 @@ const Signup = () => {
                           </InputAdornment>
                         )
                       }}
-                      required type="password" label="Confirm Password" variant='outlined' color='success'  fullWidth sx={{mt:2}} />
+                      required type="password" label="Confirm Password" variant='outlined' color='success'  fullWidth sx={{mt:2}} helperText={signupform.touched.confirm && signupform.errors.confirm} />
                       
-                      <Button type="submit" variant="contained" color='success'  sx={{mt:5, p:2}} fullWidth>
+                      <Button type="submit" variant="contained" color='success'  sx={{mt:4, p:2}} fullWidth>
                         Create Account
                       </Button>
                       <center><p>Already an existing user -  
