@@ -34,7 +34,7 @@ const loginform= useFormik ({
                   title:'Login Successfully'
                   
               })
-              navigate("/main/Home");
+              navigate("/main/home");
               setloggedIn(true);
               const data= await res.json();
               console.log(data);
