@@ -13,6 +13,9 @@ import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
 import { NavLink, useNavigate } from 'react-router-dom';
+import useAppContext from '../../context/AppContext';
+
+  
 
 const pages = [{
   text:'Home', 
@@ -61,6 +64,32 @@ const settings = [{
 ];
 
 function ResponsiveAppBar(){
+// const { loggedIn, setLoggedIn, logout } = useAppContext();
+
+// const showLoginOptions = () => {
+//   if (loggedIn) {
+//     return (
+//       // <li className="nav-item">
+//         <button className="btn btn-danger" onClick={logout}>
+//           Logout
+//         </button>
+//       // </li>
+//     );
+//   }else{
+//     return <>
+//       <button className="d-flex px-4 btn btn-outline-primary me-2 active">
+//           <NavLink className="nav-link" to="/login">
+//             Login
+//           </NavLink>
+//         </button>
+//         <button className="d-flex px-4 btn btn-outline-primary active">
+//           <NavLink className="nav-link" to="/signup">
+//             Sign up
+//           </NavLink>
+//         </button>
+//     </>
+//   }
+// };
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
   const navigate = useNavigate();
@@ -206,6 +235,7 @@ function ResponsiveAppBar(){
             </Menu>
           </Box>
         </Toolbar>
+        {/* {showLoginOptions()} */}
       </Container>
     </AppBar>
   );
