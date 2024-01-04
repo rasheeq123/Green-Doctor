@@ -1,11 +1,13 @@
-import { Button, Card, CardContent, Grid, InputAdornment, Paper, TextField, Typography } from '@mui/material'
+import { Box, Button, Card, CardContent, Divider, Grid, InputAdornment, Paper, TextField, Typography } from '@mui/material'
 import React from 'react'
 import { AccountCircle } from '@mui/icons-material';
 import VisibilityIcon from '@mui/icons-material/Visibility';
 import * as Yup from 'yup';
-import { useNavigate } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
 import { useFormik } from 'formik';
 import Swal from 'sweetalert2';
+import GoogleIcon from '@mui/icons-material/Google';
+
 
 const SignupSchema = Yup.object().shape({
   name: Yup.string()
@@ -65,16 +67,16 @@ const Signup = () => {
 
   return (
     <div >
-            <Typography variant='h3' sx={{textAlign: 'center', mt: 5}}>Sign Up for Unmatched Benefits</Typography>
+            {/* <Typography variant='h4' sx={{textAlign: 'center', mt: 2}}>Sign Up for Unmatched Benefits</Typography> */}
 
             <Paper sx={{boxShadow:0, mt: 5}}>
               <Grid container>
                 <Grid item md={5} sx={{mx: 'auto'}}>
 
                   <Card sx={{
-                    height: 450,
+                    height: 480,
                     boxShadow: 5,
-                    borderRadius: 1,
+                    borderRadius: 3,
                     p: 4
                   }}>
                     <CardContent>
@@ -125,13 +127,21 @@ const Signup = () => {
                       }}
                       required type="password" label="Confirm Password" variant='outlined' color='success'  fullWidth sx={{mt:2}} helperText={signupform.touched.confirm && signupform.errors.confirm} />
                       
-                      <Button type="submit" variant="contained" color='success'  sx={{mt:4, p:2}} fullWidth>
-                        Create Account
-                      </Button>
-                      <center><p>Already an existing user -  
-                        <a href="/main/login">Login Here</a>
-                      </p>
-                      </center>
+                      <Box sx={{ textAlign: 'center' }}>
+                  <Button type="submit" variant="contained" disableElevation sx={{ mt: 3, borderRadius: 5}} fullWidth color="success">
+                    Sign up
+                  </Button>
+                  <Divider sx={{ mt: 2}} orientation="horizontal" variant="fullWidth" >or </Divider> 
+                  <Button type="submit" variant="outlined" disableElevation sx={{ mt: 2, borderRadius: 5, textTransform: 'none'}} fullWidth color="success">
+                  <InputAdornment position="start" >
+                        <GoogleIcon />
+                      </InputAdornment>
+                    Sign up with Google
+                  </Button>
+                  <p variant='h6' >Already Have an account?
+                    <NavLink
+                    to="/main/login">Sign in</NavLink></p>
+                </Box>
                       </form>
                     </CardContent>
                   </Card>
