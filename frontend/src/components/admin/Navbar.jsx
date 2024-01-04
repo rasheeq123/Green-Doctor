@@ -81,7 +81,7 @@ function ResponsiveAppBar(){
         <Toolbar disableGutters>
           {/* <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} /> */}
           <Typography
-            variant="h6"
+            variant="h5"
             noWrap
             component="a"
             href="/main/home"

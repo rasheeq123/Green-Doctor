@@ -120,8 +120,8 @@ function ResponsiveAppBar(){
             component="a"
             href="main/home"
             sx={{
-              ml: 12,
-              mr: 35,
+              // ml: 12,
+              mr: 10,
               display: { xs: 'none', md: 'flex' },
               fontFamily: 'Roboto',
               fontWeight: 500,
@@ -206,7 +206,7 @@ function ResponsiveAppBar(){
 
           <Box sx={{ flexGrow: 0}}>
             <Tooltip title="Open settings">
-              <IconButton onClick={handleOpenUserMenu} sx={{ pr: 12 }}>
+              <IconButton onClick={handleOpenUserMenu} sx={{ pr: 0 }}>
                 <Avatar alt="Remy Sharp" src="https://avatars.githubusercontent.com/u/108568853?v=4" />
                 {/* <link rel="icon" type="image/png" href="https://plantix.net/en/favicon.png" /> */}
               </IconButton>
