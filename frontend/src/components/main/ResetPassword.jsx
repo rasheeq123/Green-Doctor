@@ -1,5 +1,5 @@
 import { AccountCircle } from '@mui/icons-material';
-import { Card, CardContent, Grid, IconButton, InputAdornment, Paper, TextField, Typography } from '@mui/material';
+import { Button, Card, CardContent, Grid, IconButton, InputAdornment, Paper, TextField, Typography } from '@mui/material';
 import React, { useRef } from 'react'
 
 const ResetPassword = () => {
@@ -28,37 +28,22 @@ const ResetPassword = () => {
                 <Grid container>
                     <Grid item md={4} sx={{ mx: 'auto' }}>
                         <Card sx={{
-                            height: 250,
+                            height: 300,
                             boxShadow: 5,
                             borderRadius: 3,
-                            p: 4
+                            p: 5
                         }}>
                             <CardContent>
-                                {/* <form onSubmit={loginform.handleSubmit} > */}
                                 <form>
-                                    <TextField
-                                        id="email"
-                                        // onChange={loginform.handleChange}
-                                        // value={loginform.values.email}
-
-                                        InputProps={{
-                                            endAdornment: (
-                                                <InputAdornment position="end">
-                                                <AccountCircle/>
-                                                </InputAdornment>
-                                            )
-                                        }}
-                                        required type="email" label="Enter Registered Email"
-                                        // error={loginform.touched.email && loginform.error.email} helperText={loginform.touched.email && loginform.error.email} 
-
-                                        variant='outlined' color='success' fullWidth sx={{ mt: 2 }} />
-
-                                    {/* <label htmlFor="">Enter Registered Email</label> */}
-                                    <input id="email" ref={emailRef}
-                                        required type="email" label="Enter Registered Email" variant='outlined' color='success' fullWidth sx={{ mt: 2 }} />
-                                    <button onClick={sendOTP}>Send OTP</button>
-                                    <input type="text" ref={otpRef} />
-                                    <button onClick={verifyOTP}>verify otp</button>
+                                    
+                                    <TextField  id="email" ref={emailRef}
+                                        required type="email" label="Enter Registered Email" fullWidth variant='outlined' color='success'  sx={{ mt: 2 }}
+                                        />
+                                    <Button fullWidth variant='contained'color='success' sx={{ mt: 2 }} onClick={sendOTP}>Send OTP</Button>
+                                    <TextField id="text" ref={otpRef} 
+                                    required type="text" label="Enter OTP" fullWidth variant='outlined' color='success'  sx={{ mt: 2 }}
+                                    />
+                                    <Button fullWidth variant='contained'color='success' sx={{ mt: 2 }} onClick={verifyOTP}>verify otp</Button>
                                 </form>
                             </CardContent>
                         </Card>
