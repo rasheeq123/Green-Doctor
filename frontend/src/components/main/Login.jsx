@@ -1,11 +1,12 @@
-import { Box, Button, Card, CardContent, Grid, InputAdornment, Paper, TextField, Typography } from '@mui/material'
+import { Box, Button, Card, CardContent, Divider, Grid, InputAdornment, Paper, TextField, Typography } from '@mui/material'
 import React from 'react';
 import { AccountCircle } from '@mui/icons-material';
 import VisibilityIcon from '@mui/icons-material/Visibility';
-import { useNavigate } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
 import useAppContext from '../../context/AppContext';
 import { useFormik } from 'formik';
 import Swal from 'sweetalert2';
+import GoogleIcon from '@mui/icons-material/Google';
 
 
 const Login = () => {  
@@ -64,14 +65,14 @@ const loginform= useFormik ({
   return (
     <div >
 
-      <Typography variant='h2' sx={{textAlign: 'center', mt: 5}}>Begin with Login</Typography>
-      <Paper sx={{ boxShadow: 0, mt: 5 }}>
+      <Typography variant='h3' sx={{textAlign: 'center', mt: 2}}>Begin with Login</Typography>
+      <Paper sx={{ boxShadow: 0, mt: 2 }}>
         <Grid container>
           <Grid item md={4} sx={{ mx: 'auto' }}>
             <Card sx={{
-              height: 250, 
+              height: 450, 
               boxShadow: 5,
-              borderRadius: 1,
+              borderRadius: 3,
               p: 4
             }}>
               <CardContent>
@@ -102,11 +103,22 @@ const loginform= useFormik ({
                 }}
                 required type="password" label="Password" error={loginform.touched.password && loginform.error.password} helperText={loginform.touched.password && loginform.error.password} variant='outlined' color='success' fullWidth sx={{ mt: 2 }} />
                 <Box sx={{ textAlign: 'center' }}>
-                  <Button type="submit" variant="contained" disableElevation sx={{ mt: 3}} fullWidth color="success">
+                  <Button type="submit" variant="contained" disableElevation sx={{ mt: 3, borderRadius: 5}} fullWidth color="success">
                     Login
                   </Button>
-                  <p variant='h6' >Dont Have an account - 
-                    <a href="/main/signup"> Create account</a></p>
+                  <Button type="submit" variant="outlined" disableElevation sx={{ mt: 2, borderRadius: 5, textTransform: 'none'}} fullWidth color="success">
+                    Forget Password?
+                  </Button>
+                  <Divider sx={{ mt: 3}} orientation="horizontal" variant="fullWidth" >or </Divider> 
+                  <Button type="submit" variant="outlined" disableElevation sx={{ mt: 2, borderRadius: 5, textTransform: 'none'}} fullWidth color="success">
+                  <InputAdornment position="start" >
+                        <GoogleIcon />
+                      </InputAdornment>
+                    Sign in with Google
+                  </Button>
+                  <p variant='h6' >Dont Have an account?
+                    <NavLink
+                    to="/main/signup">Sign up</NavLink></p>
                 </Box>
                 </form>
               </CardContent>
