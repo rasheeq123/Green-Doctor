@@ -1,4 +1,19 @@
-import {Box,Button,Card,CardContent,Divider,FormControl,Grid,IconButton,InputAdornment,InputLabel,OutlinedInput,Paper,TextField,Typography,} from "@mui/material";
+import {
+  Box,
+  Button,
+  Card,
+  CardContent,
+  Divider,
+  FormControl,
+  Grid,
+  IconButton,
+  InputAdornment,
+  InputLabel,
+  OutlinedInput,
+  Paper,
+  TextField,
+  Typography,
+} from "@mui/material";
 import React from "react";
 import { AccountCircle, Visibility, VisibilityOff } from "@mui/icons-material";
 import VisibilityIcon from "@mui/icons-material/Visibility";
@@ -106,14 +121,26 @@ const Login = () => {
                     sx={{ mt: 2 }}
                   />
 
-                
-
-                  <FormControl required error={loginform.touched.password && loginform.error.password} helperText={loginform.touched.password && loginform.error.password} variant='outlined' color='success' fullWidth sx={{ mt: 2 }}>
-                    <InputLabel htmlFor="outlined-adornment-password">
+                  <FormControl
+                    required
+                    error={
+                      loginform.touched.password && loginform.error.password
+                    }
+                    helperText={
+                      loginform.touched.password && loginform.error.password
+                    }
+                    variant="outlined"
+                    color="success"
+                    fullWidth
+                    sx={{ mt: 2 }}
+                  >
+                    <InputLabel htmlFor="password">
                       Password
                     </InputLabel>
                     <OutlinedInput
-                      id="outlined-adornment-password"
+                      id="password"
+                      onChange={loginform.handleChange}
+                      value={loginform.values.password}
                       type={showPassword ? "text" : "password"}
                       endAdornment={
                         <InputAdornment position="end">
