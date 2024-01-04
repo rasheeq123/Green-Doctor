@@ -106,9 +106,11 @@ const loginform= useFormik ({
                   <Button type="submit" variant="contained" disableElevation sx={{ mt: 3, borderRadius: 5}} fullWidth color="success">
                     Login
                   </Button>
+                  <NavLink to="/main/resetpassword">
                   <Button type="submit" variant="outlined" disableElevation sx={{ mt: 2, borderRadius: 5, textTransform: 'none'}} fullWidth color="success">
                     Forget Password?
                   </Button>
+                  </NavLink>
                   <Divider sx={{ mt: 3}} orientation="horizontal" variant="fullWidth" >or </Divider> 
                   <Button type="submit" variant="outlined" disableElevation sx={{ mt: 2, borderRadius: 5, textTransform: 'none'}} fullWidth color="success">
                   <InputAdornment position="start" >
