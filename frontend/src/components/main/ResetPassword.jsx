@@ -39,11 +39,11 @@ const ResetPassword = () => {
                                     <TextField  id="email" ref={emailRef}
                                         required type="email" label="Enter Registered Email" fullWidth variant='outlined' color='success'  sx={{ mt: 2 }}
                                         />
-                                    <Button fullWidth variant='contained'color='success' sx={{ mt: 2 }} onClick={sendOTP}>Send OTP</Button>
+                                    <Button fullWidth variant='contained'color='success' sx={{ mt: 2,borderRadius:5 }} onClick={sendOTP}>Send OTP</Button>
                                     <TextField id="text" ref={otpRef} 
                                     required type="text" label="Enter OTP" fullWidth variant='outlined' color='success'  sx={{ mt: 2 }}
                                     />
-                                    <Button fullWidth variant='contained'color='success' sx={{ mt: 2 }} onClick={verifyOTP}>verify otp</Button>
+                                    <Button fullWidth variant='contained'color='success' sx={{ mt: 2, borderRadius:5 }} onClick={verifyOTP} >verify otp</Button>
                                 </form>
                             </CardContent>
                         </Card>
