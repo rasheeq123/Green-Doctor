@@ -6,7 +6,6 @@ const Admin = () => {
   return (
     <>
     <Navbar />
-    <center><h1>ADMIN NAVBAR</h1></center>
     <Outlet />
     </>
   )

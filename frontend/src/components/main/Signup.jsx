@@ -88,7 +88,7 @@ const Signup = () => {
                 <Grid item md={5} sx={{mx: 'auto'}}>
 
                   <Card sx={{
-                    height: 480,
+                    height: 560,
                     boxShadow: 5,
                     borderRadius: 3,
                     p: 4
@@ -220,7 +220,7 @@ const Signup = () => {
                     Sign up
                   </Button>
                   <Divider sx={{ mt: 2}} orientation="horizontal" variant="fullWidth" >or </Divider> 
-                  <Button type="submit" variant="outlined" disableElevation sx={{ mt: 2, borderRadius: 5, textTransform: 'none'}} fullWidth color="success">
+                  <Button type="submit" variant="outlined" disableElevation sx={{ mt: 2, mb:1,borderRadius: 5, textTransform: 'none'}} fullWidth color="success">
                   <InputAdornment position="start" >
                         <GoogleIcon />
                       </InputAdornment>

@@ -6,7 +6,6 @@ const User = () => {
   return (
     <>
     <Navbar/>
-    <center><h1>USER NAVBAR</h1></center>
     <Outlet/>
     </>
   )

@@ -28,7 +28,7 @@ const ResetPassword = () => {
                 <Grid container>
                     <Grid item md={4} sx={{ mx: 'auto' }}>
                         <Card sx={{
-                            height: 300,
+                            height: 380,
                             boxShadow: 5,
                             borderRadius: 3,
                             p: 5

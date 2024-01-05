@@ -89,7 +89,7 @@ const Login = () => {
           <Grid item md={4} sx={{ mx: "auto" }}>
             <Card
               sx={{
-                height: 430,
+                height: 470,
                 boxShadow: 5,
                 borderRadius: 3,
                 p: 4,
@@ -192,7 +192,7 @@ const Login = () => {
                       type="submit"
                       variant="outlined"
                       disableElevation
-                      sx={{ mt: 2, borderRadius: 5, textTransform: "none" }}
+                      sx={{ mt: 2, borderRadius: 5, textTransform: "none",mb:1 }}
                       fullWidth
                       color="success"
                     >
