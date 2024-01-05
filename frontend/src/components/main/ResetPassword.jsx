@@ -23,7 +23,7 @@ const ResetPassword = () => {
 
     return (
         <div >
-            <Typography variant='h3' sx={{ textAlign: 'center', mt: 2 }}>Reset your password</Typography>
+            <Typography variant='h3' sx={{ textAlign: 'center', mt: 16 }}>Reset your password</Typography>
             <Paper sx={{ boxShadow: 0, mt: 2 }}>
                 <Grid container>
                     <Grid item md={4} sx={{ mx: 'auto' }}>

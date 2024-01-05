@@ -81,7 +81,7 @@ const Login = () => {
   });
   return (
     <div>
-      <Typography variant="h3" sx={{ textAlign: "center", mt: 2 }}>
+      <Typography variant="h3" sx={{ textAlign: "center", mt: 12 }}>
         Begin with Login
       </Typography>
       <Paper sx={{ boxShadow: 0, mt: 2 }}>
@@ -167,7 +167,7 @@ const Login = () => {
                       fullWidth
                       color="success"
                     >
-                      Login
+                      Continue
                     </Button>
                     <NavLink to="/main/resetpassword">
                       <Button

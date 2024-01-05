@@ -83,7 +83,7 @@ const Signup = () => {
     <div >
             {/* <Typography variant='h4' sx={{textAlign: 'center', mt: 2}}>Sign Up for Unmatched Benefits</Typography> */}
 
-            <Paper sx={{boxShadow:0, mt: 5}}>
+            <Paper sx={{boxShadow:0, mt: 14}}>
               <Grid container>
                 <Grid item md={5} sx={{mx: 'auto'}}>
 
