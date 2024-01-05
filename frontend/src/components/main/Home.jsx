@@ -27,9 +27,9 @@ const Home = () => {
     height: '100vh',
   }}
 > 
-    <Typography  variant="h1" mt={0} sx={{color: 'white', textAlign: 'center'}} >
+    <Typography  variant="h1" mt={0} sx={{color: 'white', textAlign: 'center', fontSize:'10vw'}} >
       Green Doctor </Typography>
-    <Typography variant='h3' sx={{color: 'white', textAlign: 'center'}}>
+    <Typography variant='h3' sx={{color: 'white', textAlign: 'center', fontSize:'3vw'}}>
     Where Leaves Speak and We Listen.</Typography>
     </div>
     </>
