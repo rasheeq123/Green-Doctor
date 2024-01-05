@@ -1,6 +1,6 @@
-import { Box, Button, Card, CardContent, Divider, Grid, InputAdornment, Paper, TextField, Typography } from '@mui/material'
-import React from 'react'
-import { AccountCircle } from '@mui/icons-material';
+import { Box, Button, Card, CardContent, Divider, FormControl, Grid, IconButton, InputAdornment, InputLabel, OutlinedInput, Paper, TextField, Typography } from '@mui/material'
+import React, { useState } from 'react'
+import { AccountCircle, Visibility, VisibilityOff } from '@mui/icons-material';
 import VisibilityIcon from '@mui/icons-material/Visibility';
 import * as Yup from 'yup';
 import { NavLink, useNavigate } from 'react-router-dom';
@@ -16,21 +16,35 @@ const SignupSchema = Yup.object().shape({
     .required('Required'),
 
   email: Yup.string().email('Invalid email').required('Email is Required'),
-  password: Yup.string().required('Password is required')
-    .matches('^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z]).*$', 'Password is invalid'),      // yaha pe hum password me condition dene ke lie ki wo uppercase, lowercase and number include kre , chatgpt se  
-
-  confirm: Yup.string().oneOf([Yup.ref('password'), null], 'Passwords must match')
+  password: Yup.string()
+  .required('Password is required')
+  .matches(
+    /^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z]).*$/,
+    'Password must contain at least one uppercase letter, one lowercase letter, and one number'
+  ),
+confirm: Yup.string()
+  .oneOf([Yup.ref('password'), null], 'Passwords must match')
+  .required('Confirm Password is required'),
 });
 
 const Signup = () => {
+  const [showPassword, setShowPassword] = React.useState(false);
+  const [showConfirmPassword, setShowConfirmPassword] = React.useState(false);
+
+  const handleClickShowPassword = () => setShowPassword((show) => !show);
+  const handleClickShowConfirmPassword = () => setShowConfirmPassword((showConfirm) => !showConfirm);
+  
+  const handleMouseDownPassword = (event) => {
+    event.preventDefault();
+  };
   const navigate = useNavigate();
 
   const signupform = useFormik({
     initialValues: {
       name: '',
       email: '',
-      password: ''
-      
+      password: '',
+      confirm: '',
     },
 
     onSubmit: async (values, { resetForm }) => {
@@ -91,7 +105,7 @@ const Signup = () => {
                           </InputAdornment>
                         )
                       }}
-                      required type="name" label="Name" variant='outlined' color='success'  fullWidth sx={{mt:2}}  helperText={signupform.touched.name && signupform.errors.name}/>
+                     required type="name" label="Name" variant='outlined' color='success'  fullWidth sx={{mt:2}}  helperText={signupform.touched.name && signupform.errors.name} error={signupform.touched.name && signupform.errors.name}/>
 
                       <TextField 
                       id="email" onChange={signupform.handleChange} 
@@ -103,8 +117,8 @@ const Signup = () => {
                           </InputAdornment>
                         )
                       }}
-                      required type="email" label="Email Address" variant='outlined' color='success'  fullWidth sx={{mt:2}} helperText={signupform.touched.email && signupform.errors.email}/>
-                      <TextField 
+                      required type="email" label="Email Address" variant='outlined' color='success'  fullWidth sx={{mt:2}} helperText={signupform.touched.email && signupform.errors.email} error={signupform.touched.email && signupform.errors.email}/>
+                      {/* <TextField 
                       id="password" onChange={signupform.handleChange} 
                       value={signupform.values.password}
                       InputProps={{
@@ -114,8 +128,82 @@ const Signup = () => {
                           </InputAdornment>
                         )
                       }}
-                      required type="password" label="Password" variant='outlined' color='success'  fullWidth sx={{mt:2}} helperText={signupform.touched.password && signupform.errors.password}/>
-                      <TextField 
+                      required type="password" label="Password" variant='outlined' color='success'  fullWidth sx={{mt:2}} helperText={signupform.touched.password && signupform.errors.password}/> */}
+
+                  <FormControl
+                  required
+                    error={
+                      signupform.touched.password && signupform.errors.password
+                    }
+                    helperText={
+                      signupform.touched.password && signupform.errors.password
+                    }
+                    variant="outlined"
+                    color="success"
+                    fullWidth
+                    sx={{ mt: 2 }}
+                  >
+                    <InputLabel htmlFor="password">
+                      Password
+                    </InputLabel>
+                    <OutlinedInput
+                      id="password"
+                      onChange={signupform.handleChange}
+                      value={signupform.values.password}
+                      type={showPassword ? "text" : "password"}
+                      endAdornment={
+                        <InputAdornment position="end">
+                          <IconButton
+                            aria-label="toggle password visibility"
+                            onClick={handleClickShowPassword}
+                            onMouseDown={handleMouseDownPassword}
+                            // edge="end"
+                          >
+                            {showPassword ? <VisibilityOff /> : <Visibility />}
+                          </IconButton>
+                        </InputAdornment>
+                      }
+                      label="Password"
+                    />
+                  </FormControl>
+                  <FormControl
+                  required
+                    error={
+                      signupform.touched.confirm && signupform.errors.confirm
+                    }
+                    helperText={
+                      signupform.touched.confirm && signupform.errors.confirm
+                    }
+                    variant="outlined"
+                    color="success"
+                    fullWidth
+                    sx={{ mt: 2 }}
+                  >
+                    <InputLabel htmlFor="confirm">
+                      Confirm password
+                    </InputLabel>
+                    <OutlinedInput
+                      id="confirm"
+                      onChange={signupform.handleChange}
+                      value={signupform.values.confirm}
+                      type={showConfirmPassword ? "text" : "password"}
+                      endAdornment={
+                        <InputAdornment position="end">
+                          <IconButton
+                            aria-label="toggle Confirm password visibility"
+                            onClick={handleClickShowConfirmPassword}
+                            onMouseDown={handleMouseDownPassword}
+                            // edge="end"
+                          >
+                            {showConfirmPassword ? <VisibilityOff /> : <Visibility />}
+                          </IconButton>
+                        </InputAdornment>
+                      }
+                      label="Confirm Password"
+                    />
+                  </FormControl>
+
+                      {/* <TextField 
                       id="confirm" onChange={signupform.handleChange} 
                       value={signupform.values.confirm} 
                       InputProps={{
@@ -125,9 +213,9 @@ const Signup = () => {
                           </InputAdornment>
                         )
                       }}
-                      required type="password" label="Confirm Password" variant='outlined' color='success'  fullWidth sx={{mt:2}} helperText={signupform.touched.confirm && signupform.errors.confirm} />
+                      required type="password" label="Confirm Password" variant='outlined' color='success'  fullWidth sx={{mt:2}} helperText={signupform.touched.confirm && signupform.errors.confirm} /> */}
                       
-                      <Box sx={{ textAlign: 'center' }}>
+                  <Box sx={{ textAlign: 'center' }}>
                   <Button type="submit" variant="contained" disableElevation sx={{ mt: 3, borderRadius: 5}} fullWidth color="success">
                     Sign up
                   </Button>
@@ -148,12 +236,7 @@ const Signup = () => {
                 </Grid>
               </Grid>
             </Paper>
-
-
           </div>
-        
-
   )
 }
-
 export default Signup;

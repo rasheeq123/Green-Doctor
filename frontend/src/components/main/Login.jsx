@@ -111,9 +111,9 @@ const Login = () => {
                     required
                     type="email"
                     label="Email Address"
-                    error={loginform.touched.email && loginform.error.email}
+                    error={loginform.touched.email && loginform.errors.email}
                     helperText={
-                      loginform.touched.email && loginform.error.email
+                      loginform.touched.email && loginform.errors.email
                     }
                     variant="outlined"
                     color="success"
@@ -124,10 +124,10 @@ const Login = () => {
                   <FormControl
                     required
                     error={
-                      loginform.touched.password && loginform.error.password
+                      loginform.touched.password && loginform.errors.password
                     }
                     helperText={
-                      loginform.touched.password && loginform.error.password
+                      loginform.touched.password && loginform.errors.password
                     }
                     variant="outlined"
                     color="success"
