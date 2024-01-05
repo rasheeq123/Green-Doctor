@@ -203,7 +203,7 @@ const Login = () => {
                     </Button>
                     <p variant="h6">
                       Dont Have an account?
-                      <NavLink to="/main/signup">Sign up</NavLink>
+                      <NavLink to="/main/signup" style={{ textDecoration: 'none' }}>Sign up</NavLink>
                     </p>
                   </Box>
                 </form>

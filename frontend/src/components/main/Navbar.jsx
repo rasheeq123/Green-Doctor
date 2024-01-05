@@ -89,7 +89,7 @@ function ResponsiveAppBar(){
             variant="h5"
             noWrap
             component="a"
-            href="main/home"
+            href="/main/home"
             sx={{
               // ml: 12,
               mr: 10,

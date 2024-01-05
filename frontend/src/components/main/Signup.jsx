@@ -140,7 +140,7 @@ const Signup = () => {
                   </Button>
                   <p variant='h6' >Already Have an account?
                     <NavLink
-                    to="/main/login">Sign in</NavLink></p>
+                    to="/main/login" style={{ textDecoration: 'none' }}>Sign in</NavLink></p>
                 </Box>
                       </form>
                     </CardContent>
