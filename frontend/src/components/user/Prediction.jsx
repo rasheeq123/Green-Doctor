@@ -1,6 +1,6 @@
 import React, { useCallback, useEffect, useRef, useState } from "react";
 import app_config from "../../config";
-import { NavLink, useNavigate } from "react-router-dom";
+import { Link, NavLink, useNavigate } from "react-router-dom";
 import Webcam from "react-webcam";
 import { Box, Button, Grid, Paper, Typography } from "@mui/material";
 import {
@@ -181,14 +181,39 @@ const Prediction = () => {
       getDiseaseData();
       return (
         <>
-          <p className="h1 fw-bold text-danger text-center">
+          {/* <p className="h1 fw-bold text-danger text-center">
             OOps!! Your plant has been detected with disease :{" "}
             {result.className}
-          </p>
-          <NavLink className="btn btn-success mt-3 w-100" to="/user/cure">
+          </p> */}
+          <Typography
+            variant="h4"
+            fontWeight="bold"
+            color="error"
+            textAlign="center"
+            sx={{ mt: 4 }}
+          >
+            OOps!! Your plant has been detected with disease: {result.className}
+          </Typography>
+          <div style={{ display: "flex", justifyContent: "center" }}>
+          {/* <NavLink to="/user/cure"> */}
+          {/* <NavLink className="btn btn-success mt-3 w-50 " to="/user/cure"> */}
+          {/* <Button variant="contained" align='center' sx={{mt:3, color:'success', textTransform:'none',width:'50%'}}> */}
+          {/* Find Cure for Your Disease{" "} */}
+          {/* <i class="fa fa-arrow-right" aria-hidden="true"></i> */}
+          {/* </Button> */}
+          {/* </NavLink> */}
+          <Button
+            component={Link}
+            to="/user/cure"
+            variant="contained"
+            color="success" // You might need to customize this color based on your theme
+            fullWidth
+            sx={{ mt: 3, fontSize: "1.5rem", py: 1,borderRadius:8, textTransform:'none',width:'50%'}}
+            >
             Find Cure for Your Disease{" "}
-            <i class="fa fa-arrow-right" aria-hidden="true"></i>
-          </NavLink>
+            <i className="fa fa-arrow-right" aria-hidden="true"></i>
+          </Button>
+            </div> 
         </>
       );
     }
@@ -197,7 +222,7 @@ const Prediction = () => {
   return (
     <Box
       sx={{
-        mt:7,
+        mt: 7,
         minHeight: "100vh",
         // backgroundImage:
         //   "url('https://img.rawpixel.com/s3fs-private/rawpixel_images/website_content/v986-bg-02-kqhe3wit.jpg?w=1200&h=1200&dpr=1&fit=clip&crop=default&fm=jpg&q=75&vib=3&con=3&usm=15&cs=srgb&bg=F4F4F3&ixlib=js-2.2.1&s=a18675d7f6be224df8ff585d65d5d8dc')",
@@ -253,7 +278,7 @@ const Prediction = () => {
                           borderRadius: 23,
                           mt: 2,
                           textTransform: "none",
-                          width:'50%'
+                          width: "50%",
                         }}
                         variant="contained"
                         color="primary"
