@@ -2,8 +2,17 @@ import React, { useCallback, useEffect, useRef, useState } from "react";
 import app_config from "../../config";
 import { Link, NavLink, useNavigate } from "react-router-dom";
 import Webcam from "react-webcam";
-import { Box, Button, Grid, Paper, Typography } from "@mui/material";
 import {
+  Box,
+  Button,
+  Grid,
+  IconButton,
+  Paper,
+  Tooltip,
+  Typography,
+} from "@mui/material";
+import {
+  CameraAlt,
   CloudUpload,
   PhotoAlbumRounded,
   PhotoCamera,
@@ -195,25 +204,32 @@ const Prediction = () => {
             OOps!! Your plant has been detected with disease: {result.className}
           </Typography>
           <div style={{ display: "flex", justifyContent: "center" }}>
-          {/* <NavLink to="/user/cure"> */}
-          {/* <NavLink className="btn btn-success mt-3 w-50 " to="/user/cure"> */}
-          {/* <Button variant="contained" align='center' sx={{mt:3, color:'success', textTransform:'none',width:'50%'}}> */}
-          {/* Find Cure for Your Disease{" "} */}
-          {/* <i class="fa fa-arrow-right" aria-hidden="true"></i> */}
-          {/* </Button> */}
-          {/* </NavLink> */}
-          <Button
-            component={Link}
-            to="/user/cure"
-            variant="contained"
-            color="success" // You might need to customize this color based on your theme
-            fullWidth
-            sx={{ mt: 3, fontSize: "1.5rem", py: 1,borderRadius:8, textTransform:'none',width:'50%'}}
+            {/* <NavLink to="/user/cure"> */}
+            {/* <NavLink className="btn btn-success mt-3 w-50 " to="/user/cure"> */}
+            {/* <Button variant="contained" align='center' sx={{mt:3, color:'success', textTransform:'none',width:'50%'}}> */}
+            {/* Find Cure for Your Disease{" "} */}
+            {/* <i class="fa fa-arrow-right" aria-hidden="true"></i> */}
+            {/* </Button> */}
+            {/* </NavLink> */}
+            <Button
+              component={Link}
+              to="/user/cure"
+              variant="contained"
+              color="success" // You might need to customize this color based on your theme
+              fullWidth
+              sx={{
+                mt: 3,
+                fontSize: "1.5rem",
+                py: 1,
+                borderRadius: 8,
+                textTransform: "none",
+                width: "50%",
+              }}
             >
-            Find Cure for Your Disease{" "}
-            <i className="fa fa-arrow-right" aria-hidden="true"></i>
-          </Button>
-            </div> 
+              Find Cure for Your Disease{" "}
+              <i className="fa fa-arrow-right" aria-hidden="true"></i>
+            </Button>
+          </div>
         </>
       );
     }
@@ -245,12 +261,15 @@ const Prediction = () => {
                 className="card"
                 sx={{
                   borderRadius: 2,
+                  // backgroundSize: '100% 100%', // Cover the entire Paper
                   backgroundSize: "cover",
-                  backgroundImage: `url('https://cipotato.org/wp-content/uploads/2020/03/Phone-App-2-PUT.jpg')`,
+                  // backgroundPosition: 'center',
+                  backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.5)), url('/images/C1.jpg')`,
                 }}
               >
                 <div className="card-header">
-                  <Typography variant="h3" align="center" color={"white"}>
+                  <Typography variant="h3" align="center" color={"white"}
+                  sx={{textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)'}}>
                     Use Camera
                   </Typography>
                 </div>
@@ -291,17 +310,27 @@ const Prediction = () => {
                       </Button>
                     </>
                   ) : (
-                    <div className="cam-container">
-                      <div class="overlay d-flex justify-content-center align-items-center flex-column">
-                        <div></div>
-                        <img
-                          src="/camera.png"
-                          style={{ display: "block", width: "200px" }}
-                          onClick={(e) => setCamOpen(true)}
-                        />
-                        {/* <p className="h1 text-center mt-3">Use Camera</p> */}
-                      </div>
-                    </div>
+                    <Box className="cam-container">
+                      <Box
+                        className="overlay"
+                        sx={{
+                          display: "flex",
+                          justifyContent: "center",
+                          alignItems: "center",
+                          flexDirection: "column",
+                        }}
+                      >
+                        <Box></Box>
+                        <Tooltip title="Open Camera" arrow>
+                          <IconButton onClick={(e) => setCamOpen(true)}>
+                            <CameraAlt
+                              fontSize="large"
+                              style={{ color: "white" }}
+                            />
+                          </IconButton>
+                        </Tooltip>
+                      </Box>
+                    </Box>
                   )}
                 </div>
               </Paper>
@@ -309,13 +338,17 @@ const Prediction = () => {
             <Paper
               elevation={24}
               className="col-md-6 mx-auto"
-              sx={{ borderRadius: 2 }}
+              sx={{ borderRadius: 2,
+                backgroundSize: "cover",
+                // backgroundPosition: 'center',
+                backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6)), url('/images/C1.jpg')`,
+              }}
             >
               {/* <div className="card h-100 upload-img-card"> */}
               <Box sx={{ textAlign: "center" }}>
                 {/* <img src="" /> */}
                 <div className="card-header">
-                  <Typography variant="h3" align="center">
+                  <Typography variant="h3" align="center" sx={{color:'white', textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)'}}>
                     Upload from Device
                   </Typography>
                 </div>
@@ -361,7 +394,7 @@ const Prediction = () => {
                 ) : (
                   <p
                     className="text-center h1 mt-4 py-4 px-5"
-                    style={{ fontSize: "18px" }}
+                    style={{ textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)',fontSize: "18px", color:'white'}}
                   >
                     Sharper Images, Better Insights <br></br>For the most
                     accurate diagnosis, upload a sharp and clear picture of the
