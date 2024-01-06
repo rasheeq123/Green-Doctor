@@ -7,6 +7,8 @@ import { NavLink, useNavigate } from 'react-router-dom';
 import { useFormik } from 'formik';
 import Swal from 'sweetalert2';
 import GoogleIcon from '@mui/icons-material/Google';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 const SignupSchema = Yup.object().shape({
@@ -69,12 +71,11 @@ const Signup = () => {
       }
       else {  
         Swal.fire({
-          icon: 'error', // error defaullt h yaha
+          icon: 'error', 
           title: 'Error',
           text: 'Something went wrong!!'
         })
       }
-      //send values to backend
     },
     validationSchema: SignupSchema
   });
@@ -236,6 +237,7 @@ const Signup = () => {
                 </Grid>
               </Grid>
             </Paper>
+            <ToastContainer />
           </div>
   )
 }
