@@ -256,7 +256,8 @@ const Prediction = () => {
         </div>
       </Box>
       <Container>
-        {/* <div className="container"> */}
+        {/* <div className="container"> */} 
+      {/* <Grid container spacing={0}> */}
           <div className="row mt-4">
             <div className="col-md-6">
               <Paper
@@ -378,7 +379,7 @@ const Prediction = () => {
                       px: 2,
                       py: 1,
                       borderRadius: 8,
-                      mt: 2,
+                      mt: 3,
                       textTransform: "none",
                     }}
                     startIcon={<CloudUpload />}
@@ -450,6 +451,7 @@ const Prediction = () => {
             </div>
           )}
         {/* </div> */}
+        {/* </Grid> */}
       </Container>
     </Box>
       </div>
