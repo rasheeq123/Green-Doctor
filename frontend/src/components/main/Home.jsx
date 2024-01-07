@@ -24,26 +24,26 @@ const Home = () => {
             "rgba(7, 7, 7, 0.1) 99%" +
             "), " +
             "linear-gradient(40deg, #040a22, #162561, #202e64, #6f7aa6)",
-          backgroundRepeat: "no-repeat",
-          backgroundSize: "cover",
+          // backgroundRepeat: "no-repeat",
+          // backgroundSize: "cover",
           height: "100vh",
         }}
       >
         <Typography
           variant="h1"
           mt={0}
-          sx={{ color: "white", textAlign: "center", fontSize: "10vw" }}
+          sx={{ color: "rgb(121, 158, 42)", textAlign: "center", fontSize: "10vw",textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)' }}
         >
           Green Doctor{" "}
         </Typography>
         <Typography
           variant="h3"
-          sx={{ color: "white", textAlign: "center", fontSize: "3vw" }}
+          sx={{ color: "rgb(121, 158, 42)", textAlign: "center", fontSize: "3vw",textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)' }}
         >
           Where Leaves Speak and We Listen.
         </Typography>
       </div>
-        <Typography variant="h2" textAlign={"center"} sx={{ mt: 5,mb:10}}>
+        <Typography variant="h2" textAlign={"center"} sx={{ mt: 5,mb:10,}}>
           Boost your crop production
         </Typography>
         <Container>
@@ -109,7 +109,7 @@ const Home = () => {
             <Grid item xs={12} sm={6}>
               <Container
                sx={{display: "flex",
-               backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.3)), url('/images/H2.jpg')`,
+               backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.3)), url('/images/H1.jpg')`,
                   flexDirection: "column",
                   justifyContent: "center",
                   alignItems: "center",
@@ -147,6 +147,66 @@ const Home = () => {
             </Grid>
           </Grid>
         </Container>
+
+{/* --------------------------------------------------------------------------------------------------------- */}
+
+
+<div className="accordion">
+  <Typography variant="h3" sx={{mb:5}} textAlign={'center'}>Frequently Asked Questions</Typography>
+  <div className="accordion-item">
+    <input type="checkbox" id="accordion1" />
+    <label htmlFor="accordion1" className="accordion-item-title">
+      <span className="icon" />
+      What is Green Doctor, and how is it helpful to Garderner and Farmers?
+    </label>
+    <div className="accordion-item-desc">
+    Green Doctor is a web Based Solution to identify and solve disease in plants/crops. Provides tailored treatment plans and proactive measures to combat plant disease.Designed for urban farmers, farmers and amateur gardener to protect their crops/plants and boost production.
+
+    </div>
+  </div>
+  <div className="accordion-item">
+    <input type="checkbox" id="accordion2" />
+    <label htmlFor="accordion2" className="accordion-item-title">
+      <span className="icon" />
+      How long does it take to see results from Green Doctor?
+    </label>
+    <div className="accordion-item-desc">
+    The time to see results from Green Doctor depends on factors such as system response time, internet speed, and the complexity of the plant disease.
+    </div>
+  </div>
+  <div className="accordion-item">
+    <input type="checkbox" id="accordion3" />
+    <label htmlFor="accordion3" className="accordion-item-title">
+      <span className="icon" />
+      What are the key components of a Green Doctor?
+    </label>
+    <div className="accordion-item-desc">
+    Green Doctor strives to offer a comprehensive and valuable solution for plant disease management, ensuring high accuracy, effective recommendations, and a user-friendly experience, all at no cost to the users.
+    </div>
+  </div>
+  <div className="accordion-item">
+    <input type="checkbox" id="accordion4" />
+    <label htmlFor="accordion4" className="accordion-item-title">
+      <span className="icon" />
+      How does Green Doctor helps in country Economy?
+    </label>
+    <div className="accordion-item-desc">
+    Green Doctor plays a vital role in enhancing agricultural productivity, reducing costs, promoting sustainability, and empowering farmers, all of which contribute to the overall growth and resilience of the country's economy, especially in the context of India's significant role in food production.
+    </div>
+  </div>
+  <div className="accordion-item">
+    <input type="checkbox" id="accordion5" />
+    <label htmlFor="accordion5" className="accordion-item-title">
+      <span className="icon" />
+      Who Manage Green Doctor?
+    </label>
+    <div className="accordion-item-desc">
+    The founders of Green Doctor are Omkar Sharma and Rasheeq Zehra. Both are Computer Science Graduate. They initiated the development of Green Doctor to address real-time issues related to plant health. Green Doctor prioritizes system accuracy, ensuring predictions exceed 95%. The platform recommends effective and quality products for crop care while offering a clean and simple user interface. Importantly, the services provided by Green Doctor are accessible to users free of cost. This initiative aligns with the goal of promoting sustainable agriculture and supporting the economy through enhanced food production.      
+    </div>
+  </div>
+</div>
+
+
     </>
   );
 };

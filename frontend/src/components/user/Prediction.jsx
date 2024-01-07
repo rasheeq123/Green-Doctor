@@ -112,7 +112,8 @@ const Prediction = () => {
     // Refer to tmImage.loadFromFiles() in the API to support files from a file picker
     // or files from your local hard drive
     // Note: the pose library adds "tmImage" object to your window (window.tmImage)
-    let modelT = await window.tmImage.load(modelURL, metadataURL);
+    // let modelT = await window.tmImage.load(modelURL, metadataURL); //human erron tm by mistake
+    let modelT = await window.Image.load(modelURL, metadataURL);
     setMaxPredictions(modelT.getTotalClasses());
     setModel(modelT);
   }
@@ -268,8 +269,8 @@ const Prediction = () => {
                   minHeight: 400,
                   // backgroundSize: '100% 100%', // Cover the entire Paper
                   backgroundSize: "cover",
-                  // backgroundPosition: 'center',
-                  backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.5)), url('/images/C1.jpg')`,
+                  backgroundPosition: 'center',
+                  backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6)), url('/images/C1.jpg')`,
                 }}
               >
                 <div className="card-header">
@@ -352,8 +353,8 @@ const Prediction = () => {
               sx={{ borderRadius: 2,
                 minHeight: 400,
                 backgroundSize: "cover",
-                // backgroundPosition: 'center',
-                backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.5)), url('/images/C1.jpg')`,
+                backgroundPosition: 'center',
+                backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6)), url('/images/H2.jpg')`,
               }}
             >
               {/* <div className="card h-100 upload-img-card"> */}
@@ -374,13 +375,14 @@ const Prediction = () => {
                   <Button
                     variant="contained"
                     color="primary"
-                    size="small"
+                    // size="small"
                     sx={{
-                      px: 2,
+                      px: 4,
                       py: 1,
                       borderRadius: 8,
-                      mt: 3,
+                      mt: 1.5,
                       textTransform: "none",
+                      fontSize:'18px'
                     }}
                     startIcon={<CloudUpload />}
                     component="div" // Allows the button to act as a label for the input
@@ -399,7 +401,7 @@ const Prediction = () => {
                 {selImage ? (
                   <img
                     style={{ height: "350px" }}
-                    className="d-block m-auto mt-2"
+                    className="d-block m-auto mt-2 mb-1"
                     src={selImage}
                     alt=""
                   />
