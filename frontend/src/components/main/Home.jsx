@@ -43,7 +43,7 @@ const Home = () => {
           Where Leaves Speak and We Listen.
         </Typography>
       </div>
-        <Typography variant="h2" textAlign={"center"} sx={{ mt: 5,mb:20}}>
+        <Typography variant="h2" textAlign={"center"} sx={{ mt: 5,mb:10}}>
           Boost your crop production
         </Typography>
         <Container>
@@ -98,7 +98,7 @@ const Home = () => {
 {/* ------------------------------------------------------------------------------------------------------- */}
 {/* 2nd container started */}
 
-        <Container sx={{mt:0,}}>
+        <Container sx={{mt:5,}}>
           <Grid
             container
             rowSpacing={1}
@@ -141,7 +141,7 @@ const Home = () => {
                 <Typography variant="h4" mb={2} fontWeight='semibold'>Find the right treatment</Typography>
                 <Typography mb={3} variant="h5">Get great deals on agricultural products from your local retailers. Compare prices, learn about the products and how to use them.</Typography>
                 <NavLink to="/user">
-                <Button sx={{textTransform:'none',borderRadius:'28px',mt:4,width:'50%',fontSize:'18px',py:1}} variant='contained' color='primary'>Get a free treatment</Button>
+                <Button sx={{textTransform:'none',borderRadius:'28px',mt:4,mb:10,width:'50%',fontSize:'18px',py:1}} variant='contained' color='primary'>Get a free treatment</Button>
                 </NavLink>
               </Box>
             </Grid>
