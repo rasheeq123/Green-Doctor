@@ -86,6 +86,11 @@ function ResponsiveAppBar(){
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           {/* <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} /> */}
+          <img
+            src="/images/GD_Logo-.png"  // Update the path to your logo
+            alt="Logo"
+            style={{ marginRight: '10px', maxHeight: '40px' }}
+          />
           <Typography
             variant="h6"
             noWrap

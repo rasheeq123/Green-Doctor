@@ -85,6 +85,11 @@ function ResponsiveAppBar(){
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           {/* <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 18, }} /> */}
+          <img
+            src="/images/GD_Logo-.png"  // Update the path to your logo
+            alt="Logo"
+            style={{ marginRight: '10px', maxHeight: '40px' }}
+          />
           <Typography
             variant="h5"
             noWrap
@@ -103,7 +108,7 @@ function ResponsiveAppBar(){
             }}
           >
             Green Doctor
-          </Typography>
+          </Typography> 
 
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none'}, justifyContent: 'center' }}>
             <IconButton
