@@ -1,3 +1,4 @@
+import { Tooltip } from '@mui/material'
 import React from 'react'
 
 const Footer = () => {
@@ -8,61 +9,48 @@ const Footer = () => {
     <div className="container">
       <div className="row">
         <div className="col-sm-12 col-md-6">
-          <h6>About</h6>
+          <h6>Green Doctor</h6>
           <p className="text-justify">
-            VintiMart is for furniture lovers seeking to add a touch of elegance to their homes without breaking the bank. It extends a helping hand to those seeking to furnish their homes with dignity and grace also empowers both the furniture donor and the recipient, fostering a spirit of community and shared purpose
+          Web Based Solution to identify and solve disease in plants/crops. Provides tailored treatment plans and proactive measures to combat plant disease.Designed for urban farmers, farmers and amateur gardener to protect their crops/plants and boost production.
           </p>
         </div>
         <div className="col-xs-6 col-md-3">
           <h6>Categories</h6>
           <ul className="footer-links">
+            {/* <li>
+              <a href="/main/home">Home</a>
+            </li> */}
             <li>
-              <a href="/browsefurniture">Home Decor</a>
-            </li>
-            <li>
-              <a href="/browsefurniture">
-                Modern Furniture
+              <a href="/user">
+                Prediction
               </a>
             </li>
             <li>
-              <a href="/browsefurniture">
-                Vintage Article
+              <a href="/user">
+                Diagnosis
               </a>
             </li>
             <li>
-              <a href="/browsefurniture">
-                Browse Furniture
+              <a href="/user">
+                Admin
               </a>
             </li>
             <li>
-              <a href="/browsefurniture">Top Discount</a>
+              <a href="/user">Product</a>
             </li>
             <li>
-              <a href="/addfurniture">Sell Furniture</a>
+              <a href="/user">Treatment</a>
             </li>
           </ul>
         </div>
-        <div className="col-xs-6 col-md-3">
-          <h6>Quick Links</h6>
-          <ul className="footer-links">
-            <li>
-              <a href="/home">About Us</a>
-            </li>
-            <li>
-              <a href="/contact">Contact Us</a>
-            </li>
-            <li>
-              <a href="/browsefurniture">
-                Purchase
-              </a>
-            </li>
-            <li>
-              <a href="/view">View Order</a>
-            </li>
-            <li>
-              <a href="/cartpage">Cart</a>
-            </li>
-          </ul>
+        <div className="col-xs-6 col-md-3 ">    
+        <Tooltip title="Green Doctor Logo" arrow>
+          <img
+            src="/images/GD_Logo-.png"  // Update the path to your logo
+            alt="Logo"
+            style={{ marginRight: '0px', maxHeight: '150px' }}
+          />
+          </Tooltip>
         </div>
       </div>
       <hr />
@@ -72,13 +60,13 @@ const Footer = () => {
         <div className="col-md-8 col-sm-6 col-xs-12">
           <p className="copyright-text">
             Copyright © 2023 All Rights Reserved by
-            <a href="/"> VintiMart</a>.
+            <a href="/"> Green Doctor </a>.
           </p>
         </div>
         <div className="col-md-4 col-sm-6 col-xs-12">
           <ul className="social-icons">
             <li>
-              <a className="github" href="https://github.com/omkarsharma2821/VintiMart/">
+              <a className="github" href="https://github.com/omkarsharma2821/">
               <i class="fa-brands fa-github"></i>
               </a>
             </li>
