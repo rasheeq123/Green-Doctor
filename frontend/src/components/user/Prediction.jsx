@@ -113,7 +113,8 @@ const Prediction = () => {
     // or files from your local hard drive
     // Note: the pose library adds "tmImage" object to your window (window.tmImage)
     // let modelT = await window.tmImage.load(modelURL, metadataURL); //human erron tm by mistake
-    let modelT = await window.Image.load(modelURL, metadataURL);
+    // let modelT = await window.Image.load(modelURL, metadataURL);
+    let modelT = await window.tmImage.load(modelURL, metadataURL); 
     setMaxPredictions(modelT.getTotalClasses());
     setModel(modelT);
   }
@@ -213,24 +214,51 @@ const Prediction = () => {
             {/* <i class="fa fa-arrow-right" aria-hidden="true"></i> */}
             {/* </Button> */}
             {/* </NavLink> */}
-            <Button
-              component={Link}
-              to="/user/cure"
-              variant="contained"
-              color="success" // You might need to customize this color based on your theme
-              // fullWidth
-              sx={{
-                mt: 3,
-                fontSize: "1.5rem",
-                py: 1,
-                borderRadius: 8,
-                textTransform: "none",
-                width: "50%",
-              }}
-            >
-              Find Cure for Your Disease{" "}
-              <i className="fa fa-arrow-right" aria-hidden="true"></i>
-            </Button>
+            <Box
+  sx={{
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+  }}
+>
+  <Button
+    component={Link}
+    to="/user/cure"
+    variant="contained"
+    color="success"
+    sx={{
+      mt: 3,
+      fontSize: '1.5rem',
+      py: 1,
+      borderRadius: 8,
+      textTransform: 'none',
+      width: '565px',
+    }}
+  >
+    Find Cure for Your Disease{' '}
+    <i className="fa fa-arrow-right" aria-hidden="true"></i>
+  </Button>
+
+  <Button
+    component={Link}
+    to="/user/cure"
+    variant="contained"
+    color="success"
+    sx={{
+      mt: 3,
+      fontSize: '1.5rem',
+      py: 1,
+      // mx:10,
+      borderRadius: 8,
+      textTransform: 'none',
+      width: '565px',
+    }}
+  >
+    Find Cure for Your Disease{' '}
+    <i className="fa fa-arrow-right" aria-hidden="true"></i>
+  </Button>
+</Box>
+
           </div>
         </>
       );
@@ -450,6 +478,26 @@ const Prediction = () => {
                   <Typography variant="h5">Predict Disease</Typography>
                 )}
               </Button>
+              {/* <div style={{ display: "flex", justifyContent: "center" }}>
+              <NavLink to='/user/History'>
+              <Button
+                type="submit"
+                variant="contained"
+                sx={{
+                  mt: 2,
+                  borderRadius: 10,
+                  textTransform: "none",
+                  mb: 2,
+                  py: 1,
+                  width: "50%",
+                  fontSize:'22px'
+                }}
+                color="primary"
+              >
+                View History
+              </Button>
+              </NavLink>
+              </div> */}
             </div>
           )}
         {/* </div> */}

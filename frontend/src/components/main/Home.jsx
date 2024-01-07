@@ -156,11 +156,11 @@ const Home = () => {
     <input type="checkbox" id="accordion1" />
     <label htmlFor="accordion1" className="accordion-item-title">
       <span className="icon" />
-      What is Green Doctor, and how is it helpful to Garderner and Farmers?
+      {/* What is Green Doctor, how does it provide assistance to gardeners & farmers? */}
+      What is Green Doctor, and how does it benefit gardeners & farmers?
     </label>
     <div className="accordion-item-desc">
     Green Doctor is a web Based Solution to identify and solve disease in plants/crops. Provides tailored treatment plans and proactive measures to combat plant disease.Designed for urban farmers, farmers and amateur gardener to protect their crops/plants and boost production.
-
     </div>
   </div>
   <div className="accordion-item">
