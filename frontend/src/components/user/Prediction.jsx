@@ -5,6 +5,7 @@ import Webcam from "react-webcam";
 import {
   Box,
   Button,
+  Container,
   Grid,
   IconButton,
   Paper,
@@ -216,7 +217,7 @@ const Prediction = () => {
               to="/user/cure"
               variant="contained"
               color="success" // You might need to customize this color based on your theme
-              fullWidth
+              // fullWidth
               sx={{
                 mt: 3,
                 fontSize: "1.5rem",
@@ -236,6 +237,9 @@ const Prediction = () => {
   };
 
   return (
+    // <div className="" style={{backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.5)), url('/images/C1.jpg')`,backgroundSize: "cover",}}>
+    // <div className="" style={{backgroundImage: `linear-gradient(to bottom, #ffffff, #f5f5f5)`}}>
+    <div className="">
     <Box
       sx={{
         mt: 7,
@@ -246,14 +250,13 @@ const Prediction = () => {
     >
       <Box sx={{ background: "linear-gradient(to bottom, #23074d, #cc5333)" }}>
         <div className="container py-5 ">
-          <Typography variant="h2" textAlign={"center"} sx={{ color: "white" }}>
+          <Typography variant="h2" textAlign={"center"} sx={{ color: "white",textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)' }}>
             Decrypting Your Garden's Leafy Secrets!
           </Typography>
         </div>
       </Box>
-
-      <Grid>
-        <div className="container">
+      <Container>
+        {/* <div className="container"> */}
           <div className="row mt-4">
             <div className="col-md-6">
               <Paper
@@ -261,6 +264,7 @@ const Prediction = () => {
                 className="card"
                 sx={{
                   borderRadius: 2,
+                  minHeight: 400,
                   // backgroundSize: '100% 100%', // Cover the entire Paper
                   backgroundSize: "cover",
                   // backgroundPosition: 'center',
@@ -329,6 +333,12 @@ const Prediction = () => {
                             />
                           </IconButton>
                         </Tooltip>
+                        <p
+                    className="text-center h1 mt-4 py-4 px-5"
+                    style={{ textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)',fontSize: "18px", color:'white'}}
+                  >
+                    For accurate predictions, ensure you're in good light. Capture a clear photo to help us analyze your plant's condition.
+                  </p>
                       </Box>
                     </Box>
                   )}
@@ -339,19 +349,20 @@ const Prediction = () => {
               elevation={24}
               className="col-md-6 mx-auto"
               sx={{ borderRadius: 2,
+                minHeight: 400,
                 backgroundSize: "cover",
                 // backgroundPosition: 'center',
-                backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6)), url('/images/C1.jpg')`,
+                backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.5)), url('/images/C1.jpg')`,
               }}
             >
               {/* <div className="card h-100 upload-img-card"> */}
-              <Box sx={{ textAlign: "center" }}>
                 {/* <img src="" /> */}
                 <div className="card-header">
-                  <Typography variant="h3" align="center" sx={{color:'white', textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)'}}>
+                  <Typography variant="h3" align="center" sx={{color:'white', textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)',mt:1}}>
                     Upload from Device
                   </Typography>
                 </div>
+              <Box sx={{ textAlign: "center" }}>
                 {/* <label
                     className="d-block btn btn-primary px-5 py-3"
                     htmlFor="leaf-image"
@@ -386,8 +397,8 @@ const Prediction = () => {
 
                 {selImage ? (
                   <img
-                    style={{ height: "400px" }}
-                    className="d-block m-auto mt-3"
+                    style={{ height: "350px" }}
+                    className="d-block m-auto mt-2"
                     src={selImage}
                     alt=""
                   />
@@ -396,7 +407,7 @@ const Prediction = () => {
                     className="text-center h1 mt-4 py-4 px-5"
                     style={{ textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)',fontSize: "18px", color:'white'}}
                   >
-                    Sharper Images, Better Insights <br></br>For the most
+                    Sharper Images, Better Insights, For the most
                     accurate diagnosis, upload a sharp and clear picture of the
                     leaf.
                   </p>
@@ -438,9 +449,10 @@ const Prediction = () => {
               </Button>
             </div>
           )}
-        </div>
-      </Grid>
+        {/* </div> */}
+      </Container>
     </Box>
+      </div>
   );
 };
 
