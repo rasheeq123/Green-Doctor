@@ -241,20 +241,19 @@ const Prediction = () => {
 
   <Button
     component={Link}
-    to="/user/cure"
+    to="/user/history"
     variant="contained"
     color="success"
     sx={{
       mt: 3,
       fontSize: '1.5rem',
       py: 1,
-      // mx:10,
       borderRadius: 8,
       textTransform: 'none',
       width: '565px',
     }}
   >
-    Find Cure for Your Disease{' '}
+    View Previous History{' '}
     <i className="fa fa-arrow-right" aria-hidden="true"></i>
   </Button>
 </Box>
