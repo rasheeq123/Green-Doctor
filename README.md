@@ -98,10 +98,20 @@ npm run build
 ```
 
 
-## :handshake: Contact
+## :handshake: Contact Owners
+
+<p align="left">
+  <img src="https://avatars.githubusercontent.com/u/104587783?s=96&v=4" alt='image' width='80' style="border-radius: 50%;">
+  <img src="https://avatars.githubusercontent.com/u/108568853?v=4" alt='image' width='80' style="border-radius: 50%;">
+</p>
+
 
 Omkar Sharma - [LINKEDIN](https://www.linkedin.com/in/omkarsharmaa/) <br>
+Rasheeq Zehra - [LINKEDIN](https://www.linkedin.com/in/rasheeq-zehra-mern-developer/") <br>
 Email - omkarsharma2821@gmail.com <br>
+Email - zehrarasheeq@gmail.com <br>
 Project Link: [GITHUB](https://github.com/omkarsharma2821/Green-Doctor) 
+Project Link: [GITHUB](https://github.com/rasheeq123/Green-Doctor) 
+
 
 ## We are currently working on this project.
