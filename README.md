@@ -1,5 +1,3 @@
-# React + Vite
-
 <div align='center'>
 
 <h1>Green Doctor</h1>
@@ -57,7 +55,7 @@
 - Node.js
 - Express
 - Postman API
-- This project uses npm as package manager
+- This project uses React + Vite and  npm as package manager.
 
 ## :toolbox: Getting Started
 
