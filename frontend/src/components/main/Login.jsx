@@ -97,24 +97,23 @@ const Login = () => {
         minHeight: '100vh',
       }}
     >
-      {/* <Typography variant="h3" sx={{ textAlign: "center", mt: 12 }}>
-        Begin with Login
-      </Typography> */}
-      <Box sx={{ boxShadow: 0, mt: 0, }}>
-        <Grid container>
+      
+        <Grid container sx={{ mt: 0, }}>
           <Grid item md={4} sx={{ mx: "auto" }}>
             <Card
               sx={{
-                height: 470,
+                height: 510,
                 boxShadow: 25,
                 borderRadius: 5,
-                p: 4,
+                p: 3,
                 mt:18,
                 mb:15,
-
               }}
             >
               <CardContent>
+                <Typography variant="h4" sx={{ textAlign: "center", mt: 0 }}>
+        Begin with Login
+      </Typography>
                 <form onSubmit={loginform.handleSubmit}>
                   <TextField
                     id="email"
@@ -230,7 +229,6 @@ const Login = () => {
             </Card>
           </Grid>
         </Grid>
-      </Box>
     </Box>
   );
 };
