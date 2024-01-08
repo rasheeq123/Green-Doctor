@@ -98,20 +98,18 @@ const Signup = () => {
       minHeight: '100vh',
     }}
   >
-            {/* <Typography variant='h4' sx={{textAlign: 'center', mt: 2}}>Sign Up for Unmatched Benefits</Typography> */}
-
             <Box sx={{boxShadow:0, mt: 0}}>
               <Grid container>
                 <Grid item md={5} sx={{mx: 'auto'}}>
-
                   <Card sx={{
-                    height: 560,
+                    height: 590,
                     boxShadow: 5,
                     borderRadius: 3,
-                    p: 4,
-                    mt:13,
+                    p: 3,
+                    mt:11,
                     mb:15,
                   }}>
+                    <Typography variant='h4' sx={{textAlign: 'center', mt: 0}}>Sign Up for Unmatched Benefits</Typography>
                     <CardContent>
                     <form onSubmit={signupform.handleSubmit}>
                     <TextField 
