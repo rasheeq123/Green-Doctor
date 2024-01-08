@@ -20,16 +20,14 @@
 ## :star2: About The Project
 
 ### :camera: Snapshots
-<div align="center"> <a href="https://vintimart-9x78.onrender.com/"><img src="https://github.com/omkarsharma2821/VintiMart/blob/master/screenshots/Screenshot%202023-12-14%20194816.png" alt='image' width='800'/></a> </div>
-<div align="center"> <a href="https://vintimart-9x78.onrender.com/"><img src="https://github.com/omkarsharma2821/VintiMart/blob/master/screenshots/Screenshot%202023-12-14%20195008.png" alt='image' width='800'/></a> </div>
-<div align="center"> <a href="https://vintimart-9x78.onrender.com/"><img src="https://github.com/omkarsharma2821/VintiMart/blob/master/screenshots/Screenshot%202023-12-14%20195541.png" alt='image' width='800'/></a> </div>
-<div align="center"> <a href="https://vintimart-9x78.onrender.com/"><img src="https://github.com/omkarsharma2821/VintiMart/blob/master/screenshots/Screenshot%202023-12-14%20195650.png" alt='image' width='800'/></a> </div>
-<div align="center"> <a href="https://vintimart-9x78.onrender.com/"><img src="https://github.com/omkarsharma2821/VintiMart/blob/master/screenshots/Screenshot%202023-12-14%20195909.png" alt='image' width='800'/></a> </div>
-<div align="center"> <a href="https://vintimart-9x78.onrender.com/"><img src="https://github.com/omkarsharma2821/VintiMart/blob/master/screenshots/Screenshot%202023-12-14%20200049.png" alt='image' width='800'/></a> </div>
-<div align="center"> <a href="https://vintimart-9x78.onrender.com/"><img src="https://github.com/omkarsharma2821/VintiMart/blob/master/screenshots/Screenshot%202023-12-14%20204917.png" alt='image' width='800'/></a> </div>
-<div align="center"> <a href="https://vintimart-9x78.onrender.com/"><img src="https://github.com/omkarsharma2821/VintiMart/blob/master/screenshots/Screenshot%202023-12-14%20205039.png" alt='image' width='800'/></a> </div>
-<div align="center"> <a href="https://vintimart-9x78.onrender.com/"><img src="https://github.com/omkarsharma2821/VintiMart/blob/master/screenshots/Screenshot%202023-12-14%20205158.png" alt='image' width='800'/></a> </div>
-<div align="center"> <a href="https://vintimart-9x78.onrender.com/"><img src="https://github.com/omkarsharma2821/VintiMart/blob/master/screenshots/Screenshot%202023-12-14%20205331.png" alt='image' width='800'/></a> </div>
+<div align="center"> <img src="https://github.com/omkarsharma2821/Green-Doctor/blob/main/screenshot/Screenshot%202024-01-08%20173236.png" alt='image' width='800'/> </div>
+<div align="center"> <img src="https://github.com/omkarsharma2821/Green-Doctor/blob/main/screenshot/Screenshot%202024-01-08%20173251.png" alt='image' width='800'/></div>
+<div align="center"><img src="https://github.com/omkarsharma2821/Green-Doctor/blob/main/screenshot/Screenshot%202024-01-08%20173200.png" alt='image' width='800</div>
+<div align="center"> <img src="https://github.com/omkarsharma2821/Green-Doctor/blob/main/screenshot/Screenshot%202024-01-08%20173018.png" alt='image' width='800'/> </div>
+<div align="center"> <img src="https://github.com/omkarsharma2821/Green-Doctor/blob/main/screenshot/Screenshot%202024-01-08%20172909.png" alt='image' width='800'/></div>
+<div align="center"> <img src="https://github.com/omkarsharma2821/Green-Doctor/blob/main/screenshot/Screenshot%202024-01-08%20172958.png" alt='image' width='800'/></div>
+<div align="center"> <img src="https://github.com/omkarsharma2821/Green-Doctor/blob/main/screenshot/Screenshot%202024-01-08%20173324.png" alt='image' width='800'/></div>
+
 
 
 <details> <summary>Database</summary> <ul>
