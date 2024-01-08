@@ -80,19 +80,38 @@ const Login = () => {
     },
   });
   return (
-    <div>
-      <Typography variant="h3" sx={{ textAlign: "center", mt: 12 }}>
+    <Box
+      sx={{
+        // background: 'linear-gradient(to right, #001F3F, #003366)',
+        backgroundImage:
+        "radial-gradient(" +
+        "circle at 20% 100%, " +
+        "rgba(184, 184, 184, 0.1) 0%, " +
+        "rgba(184, 184, 184, 0.1) 33%, " +
+        "rgba(96, 96, 96, 0.1) 33%, " +
+        "rgba(96, 96, 96, 0.1) 66%, " +
+        "rgba(7, 7, 7, 0.1) 66%, " +
+        "rgba(7, 7, 7, 0.1) 99%" +
+        "), " +
+        "linear-gradient(40deg, #040a22, #162561, #202e64, #6f7aa6)",
+        minHeight: '100vh',
+      }}
+    >
+      {/* <Typography variant="h3" sx={{ textAlign: "center", mt: 12 }}>
         Begin with Login
-      </Typography>
-      <Paper sx={{ boxShadow: 0, mt: 2 }}>
+      </Typography> */}
+      <Box sx={{ boxShadow: 0, mt: 0, }}>
         <Grid container>
           <Grid item md={4} sx={{ mx: "auto" }}>
             <Card
               sx={{
                 height: 470,
-                boxShadow: 5,
-                borderRadius: 3,
+                boxShadow: 25,
+                borderRadius: 5,
                 p: 4,
+                mt:18,
+                mb:15,
+
               }}
             >
               <CardContent>
@@ -211,8 +230,8 @@ const Login = () => {
             </Card>
           </Grid>
         </Grid>
-      </Paper>
-    </div>
+      </Box>
+    </Box>
   );
 };
 export default Login;

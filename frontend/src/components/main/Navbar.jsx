@@ -100,7 +100,7 @@ function ResponsiveAppBar(){
               mr: 10,
               display: { xs: 'none', md: 'flex' },
               fontFamily: 'Roboto',
-              fontWeight: 500,
+              fontWeight: 525,
               fontSize: 'h5.fontSize',
               // letterSpacing: '.3rem',
               color: 'black',
@@ -160,6 +160,7 @@ function ResponsiveAppBar(){
               fontFamily: 'Roboto',
               fontWeight: 700,
               // fontSize: 'h6.fontSize',
+              // fontSize: '25px',
               // letterSpacing: '.3rem',
               color: 'black',
               textDecoration: 'none',
@@ -173,8 +174,7 @@ function ResponsiveAppBar(){
                 onClick={() => navigate(page.link)}
                 key={page.text}
                 // onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: 'black', display: 'block', fontSize:'16px' }}
-              >
+                sx={{ my: 2, color: 'black', display: 'block', fontSize:'16px',textTransform:'none',}}>
                 {page.text}
               </Button>
             ))}

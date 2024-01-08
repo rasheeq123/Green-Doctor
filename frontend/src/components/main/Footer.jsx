@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <>
   {/* Site footer */}
-  <footer className="site-footer mt-5">
+  <footer className="site-footer mt-0">
     <div className="container">
       <div className="row">
         <div className="col-sm-12 col-md-6">
@@ -66,7 +66,7 @@ const Footer = () => {
         <div className="col-md-4 col-sm-6 col-xs-12">
           <ul className="social-icons">
             <li>
-              <a className="github" href="https://github.com/omkarsharma2821/">
+              <a className="github" href="https://github.com/omkarsharma2821/Green-Doctor">
               <i class="fa-brands fa-github"></i>
               </a>
             </li>

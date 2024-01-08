@@ -53,7 +53,7 @@ const settings = [{
 },
 {
   text: 'My History',
-  link: 'user/history'
+  link: '/user/history'
 },
 {
   text: 'Logout'
@@ -135,7 +135,7 @@ function ResponsiveAppBar(){
               open={Boolean(anchorElNav)}
               onClose={handleCloseNavMenu}
               sx={{
-                display: { xs: 'block', md: 'none' },
+                display: { xs: 'block', md: 'none', },
               }}
             >
               {pages.map((page) => (

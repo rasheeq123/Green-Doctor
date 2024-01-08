@@ -81,10 +81,26 @@ const Signup = () => {
   });
 
   return (
-    <div >
+    <Box
+    sx={{
+      // background: 'linear-gradient(to right, #001F3F, #003366)',
+      backgroundImage:
+      "radial-gradient(" +
+      "circle at 20% 100%, " +
+      "rgba(184, 184, 184, 0.1) 0%, " +
+      "rgba(184, 184, 184, 0.1) 33%, " +
+      "rgba(96, 96, 96, 0.1) 33%, " +
+      "rgba(96, 96, 96, 0.1) 66%, " +
+      "rgba(7, 7, 7, 0.1) 66%, " +
+      "rgba(7, 7, 7, 0.1) 99%" +
+      "), " +
+      "linear-gradient(40deg, #040a22, #162561, #202e64, #6f7aa6)",
+      minHeight: '100vh',
+    }}
+  >
             {/* <Typography variant='h4' sx={{textAlign: 'center', mt: 2}}>Sign Up for Unmatched Benefits</Typography> */}
 
-            <Paper sx={{boxShadow:0, mt: 14}}>
+            <Box sx={{boxShadow:0, mt: 0}}>
               <Grid container>
                 <Grid item md={5} sx={{mx: 'auto'}}>
 
@@ -92,7 +108,9 @@ const Signup = () => {
                     height: 560,
                     boxShadow: 5,
                     borderRadius: 3,
-                    p: 4
+                    p: 4,
+                    mt:13,
+                    mb:15,
                   }}>
                     <CardContent>
                     <form onSubmit={signupform.handleSubmit}>
@@ -236,9 +254,9 @@ const Signup = () => {
                   </Card>
                 </Grid>
               </Grid>
-            </Paper>
+            </Box>
             <ToastContainer />
-          </div>
+          </Box>
   )
 }
 export default Signup;
