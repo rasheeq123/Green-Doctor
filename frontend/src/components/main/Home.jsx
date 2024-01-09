@@ -65,10 +65,10 @@ const Home = () => {
                   // alignItems: "center",
                 }}
               >
-                <Typography variant="h4" fontWeight='semibold' mb={2}>Diagnose your sick crop</Typography>
-                <Typography variant="h5" mb={3}>Take a photo of your sick crop and get a free diagnosis and treatment suggestions – all in a few seconds!</Typography>
+                <Typography variant="h3" fontWeight='semibold' mb={2}>Diagnose your  crop</Typography>
+                <Typography variant="h4" mb={0}>Take a photo of your sick crop and get a free diagnosis and treatment suggestions – all in a few seconds!</Typography>
                 <NavLink to="/user">
-                <Button sx={{textTransform:'none',borderRadius:'28px',mt:4,width:'50%',fontSize:'18px',py:1}} variant='contained' color='primary'>Get a free diagnosis</Button>
+                <Button sx={{textTransform:'none',borderRadius:'28px',mt:4,width:'60%',fontSize:'25px',py:1}} variant='contained' color='primary'>Get a free diagnosis</Button>
                 </NavLink>
               </Box>
             </Grid>
@@ -76,12 +76,12 @@ const Home = () => {
             <Grid item xs={12} sm={6}>
               <Container
                sx={{display: "flex",
-               backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.3)), url('/images/H2.jpg')`,
+               backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.3)), url('/images/G1.jpg')`,
                   flexDirection: "column",
                   justifyContent: "center",
                   alignItems: "center",
                   borderRadius: 2,
-                  minHeight: 400,
+                  minHeight: 500,
                   width:'100%',
                   // m:5,
                   // mt:10,
@@ -97,7 +97,7 @@ const Home = () => {
 
 {/* ---------------------------------------2nd container started----------------------------------------------- */}
 
-        <Container sx={{mt:5,}}>
+        <Container sx={{mt:18,}}>
           <Grid
             container
             rowSpacing={1}
@@ -108,12 +108,12 @@ const Home = () => {
             <Grid item xs={12} sm={6}>
               <Container
                sx={{display: "flex",
-               backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.3)), url('/images/H1.jpg')`,
+               backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.3)), url('/images/G2.jpg')`,
                   flexDirection: "column",
                   justifyContent: "center",
                   alignItems: "center",
                   borderRadius: 2,
-                  minHeight: 400,
+                  minHeight: 500,
                   width:'100%',
                   // m:5,
                   // mt:10,
@@ -137,10 +137,10 @@ const Home = () => {
                   // alignItems: "center",
                 }}
               >
-                <Typography variant="h4" mb={2} fontWeight='semibold'>Find the right treatment</Typography>
-                <Typography mb={3} variant="h5">Get great deals on agricultural products from your local retailers. Compare prices, learn about the products and how to use them.</Typography>
+                <Typography variant="h3" mb={2} fontWeight='semibold'>Find the right treatment</Typography>
+                <Typography mb={0} variant="h4">Get great deals on agricultural products from your local retailers. Compare prices, learn about the products and how to use them.</Typography>
                 <NavLink to="/user">
-                <Button sx={{textTransform:'none',borderRadius:'28px',mt:4,mb:10,width:'50%',fontSize:'18px',py:1}} variant='contained' color='primary'>Get a free treatment</Button>
+                <Button sx={{textTransform:'none',borderRadius:'28px',mt:4,mb:1,width:'60%',fontSize:'25px',py:1}} variant='contained' color='primary'>Get a free treatment</Button>
                 </NavLink>
               </Box>
             </Grid>
@@ -151,7 +151,7 @@ const Home = () => {
 
 
 <div className="accordion">
-  <Typography variant="h3" sx={{mb:5}} textAlign={'center'}>Frequently Asked Questions</Typography>
+  <Typography variant="h3" sx={{mb:5,mt:10}} textAlign={'center'}>Frequently Asked Questions</Typography>
   <div className="accordion-item">
     <input type="checkbox" id="accordion1" />
     <label htmlFor="accordion1" className="accordion-item-title">
