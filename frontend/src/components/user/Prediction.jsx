@@ -204,7 +204,7 @@ const Prediction = () => {
             textAlign="center"
             sx={{ mt: 4 }}
           >
-            OOps!! Your plant has been detected with disease: {result.className}
+            Oops!! Your plant has been detected with disease: {result.className}
           </Typography>
           <div style={{ display: "flex", justifyContent: "center" }}>
             {/* <NavLink to="/user/cure"> */}
@@ -253,7 +253,7 @@ const Prediction = () => {
       width: '565px',
     }}
   >
-    View Previous History{' '}
+    View Diagnosed History{' '}
     <i className="fa fa-arrow-right" aria-hidden="true"></i>
   </Button>
 </Box>
