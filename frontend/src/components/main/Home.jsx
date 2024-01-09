@@ -13,32 +13,35 @@ const Home = () => {
           justifyContent: "center", // Vertical centering
           alignItems: "center", // Horizontal centering
           backgroundAttachment: "fixed",
-          backgroundImage:
-            "radial-gradient(" +
-            "circle at 20% 100%, " +
-            "rgba(184, 184, 184, 0.1) 0%, " +
-            "rgba(184, 184, 184, 0.1) 33%, " +
-            "rgba(96, 96, 96, 0.1) 33%, " +
-            "rgba(96, 96, 96, 0.1) 66%, " +
-            "rgba(7, 7, 7, 0.1) 66%, " +
-            "rgba(7, 7, 7, 0.1) 99%" +
-            "), " +
-            "linear-gradient(40deg, #040a22, #162561, #202e64, #6f7aa6)",
-          // backgroundRepeat: "no-repeat",
-          // backgroundSize: "cover",
+          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url('/images/B3.jpg')`,
+          // backgroundImage:
+          //   "radial-gradient(" +
+          //   "circle at 20% 100%, " +
+          //   "rgba(184, 184, 184, 0.1) 0%, " +
+          //   "rgba(184, 184, 184, 0.1) 33%, " +
+          //   "rgba(96, 96, 96, 0.1) 33%, " +
+          //   "rgba(96, 96, 96, 0.1) 66%, " +
+          //   "rgba(7, 7, 7, 0.1) 66%, " +
+          //   "rgba(7, 7, 7, 0.1) 99%" +
+          //   "), " +
+          //   "linear-gradient(40deg, #040a22, #162561, #202e64, #6f7aa6)",
+          backgroundRepeat: "no-repeat",
+          backgroundSize: "cover",
+          backgroundPosition: 'center',
           height: "100vh",
         }}
       >
         <Typography
           variant="h1"
           mt={0}
-          sx={{ color: "rgb(121, 158, 42)", textAlign: "center", fontSize: "10vw",textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)' }}
+          sx={{ color: "white", textAlign: "center", fontSize: "10vw",textShadow: '2px 2px 4px rgba(0, 0, 0, 0.8)' }}
+          // sx={{ color: "rgb(121, 158, 42)", textAlign: "center", fontSize: "10vw",textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)' }}
         >
           Green Doctor{" "}
         </Typography>
         <Typography
           variant="h3"
-          sx={{ color: "rgb(121, 158, 42)", textAlign: "center", fontSize: "3vw",textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)' }}
+          sx={{ color: "white", textAlign: "center", fontSize: "3vw",textShadow: '2px 2px 4px rgba(0, 0, 0, 0.8)' }}
         >
           Where Leaves Speak and We Listen.
         </Typography>
