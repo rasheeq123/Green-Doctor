@@ -146,6 +146,11 @@ const Prediction = () => {
   const handleImageUpload = async (e) => {
     if (!e.target.files[0]) return;
     const file = e.target.files[0];
+    // Check file type before uploading
+    if (!isValidImageType(file)) {
+      alert('Invalid file type. Please select a valid image (jpg, png, jpeg).');
+      return;
+    }
     setSelImg(file.name);
     uploadFile(file);
     const img = new Image();
@@ -167,6 +172,12 @@ const Prediction = () => {
       // Read the file as a data URL
       reader.readAsDataURL(file);
     }
+  };
+
+  // Function to check if the file type is a valid image type
+  const isValidImageType = (file) => {
+    const allowedTypes = ['image/jpeg', 'image/png', 'image/jpg'];
+    return allowedTypes.includes(file.type);
   };
 
   const getDiseaseData = () => {
