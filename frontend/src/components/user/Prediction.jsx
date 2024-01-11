@@ -295,7 +295,7 @@ const Prediction = () => {
     <Box
       sx={{
         mt: 7,
-        minHeight: "100vh",
+        minHeight: "110vh",
       }}
     >
       <Box sx={{ background: "linear-gradient(to bottom, #23074d, #cc5333)" }}>
