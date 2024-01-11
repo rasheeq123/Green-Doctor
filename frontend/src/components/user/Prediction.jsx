@@ -62,6 +62,10 @@ const Prediction = () => {
     setCamOpen(false);
   }, []);
 
+  const stopWebcam = () => {
+    setCamOpen(false);
+  };
+
   const predictionResultExtractor = (prediction) => {
     let tempRes = prediction.find(
       (pred) =>
@@ -359,6 +363,8 @@ const Prediction = () => {
                         <PhotoCamera />
                         <Typography variant="h5">Capture Image</Typography>
                       </Button>
+                      <Box sx={{display:'flex', justifyContent: 'center', }}>
+                  <Button variant="contained" color="error" sx={{mb:1,mt:1, borderRadius:5, textTransform:'none'}} onClick={stopWebcam} startIcon={<Close />}>Close</Button></Box>
                     </>
                   ) : (
                     <Box className="cam-container">

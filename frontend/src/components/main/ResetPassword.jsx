@@ -1,5 +1,5 @@
 import { AccountCircle } from '@mui/icons-material';
-import { Button, Card, CardContent, Grid, IconButton, InputAdornment, Paper, TextField, Typography } from '@mui/material';
+import { Box, Button, Card, CardContent, Grid, IconButton, InputAdornment, Paper, TextField, Typography } from '@mui/material';
 import React, { useRef } from 'react'
 
 const ResetPassword = () => {
@@ -23,8 +23,8 @@ const ResetPassword = () => {
 
     return (
         <div >
-            <Typography variant='h3' sx={{ textAlign: 'center', mt: 16 }}>Reset your password</Typography>
-            <Paper sx={{ boxShadow: 0, mt: 2 }}>
+            <Typography variant='h3' sx={{ textAlign: 'center', mt: 14 }}>Reset your password</Typography>
+            <Box sx={{ boxShadow: 0, mt: 2, mb:10}}>
                 <Grid container>
                     <Grid item md={4} sx={{ mx: 'auto' }}>
                         <Card sx={{
@@ -49,7 +49,7 @@ const ResetPassword = () => {
                         </Card>
                     </Grid>
                 </Grid>
-            </Paper>
+            </Box>
         </div >
     )
 };
