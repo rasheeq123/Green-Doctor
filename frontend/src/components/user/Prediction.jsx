@@ -14,11 +14,14 @@ import {
 } from "@mui/material";
 import {
   CameraAlt,
+  Close,
   CloudUpload,
+  CropSharp,
   PhotoAlbumRounded,
   PhotoCamera,
   PhotoCameraFront,
 } from "@mui/icons-material";
+import { red } from "@mui/material/colors";
 
 const Prediction = () => {
   const { modelPath, cureData } = app_config;
@@ -179,6 +182,12 @@ const Prediction = () => {
     const allowedTypes = ['image/jpeg', 'image/png', 'image/jpg'];
     return allowedTypes.includes(file.type);
   };
+  // Function to handle image removal
+  const handleRemoveImage = () => {
+    setSelImage(null);
+    setLoadedImage(null);
+    setSelImg('');
+  };
 
   const getDiseaseData = () => {
     sessionStorage.setItem(
@@ -283,8 +292,6 @@ const Prediction = () => {
       sx={{
         mt: 7,
         minHeight: "100vh",
-        // backgroundImage:
-        //   "url('https://img.rawpixel.com/s3fs-private/rawpixel_images/website_content/v986-bg-02-kqhe3wit.jpg?w=1200&h=1200&dpr=1&fit=clip&crop=default&fm=jpg&q=75&vib=3&con=3&usm=15&cs=srgb&bg=F4F4F3&ixlib=js-2.2.1&s=a18675d7f6be224df8ff585d65d5d8dc')",
       }}
     >
       <Box sx={{ background: "linear-gradient(to bottom, #23074d, #cc5333)" }}>
@@ -437,12 +444,15 @@ const Prediction = () => {
                 />
 
                 {selImage ? (
+                  <div>
                   <img
                     style={{ height: "350px" }}
                     className="d-block m-auto mt-2 mb-1"
                     src={selImage}
                     alt=""
                   />
+                  <Button variant="contained" color="error" sx={{mb:1,mt:1,borderRadius:5, textTransform:'none'}} onClick={handleRemoveImage} startIcon={<Close />}>Remove</Button>
+                  </div>
                 ) : (
                   <p
                     className="text-center h1 mt-4 py-4 px-5"
