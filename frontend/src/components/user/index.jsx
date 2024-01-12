@@ -8,9 +8,9 @@ const User = () => {
   return (
     <>
     <Navbar/>
-    <Prediction/>
-    <Footer/>
+    {/* <Prediction/> */}
     <Outlet/>
+    <Footer/>
     </>
   )
 }

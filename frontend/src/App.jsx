@@ -11,6 +11,8 @@ import Admin from './components/admin'
 import ManageUser from './components/admin/ManageUser'
 import ResetPassword from './components/main/ResetPassword'
 import Prediction from './components/user/Prediction'
+import History from './components/user/History'
+import Dashboard from './components/user/Dashboard'
 import { AppProvider } from './context/AppContext'
 
 
@@ -38,6 +40,7 @@ function App() {
             <Route path="profile" element={<Profile />} />
             <Route path="prediction" element={<Prediction />} />
             <Route path="history" element={<History />} />
+            <Route path="dashboard" element={<Dashboard />} />
           </Route>
 
           <Route path="admin" element={<Admin />}>

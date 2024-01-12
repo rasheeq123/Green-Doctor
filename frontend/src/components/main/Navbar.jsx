@@ -26,7 +26,7 @@ import useAppContext from "../../context/AppContext";
     },
     {
       text: "User",
-      link: "/user",
+      link: "/user/dashboard",
     },
     {
       text: "Expert",

@@ -1,16 +1,21 @@
-import React from 'react'
-import Navbar from '../main/Navbar'
-import { Outlet } from 'react-router-dom'
-
+import { Box, Typography } from "@mui/material";
+import React from "react";
 
 const History = () => {
   return (
     <>
-    <Navbar/>
-    <Outlet/>
-
+      <Box
+        sx={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          height: "60vh",
+        }}
+      >
+        <Typography variant="h2"> Oops! No History to show  </Typography>
+      </Box>
     </>
-  )
-}
+  );
+};
 
 export default History;
