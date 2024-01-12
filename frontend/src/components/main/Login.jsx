@@ -84,151 +84,156 @@ const Login = () => {
       sx={{
         // background: 'linear-gradient(to right, #001F3F, #003366)',
         backgroundImage:
-        "radial-gradient(" +
-        "circle at 20% 100%, " +
-        "rgba(184, 184, 184, 0.1) 0%, " +
-        "rgba(184, 184, 184, 0.1) 33%, " +
-        "rgba(96, 96, 96, 0.1) 33%, " +
-        "rgba(96, 96, 96, 0.1) 66%, " +
-        "rgba(7, 7, 7, 0.1) 66%, " +
-        "rgba(7, 7, 7, 0.1) 99%" +
-        "), " +
-        "linear-gradient(40deg, #040a22, #162561, #202e64, #6f7aa6)",
-        minHeight: '100vh',
+          "radial-gradient(" +
+          "circle at 20% 100%, " +
+          "rgba(184, 184, 184, 0.1) 0%, " +
+          "rgba(184, 184, 184, 0.1) 33%, " +
+          "rgba(96, 96, 96, 0.1) 33%, " +
+          "rgba(96, 96, 96, 0.1) 66%, " +
+          "rgba(7, 7, 7, 0.1) 66%, " +
+          "rgba(7, 7, 7, 0.1) 99%" +
+          "), " +
+          "linear-gradient(40deg, #040a22, #162561, #202e64, #6f7aa6)",
+        minHeight: "100vh",
       }}
     >
-      
-        <Grid container sx={{ mt: 0, }}>
-          <Grid item md={4} sx={{ mx: "auto" }}>
-            <Card
-              sx={{
-                height: 510,
-                boxShadow: 25,
-                borderRadius: 5,
-                p: 3,
-                mt:18,
-                mb:15,
-              }}
-            >
-              <CardContent>
-                <Typography variant="h4" sx={{ textAlign: "center", mt: 0 }}>
-        Begin with Login
-      </Typography>
-                <form onSubmit={loginform.handleSubmit}>
-                  <TextField
-                    id="email"
+      <Grid container sx={{ mt: 0 }}>
+        <Grid item md={4} sx={{ mx: "auto" }}>
+          <Card
+            sx={{
+              height: 510,
+              boxShadow: 25,
+              borderRadius: 5,
+              p: 3,
+              mt: 18,
+              mb: 15,
+            }}
+          >
+            <CardContent>
+              <Typography variant="h4" sx={{ textAlign: "center", mt: 0 }}>
+                Begin with Login
+              </Typography>
+              <form onSubmit={loginform.handleSubmit}>
+                <TextField
+                  id="email"
+                  onChange={loginform.handleChange}
+                  value={loginform.values.email}
+                  InputProps={{
+                    endAdornment: (
+                      <InputAdornment position="start">
+                        <AccountCircle />
+                      </InputAdornment>
+                    ),
+                  }}
+                  required
+                  type="email"
+                  label="Email Address"
+                  error={loginform.touched.email && loginform.errors.email}
+                  helperText={loginform.touched.email && loginform.errors.email}
+                  variant="outlined"
+                  color="success"
+                  fullWidth
+                  sx={{ mt: 2 }}
+                />
+
+                <FormControl
+                  required
+                  error={
+                    loginform.touched.password && loginform.errors.password
+                  }
+                  helperText={
+                    loginform.touched.password && loginform.errors.password
+                  }
+                  variant="outlined"
+                  color="success"
+                  fullWidth
+                  sx={{ mt: 2 }}
+                >
+                  <InputLabel htmlFor="password">Password</InputLabel>
+                  <OutlinedInput
+                    id="password"
                     onChange={loginform.handleChange}
-                    value={loginform.values.email}
-                    InputProps={{
-                      endAdornment: (
-                        <InputAdornment position="start">
-                          <AccountCircle />
-                        </InputAdornment>
-                      ),
-                    }}
-                    required
-                    type="email"
-                    label="Email Address"
-                    error={loginform.touched.email && loginform.errors.email}
-                    helperText={
-                      loginform.touched.email && loginform.errors.email
+                    value={loginform.values.password}
+                    type={showPassword ? "text" : "password"}
+                    endAdornment={
+                      <InputAdornment position="end">
+                        <IconButton
+                          aria-label="toggle password visibility"
+                          onClick={handleClickShowPassword}
+                          onMouseDown={handleMouseDownPassword}
+                          // edge="end"
+                        >
+                          {showPassword ? <VisibilityOff /> : <Visibility />}
+                        </IconButton>
+                      </InputAdornment>
                     }
-                    variant="outlined"
-                    color="success"
-                    fullWidth
-                    sx={{ mt: 2 }}
+                    label="Password"
                   />
+                </FormControl>
 
-                  <FormControl
-                    required
-                    error={
-                      loginform.touched.password && loginform.errors.password
-                    }
-                    helperText={
-                      loginform.touched.password && loginform.errors.password
-                    }
-                    variant="outlined"
-                    color="success"
+                <Box sx={{ textAlign: "center" }}>
+                  <Button
+                    type="submit"
+                    variant="contained"
+                    disableElevation
+                    sx={{ mt: 3, borderRadius: 5 }}
                     fullWidth
-                    sx={{ mt: 2 }}
+                    color="success"
                   >
-                    <InputLabel htmlFor="password">
-                      Password
-                    </InputLabel>
-                    <OutlinedInput
-                      id="password"
-                      onChange={loginform.handleChange}
-                      value={loginform.values.password}
-                      type={showPassword ? "text" : "password"}
-                      endAdornment={
-                        <InputAdornment position="end">
-                          <IconButton
-                            aria-label="toggle password visibility"
-                            onClick={handleClickShowPassword}
-                            onMouseDown={handleMouseDownPassword}
-                            // edge="end"
-                          >
-                            {showPassword ? <VisibilityOff /> : <Visibility />}
-                          </IconButton>
-                        </InputAdornment>
-                      }
-                      label="Password"
-                    />
-                  </FormControl>
-
-                  <Box sx={{ textAlign: "center" }}>
-                    <Button
-                      type="submit"
-                      variant="contained"
-                      disableElevation
-                      sx={{ mt: 3, borderRadius: 5 }}
-                      fullWidth
-                      color="success"
-                    >
-                      Continue
-                    </Button>
-                    <NavLink to="/main/resetpassword">
-                      <Button
-                        type="submit"
-                        variant="outlined"
-                        disableElevation
-                        sx={{ mt: 2, borderRadius: 5, textTransform: "none" }}
-                        fullWidth
-                        color="success"
-                      >
-                        Forget Password?
-                      </Button>
-                    </NavLink>
-                    <Divider
-                      sx={{ mt: 3 }}
-                      orientation="horizontal"
-                      variant="fullWidth"
-                    >
-                      or{" "}
-                    </Divider>
+                    Continue
+                  </Button>
+                  <NavLink to="/main/resetpassword">
                     <Button
                       type="submit"
                       variant="outlined"
                       disableElevation
-                      sx={{ mt: 2, borderRadius: 5, textTransform: "none",mb:1 }}
+                      sx={{ mt: 2, borderRadius: 5, textTransform: "none" }}
                       fullWidth
                       color="success"
                     >
-                      <InputAdornment position="start">
-                        <GoogleIcon />
-                      </InputAdornment>
-                      Sign in with Google
+                      Forget Password?
                     </Button>
-                    <p variant="h6">
-                      Dont Have an account?
-                      <NavLink to="/main/signup" style={{ textDecoration: 'none' }}>Sign up</NavLink>
-                    </p>
-                  </Box>
-                </form>
-              </CardContent>
-            </Card>
-          </Grid>
+                  </NavLink>
+                  <Divider
+                    sx={{ mt: 3 }}
+                    orientation="horizontal"
+                    variant="fullWidth"
+                  >
+                    or{" "}
+                  </Divider>
+                  <Button
+                    type="submit"
+                    variant="outlined"
+                    disableElevation
+                    sx={{
+                      mt: 2,
+                      borderRadius: 5,
+                      textTransform: "none",
+                      mb: 1,
+                    }}
+                    fullWidth
+                    color="success"
+                  >
+                    <InputAdornment position="start">
+                      <GoogleIcon />
+                    </InputAdornment>
+                    Sign in with Google
+                  </Button>
+                  <p variant="h6">
+                    Dont Have an account?
+                    <NavLink
+                      to="/main/signup"
+                      style={{ textDecoration: "none" }}
+                    >
+                      Sign up
+                    </NavLink>
+                  </p>
+                </Box>
+              </form>
+            </CardContent>
+          </Card>
         </Grid>
+      </Grid>
     </Box>
   );
 };
