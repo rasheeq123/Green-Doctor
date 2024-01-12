@@ -15,52 +15,54 @@ import AdbIcon from "@mui/icons-material/Adb";
 import { NavLink, useNavigate } from "react-router-dom";
 import useAppContext from "../../context/AppContext";
 
-const pages = [
-  {
-    text: "Home",
-    link: "/main/home",
-  },
-  {
-    text: "Admin",
-    link: "/admin",
-  },
-  {
-    text: "User",
-    link: "/user",
-  },
-  {
-    text: "Expert",
-    link: "/admin",
-  },
-  {
-    text: "Signup",
-    link: "/main/signup",
-  },
-  {
-    text: "Login",
-    link: "/main/login",
-  },
-];
+  const pages = [
+    {
+      text: "Home",
+      link: "/main/home",
+    },
+    {
+      text: "Admin",
+      link: "/admin",
+    },
+    {
+      text: "User",
+      link: "/user",
+    },
+    {
+      text: "Expert",
+      link: "/admin",
+    },
+    {
+      text: "Signup",
+      link: "/main/signup",
+    },
+    {
+      text: "Login",
+      link: "/main/login",
+    },
+  ];
 
-const settings = [
-  {
-    text: "My Profile",
-    link: "/user/profile",
-  },
-  {
-    text: "Dashboard",
-    link: "/user/dashboard",
-  },
-  {
-    text: "My History",
-    link: "user/history",
-  },
-  {
-    text: "Logout",
-  },
-];
+  const settings = [
+    {
+      text: "My Profile",
+      link: "/user/profile",
+    },
+    {
+      text: "Dashboard",
+      link: "/user/dashboard",
+    },
+    {
+      text: "My History",
+      link: "/user/history",
+    },
+    {
+      text: "Logout",
+    },
+  ];
 
-function ResponsiveAppBar() {
+  // function ResponsiveAppBar() {
+  const Navbar = () => {
+
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
   const navigate = useNavigate();
@@ -232,5 +234,6 @@ function ResponsiveAppBar() {
       </Container>
     </AppBar>
   );
-}
-export default ResponsiveAppBar;
+};
+// export default ResponsiveAppBar;
+export default Navbar;

@@ -37,6 +37,7 @@ function App() {
           <Route path="user" element={<User />}>
             <Route path="profile" element={<Profile />} />
             <Route path="prediction" element={<Prediction />} />
+            <Route path="history" element={<History />} />
           </Route>
 
           <Route path="admin" element={<Admin />}>

@@ -43,6 +43,10 @@ const pages = [
     text: "Prediction",
     link: "/user/prediction",
   },
+  {
+    text: "History",
+    link: "/user/history",
+  },
 ];
 
 const settings = [
