@@ -65,7 +65,7 @@ const Home = () => {
                 Take a photo of your sick crop and get a free diagnosis and
                 treatment suggestions – all in a few seconds!
               </Typography>
-              <NavLink to="/user">
+              <NavLink to="/user/prediction">
                 <Button
                   sx={{
                     textTransform: "none",
@@ -141,7 +141,7 @@ const Home = () => {
                 retailers. Compare prices, learn about the products and how to
                 use them.
               </Typography>
-              <NavLink to="/user">
+              <NavLink to="/user/prediction">
                 <Button
                   sx={{
                     textTransform: "none",
