@@ -112,8 +112,15 @@ const Prediction = () => {
   };
 
   async function init() {
+
+    //apple model 
     const modelURL = modelPath + "/apple/model.json";
     const metadataURL = modelPath + "/apple/metadata.json";
+
+    //  wheat model
+    const modelURL_wheat = modelPath + "/wheat/model.json";
+    const metadataURL_wheat = modelPath + "/wheat/metadata.json";
+   
 
     // load the model and metadata
     // Refer to tmImage.loadFromFiles() in the API to support files from a file picker
