@@ -20,16 +20,16 @@ const pages = [
     link: "/main/home",
   },
   {
-    text: "Admin",
-    link: "/admin",
-  },
-  {
     text: "User",
     link: "/user/dashboard",
   },
   {
-    text: "Expert",
-    link: "/admin",
+    text: "Prediction",
+    link: "/user/prediction",
+  },
+  {
+    text: "History",
+    link: "/user/history",
   },
   {
     text: "Signup",
@@ -40,12 +40,12 @@ const pages = [
     link: "/main/login",
   },
   {
-    text: "Prediction",
-    link: "/user/prediction",
+    text: "Expert",
+    link: "/admin",
   },
   {
-    text: "History",
-    link: "/user/history",
+    text: "Admin",
+    link: "/admin",
   },
 ];
 

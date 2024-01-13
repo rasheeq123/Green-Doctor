@@ -1,9 +1,19 @@
-import React from 'react'
+import React from "react";
+import { Box, Typography } from '@mui/material'
 
 const ManageUser = () => {
   return (
-    <div>ManageUser</div>
-  )
-}
+    <Box
+      sx={{
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        height: "60vh",
+      }}
+    >
+      <Typography variant="h1"> User Diagnosed History </Typography>
+    </Box>
+  );
+};
 
-export default ManageUser
+export default ManageUser;

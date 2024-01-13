@@ -31,6 +31,10 @@ const pages = [{
   link: '/admin'
 },
 {
+  text: 'Manage User',
+  link: '/admin/manageuser'
+},
+{
   text: 'Signup', 
   link: '/main/signup'
 },

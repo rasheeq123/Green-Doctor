@@ -21,16 +21,8 @@ import useAppContext from "../../context/AppContext";
       link: "/main/home",
     },
     {
-      text: "Admin",
-      link: "/admin",
-    },
-    {
       text: "User",
       link: "/user/dashboard",
-    },
-    {
-      text: "Expert",
-      link: "/admin",
     },
     {
       text: "Signup",
@@ -39,6 +31,14 @@ import useAppContext from "../../context/AppContext";
     {
       text: "Login",
       link: "/main/login",
+    },
+    {
+      text: "Expert",
+      link: "/admin",
+    },
+    {
+      text: "Admin",
+      link: "/admin",
     },
   ];
 
