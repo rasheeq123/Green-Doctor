@@ -24,7 +24,7 @@ const pages = [{
 },
 {
   text: 'User',
-  link:'/user'
+  link:'/user/dashboard'
 },
 {
   text: 'Expert',
@@ -165,7 +165,7 @@ function ResponsiveAppBar(){
                 onClick={() => navigate(page.link)}
                 key={page.text}
                 // onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: 'black', display: 'block' }}
+                sx={{ my: 2, color: 'black', display: 'block',textTransform: "none", }}
               >
                 {page.text}
               </Button>

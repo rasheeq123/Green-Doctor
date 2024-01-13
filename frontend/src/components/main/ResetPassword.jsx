@@ -37,21 +37,32 @@ const ResetPassword = () => {
   };
 
   return (
-    <Box>
-      <Typography variant="h3" sx={{ textAlign: "center", mt: 14 }}>
-        Reset your password
-      </Typography>
-      <Box sx={{ boxShadow: 0, mt: 2, mb: 10 }}>
+    <Box sx={{backgroundImage:
+      "radial-gradient(" +
+      "circle at 20% 100%, " +
+      "rgba(184, 184, 184, 0.1) 0%, " +
+      "rgba(184, 184, 184, 0.1) 33%, " +
+      "rgba(96, 96, 96, 0.1) 33%, " +
+      "rgba(96, 96, 96, 0.1) 66%, " +
+      "rgba(7, 7, 7, 0.1) 66%, " +
+      "rgba(7, 7, 7, 0.1) 99%" +
+      "), " +
+      "linear-gradient(40deg, #040a22, #162561, #202e64, #6f7aa6)",height:'95vh'}}>
+      <Box sx={{ mb: 15, }}>
         <Grid container>
           <Grid item md={4} sx={{ mx: "auto" }}>
             <Card
               sx={{
-                height: 380,
+                height: 400,
                 boxShadow: 5,
                 borderRadius: 3,
-                p: 5,
+                p: 4,
+                mt:20
               }}
             >
+              <Typography variant="h4" sx={{ textAlign: "center", }}>
+                Reset your password
+              </Typography>
               <CardContent>
                 <form>
                   <TextField
@@ -100,7 +111,7 @@ const ResetPassword = () => {
           </Grid>
         </Grid>
       </Box>
-    </Box>
+      </Box>
   );
 };
 
