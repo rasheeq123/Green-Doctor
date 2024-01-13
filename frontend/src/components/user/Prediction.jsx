@@ -118,6 +118,8 @@ const Prediction = () => {
     const metadataURL = modelPath + "/apple/metadata.json";
 
     //  wheat model
+    const modelURL_wheat = modelPath + "/wheat/model.json";
+    const metadataURL_wheat = modelPath + "/wheat/metadata.json";
    
 
     // load the model and metadata
