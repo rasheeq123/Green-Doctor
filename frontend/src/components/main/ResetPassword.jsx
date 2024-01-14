@@ -12,10 +12,12 @@ import {
   Typography,
 } from "@mui/material";
 import React, { useRef } from "react";
+import { ToastContainer, toast } from "react-toastify";
 
 const ResetPassword = () => {
   const emailRef = useRef(null);
   const otpRef = useRef(null);
+
   const sendOTP = async () => {
     const res = await fetch(`${import.meta.env.VITE_API_URL}/util/sendotp`, {
       method: "POST",
@@ -25,18 +27,61 @@ const ResetPassword = () => {
       },
     });
 
-    console.log(res.status);
+    if (res.status === 200) {
+      toast.success("OTP sent to registered email", {
+        position: "top-right",
+        autoClose: 3000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+      });
+    } else {
+      toast.error("Failed to send OTP", {
+        position: "top-right",
+        autoClose: 3000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+      });
+    }
   };
+  //   console.log(res.status);
+  // };
   const verifyOTP = async () => {
     const res = await fetch(
       `${import.meta.env.VITE_API_URL}/util/verifyotp/${
         emailRef.current.value
       }/${otpRef.current.value}`
     );
-    console.log(res.status);
+
+    if (res.status === 200) {
+      toast.success("OTP verified successfully", {
+        position: "top-right",
+        autoClose: 3000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+      });
+    } else {
+      toast.error("Failed to verify OTP", {
+        position: "top-right",
+        autoClose: 3000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+      });
+    }
   };
+  //   console.log(res.status);
+  // };
 
   return (
+    <>
+    <ToastContainer />
     <Box sx={{backgroundImage:
       "radial-gradient(" +
       "circle at 20% 100%, " +
@@ -112,6 +157,7 @@ const ResetPassword = () => {
         </Grid>
       </Box>
       </Box>
+      </>
   );
 };
 
