@@ -32,7 +32,8 @@ import { red } from "@mui/material/colors";
 const AIModels = [
   'Apple',
   'AloeVera',
-  'Wheat'
+  'Wheat',
+  'Rose'
 ]
 
 const Prediction = () => {
@@ -175,7 +176,7 @@ const Prediction = () => {
     setResult(res);
 
     // saveHistory(predictionResultExtractor(prediction));
-    Swal.fire({
+    <Swal className="fire"></Swal>({
       title: "Success",
       icon: "success",
       text: "Prediction Completed",
