@@ -6,12 +6,17 @@ import {
   Box,
   Button,
   Container,
+  FormControl,
   Grid,
   IconButton,
+  InputLabel,
+  MenuItem,
   Paper,
+  Select,
   Tooltip,
   Typography,
 } from "@mui/material";
+import { ToastContainer, toast } from 'react-toastify';
 import {
   CameraAlt,
   Close,
@@ -51,6 +56,20 @@ const Prediction = () => {
   const [currentUser, setCurrentUser] = useState(
     JSON.parse(sessionStorage.getItem("user"))
   );
+  const handleModelChange = (event) => {
+    const selectedModel = (event.target.value.toLowerCase());
+    setSelModel(selectedModel);
+
+     // Show toaster notification
+  toast.success(`Model ${selectedModel} selected`, {
+    position: 'top-right',
+    autoClose: 3000,
+    hideProgressBar: false,
+    closeOnClick: true,
+    pauseOnHover: true,
+    draggable: true,
+  });
+  };
 
   let webcam, labelContainer;
 
@@ -318,12 +337,34 @@ const Prediction = () => {
         </div>
       </Box>
       <Container>
-      <select className="form-control" onChange={e => setSelModel(e.target.value.toLowerCase())}>
+      {/* <select className="form-control" onChange={e => setSelModel(e.target.value.toLowerCase())}>
         <option value="">Select a Model</option>
         {
           AIModels.map( modelName => <option value={modelName}>{modelName}</option> )
         }
-      </select>
+      </select> */}
+    <ToastContainer />
+    <FormControl required fullWidth sx={{mt:2}}>
+      <InputLabel id="model-select">
+        Select a Model
+      </InputLabel>
+      <Select
+      labelId="model-select"
+      id= 'model-select-required'
+        value={selModel}
+        onChange={handleModelChange}
+        label="Select a Model "
+      >
+        <MenuItem value="">
+          Select a Model
+        </MenuItem>
+        {AIModels.map((modelName) => (
+          <MenuItem key={modelName} value={modelName.toLowerCase()}>
+            {modelName}
+          </MenuItem>
+        ))}
+      </Select>
+    </FormControl>
         <div className="row mt-4">
           <div className="col-md-6">
             <Paper
