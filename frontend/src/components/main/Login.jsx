@@ -58,11 +58,19 @@ const Login = () => {
           icon: "success",
           title: "Login Successfully",
         });
-        navigate("/main/home");
         setloggedIn(true);
         const data = await res.json();
+        
         console.log(data);
-        sessionStorage.setItem("user", JSON.stringify(data));
+        if(data.role === 'admin'){
+
+          navigate("/admin");
+          sessionStorage.setItem("admin", JSON.stringify(data));
+        }else{
+
+          navigate("/main/home");
+          sessionStorage.setItem("user", JSON.stringify(data));
+        }
       } else if (res.status === 400) {
         Swal.fire({
           icon: "error",

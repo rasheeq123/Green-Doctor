@@ -23,8 +23,17 @@ import {
 } from "@mui/icons-material";
 import { red } from "@mui/material/colors";
 
+
+const AIModels = [
+  'Apple',
+  'AloeVera',
+  'Wheat'
+]
+
 const Prediction = () => {
   const { modelPath, cureData } = app_config;
+
+  const [selModel, setSelModel] = useState('');
 
   const [model, setModel] = useState(null);
   const [maxPredictions, setMaxPredictions] = useState(null);
@@ -114,12 +123,12 @@ const Prediction = () => {
   async function init() {
 
     //apple model 
-    const modelURL = modelPath + "/apple/model.json";
-    const metadataURL = modelPath + "/apple/metadata.json";
+    const modelURL = modelPath + `/${selModel}/model.json`;
+    const metadataURL = modelPath + `/${selModel}/metadata.json`;
 
     //  wheat model
-    const modelURL_wheat = modelPath + "/wheat/model.json";
-    const metadataURL_wheat = modelPath + "/wheat/metadata.json";
+    // const modelURL_wheat = modelPath + "/wheat/model.json";
+    // const metadataURL_wheat = modelPath + "/wheat/metadata.json";
    
 
     // load the model and metadata
@@ -131,6 +140,7 @@ const Prediction = () => {
     let modelT = await window.tmImage.load(modelURL, metadataURL);
     setMaxPredictions(modelT.getTotalClasses());
     setModel(modelT);
+    console.log(selModel , ' Model loaded');
   }
 
   const predictFromImage = async () => {
@@ -154,8 +164,11 @@ const Prediction = () => {
   };
 
   useEffect(() => {
-    init();
-  }, []);
+    
+    if(selModel)
+      init();
+
+  }, [selModel]);
 
   const handleImageUpload = async (e) => {
     if (!e.target.files[0]) return;
@@ -208,7 +221,7 @@ const Prediction = () => {
   };
 
   const getPlantStatus = () => {
-    if (result.className.endsWith("healthy")) {
+    if (result.className.toLowerCase().includes("healthy")) {
       return (
         <p className="display-4 fw-bold text-success text-center">
           Congratulations!! Your plant is Healthy
@@ -305,6 +318,12 @@ const Prediction = () => {
         </div>
       </Box>
       <Container>
+      <select className="form-control" onChange={e => setSelModel(e.target.value.toLowerCase())}>
+        <option value="">Select a Model</option>
+        {
+          AIModels.map( modelName => <option value={modelName}>{modelName}</option> )
+        }
+      </select>
         <div className="row mt-4">
           <div className="col-md-6">
             <Paper
