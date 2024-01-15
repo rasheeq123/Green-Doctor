@@ -148,6 +148,8 @@ const Home = () => {
                 width: "100%",
                 backgroundSize: "cover",
                 backgroundPosition: "center",
+                marginRight:"30px",
+                
               }}
             ></Container>
             </StyledPaper>
@@ -155,11 +157,12 @@ const Home = () => {
           <Grid item xs={12} sm={6}>
             <Box
               sx={{
-                width: "480px",
+                width: "510px",
                 height: "500px",
                 display: "flex",
                 flexDirection: "column",
                 justifyContent: "center",
+                marginLeft:"50px"
               }}
             >
               <Typography variant="h3" mb={2} fontWeight="semibold">
