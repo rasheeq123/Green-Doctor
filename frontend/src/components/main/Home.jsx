@@ -148,9 +148,9 @@ const Home = () => {
                 width: "100%",
                 backgroundSize: "cover",
                 backgroundPosition: "center",
-                marginRight:"30px",
-                
+                marginRight:"30px", 
               }}
+              
             ></Container>
             </StyledPaper>
           </Grid>
