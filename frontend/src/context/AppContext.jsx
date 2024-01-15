@@ -9,14 +9,14 @@ export const AppProvider = ({children}) => {
     const [currentUser, setCurrentUser] = useState(
         JSON.parse(sessionStorage.getItem('user')) //JSON.parse convert json into jsx 
     )
-    const [loggedIn, setLoggedIn] = useState(currentUser!==null);
+    const [loggedIn, setloggedIn] = useState(currentUser!==null);
 
     const logout = () =>{
         setLoggedIn(false);
         sessionStorage.removeItem('user');
         navigate('/login');
     }
-    return <AppContext.Provider value={{setLoggedIn, loggedIn, logout}}>
+    return <AppContext.Provider value={{loggedIn, setloggedIn, logout}}>
         {children}
     </AppContext.Provider>
 } 
