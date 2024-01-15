@@ -1,6 +1,30 @@
-import { Box, Button, Container, Grid, Typography } from "@mui/material";
+import { Box, Button, Container, Grid, Typography, createTheme, styled, Paper } from "@mui/material";
 import React from "react";
 import { NavLink } from "react-router-dom";
+
+const theme = createTheme();
+
+const StyledPaper = styled(Paper)({
+  padding: theme.spacing(1),
+  border: '1 px solid black',
+  transition: 'transform 0.3s ease-in-out',
+  '&:hover': {
+    
+      transform: 'scale(1.1)', // Adjust the scale factor as needed
+    
+  },
+  '& img': {
+    width: '100%',
+    height: 'auto',
+    display: 'block',
+    transition: 'transform 0.1s ease-in-out', // Added transition for the image
+    transform: 'scale(1)', // Set the default scale
+  },
+  // width: '60%', // Adjust the width as needed
+  margin: 'auto', // Center the Paper within the Grid item
+});
+
+
 
 const Home = () => {
   return (
