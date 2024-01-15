@@ -84,6 +84,7 @@ const Home = () => {
             </Box>
           </Grid>
           <Grid item xs={12} sm={6}>
+          <StyledPaper>
             <Container
               sx={{
                 display: "flex",
@@ -99,6 +100,7 @@ const Home = () => {
                 backgroundPosition: "center",
               }}
             ></Container>
+            </StyledPaper>
           </Grid>
         </Grid>
       </Container>
@@ -108,6 +110,7 @@ const Home = () => {
       <Container sx={{ mt: 18 }}>
         <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
           <Grid item xs={12} sm={6}>
+            <StyledPaper>
             <Container
               sx={{
                 display: "flex",
@@ -122,6 +125,7 @@ const Home = () => {
                 backgroundPosition: "center",
               }}
             ></Container>
+            </StyledPaper>
           </Grid>
           <Grid item xs={12} sm={6}>
             <Box
