@@ -5,7 +5,7 @@ import { NavLink } from "react-router-dom";
 const theme = createTheme();
 
 const StyledPaper = styled(Paper)({
-  padding: theme.spacing(1),
+  padding: theme.spacing(0),
   border: '1 px solid black',
   transition: 'transform 0.3s ease-in-out',
   '&:hover': {
@@ -117,7 +117,7 @@ const Home = () => {
                 flexDirection: "column",
                 justifyContent: "center",
                 alignItems: "center",
-                borderRadius: 2,
+                borderRadius: 1,
                 minHeight: 500,
                 width: "100%",
                 // backgroundSize: '100% 100%', // Cover the entire Paper
@@ -143,7 +143,7 @@ const Home = () => {
                 flexDirection: "column",
                 justifyContent: "center",
                 alignItems: "center",
-                borderRadius: 2,
+                borderRadius: 1,
                 minHeight: 500,
                 width: "100%",
                 backgroundSize: "cover",

@@ -176,7 +176,8 @@ const Prediction = () => {
     setResult(res);
 
     // saveHistory(predictionResultExtractor(prediction));
-    <Swal className="fire"></Swal>({
+    <Swal className="fire"></Swal>
+    ({
       title: "Success",
       icon: "success",
       text: "Prediction Completed",
