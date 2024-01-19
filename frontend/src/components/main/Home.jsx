@@ -137,7 +137,7 @@ const Home = () => {
           <Grid item xs={12} sm={6}>
             <StyledPaper>
             <Container
-              sx={{
+              sx={{ 
                 display: "flex",
                 backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.3)), url('/images/G2.jpg')`,
                 flexDirection: "column",
