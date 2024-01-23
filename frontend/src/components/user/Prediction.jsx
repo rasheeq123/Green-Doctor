@@ -37,7 +37,8 @@ const AIModels = [
   'Potato',
   'Peach',
   'Tomato',
-  'Pepper'
+  'Pepper',
+  'Tomato'
 ]
 
 const Prediction = () => {
