@@ -102,6 +102,7 @@ const Prediction = () => {
 
   const stopWebcam = () => {
     setCamOpen(false);
+
   };
 
   const predictionResultExtractor = (prediction) => {
