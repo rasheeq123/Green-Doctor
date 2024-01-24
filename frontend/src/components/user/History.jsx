@@ -31,7 +31,7 @@ const History = () => {
   return (
     <div className='vh-100 bg-body-secondary'>
       <div className="container py-4 mt-2">
-        <h1 className='text-center mb-4 mt-5 text-bold'>View Prediction History</h1>
+        <h1 className='text-center mb-4 mt-5 text-bold'>View Diagnosed History</h1>
 
         <table className='table table-bordered table align-middle text-center table-hover table-warning shadow-lg'>
           <thead>
