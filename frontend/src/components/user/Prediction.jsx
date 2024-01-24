@@ -92,6 +92,7 @@ const Prediction = () => {
     const imageSrc = webcamRef.current.getScreenshot();
     // Do something with the captured image (e.g., send it to a server)
     // console.log(imageSrc);
+    
     const img = new Image();
     img.src = imageSrc;
     setSelImage(imageSrc);
