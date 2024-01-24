@@ -68,14 +68,15 @@ const Prediction = () => {
     const selectedModel = (event.target.value.toLowerCase());
     setSelModel(selectedModel);
 
-     // Show toaster notification
-  toast.success(`Model ${selectedModel} selected`, {
-    position: 'top-right',
-    autoClose: 3000,
-    hideProgressBar: false,
-    closeOnClick: true,
-    pauseOnHover: true,
-    draggable: true,
+     // Show toaster notification 
+  
+     toast.success(`Model ${selectedModel} selected`, {
+      position: 'top-right',
+      autoClose: 3000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
   });
   };
 
