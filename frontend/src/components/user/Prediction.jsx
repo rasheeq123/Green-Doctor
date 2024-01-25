@@ -124,9 +124,11 @@ const Prediction = () => {
       method: "POST",
       body: fd,
     }).then((res) => {
+
       if (res.status === 200) {
         console.log("file uploaded");
       }
+      
     });
   };
 
