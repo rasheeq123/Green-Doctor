@@ -463,7 +463,6 @@ const Prediction = () => {
                         flexDirection: "column",
                       }}
                     >
-                      
                       <Tooltip title="Open Camera" arrow>
                         <IconButton onClick={(e) => setCamOpen(true)}>
                           <CameraAlt
@@ -573,15 +572,14 @@ const Prediction = () => {
                     color: "white",
                   }}
                 >
-                  Sharper Images, Better Insights, For the most accurate
-                  diagnosis, upload a sharp and clear picture of the leaf.
+                Sharper Images, Better Insights, For the most accurate
+                diagnosis, upload a sharp and clear picture of the leaf.
                 </p>
               )}
             </Box>
           </Paper>
         </div>
         {result && getPlantStatus()}
-
         {loadedImage && (
           <div style={{ display: "flex", justifyContent: "center" }}>
             <Button
@@ -605,7 +603,7 @@ const Prediction = () => {
                     role="status"
                     aria-hidden="true"
                   ></span>
-                    Predicting...
+                  Predicting...
                 </>
               ) : (
                 <Typography variant="h5">Predict Disease</Typography>
