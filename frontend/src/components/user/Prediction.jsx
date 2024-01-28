@@ -211,6 +211,7 @@ const Prediction = () => {
       alert("Invalid file type. Please select a valid image (jpg, png, jpeg).");
       return;
     }
+    
     setSelImg(file.name);
     uploadFile(file);
     const img = new Image();
