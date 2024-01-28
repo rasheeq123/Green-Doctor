@@ -106,7 +106,7 @@ const Prediction = () => {
   };
 
   const predictionResultExtractor = (prediction) => {
-    
+
     let tempRes = prediction.find(
       (pred) =>
         pred.probability ===
@@ -128,8 +128,7 @@ const Prediction = () => {
 
       if (res.status === 200) {
         console.log("file uploaded");
-      }
-      
+      }   
     });
   };
 
