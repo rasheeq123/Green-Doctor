@@ -501,7 +501,8 @@ const Prediction = () => {
             }}
           >
             <div className="card-header">
-              <Typography
+              
+            <Typography
                 variant="h3"
                 align="center"
                 sx={{
