@@ -253,7 +253,6 @@ const Prediction = () => {
       JSON.stringify(cureData.find((d) => d.diseaseName === result.className))
     );
   };
-
   const getPlantStatus = () => {
     if (result.className.toLowerCase().includes("healthy")) {
       return (
