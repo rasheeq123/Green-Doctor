@@ -106,6 +106,7 @@ const Prediction = () => {
   };
 
   const predictionResultExtractor = (prediction) => {
+
     let tempRes = prediction.find(
       (pred) =>
         pred.probability ===
@@ -124,9 +125,10 @@ const Prediction = () => {
       method: "POST",
       body: fd,
     }).then((res) => {
+
       if (res.status === 200) {
         console.log("file uploaded");
-      }
+      }   
     });
   };
 
@@ -209,6 +211,7 @@ const Prediction = () => {
       alert("Invalid file type. Please select a valid image (jpg, png, jpeg).");
       return;
     }
+    
     setSelImg(file.name);
     uploadFile(file);
     const img = new Image();
@@ -250,7 +253,6 @@ const Prediction = () => {
       JSON.stringify(cureData.find((d) => d.diseaseName === result.className))
     );
   };
-
   const getPlantStatus = () => {
     if (result.className.toLowerCase().includes("healthy")) {
       return (
@@ -461,7 +463,6 @@ const Prediction = () => {
                         flexDirection: "column",
                       }}
                     >
-                      <Box></Box>
                       <Tooltip title="Open Camera" arrow>
                         <IconButton onClick={(e) => setCamOpen(true)}>
                           <CameraAlt
@@ -500,7 +501,8 @@ const Prediction = () => {
             }}
           >
             <div className="card-header">
-              <Typography
+              
+            <Typography
                 variant="h3"
                 align="center"
                 sx={{
@@ -571,15 +573,14 @@ const Prediction = () => {
                     color: "white",
                   }}
                 >
-                  Sharper Images, Better Insights, For the most accurate
-                  diagnosis, upload a sharp and clear picture of the leaf.
+                Sharper Images, Better Insights, For the most accurate
+                diagnosis, upload a sharp and clear picture of the leaf.
                 </p>
               )}
             </Box>
           </Paper>
         </div>
         {result && getPlantStatus()}
-
         {loadedImage && (
           <div style={{ display: "flex", justifyContent: "center" }}>
             <Button
@@ -603,7 +604,7 @@ const Prediction = () => {
                     role="status"
                     aria-hidden="true"
                   ></span>
-                    Predicting...
+                  Predicting...
                 </>
               ) : (
                 <Typography variant="h5">Predict Disease</Typography>
