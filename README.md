@@ -91,14 +91,6 @@ npm run dev
 ```
 
 
-### :triangular_flag_on_post: Deployment
-
-To deploy this project manually run
-```bash
-npm run build
-```
-
-
 ## :handshake: Contact Owners
 
 <p align="left">
