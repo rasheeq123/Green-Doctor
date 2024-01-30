@@ -599,11 +599,13 @@ const Prediction = () => {
             >
               {predictionLoading ? (
                 <>
-                  <span
+                
+                <span
                     className="spinner-border spinner-border-sm"
                     role="status"
                     aria-hidden="true"
                   ></span>
+
                   Predicting...
                 </>
               ) : (
