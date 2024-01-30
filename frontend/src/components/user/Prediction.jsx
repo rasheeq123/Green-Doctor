@@ -540,7 +540,6 @@ const Prediction = () => {
                 onChange={handleImageUpload}
                 id="leaf-image"
               />
-
               {selImage ? (
                 <div>
                   <img
@@ -581,6 +580,7 @@ const Prediction = () => {
           </Paper>
         </div>
         {result && getPlantStatus()}
+        
         {loadedImage && (
           <div style={{ display: "flex", justifyContent: "center" }}>
             <Button
