@@ -612,7 +612,6 @@ const Prediction = () => {
             </Button>
           </div>
         )}
-        
       </Container>
     </Box>
   );
