@@ -500,6 +500,7 @@ const Prediction = () => {
               backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6)), url('/images/H2.jpg')`,
             }}
           >
+            
             <div className="card-header">
               
             <Typography
@@ -580,7 +581,7 @@ const Prediction = () => {
           </Paper>
         </div>
         {result && getPlantStatus()}
-        
+
         {loadedImage && (
           <div style={{ display: "flex", justifyContent: "center" }}>
             <Button
