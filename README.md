@@ -1,5 +1,4 @@
 <div align='center'>
-
 <h1>Green Doctor</h1>
 <p>Green Doctor is a web Based Solution to identify and solve disease in plants/crops. Provides tailored treatment plans and proactive measures to combat plant disease.Designed for urban farmers, farmers and amateur gardener to protect their crops/plants and boost production.
 </p>
