@@ -44,7 +44,6 @@
 - User Authentication
 - Multiple Level of Access
 - Storage of previously diagnosed plant
-
   
 ### :bangbang: Prerequisites
 
