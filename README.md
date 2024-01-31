@@ -4,8 +4,6 @@
 </p>
 
 <h4> <a href=>View Demo</a> <span> · </span> <a href="https://github.com/omkarsharma2821/Green-Doctor/blob/master/README.md"> Documentation </a> <span> · </span> <a href="https://github.com/omkarsharma2821/Green-Doctor/issues"> Report Bug </a> <span> · </span> <a href="https://github.com/omkarsharma2821/Green-Doctor/issues"> Request Feature </a> </h4>
-
-
 </div> 
 
 # :notebook_with_decorative_cover: Table of Contents 
