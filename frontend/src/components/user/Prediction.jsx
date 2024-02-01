@@ -212,7 +212,6 @@ const Prediction = () => {
       alert("Invalid file type. Please select a valid image (jpg, png, jpeg).");
       return;
     }
-    
     setSelImg(file.name);
     uploadFile(file);
     const img = new Image();
@@ -264,7 +263,7 @@ const Prediction = () => {
     } else if (result.className === "Sorry! Unknown Plant") {
       return (
         <p className="display-4 fw-bold text-warning text-center">
-          Sorry! Unknown Plant
+          Sorry! Unknown Plant detected
         </p>
       );
     } else {
@@ -329,7 +328,6 @@ const Prediction = () => {
       );
     }
   };
-
   return (
     <Box
       sx={{
