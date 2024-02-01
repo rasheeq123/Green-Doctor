@@ -463,6 +463,7 @@ const Prediction = () => {
                         flexDirection: "column",
                       }}
                     >
+                      
                       <Tooltip title="Open Camera" arrow>
                         <IconButton onClick={(e) => setCamOpen(true)}>
                           <CameraAlt
@@ -471,6 +472,7 @@ const Prediction = () => {
                           />
                         </IconButton>
                       </Tooltip>
+
                       <p
                         className="text-center h1 mt-4 py-4 px-5"
                         style={{
