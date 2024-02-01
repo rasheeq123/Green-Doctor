@@ -64,6 +64,7 @@ const Prediction = () => {
   const [currentUser, setCurrentUser] = useState(
     JSON.parse(sessionStorage.getItem("user"))
   );
+  
   const handleModelChange = (event) => {
     const selectedModel = (event.target.value.toLowerCase());
     setSelModel(selectedModel);
