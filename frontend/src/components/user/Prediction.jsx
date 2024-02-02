@@ -322,6 +322,7 @@ const Prediction = () => {
                 View Diagnosed History{" "}
                 <i className="fa fa-arrow-right" aria-hidden="true"></i>
               </Button>
+
             </Box>
           </div>
         </>
