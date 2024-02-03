@@ -6,5 +6,6 @@ const myschema= new Schema({
     product:Object,
     price:Number,
     createdAt:Date
+    
 });
 module.exports=model('order', myschema);
