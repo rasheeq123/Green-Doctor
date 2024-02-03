@@ -11,6 +11,7 @@ export const AppProvider = ({children}) => {
     )
     const [loggedIn, setloggedIn] = useState(currentUser!==null);
 
+    
     const logout = () =>{
         setLoggedIn(false);
         sessionStorage.removeItem('user');
@@ -19,6 +20,7 @@ export const AppProvider = ({children}) => {
     return <AppContext.Provider value={{loggedIn, setloggedIn, logout}}>
         {children}
     </AppContext.Provider>
+    
 } 
 
 const useAppContext = () => useContext(AppContext); 
