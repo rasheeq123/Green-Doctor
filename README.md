@@ -1,12 +1,9 @@
 <div align='center'>
-
 <h1>Green Doctor</h1>
 <p>Green Doctor is a web Based Solution to identify and solve disease in plants/crops. Provides tailored treatment plans and proactive measures to combat plant disease.Designed for urban farmers, farmers and amateur gardener to protect their crops/plants and boost production.
 </p>
 
 <h4> <a href=>View Demo</a> <span> · </span> <a href="https://github.com/omkarsharma2821/Green-Doctor/blob/master/README.md"> Documentation </a> <span> · </span> <a href="https://github.com/omkarsharma2821/Green-Doctor/issues"> Report Bug </a> <span> · </span> <a href="https://github.com/omkarsharma2821/Green-Doctor/issues"> Request Feature </a> </h4>
-
-
 </div> 
 
 # :notebook_with_decorative_cover: Table of Contents 
@@ -16,6 +13,8 @@
 - [Run Locally]
 - [How to clone]
 - [Contact]
+
+
 
 ## :star2: About The Project
 
@@ -45,7 +44,6 @@
 - User Authentication
 - Multiple Level of Access
 - Storage of previously diagnosed plant
-
   
 ### :bangbang: Prerequisites
 
@@ -89,14 +87,6 @@ npm install
 connect backend
 ```bash
 npm run dev
-```
-
-
-### :triangular_flag_on_post: Deployment
-
-To deploy this project manually run
-```bash
-npm run build
 ```
 
 

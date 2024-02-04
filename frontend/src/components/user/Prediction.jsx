@@ -64,6 +64,7 @@ const Prediction = () => {
   const [currentUser, setCurrentUser] = useState(
     JSON.parse(sessionStorage.getItem("user"))
   );
+  
   const handleModelChange = (event) => {
     const selectedModel = (event.target.value.toLowerCase());
     setSelModel(selectedModel);
@@ -211,7 +212,6 @@ const Prediction = () => {
       alert("Invalid file type. Please select a valid image (jpg, png, jpeg).");
       return;
     }
-    
     setSelImg(file.name);
     uploadFile(file);
     const img = new Image();
@@ -263,7 +263,7 @@ const Prediction = () => {
     } else if (result.className === "Sorry! Unknown Plant") {
       return (
         <p className="display-4 fw-bold text-warning text-center">
-          Sorry! Unknown Plant
+          Sorry! Unknown Plant detected
         </p>
       );
     } else {
@@ -322,13 +322,13 @@ const Prediction = () => {
                 View Diagnosed History{" "}
                 <i className="fa fa-arrow-right" aria-hidden="true"></i>
               </Button>
+
             </Box>
           </div>
         </>
       );
     }
   };
-
   return (
     <Box
       sx={{
@@ -463,6 +463,7 @@ const Prediction = () => {
                         flexDirection: "column",
                       }}
                     >
+                      
                       <Tooltip title="Open Camera" arrow>
                         <IconButton onClick={(e) => setCamOpen(true)}>
                           <CameraAlt
@@ -471,6 +472,7 @@ const Prediction = () => {
                           />
                         </IconButton>
                       </Tooltip>
+
                       <p
                         className="text-center h1 mt-4 py-4 px-5"
                         style={{
@@ -500,6 +502,7 @@ const Prediction = () => {
               backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6)), url('/images/H2.jpg')`,
             }}
           >
+            
             <div className="card-header">
               
             <Typography
@@ -540,7 +543,6 @@ const Prediction = () => {
                 onChange={handleImageUpload}
                 id="leaf-image"
               />
-
               {selImage ? (
                 <div>
                   <img
@@ -581,6 +583,7 @@ const Prediction = () => {
           </Paper>
         </div>
         {result && getPlantStatus()}
+
         {loadedImage && (
           <div style={{ display: "flex", justifyContent: "center" }}>
             <Button
@@ -599,11 +602,12 @@ const Prediction = () => {
             >
               {predictionLoading ? (
                 <>
-                  <span
+                <span
                     className="spinner-border spinner-border-sm"
                     role="status"
                     aria-hidden="true"
                   ></span>
+
                   Predicting...
                 </>
               ) : (
