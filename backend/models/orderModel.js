@@ -4,7 +4,6 @@ const myschema= new Schema({
 
     user:{type:Types.ObjectId, ref:"users"},
     product:Object,
-    
     price:Number,
     createdAt:Date
     
