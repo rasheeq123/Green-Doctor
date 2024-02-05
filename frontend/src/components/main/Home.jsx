@@ -40,7 +40,7 @@ const Home = () => {
           backgroundRepeat: "no-repeat",
           backgroundSize: "cover",
           backgroundPosition: "center",
-          height: "100vh", 
+          height: "100vh",  
         }}
       >
         <Typography
