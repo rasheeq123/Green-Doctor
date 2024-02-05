@@ -181,6 +181,7 @@ function ResponsiveAppBar(){
               <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
                 <Avatar alt="Remy Sharp" src="https://avatars.githubusercontent.com/u/108568853?v=4" />
               </IconButton>
+              
             </Tooltip>
             <Menu
               sx={{ mt: '45px' }}
@@ -205,6 +206,7 @@ function ResponsiveAppBar(){
               ))}
             </Menu>
           </Box>
+          
         </Toolbar>
       </Container>
     </AppBar>
