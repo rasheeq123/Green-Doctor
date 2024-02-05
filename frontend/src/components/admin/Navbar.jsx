@@ -179,9 +179,9 @@ function ResponsiveAppBar(){
           <Box sx={{ flexGrow: 0 }}>
             <Tooltip title="Open settings">
               <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                <Avatar alt="Remy Sharp" src="https://avatars.githubusercontent.com/u/108568853?v=4" />
+                < Avatar alt="Remy Sharp" src="https://avatars.githubusercontent.com/u/108568853?v=4" />
               </IconButton>
-              
+
             </Tooltip>
             <Menu
               sx={{ mt: '45px' }}
@@ -197,7 +197,7 @@ function ResponsiveAppBar(){
                 horizontal: 'right',
               }}
               open={Boolean(anchorElUser)}
-              onClose={handleCloseUserMenu}
+              onClose={ handleCloseUserMenu }
             >
               {settings.map((setting) => (
                 <MenuItem key={setting.text} onClick={handleCloseUserMenu}>
