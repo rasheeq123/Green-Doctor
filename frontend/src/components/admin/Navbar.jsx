@@ -196,6 +196,7 @@ function ResponsiveAppBar(){
                 vertical: 'top',
                 horizontal: 'right',
               }}
+              
               open={Boolean(anchorElUser)}
               onClose={ handleCloseUserMenu }
             >
