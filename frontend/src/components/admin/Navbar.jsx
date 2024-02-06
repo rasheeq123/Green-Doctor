@@ -183,8 +183,7 @@ function ResponsiveAppBar(){
               </IconButton>
 
             </Tooltip>
-            <Menu
-              sx={{ mt: '45px' }}
+            <Menu sx={{ mt: '45px' }}
               id="menu-appbar"
               anchorEl={anchorElUser}
               anchorOrigin={{
@@ -196,10 +195,9 @@ function ResponsiveAppBar(){
                 vertical: 'top',
                 horizontal: 'right',
               }}
-              
               open={Boolean(anchorElUser)}
               onClose={ handleCloseUserMenu }
-            >
+              >
               {settings.map((setting) => (
                 <MenuItem key={setting.text} onClick={handleCloseUserMenu}>
                   <Typography textAlign="center" onClick={() => navigate(setting.link)} >{setting.text}</Typography>
