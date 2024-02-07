@@ -3,7 +3,6 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 
 const theme = createTheme();
-
 const StyledPaper = styled(Paper)({
   padding: theme.spacing(0),
   border: '1 px solid black',
