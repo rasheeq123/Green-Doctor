@@ -9,9 +9,7 @@ const StyledPaper = styled(Paper)({
   border: '1 px solid black',
   transition: 'transform 0.3s ease-in-out',
   '&:hover': {
-    
       transform: 'scale(1.1)', // Adjust the scale factor as needed
-    
   },
   '& img': {
     width: '100%',
