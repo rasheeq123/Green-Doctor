@@ -168,7 +168,8 @@ function ResponsiveAppBar(){
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
             {pages.map((page) => (
               <Button
-                onClick={() => navigate(page.link)}
+              
+                onClick={() => navigate (page.link)}
                 key={page.text}
                 // onClick={handleCloseNavMenu}
                 sx={{ my: 2, color: 'black', display: 'block',textTransform: "none", }}
@@ -180,7 +181,7 @@ function ResponsiveAppBar(){
 
           <Box sx={{ flexGrow: 0 }}>
             <Tooltip title="Open settings">
-              <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
+              <IconButton onClick={ handleOpenUserMenu } sx={{ p: 0 }}>
                 < Avatar alt="Remy Sharp" src="https://avatars.githubusercontent.com/u/108568853?v=4" />
               </IconButton>
 
