@@ -32,28 +32,25 @@ const options = {
   flower:[
     'Rose'
   ],
+
   fruit: [
-    
-      'Apple'
+      'Apple',
+      'Peach'
   ],
   vegetable: [
     'Tomato',
       'Pepper',
       'Potato',
       
+  ],
+  crops: [
+    'wheat'  
+  ],
+  
+  plants: [
+    'aloevera'     
   ]
 }
-// [
-//   'Apple',
-//   'AloeVera',
-//   'Wheat',
-//   
-//   
-//   'Peach',
-//   
-// ]
-
-
 
 const Prediction = () => {
   const [AIModels, setAIModels] = useState([]);
