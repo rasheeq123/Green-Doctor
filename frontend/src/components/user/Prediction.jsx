@@ -1,6 +1,6 @@
 import React, { useCallback, useEffect, useRef, useState } from "react";
 import app_config from "../../config";
-import { Link, NavLink, useNavigate } from "react-router-dom";
+import { Link, NavLink, useLocation, useNavigate, useParams } from "react-router-dom";
 import Webcam from "react-webcam";
 import {
   Box,
@@ -28,23 +28,38 @@ import {
 } from "@mui/icons-material";
 import { red } from "@mui/material/colors";
 
+const options = {
+  flower:[
+    'Rose'
+  ],
+  fruit: [
+    
+      'Apple'
+  ],
+  vegetable: [
+    'Tomato',
+      'Pepper',
+      'Potato',
+      
+  ]
+}
+// [
+//   'Apple',
+//   'AloeVera',
+//   'Wheat',
+//   
+//   
+//   'Peach',
+//   
+// ]
 
-const AIModels = [
-  'Apple',
-  'AloeVera',
-  'Wheat',
-  'Rose',
-  'Potato',
-  'Peach',
-  'Tomato',
-  'Pepper',
-  
-  // 'Cherry',
-  // 'Banana'
-]
+
 
 const Prediction = () => {
+  const [AIModels, setAIModels] = useState([]);
   const { modelPath, cureData } = app_config;
+
+  const {type} = useParams();
 
   const [selModel, setSelModel] = useState('');
 
@@ -105,6 +120,11 @@ const Prediction = () => {
     setCamOpen(false);
 
   };
+
+  useEffect(() => {
+    setAIModels(options[type]);
+  }, [])
+  
 
   const predictionResultExtractor = (prediction) => {
 
@@ -170,10 +190,14 @@ const Prediction = () => {
     // Note: the pose library adds "tmImage" object to your window (window.tmImage)
     // let modelT = await window.tmImage.load(modelURL, metadataURL); //human erron tm by mistake
     // let modelT = await window.Image.load(modelURL, metadataURL);
+    
+    // start loading here
     let modelT = await window.tmImage.load(modelURL, metadataURL);
     setMaxPredictions(modelT.getTotalClasses());
     setModel(modelT);
     console.log(selModel , ' Model loaded');
+
+    // stop loading here
   }
 
   const predictFromImage = async () => {

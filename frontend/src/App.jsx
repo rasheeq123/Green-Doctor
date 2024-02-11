@@ -39,7 +39,7 @@ function App() {
 
           <Route path="user" element={<User />}>
             <Route path="profile" element={<Profile />} />
-            <Route path="prediction" element={<Prediction />} />
+            <Route path="prediction/:type" element={<Prediction />} />
             <Route path="history" element={<History />} />
             <Route path="dashboard" element={<Dashboard />} />
           </Route>
