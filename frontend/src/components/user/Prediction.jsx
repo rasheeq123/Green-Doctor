@@ -38,7 +38,7 @@ const options = {
       'Peach'
   ],
   vegetable: [
-    'Tomato',
+      'Tomato',
       'Pepper',
       'Potato',
       
