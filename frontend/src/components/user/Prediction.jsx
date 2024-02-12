@@ -119,10 +119,16 @@ const Prediction = () => {
 
   };
 
-  useEffect(() => {
-    setAIModels(options[type]);
-  }, [])
-  
+  // useEffect(() => {
+  //   setAIModels(options[type]);
+  // }, [])
+  // Inside the useEffect hook where you set the AIModels state
+useEffect(() => {
+  if (options[type]) { // Check if options[type] exists
+    setAIModels(options[type]); // Set AIModels state with options[type] value
+  }
+}, [type]);
+
 
   const predictionResultExtractor = (prediction) => {
 
