@@ -44,7 +44,8 @@ const options = {
       
   ],
   crops: [
-    'wheat'  
+    'wheat',
+    'rice'  
   ],
   
   plants: [
