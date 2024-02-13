@@ -6,10 +6,10 @@ const Prediction = () => {
   
   return (
     <div style={{ marginTop: 50 }}>
-      <Typography variant="h3" align="center" gutterBottom mt={12}>
+      <Typography variant="h4" align="center" gutterBottom mt={15}>
         Select the category for prediction
       </Typography>
-      <Container sx={{mb:5}}>
+      <Container sx={{mb:5, mt:5}}>
       <Grid container spacing={1} justifyContent="center">
         <Grid item xs={12} md={3}>
           <Container
@@ -21,7 +21,7 @@ const Prediction = () => {
               alignItems: "center",
               borderRadius: 3,
               minHeight: 300,
-              width: "100%",
+              width: "90%",
               backgroundSize: "cover",
               backgroundPosition: "center",
             }}
@@ -49,7 +49,7 @@ const Prediction = () => {
               alignItems: "center",
               borderRadius: 3,
               minHeight: 300,
-              width: "100%",
+              width: "90%",
               backgroundSize: "cover",
               backgroundPosition: "center",
             }}
@@ -76,7 +76,7 @@ const Prediction = () => {
               alignItems: "center",
               borderRadius: 3,
               minHeight: 300,
-              width: "100%",
+              width: "90%",
               backgroundSize: "cover",
               backgroundPosition: "center",
             }}
@@ -103,7 +103,7 @@ const Prediction = () => {
               alignItems: "center",
               borderRadius: 3,
               minHeight: 300,
-              width: "100%",
+              width: "90%",
               backgroundSize: "cover",
               backgroundPosition: "center",
             }}
