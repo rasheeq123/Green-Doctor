@@ -100,7 +100,7 @@ const Prediction = () => {
         <Grid item xs={12} md={3}>
           <Container
             title="Crop"
-            to="/user/prediction/crop"
+            to="/user/prediction/crops"
             sx={{
               display: "flex",
               backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.3)), url('/images/crop.jpg')`,
