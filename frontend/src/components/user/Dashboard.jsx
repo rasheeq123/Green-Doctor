@@ -1,88 +1,139 @@
-import { Box, Container, Grid, Typography} from '@mui/material'
-import React from 'react'
+import React from "react";
+import { Link } from "react-router-dom";
+import { Grid, Typography, Container, Button } from "@mui/material";
 
-const Dashboard = () => {
+const Prediction = () => {
   return (
-    <>
-    {/* <Box
-        sx={{
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-          height: "60vh",
-        }}
-      >
-        <Typography variant="h1"> My Dashboard  </Typography>
-      </Box> */}
-       <Typography sx={{ mt: 10 }}
- variant="h2" align="center" gutterBottom >
-        Select the category
+    <div style={{ marginTop: 50 }}>
+      <Typography variant="h2" align="center" gutterBottom mt={12}>
+        Select the Category
       </Typography>
-
-      <Grid container spacing={2} justifyContent="center">
-        <Grid item xs={12} md={6}>
-          <Box title="Flower" to="/user/prediction/flower" sx={{
-                display: "flex",
-                backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.3)), url('/images/flower.jpg')`,
-                flexDirection: "column",
-                justifyContent: "center",
-                alignItems: "center",
-                borderRadius: 1,
-                minHeight: 400,
-                width: "60%",
-                // backgroundSize: '100% 100%', // Cover the entire Paper
-                backgroundSize: "cover",
-                backgroundPosition: "center",
-              }}></Box>
+      <Container sx={{mb:5}}>
+      <Grid container spacing={1} justifyContent="center">
+        {/* First Container */}
+        <Grid item xs={12} md={3}>
+          <Container
+            title="Flower"
+            to="/user/prediction/flower"
+            sx={{
+              display: "flex",
+              backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.3)), url('/images/flower.jpg')`,
+              flexDirection: "column",
+              justifyContent: "center",
+              alignItems: "center",
+              borderRadius: 3,
+              minHeight: 300,
+              width: "100%",
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+            }}
+          >
+            <Button
+              component={Link}
+              to="/user/prediction/flower"
+              variant="contained"
+              fullWidth
+              size="large"
+              color="primary"
+            >
+              Flower
+            </Button>
+          </Container>
         </Grid>
-        <Grid item xs={12} md={6}>
-          <Box title="Fruit" to="/user/prediction/fruit"  sx={{
-                display: "flex",
-                backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.3)), url('/images/fruit.jpg')`,
-                flexDirection: "column",
-                justifyContent: "center",
-                alignItems: "center",
-                borderRadius: 1,
-                minHeight: 400,
-                width: "60%",
-                // backgroundSize: '100% 100%', // Cover the entire Paper
-                backgroundSize: "cover",
-                backgroundPosition: "center",
-              }}></Box>                                                                
+        {/* Second Container */}
+        <Grid item xs={12} md={3}>
+          <Container
+            title="Fruit"
+            to="/user/prediction/fruit"
+            sx={{
+              display: "flex",
+              backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.3)), url('/images/fruit.jpg')`,
+              flexDirection: "column",
+              justifyContent: "center",
+              alignItems: "center",
+              borderRadius: 3,
+              minHeight: 300,
+              width: "100%",
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+            }}
+          >
+            <Button
+              component={Link}
+              to="/user/prediction/fruit"
+              variant="contained"
+              fullWidth
+              size="large"
+              color="primary"
+            >
+              Fruit
+            </Button>
+          </Container>
         </Grid>
-
-        <Grid item xs={12} md={6}>
-          <Container title="Vegetable" to="/user/prediction/vegetable"  sx={{
-                display: "flex",
-                backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.3)), url('/images/veg.jpg')`,
-                flexDirection: "column",
-                justifyContent: "center",
-                alignItems: "center",
-                borderRadius: 1,
-                minHeight: 400,
-                width: "60%",
-                // backgroundSize: '100% 100%', // Cover the entire Paper
-                backgroundSize: "cover",
-                backgroundPosition: "center",
-              }}></Container>
+        {/* Third Container */}
+        <Grid item xs={12} md={3}>
+          <Container
+            title="Vegetable"
+            to="/user/prediction/vegetable"
+            sx={{
+              display: "flex",
+              backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.3)), url('/images/veg.jpg')`,
+              flexDirection: "column",
+              justifyContent: "center",
+              alignItems: "center",
+              borderRadius: 3,
+              minHeight: 300,
+              width: "100%",
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+            }}
+          >
+            <Button
+              component={Link}
+              to="/user/prediction/vegetable"
+              variant="contained"
+              fullWidth
+              size="large"
+              color="primary"
+            >
+              Vegetable
+            </Button>
+          </Container>
         </Grid>
-        <Grid item xs={12} md={6}>
-          <Container title="Crop" to="/user/prediction/crop"  sx={{
-                display: "flex",
-                backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.3)), url('/images/crop.jpg')`,
-                flexDirection: "column",
-                justifyContent: "center",
-                alignItems: "center",
-                borderRadius: 1,
-                minHeight: 400,
-                width: "60%",
-                // backgroundSize: '100% 100%', // Cover the entire Paper
-                backgroundSize: "cover",
-                backgroundPosition: "center",
-              }}></Container>
+        {/* Fourth Container */}
+        <Grid item xs={12} md={3}>
+          <Container
+            title="Crop"
+            to="/user/prediction/crop"
+            sx={{
+              display: "flex",
+              backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.3)), url('/images/crop.jpg')`,
+              flexDirection: "column",
+              justifyContent: "center",
+              alignItems: "center",
+              borderRadius: 3,
+              minHeight: 300,
+              width: "100%",
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+            }}
+          >
+            <Button
+              component={Link}
+              to="/user/prediction/crop"
+              variant="contained"
+              fullWidth
+              size="large"
+              color="primary"
+            >
+              Crop
+            </Button>
+          </Container>
         </Grid>
       </Grid>
-    </>
-  )
-}
-export default Dashboard
+      </Container>
+    </div>
+  );
+};
+
+export default Prediction;
