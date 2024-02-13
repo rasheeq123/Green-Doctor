@@ -3,10 +3,11 @@ import { Link } from "react-router-dom";
 import { Grid, Typography, Container, Button } from "@mui/material";
 
 const Prediction = () => {
+  
   return (
     <div style={{ marginTop: 50 }}>
-      <Typography variant="h2" align="center" gutterBottom mt={12}>
-        Select the Category
+      <Typography variant="h3" align="center" gutterBottom mt={12}>
+        Select the category for prediction
       </Typography>
       <Container sx={{mb:5}}>
       <Grid container spacing={1} justifyContent="center">
@@ -26,6 +27,7 @@ const Prediction = () => {
             }}
           >
             <Button
+            // sx={{mt:29}}
               component={Link}
               to="/user/prediction/flower"
               variant="contained"
@@ -112,7 +114,7 @@ const Prediction = () => {
               variant="contained"
               fullWidth
               size="large"
-              color="success"
+              color="primary"
             >
               Crop
             </Button>
