@@ -10,7 +10,6 @@ const Prediction = () => {
       </Typography>
       <Container sx={{mb:5}}>
       <Grid container spacing={1} justifyContent="center">
-        {/* First Container */}
         <Grid item xs={12} md={3}>
           <Container
             title="Flower"
@@ -40,7 +39,6 @@ const Prediction = () => {
             </Button>
           </Container>
         </Grid>
-        {/* Second Container */}
         <Grid item xs={12} md={3}>
           <Container
             title="Fruit"
@@ -70,7 +68,6 @@ const Prediction = () => {
             </Button>
           </Container>
         </Grid>
-        {/* Third Container */}
         <Grid item xs={12} md={3}>
           <Container
             title="Vegetable"
@@ -100,7 +97,6 @@ const Prediction = () => {
             </Button>
           </Container>
         </Grid>
-        {/* Fourth Container */}
         <Grid item xs={12} md={3}>
           <Container
             title="Crop"
