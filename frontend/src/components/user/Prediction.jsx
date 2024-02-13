@@ -19,6 +19,7 @@ import {
 import { ToastContainer, toast } from 'react-toastify';
 import {
   CameraAlt,
+  Category,
   Close,
   CloudUpload,
   CropSharp,
@@ -57,7 +58,7 @@ const Prediction = () => {
   const [AIModels, setAIModels] = useState([]);
   const { modelPath, cureData } = app_config;
 
-  const {type} = useParams();
+  const {Category} = useParams();
 
   const [selModel, setSelModel] = useState('');
 
@@ -124,10 +125,10 @@ const Prediction = () => {
   // }, [])
   // Inside the useEffect hook where you set the AIModels state
 useEffect(() => {
-  if (options[type]) { // Check if options[type] exists
-    setAIModels(options[type]); // Set AIModels state with options[type] value
+  if (options[Category]) { // Check if options[type] exists
+    setAIModels(options[Category]); // Set AIModels state with options[type] value
   }
-}, [type]);
+}, [Category]);
 
 
   const predictionResultExtractor = (prediction) => {
