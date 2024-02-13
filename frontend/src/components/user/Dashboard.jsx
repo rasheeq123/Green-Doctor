@@ -12,8 +12,6 @@ const Prediction = () => {
       <Grid container spacing={1} justifyContent="center">
         <Grid item xs={12} md={3}>
           <Container
-            title="Flower"
-            to="/user/prediction/flower"
             sx={{
               display: "flex",
               backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.3)), url('/images/flower.jpg')`,
@@ -41,8 +39,6 @@ const Prediction = () => {
         </Grid>
         <Grid item xs={12} md={3}>
           <Container
-            title="Fruit"
-            to="/user/prediction/fruit"
             sx={{
               display: "flex",
               backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.3)), url('/images/fruit.jpg')`,
@@ -70,8 +66,6 @@ const Prediction = () => {
         </Grid>
         <Grid item xs={12} md={3}>
           <Container
-            title="Vegetable"
-            to="/user/prediction/vegetable"
             sx={{
               display: "flex",
               backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.3)), url('/images/veg.jpg')`,
@@ -99,8 +93,6 @@ const Prediction = () => {
         </Grid>
         <Grid item xs={12} md={3}>
           <Container
-            title="Crop"
-            to="/user/prediction/crops"
             sx={{
               display: "flex",
               backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.3)), url('/images/crop.jpg')`,
@@ -120,7 +112,7 @@ const Prediction = () => {
               variant="contained"
               fullWidth
               size="large"
-              color="primary"
+              color="success"
             >
               Crop
             </Button>
