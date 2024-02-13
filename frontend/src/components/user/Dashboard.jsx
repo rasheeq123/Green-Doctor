@@ -116,7 +116,7 @@ const Prediction = () => {
           >
             <Button
               component={Link}
-              to="/user/prediction/crop"
+              to="/user/prediction/crops"
               variant="contained"
               fullWidth
               size="large"
