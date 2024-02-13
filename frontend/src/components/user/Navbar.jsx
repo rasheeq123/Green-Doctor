@@ -23,10 +23,10 @@ const pages = [
     text: "User",
     link: "/user/dashboard",
   },
-  {
-    text: "Prediction",
-    link: "/user/prediction",
-  },
+  // {
+  //   text: "Prediction",
+  //   link: "/user/prediction",
+  // },
   {
     text: "History",
     link: "/user/history",
