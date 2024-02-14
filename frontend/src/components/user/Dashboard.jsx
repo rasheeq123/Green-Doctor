@@ -5,7 +5,7 @@ import { Grid, Typography, Container, Button, styled, createTheme, Paper } from 
 
 const theme = createTheme();
 
-const StyledPaper = styled(Paper)({
+const StyledPaper = styled (Paper)({
   padding: theme.spacing(0),
   border: '1 px solid black',
   transition: 'transform 0.3s ease-in-out',
