@@ -32,7 +32,7 @@ const Prediction = () => {
         Select the category for prediction
       </Typography>
       <Container sx={{mb:5, mt:5}}>
-      <Grid container spacing={1} justifyContent="center">
+      <Grid container spacing={4} justifyContent="center">
         <Grid item xs={12} md={3}>
         <StyledPaper>
           <Container
