@@ -125,5 +125,5 @@ const Prediction = () => {
     </div>
   );
 };
-
+ 
 export default Prediction;
