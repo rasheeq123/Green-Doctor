@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { Grid, Typography, Container, Button, styled, createTheme, Paper } from "@mui/material";
-
+import { ToastContainer, toast } from "react-toastify";
 
 const theme = createTheme();
 
@@ -10,7 +10,7 @@ const StyledPaper = styled (Paper)({
   border: '1 px solid black',
   transition: 'transform 0.3s ease-in-out',
   '&:hover': {
-      transform: 'scale(1.1)', // Adjust the scale factor as needed
+      transform: 'scale(1.1)', 
   },
 
   '& img': {
@@ -25,12 +25,22 @@ const StyledPaper = styled (Paper)({
 });
 
 const Prediction = () => {
-  
+  const handleCategorySelect = (category) => {
+    toast.success(`${category} category selected`, {
+      position: 'top-right',
+      autoClose: 3000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+  });
+  };
   return (
     <div style={{ marginTop: 50 }}>
       <Typography variant="h4" align="center" gutterBottom mt={15}>
         Select the category for prediction
       </Typography>
+       <ToastContainer/>
       <Container sx={{mb:5, mt:5}}>
       <Grid container spacing={4} justifyContent="center">
         <Grid item xs={12} md={3}>
@@ -48,9 +58,10 @@ const Prediction = () => {
               backgroundSize: "cover",
               backgroundPosition: "center",
             }}
-          >
+            >
             <Button
-            // sx={{mt:29}}
+              onClick={() => handleCategorySelect("flower")}
+              // sx={{mt:29}}
               component={Link}
               to="/user/prediction/flower"
               variant="contained"
@@ -80,6 +91,7 @@ const Prediction = () => {
             }}
           >
             <Button
+              onClick={() => handleCategorySelect("fruit")}
               component={Link}
               to="/user/prediction/fruit"
               variant="contained"
@@ -109,6 +121,7 @@ const Prediction = () => {
             }}
           >
             <Button
+            onClick={() => handleCategorySelect("vegetable")}
               component={Link}
               to="/user/prediction/vegetable"
               variant="contained"
@@ -138,6 +151,7 @@ const Prediction = () => {
             }}
           >
             <Button
+              onClick={() => handleCategorySelect("crops")}
               component={Link}
               to="/user/prediction/crops"
               variant="contained"
