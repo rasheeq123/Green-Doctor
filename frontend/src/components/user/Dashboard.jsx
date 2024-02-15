@@ -89,7 +89,7 @@ const Prediction = () => {
               backgroundSize: "cover",
               backgroundPosition: "center",
             }}
-          >
+          > 
             <Button
               onClick={() => handleCategorySelect("fruit")}
               component={Link}
