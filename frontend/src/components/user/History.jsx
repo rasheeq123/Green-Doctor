@@ -18,7 +18,7 @@ const History = () => {
   }, []);
 
   const deleteprediction = async (id) => {
-    const res = await fetch(`${import.meta.env.VITE_API_URL}/order/delete/` + id, {
+    const res = await fetch(`${import.meta.env.VITE_API_URL}/image/delete/` + id, {
       method: 'DELETE'
     });
     console.log(res.status);
