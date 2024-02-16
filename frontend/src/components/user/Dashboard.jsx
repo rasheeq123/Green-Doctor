@@ -121,7 +121,7 @@ const Prediction = () => {
             }}
           >
             <Button
-            onClick={() => handleCategorySelect("vegetable")}
+            onClick={( ) => handleCategorySelect( "vegetable" )}
               component={Link}
               to="/user/prediction/vegetable"
               variant="contained"
