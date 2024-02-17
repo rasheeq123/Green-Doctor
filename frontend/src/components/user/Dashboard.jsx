@@ -67,7 +67,9 @@ const Prediction = () => {
               variant="contained"
               fullWidth
               size="large"
-              color="primary"
+              // color="primary"
+              style={{ color: 'primary', backgroundColor: 'transparent' }}
+              
             >
               Flower
             </Button>
