@@ -106,7 +106,7 @@ const Prediction = () => {
                   to="/user/prediction/fruit"
                   variant="contained"
                   fullWidth
-                  size="large"
+                  
                   size="medium"
                   style={{
                     color: 'black',
@@ -146,7 +146,7 @@ const Prediction = () => {
                   to="/user/prediction/vegetable"
                   variant="contained"
                   fullWidth
-                  size="large"
+                  
                   size="medium"
                   style={{
                     color: 'black',
