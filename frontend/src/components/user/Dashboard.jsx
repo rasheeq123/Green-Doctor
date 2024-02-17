@@ -186,8 +186,18 @@ const Prediction = () => {
                   to="/user/prediction/crops"
                   variant="contained"
                   fullWidth
-                  size="large"
-                  color="primary"
+                  
+                  size="medium"
+                  style={{
+                    color: 'black',
+                    fontWeight: 'bold',
+                    backgroundColor: 'rgba(255, 255, 255, 0.5)',
+                    border: '2px solid transparent', // Initial border style
+                    transition: 'border-color 0.3s ease', // Smooth transition for border color change
+                  }}
+                  // Add hover effect
+                  onMouseOver={(event) => event.target.style.borderColor = 'white'}
+                  onMouseOut={(event) => event.target.style.borderColor = 'transparent'}
                 >
                   Crop
                 </Button>
