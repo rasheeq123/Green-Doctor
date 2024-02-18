@@ -69,7 +69,7 @@ const Prediction = () => {
                   size="medium"
                   style={{
                     color: 'black',
-                    fontWeight: 'bold',
+                    fontWeight: '800',
                     backgroundColor: 'rgba(255, 255, 255, 0.5)',
                     border: '2px solid transparent', // Initial border style
                     transition: 'border-color 0.3s ease', // Smooth transition for border color change
@@ -79,7 +79,7 @@ const Prediction = () => {
                   onMouseOut={(event) => event.target.style.borderColor = 'transparent'}
 
                 >
-                  Flower
+                  Flowers
                 </Button>
               </Container>
             </StyledPaper>
@@ -110,7 +110,7 @@ const Prediction = () => {
                   size="medium"
                   style={{
                     color: 'black',
-                    fontWeight: 'bold',
+                    fontWeight: '800',
                     backgroundColor: 'rgba(255, 255, 255, 0.5)',
                     border: '2px solid transparent', // Initial border style
                     transition: 'border-color 0.3s ease', // Smooth transition for border color change
@@ -119,7 +119,7 @@ const Prediction = () => {
                   onMouseOver={(event) => event.target.style.borderColor = 'white'}
                   onMouseOut={(event) => event.target.style.borderColor = 'transparent'}
                 >
-                  Fruit
+                  Fruits
                 </Button>
               </Container>
             </StyledPaper>
@@ -150,7 +150,7 @@ const Prediction = () => {
                   size="medium"
                   style={{
                     color: 'black',
-                    fontWeight: 'bold',
+                    fontWeight: '800',
                     backgroundColor: 'rgba(255, 255, 255, 0.5)',
                     border: '2px solid transparent', // Initial border style
                     transition: 'border-color 0.3s ease', // Smooth transition for border color change
@@ -159,7 +159,7 @@ const Prediction = () => {
                   onMouseOver={(event) => event.target.style.borderColor = 'white'}
                   onMouseOut={(event) => event.target.style.borderColor = 'transparent'}
                 >
-                  Vegetable
+                  Vegetables
                 </Button >
               </Container>
             </StyledPaper>
@@ -190,7 +190,7 @@ const Prediction = () => {
                   size="medium"
                   style={{
                     color: 'black',
-                    fontWeight: 'bold',
+                    fontWeight: '800',
                     backgroundColor: 'rgba(255, 255, 255, 0.5)',
                     border: '2px solid transparent', // Initial border style
                     transition: 'border-color 0.3s ease', // Smooth transition for border color change
@@ -199,7 +199,7 @@ const Prediction = () => {
                   onMouseOver={(event) => event.target.style.borderColor = 'white'}
                   onMouseOut={(event) => event.target.style.borderColor = 'transparent'}
                 >
-                  Crop
+                  Crops
                 </Button>
               </Container>
             </StyledPaper>
