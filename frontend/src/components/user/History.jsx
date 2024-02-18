@@ -37,10 +37,11 @@ const History = () => {
           <thead>
             <tr>
               <th>S.No.</th>
-              <th>Predicted On</th>
+              <th>Category</th>
               <th>Image</th>
-              <th>Prediction Result</th>
-              <th>Delete</th>
+              <th>Model</th>
+              <th>Result</th>
+              <th>Edit</th>
             </tr>
           </thead>
           <tbody>
