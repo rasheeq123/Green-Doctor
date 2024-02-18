@@ -5,6 +5,7 @@ const orderRouter=require('./routers/orderRouter');
 const imageRouter=require('./routers/imageRouter');
 const expertRouter=require('./routers/expertRouter');
 const utilRouter=require('./routers/util');
+const historyRouter=require('./routers/history');
 
 
 const cors = require('cors');
@@ -25,6 +26,9 @@ app.use('/order', orderRouter);
 app.use('/image', imageRouter);
 app.use('/expert', expertRouter);
 app.use('/util', utilRouter);
+app.use('/history', historyRouter);
+
+
 
 
 
