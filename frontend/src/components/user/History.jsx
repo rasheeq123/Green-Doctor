@@ -38,8 +38,8 @@ const History = () => {
             <tr>
               <th>S.No.</th>
               <th>Category</th>
-              <th>Image</th>
               <th>Model</th>
+              <th>Image</th>
               <th>Result</th>
               <th>Edit</th>
             </tr>
