@@ -5,8 +5,10 @@ import Webcam from "react-webcam";
 import {
   Box,
   Button,
+  //Checkbox,
   Container,
   FormControl,
+  // FormControlLabel,
   Grid,
   IconButton,
   InputLabel,
@@ -28,6 +30,7 @@ import {
   PhotoCameraFront,
 } from "@mui/icons-material";
 import { red } from "@mui/material/colors";
+// import Swal from "sweetalert2";
 
 const options = {
   flower:[
@@ -55,6 +58,8 @@ const options = {
 }
 
 const Prediction = () => {
+  // const [saveHistoryOption, setsaveHistoryOption] = useState(false);
+  
   const [AIModels, setAIModels] = useState([]);
   const { modelPath, cureData } = app_config;
 
@@ -94,6 +99,10 @@ const Prediction = () => {
       draggable: true,
   });
   };
+//   <FormControlLabel
+//   control={<Checkbox checked={saveHistoryOption} onChange={(e) => setSaveHistoryOption(e.target.checked)} />}
+//   label="Save Diagnosed History"
+// />
 
   let webcam, labelContainer;
 
@@ -225,6 +234,31 @@ useEffect(() => {
       text: "Prediction Completed",
     });
   };
+
+  //   if (saveHistoryOption) {
+  //     await saveHistory(res);
+      
+  //   } 
+  // };
+  // {saveHistoryOption && (
+  //   <Button
+  //     component={Link}
+  //     to="/user/history"
+  //     variant="contained"
+  //     color="success"
+  //     sx={{
+  //       mt: 3,
+  //       fontSize: "1.5rem",
+  //       py: 1,
+  //       borderRadius: 8,
+  //       textTransform: "none",
+  //       width: "565px",
+  //     }}
+  //   >
+  //     View Diagnosed History{" "}
+  //     <i className="fa fa-arrow-right" aria-hidden="true"></i>
+  //   </Button>
+  // )}
 
   useEffect(() => {
     
