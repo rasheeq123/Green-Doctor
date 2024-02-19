@@ -107,7 +107,7 @@ const Prediction = () => {
   });
   };
   <FormControlLabel
-  control={<Checkbox checked={saveHistoryOption} onChange={(e) => setSaveHistoryOption(e.target.checked)} />}
+  control={<Checkbox checked={saveHistoryOption} onChange={(e) => setsaveHistoryOption(e.target.checked)} />}
   label="Save Diagnosed History"
 />
 
@@ -176,7 +176,8 @@ useEffect(() => {
 
   const saveHistory = async (res) => {
     const response = await fetch(
-      `${import.meta.env.VITE_API_URL}/prediction/add`,
+      `${import.meta.env.VITE_API_URL}/history/add`,
+      // `${import.meta.env.VITE_API_URL}/prediction/add`,
       {
         method: "POST",
         headers: {
@@ -246,8 +247,6 @@ useEffect(() => {
     } 
   };
 
-    
-  
   {saveHistoryOption && (
     <Button
       component={Link}
