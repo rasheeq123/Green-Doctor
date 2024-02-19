@@ -5,10 +5,10 @@ import Webcam from "react-webcam";
 import {
   Box,
   Button,
-  //Checkbox,
+  Checkbox,
   Container,
   FormControl,
-  // FormControlLabel,
+  FormControlLabel,
   Grid,
   IconButton,
   InputLabel,
@@ -30,7 +30,7 @@ import {
   PhotoCameraFront,
 } from "@mui/icons-material";
 import { red } from "@mui/material/colors";
-// import Swal from "sweetalert2";
+import Swal from "sweetalert2";
 
 const options = {
   flower:[
@@ -58,7 +58,7 @@ const options = {
 }
 
 const Prediction = () => {
-  // const [saveHistoryOption, setsaveHistoryOption] = useState(false);
+  const [saveHistoryOption, setsaveHistoryOption] = useState(false);
   
   const [AIModels, setAIModels] = useState([]);
   const { modelPath, cureData } = app_config;
@@ -80,9 +80,16 @@ const Prediction = () => {
 
   const [result, setResult] = useState(null);
 
+  // sir's code
+  // const [currentUser, setCurrentUser] = useState(
+  //   JSON.parse(sessionStorage.getItem("user"))
+  // );
+
+
   const [currentUser, setCurrentUser] = useState(
-    JSON.parse(sessionStorage.getItem("user"))
+    JSON.parse(sessionStorage.getItem("user")) || {}
   );
+
   
   const handleModelChange = (event) => {
     const selectedModel = (event.target.value.toLowerCase());
@@ -99,10 +106,10 @@ const Prediction = () => {
       draggable: true,
   });
   };
-//   <FormControlLabel
-//   control={<Checkbox checked={saveHistoryOption} onChange={(e) => setSaveHistoryOption(e.target.checked)} />}
-//   label="Save Diagnosed History"
-// />
+  <FormControlLabel
+  control={<Checkbox checked={saveHistoryOption} onChange={(e) => setSaveHistoryOption(e.target.checked)} />}
+  label="Save Diagnosed History"
+/>
 
   let webcam, labelContainer;
 
@@ -226,39 +233,40 @@ useEffect(() => {
     // }
     setResult(res);
 
-    // saveHistory(predictionResultExtractor(prediction));
-    <Swal className="fire"></Swal>
+    saveHistory(predictionResultExtractor(prediction));
+    Swal.fire
     ({
       title: "Success",
       icon: "success",
       text: "Prediction Completed",
     });
+    if (saveHistoryOption) {
+      await saveHistory(res);
+      
+    } 
   };
 
-  //   if (saveHistoryOption) {
-  //     await saveHistory(res);
-      
-  //   } 
-  // };
-  // {saveHistoryOption && (
-  //   <Button
-  //     component={Link}
-  //     to="/user/history"
-  //     variant="contained"
-  //     color="success"
-  //     sx={{
-  //       mt: 3,
-  //       fontSize: "1.5rem",
-  //       py: 1,
-  //       borderRadius: 8,
-  //       textTransform: "none",
-  //       width: "565px",
-  //     }}
-  //   >
-  //     View Diagnosed History{" "}
-  //     <i className="fa fa-arrow-right" aria-hidden="true"></i>
-  //   </Button>
-  // )}
+    
+  
+  {saveHistoryOption && (
+    <Button
+      component={Link}
+      to="/user/history"
+      variant="contained"
+      color="success"
+      sx={{
+        mt: 3,
+        fontSize: "1.5rem",
+        py: 1,
+        borderRadius: 8,
+        textTransform: "none",
+        width: "565px",
+      }}
+    >
+      View Diagnosed History{" "}
+      <i className="fa fa-arrow-right" aria-hidden="true"></i>
+    </Button>
+  )}
 
   useEffect(() => {
     
