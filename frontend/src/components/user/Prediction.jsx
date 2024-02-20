@@ -692,5 +692,4 @@ useEffect(() => {
       </Container>
     </Box>
   );
-};
 export default Prediction;
