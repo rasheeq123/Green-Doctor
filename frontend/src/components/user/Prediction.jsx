@@ -234,7 +234,6 @@ useEffect(() => {
       text: "Prediction Completed",
     });
   };
-
   //   if (saveHistoryOption) {
   //     await saveHistory(res);
       
