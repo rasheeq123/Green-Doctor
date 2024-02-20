@@ -248,7 +248,7 @@ useEffect(() => {
   //     await saveHistory(res);
       
     } 
-  };
+  
 
   {saveHistoryOption && (
     <Button
@@ -416,7 +416,7 @@ useEffect(() => {
             textAlign={"center"}
             sx={{
               color: "white",
-              textShadow: "2px 2px 4px rgba(0, 0, 0, 0.5)",
+              textShadow: "2px 2px 4px rgba(0, 0, 0, 0.5)"
             }}
           >
             Decrypting Your Garden's Leafy Secrets!
@@ -692,4 +692,5 @@ useEffect(() => {
       </Container>
     </Box>
   );
+              }
 export default Prediction;
