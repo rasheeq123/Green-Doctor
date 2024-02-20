@@ -107,7 +107,7 @@ const Prediction = () => {
   });
   };
   <FormControlLabel
-  control={<Checkbox checked={saveHistoryOption} onChange={(e) => setsaveHistoryOption(e.target.checked)} />}
+  control={<Checkbox checked={saveHistoryOption} onChange={(e) => setsavehistoryOption(e.target.checked)} />}
   label="Save Diagnosed History"
 />
 
