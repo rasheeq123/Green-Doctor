@@ -14,8 +14,6 @@
 - [How to clone]
 - [Contact]
 
-
-
 ## :star2: About The Project
 
 ### :camera: Snapshots
