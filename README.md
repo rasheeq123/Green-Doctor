@@ -27,8 +27,6 @@
 <div align="center"> <img src="https://github.com/omkarsharma2821/Green-Doctor/blob/main/screenshot/Screenshot%202024-01-08%20173324.png" alt='image' width='800'/></div>
 <div align="center"> <img src="https://github.com/omkarsharma2821/Green-Doctor/blob/main/screenshot/Screenshot%202024-01-08%20174937.png" alt='image' width='800'/></div>
 
-
-
 <details> <summary>Database</summary> <ul>
 <li><a href="">MongoDB</a></li>
 </ul> </details>
