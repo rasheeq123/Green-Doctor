@@ -233,14 +233,15 @@ useEffect(() => {
     //   res = { className: 'Sorry! Unknown Plant', probability: 0 };
     // }
     setResult(res);
-
     saveHistory(predictionResultExtractor(prediction));
     Swal.fire
+
     ({
       title: "Success",
       icon: "success",
       text: "Prediction Completed",
     });
+
     if (saveHistoryOption) {
       await saveHistory(res);
   };
@@ -307,7 +308,7 @@ useEffect(() => {
   };
 
   // Function to check if the file type is a valid image type
-  const isValidImageType = (file) => {
+  const isValidImageType = ( file ) => {
     const allowedTypes = ["image/jpeg", "image/png", "image/jpg"];
     return allowedTypes.includes(file.type);
   };
