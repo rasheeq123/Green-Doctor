@@ -248,8 +248,6 @@ useEffect(() => {
   //     await saveHistory(res);
       
     } 
-  
-
   {saveHistoryOption && (
     <Button
       component={Link}
