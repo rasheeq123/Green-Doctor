@@ -313,7 +313,7 @@ useEffect(() => {
   };
   // Function to handle image removal
   const handleRemoveImage = () => {
-    setSelImage(null);
+    setSelImage( null );
     setLoadedImage(null);
     setSelImg("");
   };
