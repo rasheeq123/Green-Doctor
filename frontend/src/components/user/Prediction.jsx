@@ -301,7 +301,6 @@ useEffect(() => {
         setSelImage(loadedEvent.target.result);
         setLoadedImage(img);
       };
-
       // Read the file as a data URL
       reader.readAsDataURL(file);
     }
