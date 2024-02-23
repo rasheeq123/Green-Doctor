@@ -247,7 +247,6 @@ useEffect(() => {
   };
   //   if (saveHistoryOption) {
   //     await saveHistory(res);
-      
     } 
   {saveHistoryOption && (
     <Button
