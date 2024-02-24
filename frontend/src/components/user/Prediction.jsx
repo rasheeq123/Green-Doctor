@@ -1,6 +1,12 @@
 import React, { useCallback, useEffect, useRef, useState } from "react";
 import app_config from "../../config";
-import { Link, NavLink, useLocation, useNavigate, useParams } from "react-router-dom";
+import {
+  Link,
+  NavLink,
+  useLocation,
+  useNavigate,
+  useParams,
+} from "react-router-dom";
 import Webcam from "react-webcam";
 import {
   Box,
@@ -18,7 +24,7 @@ import {
   Tooltip,
   Typography,
 } from "@mui/material";
-import { ToastContainer, toast } from 'react-toastify';
+import { ToastContainer, toast } from "react-toastify";
 import {
   CameraAlt,
   Category,
@@ -33,39 +39,24 @@ import { red } from "@mui/material/colors";
 import Swal from "sweetalert2";
 
 const options = {
-  flower:[
-    'Rose'
-  ],
+  flower: ["Rose"],
 
-  fruit: [
-      'Apple',
-      'Peach'
-  ],
-  vegetable: [
-      'Tomato',
-      'Pepper',
-      'Potato',
-      
-  ],
-  crops: [
-    'wheat',
-    'rice'  
-  ],
-  
-  plants: [
-    'aloevera'     
-  ]
-}
+  fruit: ["Apple", "Peach"],
+  vegetable: ["Tomato", "Pepper", "Potato"],
+  crops: ["wheat", "rice"],
+
+  plants: ["aloevera"],
+};
 
 const Prediction = () => {
   const [saveHistoryOption, setsaveHistoryOption] = useState(false);
-  
+
   const [AIModels, setAIModels] = useState([]);
   const { modelPath, cureData } = app_config;
 
-  const {Category} = useParams();
+  const { Category } = useParams();
 
-  const [selModel, setSelModel] = useState('');
+  const [selModel, setSelModel] = useState("");
 
   const [model, setModel] = useState(null);
   const [maxPredictions, setMaxPredictions] = useState(null);
@@ -85,31 +76,34 @@ const Prediction = () => {
   //   JSON.parse(sessionStorage.getItem("user"))
   // );
 
-
   const [currentUser, setCurrentUser] = useState(
     JSON.parse(sessionStorage.getItem("user")) || {}
   );
 
-  
   const handleModelChange = (event) => {
-    const selectedModel = (event.target.value.toLowerCase());
+    const selectedModel = event.target.value.toLowerCase();
     setSelModel(selectedModel);
 
-     // Show toaster notification 
-  
-     toast.success(`Model ${selectedModel} selected`, {
-      position: 'top-right',
+    // Show toaster notification
+
+    toast.success(`Model ${selectedModel} selected`, {
+      position: "top-right",
       autoClose: 3000,
       hideProgressBar: false,
       closeOnClick: true,
       pauseOnHover: true,
       draggable: true,
-  });
+    });
   };
   <FormControlLabel
-  control={<Checkbox checked={saveHistoryOption} onChange={(e) => setsavehistoryOption(e.target.checked)} />}
-  label="Save Diagnosed History"
-/>
+    control={
+      <Checkbox
+        checked={saveHistoryOption}
+        onChange={(e) => setsavehistoryOption(e.target.checked)}
+      />
+    }
+    label="Save Diagnosed History"
+  />;
 
   let webcam, labelContainer;
 
@@ -123,7 +117,7 @@ const Prediction = () => {
     const imageSrc = webcamRef.current.getScreenshot();
     // Do something with the captured image (e.g., send it to a server)
     // console.log(imageSrc);
-    
+
     const img = new Image();
     img.src = imageSrc;
     setSelImage(imageSrc);
@@ -133,22 +127,20 @@ const Prediction = () => {
 
   const stopWebcam = () => {
     setCamOpen(false);
-
   };
 
   // useEffect(() => {
   //   setAIModels(options[type]);
   // }, [])
   // Inside the useEffect hook where you set the AIModels state
-useEffect(() => {
-  if (options[Category]) { // Check if options[type] exists
-    setAIModels(options[Category]); // Set AIModels state with options[type] value
-  }
-}, [Category]);
-
+  useEffect(() => {
+    if (options[Category]) {
+      // Check if options[type] exists
+      setAIModels(options[Category]); // Set AIModels state with options[type] value
+    }
+  }, [Category]);
 
   const predictionResultExtractor = (prediction) => {
-
     let tempRes = prediction.find(
       (pred) =>
         pred.probability ===
@@ -167,10 +159,9 @@ useEffect(() => {
       method: "POST",
       body: fd,
     }).then((res) => {
-
       if (res.status === 200) {
         console.log("file uploaded");
-      }   
+      }
     });
   };
 
@@ -196,15 +187,13 @@ useEffect(() => {
   };
 
   async function init() {
-
-    //apple model 
+    //apple model
     const modelURL = modelPath + `/${selModel}/model.json`;
     const metadataURL = modelPath + `/${selModel}/metadata.json`;
 
     //  wheat model
     // const modelURL_wheat = modelPath + "/wheat/model.json";
     // const metadataURL_wheat = modelPath + "/wheat/metadata.json";
-   
 
     // load the model and metadata
     // Refer to tmImage.loadFromFiles() in the API to support files from a file picker
@@ -212,12 +201,12 @@ useEffect(() => {
     // Note: the pose library adds "tmImage" object to your window (window.tmImage)
     // let modelT = await window.tmImage.load(modelURL, metadataURL); //human erron tm by mistake
     // let modelT = await window.Image.load(modelURL, metadataURL);
-    
+
     // start loading here
     let modelT = await window.tmImage.load(modelURL, metadataURL);
     setMaxPredictions(modelT.getTotalClasses());
     setModel(modelT);
-    console.log(selModel , ' Model loaded');
+    console.log(selModel, " Model loaded");
 
     // stop loading here
   }
@@ -234,9 +223,7 @@ useEffect(() => {
     // }
     setResult(res);
     saveHistory(predictionResultExtractor(prediction));
-    Swal.fire
-
-    ({
+    Swal.fire({
       title: "Success",
       icon: "success",
       text: "Prediction Completed",
@@ -244,37 +231,36 @@ useEffect(() => {
 
     if (saveHistoryOption) {
       await saveHistory(res);
+    }
+    //   if (saveHistoryOption) {
+    //     await saveHistory(res);
   };
-  //   if (saveHistoryOption) {
-  //     await saveHistory(res);
-    } 
-  {saveHistoryOption && (
-    <Button
-      component={Link}
-      to="/user/history"
-      variant="contained"
-      color="success"
-      sx={{
-        mt: 3,
-        fontSize: "1.5rem",
-        py: 1,
-        borderRadius: 8,
-        textTransform: "none",
-        width: "565px",
-      }}
-    >
-      View Diagnosed History{" "}
-      <i className="fa fa-arrow-right" aria-hidden="true"></i>
-    </Button>
-  )}
+  {
+    saveHistoryOption && (
+      <Button
+        component={Link}
+        to="/user/history"
+        variant="contained"
+        color="success"
+        sx={{
+          mt: 3,
+          fontSize: "1.5rem",
+          py: 1,
+          borderRadius: 8,
+          textTransform: "none",
+          width: "565px",
+        }}
+      >
+        View Diagnosed History{" "}
+        <i className="fa fa-arrow-right" aria-hidden="true"></i>
+      </Button>
+    );
+  }
 
   useEffect(() => {
-    
-    if(selModel)
-      init();
-
+    if (selModel) init();
   }, [selModel]);
- 
+
   const handleImageUpload = async (e) => {
     if (!e.target.files[0]) return;
     const file = e.target.files[0];
@@ -306,13 +292,13 @@ useEffect(() => {
   };
 
   // Function to check if the file type is a valid image type
-  const isValidImageType = ( file ) => {
+  const isValidImageType = (file) => {
     const allowedTypes = ["image/jpeg", "image/png", "image/jpg"];
     return allowedTypes.includes(file.type);
   };
   // Function to handle image removal
   const handleRemoveImage = () => {
-    setSelImage( null );
+    setSelImage(null);
     setLoadedImage(null);
     setSelImg("");
   };
@@ -392,7 +378,6 @@ useEffect(() => {
                 View Diagnosed History{" "}
                 <i className="fa fa-arrow-right" aria-hidden="true"></i>
               </Button>
-
             </Box>
           </div>
         </>
@@ -413,7 +398,7 @@ useEffect(() => {
             textAlign={"center"}
             sx={{
               color: "white",
-              textShadow: "2px 2px 4px rgba(0, 0, 0, 0.5)"
+              textShadow: "2px 2px 4px rgba(0, 0, 0, 0.5)",
             }}
           >
             Decrypting Your Garden's Leafy Secrets!
@@ -421,34 +406,30 @@ useEffect(() => {
         </div>
       </Box>
       <Container>
-      {/* <select className="form-control" onChange={e => setSelModel(e.target.value.toLowerCase())}>
+        {/* <select className="form-control" onChange={e => setSelModel(e.target.value.toLowerCase())}>
         <option value="">Select a Model</option>
         {
           AIModels.map( modelName => <option value={modelName}>{modelName}</option> )
         }
       </select> */}
-    <ToastContainer />
-    <FormControl required fullWidth sx={{mt:2}}>
-      <InputLabel id="model-select">
-        Select a Model
-      </InputLabel>
-      <Select
-      labelId="model-select"
-      id= 'model-select-required'
-        value={selModel}
-        onChange={handleModelChange}
-        label="Select a Model "
-      >
-        <MenuItem value="">
-          Select a Model
-        </MenuItem>
-        {AIModels.map((modelName) => (
-          <MenuItem key={modelName} value={modelName.toLowerCase()}>
-            {modelName}
-          </MenuItem>
-        ))}
-      </Select>
-    </FormControl>
+        <ToastContainer />
+        <FormControl required fullWidth sx={{ mt: 2 }}>
+          <InputLabel id="model-select">Select a Model</InputLabel>
+          <Select
+            labelId="model-select"
+            id="model-select-required"
+            value={selModel}
+            onChange={handleModelChange}
+            label="Select a Model "
+          >
+            <MenuItem value="">Select a Model</MenuItem>
+            {AIModels.map((modelName) => (
+              <MenuItem key={modelName} value={modelName.toLowerCase()}>
+                {modelName}
+              </MenuItem>
+            ))}
+          </Select>
+        </FormControl>
         <div className="row mt-4">
           <div className="col-md-6">
             <Paper
@@ -533,7 +514,6 @@ useEffect(() => {
                         flexDirection: "column",
                       }}
                     >
-                      
                       <Tooltip title="Open Camera" arrow>
                         <IconButton onClick={(e) => setCamOpen(true)}>
                           <CameraAlt
@@ -572,10 +552,8 @@ useEffect(() => {
               backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6)), url('/images/H2.jpg')`,
             }}
           >
-            
             <div className="card-header">
-              
-            <Typography
+              <Typography
                 variant="h3"
                 align="center"
                 sx={{
@@ -645,8 +623,8 @@ useEffect(() => {
                     color: "white",
                   }}
                 >
-                Sharper Images, Better Insights, For the most accurate
-                diagnosis, upload a sharp and clear picture of the leaf.
+                  Sharper Images, Better Insights, For the most accurate
+                  diagnosis, upload a sharp and clear picture of the leaf.
                 </p>
               )}
             </Box>
@@ -672,12 +650,11 @@ useEffect(() => {
             >
               {predictionLoading ? (
                 <>
-                <span
+                  <span
                     className="spinner-border spinner-border-sm"
                     role="status"
                     aria-hidden="true"
                   ></span>
-
                   Predicting...
                 </>
               ) : (
@@ -689,5 +666,5 @@ useEffect(() => {
       </Container>
     </Box>
   );
-              }
+};
 export default Prediction;

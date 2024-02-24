@@ -60,14 +60,12 @@ const Login = () => {
         });
         setloggedIn(true);
         const data = await res.json();
-        
-        console.log(data);
-        if(data.role === 'admin'){
 
+        console.log(data);
+        if (data.role === "admin") {
           navigate("/admin");
           sessionStorage.setItem("admin", JSON.stringify(data));
-        }else{
-
+        } else {
           navigate("/main/home");
           sessionStorage.setItem("user", JSON.stringify(data));
         }

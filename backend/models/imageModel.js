@@ -1,10 +1,9 @@
-const { Schema, model, Types } = require('../connection');
+const { Schema, model, Types } = require("../connection");
 
-const myschema= new Schema({
-
-    user:{ type: Types.ObjectId, ref:"users"},
-    image: String,
-    result:Array, 
-    createdAt: Date
+const myschema = new Schema({
+  user: { type: Types.ObjectId, ref: "users" },
+  image: String,
+  result: Array,
+  createdAt: Date,
 });
-module.exports=model('image', myschema);
+module.exports = model("image", myschema);
