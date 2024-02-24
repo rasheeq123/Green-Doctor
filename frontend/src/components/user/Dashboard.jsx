@@ -1,33 +1,41 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Grid, Typography, Container, Button, styled, createTheme, Paper } from "@mui/material";
+import {
+  Grid,
+  Typography,
+  Container,
+  Button,
+  styled,
+  createTheme,
+  Paper,
+} from "@mui/material";
 import { ToastContainer, toast } from "react-toastify";
 
 const theme = createTheme();
 
 const StyledPaper = styled(Paper)({
   padding: theme.spacing(0),
-  border: '1 px solid black',
-  transition: 'transform 0.3s ease-in-out',
-  '&:hover': {
-    transform: 'scale(1.1)',
+  border: "1 px solid black",
+  transition: "transform 0.3s ease-in-out",
+  "&:hover": {
+    transform: "scale(1.1)",
   },
 
-  '& img': {
-    width: '100%',
-    height: 'auto',
-    display: 'block',
-    transition: 'transform 0.1s ease-in-out', // Added transition for the image
-    transform: 'scale(1)', // Set the default scale
+  "& img": {
+    width: "100%",
+    height: "auto",
+    display: "block",
+    transition: "transform 0.1s ease-in-out", // Added transition for the image
+    transform: "scale(1)", // Set the default scale
   },
   // width: '60%', // Adjust the width as needed
-  margin: 'auto', // Center the Paper within the Grid itemrash
+  margin: "auto", // Center the Paper within the Grid itemrash
 });
 
 const Prediction = () => {
   const handleCategorySelect = (category) => {
     toast.success(`${category} category selected`, {
-      position: 'top-right',
+      position: "top-right",
       autoClose: 3000,
       hideProgressBar: false,
       closeOnClick: true,
@@ -68,16 +76,19 @@ const Prediction = () => {
                   fullWidth
                   size="medium"
                   style={{
-                    color: 'black',
-                    fontWeight: '800',
-                    backgroundColor: 'rgba(255, 255, 255, 0.5)',
-                    border: '2px solid transparent', // Initial border style
-                    transition: 'border-color 0.3s ease', // Smooth transition for border color change
+                    color: "black",
+                    fontWeight: "800",
+                    backgroundColor: "rgba(255, 255, 255, 0.5)",
+                    border: "2px solid transparent", // Initial border style
+                    transition: "border-color 0.3s ease", // Smooth transition for border color change
                   }}
                   // Add hover effect
-                  onMouseOver={(event) => event.target.style.borderColor = 'white'}
-                  onMouseOut={(event) => event.target.style.borderColor = 'transparent'}
-
+                  onMouseOver={(event) =>
+                    (event.target.style.borderColor = "white")
+                  }
+                  onMouseOut={(event) =>
+                    (event.target.style.borderColor = "transparent")
+                  }
                 >
                   Flowers
                 </Button>
@@ -106,18 +117,21 @@ const Prediction = () => {
                   to="/user/prediction/fruit"
                   variant="contained"
                   fullWidth
-                  
                   size="medium"
                   style={{
-                    color: 'black',
-                    fontWeight: '800',
-                    backgroundColor: 'rgba(255, 255, 255, 0.5)',
-                    border: '2px solid transparent', // Initial border style
-                    transition: 'border-color 0.3s ease', // Smooth transition for border color change
+                    color: "black",
+                    fontWeight: "800",
+                    backgroundColor: "rgba(255, 255, 255, 0.5)",
+                    border: "2px solid transparent", // Initial border style
+                    transition: "border-color 0.3s ease", // Smooth transition for border color change
                   }}
                   // Add hover effect
-                  onMouseOver={(event) => event.target.style.borderColor = 'white'}
-                  onMouseOut={(event) => event.target.style.borderColor = 'transparent'}
+                  onMouseOver={(event) =>
+                    (event.target.style.borderColor = "white")
+                  }
+                  onMouseOut={(event) =>
+                    (event.target.style.borderColor = "transparent")
+                  }
                 >
                   Fruits
                 </Button>
@@ -146,21 +160,24 @@ const Prediction = () => {
                   to="/user/prediction/vegetable"
                   variant="contained"
                   fullWidth
-                  
                   size="medium"
                   style={{
-                    color: 'black',
-                    fontWeight: '800',
-                    backgroundColor: 'rgba(255, 255, 255, 0.5)',
-                    border: '2px solid transparent', // Initial border style
-                    transition: 'border-color 0.3s ease', // Smooth transition for border color change
+                    color: "black",
+                    fontWeight: "800",
+                    backgroundColor: "rgba(255, 255, 255, 0.5)",
+                    border: "2px solid transparent", // Initial border style
+                    transition: "border-color 0.3s ease", // Smooth transition for border color change
                   }}
                   // Add hover effect
-                  onMouseOver={(event) => event.target.style.borderColor = 'white'}
-                  onMouseOut={(event) => event.target.style.borderColor = 'transparent'}
+                  onMouseOver={(event) =>
+                    (event.target.style.borderColor = "white")
+                  }
+                  onMouseOut={(event) =>
+                    (event.target.style.borderColor = "transparent")
+                  }
                 >
                   Vegetables
-                </Button >
+                </Button>
               </Container>
             </StyledPaper>
           </Grid>
@@ -186,18 +203,21 @@ const Prediction = () => {
                   to="/user/prediction/crops"
                   variant="contained"
                   fullWidth
-                  
                   size="medium"
                   style={{
-                    color: 'black',
-                    fontWeight: '800',
-                    backgroundColor: 'rgba(255, 255, 255, 0.5)',
-                    border: '2px solid transparent', // Initial border style
-                    transition: 'border-color 0.3s ease', // Smooth transition for border color change
+                    color: "black",
+                    fontWeight: "800",
+                    backgroundColor: "rgba(255, 255, 255, 0.5)",
+                    border: "2px solid transparent", // Initial border style
+                    transition: "border-color 0.3s ease", // Smooth transition for border color change
                   }}
                   // Add hover effect
-                  onMouseOver={(event) => event.target.style.borderColor = 'white'}
-                  onMouseOut={(event) => event.target.style.borderColor = 'transparent'}
+                  onMouseOver={(event) =>
+                    (event.target.style.borderColor = "white")
+                  }
+                  onMouseOut={(event) =>
+                    (event.target.style.borderColor = "transparent")
+                  }
                 >
                   Crops
                 </Button>
