@@ -66,7 +66,6 @@ const settings = [
     text: "Logout",
   },
 ];
-
 function ResponsiveAppBar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
