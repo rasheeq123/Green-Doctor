@@ -41,12 +41,12 @@ const History = () => {
         <table className="table table-bordered table align-middle text-center table-hover table-warning shadow-lg">
           <thead>
             <tr>
-              <th>S.No.</th>
+              <th>Date</th>
               <th>Category</th>
               <th>Model</th>
               <th>Image</th>
               <th>Result</th>
-              <th>Edit</th>
+              <th>Action</th>
             </tr>
           </thead>
           <tbody>
