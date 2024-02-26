@@ -61,8 +61,8 @@ import useAppContext from "../../context/AppContext";
   ];
 
   // function ResponsiveAppBar() {
-  const Navbar = () => {
-
+  const Navbar = ({ isLoggedIn }) => {
+  // const [isLoggedIn, setIsLoggedIn] = React.useState(false);
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
   const navigate = useNavigate();
@@ -86,6 +86,8 @@ import useAppContext from "../../context/AppContext";
     <AppBar elevation={5} position="fixed" sx={{ bgcolor: "#f0f8ff" }}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
+        {/* {isLoggedIn ? (
+            <> */}
           <img
             src="/images/GD_Logo-.png"
             alt="Logo"
@@ -109,7 +111,6 @@ import useAppContext from "../../context/AppContext";
           >
             Green Doctor
           </Typography>
-
           <Box
             sx={{
               flexGrow: 1,
@@ -157,6 +158,7 @@ import useAppContext from "../../context/AppContext";
               ))}
             </Menu>
           </Box>
+
           <Typography
             variant="h5"
             noWrap
@@ -230,6 +232,17 @@ import useAppContext from "../../context/AppContext";
               ))}
             </Menu>
           </Box>
+          {/* </>
+          ) : (
+            <Box sx={{ flexGrow: 1, display: 'flex', justifyContent: 'flex-end' }}>
+            <Button variant="contained" onClick={() => navigate('/main/login')} sx={{ ml: 1,borderRadius:5}}>
+              Sign In
+            </Button>
+            <Button variant="contained" onClick={() => navigate('/main/signup')} sx={{ ml: 1,borderRadius:5}}>
+              Get Started
+            </Button>
+          </Box>
+          )} */}
         </Toolbar>
       </Container>
     </AppBar>

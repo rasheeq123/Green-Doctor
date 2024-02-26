@@ -14,7 +14,7 @@ import {
   TextField,
   Typography,
 } from "@mui/material";
-import React from "react";
+import React, { useState } from "react";
 import { AccountCircle, Visibility, VisibilityOff } from "@mui/icons-material";
 import VisibilityIcon from "@mui/icons-material/Visibility";
 import { NavLink, useNavigate } from "react-router-dom";
@@ -25,7 +25,7 @@ import GoogleIcon from "@mui/icons-material/Google";
 
 const Login = () => {
   const [showPassword, setShowPassword] = React.useState(false);
-
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
   const handleClickShowPassword = () => setShowPassword((show) => !show);
 
   const handleMouseDownPassword = (event) => {
@@ -58,7 +58,10 @@ const Login = () => {
           icon: "success",
           title: "Login Successfully",
         });
-        setloggedIn(true);
+        navigate("/main/home");
+        // setLoggedIn(true);
+        setIsLoggedIn(true);
+
         const data = await res.json();
 
         console.log(data);
