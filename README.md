@@ -15,7 +15,6 @@
 - [Contact]
 
 ## :star2: About The Project
-
 ### :camera: Snapshots
 <div align="center"> <img src="https://github.com/omkarsharma2821/Green-Doctor/blob/main/screenshot/Screenshot%202024-01-08%20173236.png" alt='image' width='800'/> </div>
 <div align="center"> <img src="https://github.com/omkarsharma2821/Green-Doctor/blob/main/screenshot/Screenshot%202024-01-08%20173251.png" alt='image' width='800'/></div>
@@ -42,6 +41,7 @@
 - Storage of previously diagnosed plant
   
 ### :bangbang: Prerequisites
+
 
 - React
 - Vite
@@ -84,7 +84,6 @@ connect backend
 ```bash
 npm run dev
 ```
-
 
 ## :handshake: Contact Owners
 
