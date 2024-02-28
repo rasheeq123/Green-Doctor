@@ -39,7 +39,7 @@ const Home = () => {
         }}
       >
         <Typography
-          variant="h1"
+          variant="h1" 
           mt={0}
           sx={{
             color: "white",
