@@ -68,6 +68,7 @@ const settings = [
 ];
 function ResponsiveAppBar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
+  // const [first, setfirst] = useState(second)
   const [anchorElUser, setAnchorElUser] = React.useState(null);
   const navigate = useNavigate();
 
