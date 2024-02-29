@@ -26,6 +26,8 @@ const pages = [
   // {
   //   text: "Prediction",
   //   link: "/user/prediction",
+  //   text: "Prediction",
+  //   link: "/user/prediction",
   // },
   {
     text: "History",
