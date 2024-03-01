@@ -13,7 +13,7 @@ router.post('/add', (req, res) => {
         .catch((err) => {
             console.log(err);
 
-            res.json(err);
+            res.status(500).json(err);
         });
 });
 
@@ -28,6 +28,16 @@ router.get('/getall', (req, res) => {
 router.get('/getbyemail/:email', (req, res) => {   // "/: url parameter"
     console.log(req.params.email);
     module.findOne({ email: req.params.email })
+        .then((result) => {
+            res.json(result);
+        }).catch((err) => {
+            res.json(err);
+        });
+
+})
+router.get('/getbyuser/:user', (req, res) => {   // "/: url parameter"
+    console.log(req.params.user);
+    Model.find({ user: req.params.user })
         .then((result) => {
             res.json(result);
         }).catch((err) => {

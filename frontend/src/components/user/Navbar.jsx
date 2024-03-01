@@ -23,12 +23,7 @@ const pages = [
     text: "User",
     link: "/user/dashboard",
   },
-  // {
-  //   text: "Prediction",
-  //   link: "/user/prediction",
-  //   text: "Prediction",
-  //   link: "/user/prediction",
-  // },
+
   {
     text: "History",
     link: "/user/history",
@@ -141,12 +136,12 @@ function ResponsiveAppBar() {
                 horizontal: "left",
               }}
               open={Boolean(anchorElNav)}
-              onClose={ handleCloseNavMenu}
+              onClose={handleCloseNavMenu}
               sx={{
                 display: { xs: "block", md: "none" },
               }}
             >
-              { pages.map((page) => (
+              {pages.map((page) => (
                 <MenuItem key={page.text} onClick={handleCloseNavMenu}>
                   <Typography
                     textAlign="center"
@@ -182,7 +177,7 @@ function ResponsiveAppBar() {
                 onClick={() => navigate(page.link)}
                 key={page.text}
                 // onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: "black", display: "block",textTransform: "none", }}
+                sx={{ my: 2, color: "black", display: "block", textTransform: "none", }}
               >
                 {page.text}
               </Button>
@@ -213,7 +208,7 @@ function ResponsiveAppBar() {
               open={Boolean(anchorElUser)}
               onClose={handleCloseUserMenu}
             >
-              {settings.map ((setting) => (
+              {settings.map((setting) => (
                 <MenuItem key={setting.text} onClick={handleCloseUserMenu}>
                   <Typography
                     textAlign="center"

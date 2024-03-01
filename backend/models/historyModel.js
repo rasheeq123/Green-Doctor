@@ -6,7 +6,7 @@ const myschema= new Schema({
     category:String,
     model: String,
     image:String,
-    result: String,
+    result: Object,
     
     // email:{ type:String, require:true},
     // name: String,

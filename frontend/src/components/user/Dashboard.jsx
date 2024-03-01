@@ -32,7 +32,7 @@ const StyledPaper = styled(Paper)({
   margin: "auto", // Center the Paper within the Grid itemrash
 });
 
-const Prediction = () => {
+const UserDashboard = () => {
   const handleCategorySelect = (category) => {
     toast.success(`${category} category selected`, {
       position: "top-right",
@@ -230,4 +230,4 @@ const Prediction = () => {
   );
 };
 
-export default Prediction;
+export default UserDashboard;

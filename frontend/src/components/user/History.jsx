@@ -4,9 +4,13 @@ import { Box, Typography } from "@mui/material";
 
 const History = () => {
   const [predictionList, setpredictionList] = useState([]);
+  const [currentUser, setCurrentUser] = useState(
+    JSON.parse(sessionStorage.getItem("user")) || {}
+  );
 
+  
   const getpredictionData = async () => {
-    const res = await fetch(`${import.meta.env.VITE_API_URL}/image/getall`);
+    const res = await fetch(`${import.meta.env.VITE_API_URL}/history/getbyuser/${currentUser._id}`);
     console.log(res.status);
     const data = await res.json();
     console.table(data);
@@ -55,21 +59,8 @@ const History = () => {
                 <tr key={index}>
                   <td>{index + 1}</td>
                   <td>{new Date(prediction.createdAt).toLocaleDateString()}</td>
-                  <td>
-                    {prediction.items.map((item) => (
-                      <div
-                        key={item.id}
-                        className="d-flex align-items-center justify-content-between bg-white p-4"
-                      >
-                        <img
-                          height={50}
-                          src={`${process.env.REACT_APP_VINTIMART_URL}/${item.image}`}
-                          alt=""
-                        />
-                      </div>
-                    ))}
-                  </td>
-                  <td>{prediction.result}</td>
+                  
+                  <td>{prediction.result.className}</td>
                   <td>
                     <button
                       onClick={() => deleteprediction(prediction._id)}

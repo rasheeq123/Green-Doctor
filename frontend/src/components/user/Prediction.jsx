@@ -95,15 +95,7 @@ const Prediction = () => {
       draggable: true,
     });
   };
-  <FormControlLabel
-    control={
-      <Checkbox
-        checked={saveHistoryOption}
-        onChange={(e) => setsavehistoryOption(e.target.checked)}
-      />
-    }
-    label="Save Diagnosed History"
-  />;
+  
 
   let webcam, labelContainer;
 
@@ -166,6 +158,7 @@ const Prediction = () => {
   };
 
   const saveHistory = async (res) => {
+    console.log(currentUser._id);
     const response = await fetch(
       `${import.meta.env.VITE_API_URL}/history/add`,
       // `${import.meta.env.VITE_API_URL}/prediction/add`,
@@ -178,12 +171,16 @@ const Prediction = () => {
           image: selImg,
           user: currentUser._id,
           result: res,
-          createdAt: new Date(),
+          predictedAt: new Date(),
         }),
       }
     );
-    const data = await response.json();
-    console.log(data);
+    console.log(response.status);
+    if(res.status === 200){
+      // navigate('/user/history');
+      const data = await response.json();
+      console.log(data);
+    }
   };
 
   async function init() {
@@ -222,7 +219,7 @@ const Prediction = () => {
     //   res = { className: 'Sorry! Unknown Plant', probability: 0 };
     // }
     setResult(res);
-    saveHistory(predictionResultExtractor(prediction));
+    // saveHistory(predictionResultExtractor(prediction));
     Swal.fire({
       title: "Success",
       icon: "success",
@@ -232,8 +229,7 @@ const Prediction = () => {
     if (saveHistoryOption) {
       await saveHistory(res);
     }
-    //   if (saveHistoryOption) {
-    //     await saveHistory(res);
+    
   };
   {
     saveHistoryOption && (
@@ -413,6 +409,15 @@ const Prediction = () => {
         }
       </select> */}
         <ToastContainer />
+        <FormControlLabel
+    control={
+      <Checkbox
+        checked={saveHistoryOption}
+        onChange={(e, v) => setsaveHistoryOption(v)}
+      />
+    }
+    label="Save Diagnosed History"
+  />
         <FormControl required fullWidth sx={{ mt: 2 }}>
           <InputLabel id="model-select">Select a Model</InputLabel>
           <Select
