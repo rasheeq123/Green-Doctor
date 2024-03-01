@@ -41,7 +41,6 @@ const History = () => {
         <h1 className="text-center mb-4 mt-5 text-bold">
           Your Diagnosed History
         </h1>
-
         <table className="table table-bordered table align-middle text-center table-hover table-warning shadow-lg">
           <thead>
             <tr>
