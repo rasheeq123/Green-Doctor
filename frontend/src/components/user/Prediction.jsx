@@ -71,11 +71,7 @@ const Prediction = () => {
 
   const [result, setResult] = useState(null);
 
-  // sir's code
-  // const [currentUser, setCurrentUser] = useState(
-  //   JSON.parse(sessionStorage.getItem("user"))
-  // );
-
+  
   const [currentUser, setCurrentUser] = useState(
     JSON.parse(sessionStorage.getItem("user")) || {}
   );
