@@ -28,7 +28,7 @@ const StyledPaper = styled(Paper)({
     transition: "transform 0.1s ease-in-out", // Added transition for the image
     transform: "scale(1)", // Set the default scale
   },
-  // width: '60%', // Adjust the width as needed
+  
   margin: "auto", // Center the Paper within the Grid itemrash
 });
 
