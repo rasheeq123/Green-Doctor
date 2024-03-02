@@ -117,10 +117,7 @@ const Prediction = () => {
     setCamOpen(false);
   };
 
-  // useEffect(() => {
-  //   setAIModels(options[type]);
-  // }, [])
-  // Inside the useEffect hook where you set the AIModels state
+  
   useEffect(() => {
     if (options[Category]) {
       // Check if options[type] exists
