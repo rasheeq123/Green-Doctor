@@ -8,9 +8,10 @@ const History = () => {
     JSON.parse(sessionStorage.getItem("user")) || {}
   );
 
-  
   const getpredictionData = async () => {
-    const res = await fetch(`${import.meta.env.VITE_API_URL}/history/getbyuser/${currentUser._id}`);
+    const res = await fetch(
+      `${import.meta.env.VITE_API_URL}/history/getbyuser/${currentUser._id}`
+    );
     console.log(res.status);
     const data = await res.json();
     console.table(data);
@@ -58,7 +59,7 @@ const History = () => {
                 <tr key={index}>
                   <td>{index + 1}</td>
                   <td>{new Date(prediction.createdAt).toLocaleDateString()}</td>
-                  
+
                   <td>{prediction.result.className}</td>
                   <td>
                     <button
