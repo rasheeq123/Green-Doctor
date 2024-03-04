@@ -68,7 +68,7 @@ const History = () => {
               predictionList.map((prediction, index) => (
                 <tr key={index}>
                   <td>{index + 1}</td>
-                  <td>{new Date(prediction.createdAt).toLocaleDateString()}</td>
+                  <td>{new Date(prediction.predictedAt).toLocaleDateString()}</td>
 
                   <td>{prediction.result.className}</td>
                   <td>
