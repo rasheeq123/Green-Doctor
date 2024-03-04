@@ -10,7 +10,21 @@ const History = () => {
 
   const getpredictionData = async () => {
     const res = await fetch(
-      `${import.meta.env.VITE_API_URL}/history/getbyuser/${currentUser._id}`
+      // `${import.meta.env.VITE_API_URL}/history/getbyuser/${currentUser._id}`, 
+      `${import.meta.env.VITE_API_URL}/history/getbyuser`, 
+      {
+        // method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "x-auth-token": currentUser.token
+        },
+        // body: JSON.stringify({
+        //   image: selImg,
+        //   result: res,
+        //   predictedAt: new Date(),                    
+
+        // }),
+      }
     );
     console.log(res.status);
     const data = await res.json();

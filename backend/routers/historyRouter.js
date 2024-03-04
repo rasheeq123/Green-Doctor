@@ -1,12 +1,14 @@
 const express = require('express');
 const Model = require('../models/historyModel');
+const verifyToken = require('./verifyToken');
 
 const router = express.Router();
 
-router.post('/add', (req, res) => {
+router.post('/add', verifyToken, (req, res) => {
+    console.log(req.user._id);
     console.log(req.body);
 
-    new Model(req.body).save()
+    new Model({...req.body, user : req.user._id}).save()
         .then((result) => {
             res.json(result);
         })
@@ -35,9 +37,9 @@ router.get('/getbyemail/:email', (req, res) => {   // "/: url parameter"
         });
 
 })
-router.get('/getbyuser/:user', (req, res) => {   // "/: url parameter"
-    console.log(req.params.user);
-    Model.find({ user: req.params.user })
+router.get('/getbyuser', verifyToken, (req, res) => {   // "/: url parameter"
+    // console.log(req.params.user);
+    Model.find({ user: req.user._id })
         .then((result) => {
             res.json(result);
         }).catch((err) => {

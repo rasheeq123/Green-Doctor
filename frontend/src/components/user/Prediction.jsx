@@ -151,7 +151,7 @@ const Prediction = () => {
   };
 
   const saveHistory = async (res) => {
-    console.log(currentUser._id);
+    // console.log(currentUser._id);
     const response = await fetch(
       `${import.meta.env.VITE_API_URL}/history/add`,
       // `${import.meta.env.VITE_API_URL}/prediction/add`,
@@ -159,12 +159,13 @@ const Prediction = () => {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
+          "x-auth-token": currentUser.token
         },
         body: JSON.stringify({
           image: selImg,
-          user: currentUser._id,
           result: res,
-          predictedAt: new Date(),
+          predictedAt: new Date(),                    
+
         }),
       }
     );
