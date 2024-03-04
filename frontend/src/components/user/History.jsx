@@ -56,7 +56,8 @@ const History = () => {
             <tr>
               <th>S.no</th>
               <th>Date</th>
-              <th>Category</th>
+             {/*<th>Category</th> */} 
+              <th>Disease</th>
               {/* <th>Model</th>
               <th>Image</th>
               <th>Result</th> */}
