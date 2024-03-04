@@ -13,17 +13,12 @@ const History = () => {
       // `${import.meta.env.VITE_API_URL}/history/getbyuser/${currentUser._id}`, 
       `${import.meta.env.VITE_API_URL}/history/getbyuser`, 
       {
-        // method: "POST",
+        
         headers: {
           "Content-Type": "application/json",
           "x-auth-token": currentUser.token
         },
-        // body: JSON.stringify({
-        //   image: selImg,
-        //   result: res,
-        //   predictedAt: new Date(),                    
-
-        // }),
+        
       }
     );
     console.log(res.status);
@@ -59,11 +54,12 @@ const History = () => {
         <table className="table table-bordered table align-middle text-center table-hover table-warning shadow-lg">
           <thead>
             <tr>
+              <th>S.no</th>
               <th>Date</th>
               <th>Category</th>
-              <th>Model</th>
+              {/* <th>Model</th>
               <th>Image</th>
-              <th>Result</th>
+              <th>Result</th> */}
               <th>Action</th>
             </tr>
           </thead>
