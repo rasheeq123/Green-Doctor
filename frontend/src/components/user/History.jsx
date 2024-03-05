@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Box, Typography } from "@mui/material";
-// import toast from 'react-hot-toast';
+ import toast from 'react-hot-toast';
 
 const History = () => {
   const [predictionList, setpredictionList] = useState([]);
@@ -56,7 +56,7 @@ const History = () => {
             <tr>
               <th>S.no</th>
               <th>Date</th>
-             {/*<th>Category</th> */} 
+             <th>Category</th> 
               <th>Disease</th>
               {/* <th>Model</th>
               <th>Image</th>
@@ -70,8 +70,10 @@ const History = () => {
                 <tr key={index}>
                   <td>{index + 1}</td>
                   <td>{new Date(prediction.predictedAt).toLocaleDateString()}</td>
-
+                  {/* <td>{history.category}</td> */}
                   <td>{prediction.result.className}</td>
+                  <td>{prediction.result.className}</td>
+                  
                   <td>
                     <button
                       onClick={() => deleteprediction(prediction._id)}
