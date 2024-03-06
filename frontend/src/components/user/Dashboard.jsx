@@ -9,7 +9,10 @@ import {
   createTheme,
   Paper,
 } from "@mui/material";
-import { ToastContainer, toast } from "react-toastify";
+// import { ToastContainer, toast } from "react-toastify";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 
 const theme = createTheme();
 
@@ -34,6 +37,7 @@ const StyledPaper = styled(Paper)({
 
 const UserDashboard = () => {
   const handleCategorySelect = (category) => {
+    console.log('Category selected:', category);
     toast.success(`${category} category selected`, {
       position: "top-right",
       autoClose: 3000,
@@ -44,6 +48,7 @@ const UserDashboard = () => {
     });
   };
   return (
+    <>
     <div style={{ marginTop: 50 }}>
       <Typography variant="h4" align="center" gutterBottom mt={15}>
         Select the category for prediction
@@ -227,6 +232,7 @@ const UserDashboard = () => {
         </Grid>
       </Container>
     </div>
+    </>
   );
 };
 
