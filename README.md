@@ -85,7 +85,7 @@ connect backend
 npm run dev
 ```
 
-## :handshake: Contact Owners
+## :handshake: Contact Contributors
 
 <p align="left">
   <img src="https://avatars.githubusercontent.com/u/104587783?s=96&v=4" alt='image' width='80' style="border-radius: 50%;">
