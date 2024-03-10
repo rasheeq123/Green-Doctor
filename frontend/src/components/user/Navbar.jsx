@@ -49,18 +49,23 @@ const pages = [
 const settings = [
   {
     text: "My Profile",
-    link: "/user/profile",
+    onClick: () => navigate("/user/profile"),
   },
   {
     text: "Dashboard",
-    link: "/user/dashboard",
+    onClick: () => navigate("/user/dashboard"),
   },
   {
     text: "My History",
-    link: "/user/history",
+    onClick: () => navigate("/user/history"),
   },
   {
     text: "Logout",
+    onClick: () => {
+      console.log('logout');
+      logout(); // Call the logout function from context
+      navigate("/main/home"); // Navigate to the main/home page
+    },
   },
 ];
 function ResponsiveAppBar() {
