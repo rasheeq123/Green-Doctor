@@ -164,8 +164,7 @@ const Prediction = () => {
         body: JSON.stringify({
           image: selImg,
           result: res,
-          predictedAt: new Date(),                    
-
+          predictedAt: new Date(),
         }),
       }
     );
@@ -197,6 +196,7 @@ const Prediction = () => {
     let modelT = await window.tmImage.load(modelURL, metadataURL);
     setMaxPredictions(modelT.getTotalClasses());
     setModel(modelT);
+    
     console.log(selModel, " Model loaded");
 
     // stop loading here

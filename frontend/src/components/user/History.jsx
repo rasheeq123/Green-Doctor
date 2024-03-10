@@ -33,7 +33,7 @@ const History = () => {
 
   const deleteprediction = async (id) => {
     const res = await fetch(
-      `${import.meta.env.VITE_API_URL}/image/delete/` + id,
+      `${import.meta.env.VITE_API_URL}/history/delete/` + id,
       {
         method: "DELETE",
       }

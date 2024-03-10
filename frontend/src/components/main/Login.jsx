@@ -59,8 +59,8 @@ const Login = () => {
           title: "Login Successfully",
         });
         navigate("/main/home");
-        // setLoggedIn(true);
-        setIsLoggedIn(true);
+        setLoggedIn(true);
+        // setIsLoggedIn(true);
 
         const data = await res.json();
 
