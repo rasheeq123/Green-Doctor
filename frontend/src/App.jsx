@@ -14,8 +14,12 @@ import Prediction from "./components/user/Prediction";
 import History from "./components/user/History";
 import Dashboard from "./components/user/Dashboard";
 import { AppProvider } from "./context/AppContext";
+import { useAuth0 } from "@auth0/auth0-react";
+
 
 function App() {
+  const {user , loginWithRedirect } = useAuth0();
+  console.log(user);
   const theme = createTheme({});
 
   return (

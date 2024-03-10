@@ -14,6 +14,7 @@ import MenuItem from "@mui/material/MenuItem";
 import AdbIcon from "@mui/icons-material/Adb";
 import { NavLink, useNavigate } from "react-router-dom";
 import useAppContext from "../../context/AppContext";
+import { useAuth0 } from "@auth0/auth0-react";
 
 const pages = [
   {
@@ -42,12 +43,13 @@ const pages = [
   },
 ];
 
-// function ResponsiveAppBar() {
 const Navbar = ({}) => {
   const { loggedIn, setLoggedIn, logout } = useAppContext();
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
   const navigate = useNavigate();
+  const { loginWithRedirect } = useAuth0();
+
 
   const settings = [
     {
@@ -66,8 +68,8 @@ const Navbar = ({}) => {
       text: "Logout",
       onClick: () => {
         console.log('logout');
-        logout(); // Call the logout function from context
-        navigate("/main/home"); // Navigate to the main/home page
+        logout(); 
+        navigate("/main/home");
       },
     },
   ];
@@ -87,9 +89,7 @@ const Navbar = ({}) => {
     setAnchorElUser(null);
   };
   const handleLogout = () => {
-    // Call the logout function from context
     logout();
-    // Close the user menu
     handleCloseUserMenu();
   };
   
@@ -240,8 +240,6 @@ const Navbar = ({}) => {
                   <MenuItem key={setting.text} onClick={handleCloseUserMenu}>
                     <Typography
                       textAlign="center"
-                      // {/* // onClick={() => navigate(setting.link) */}
-
                       onClick={setting.onClick}
                     >
                       {setting.text}
@@ -264,6 +262,7 @@ const Navbar = ({}) => {
                   variant="contained"
                   color="success"
                   onClick={() => navigate("/main/login")}
+                  // onClick={(e) => loginWithRedirect() }
                   sx={{
                     ml: 1,
                     borderRadius: 5,
@@ -296,7 +295,4 @@ const Navbar = ({}) => {
     </AppBar>
   );
 };
-
-// };
-// export default ResponsiveAppBar;
 export default Navbar;

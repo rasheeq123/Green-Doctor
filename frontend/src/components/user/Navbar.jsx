@@ -13,6 +13,7 @@ import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
 import AdbIcon from "@mui/icons-material/Adb";
 import { NavLink, useNavigate } from "react-router-dom";
+import useAppContext from "../../context/AppContext";
 
 const pages = [
   {
@@ -46,34 +47,34 @@ const pages = [
   },
 ];
 
-const settings = [
-  {
-    text: "My Profile",
-    onClick: () => navigate("/user/profile"),
-  },
-  {
-    text: "Dashboard",
-    onClick: () => navigate("/user/dashboard"),
-  },
-  {
-    text: "My History",
-    onClick: () => navigate("/user/history"),
-  },
-  {
-    text: "Logout",
-    onClick: () => {
-      console.log('logout');
-      logout(); // Call the logout function from context
-      navigate("/main/home"); // Navigate to the main/home page
-    },
-  },
-];
 function ResponsiveAppBar() {
+  const { loggedIn, setLoggedIn, logout } = useAppContext();
   const [anchorElNav, setAnchorElNav] = React.useState(null);
-  // const [first, setfirst] = useState(second)
   const [anchorElUser, setAnchorElUser] = React.useState(null);
   const navigate = useNavigate();
-
+  
+  const settings = [
+    {
+      text: "My Profile",
+      onClick: () => navigate("/user/profile"),
+    },
+    {
+      text: "Dashboard",
+      onClick: () => navigate("/user/dashboard"),
+    },
+    {
+      text: "My History",
+      onClick: () => navigate("/user/history"),
+    },
+    {
+      text: "Logout",
+      onClick: () => {
+        console.log('logout');
+        logout(); 
+        navigate("/main/home");
+      },
+    },
+  ];
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
   };
@@ -89,11 +90,15 @@ function ResponsiveAppBar() {
     setAnchorElUser(null);
   };
 
+  const handleLogout = () => {
+    logout();
+    handleCloseUserMenu();
+  };
+
   return (
     <AppBar elevation={5} position="fixed" sx={{ bgcolor: "#f0f8ff", top: 0 }}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          {/* <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} /> */}
           <img
             src="/images/GD_Logo-.png" // Update the path to your logo
             alt="Logo"
@@ -217,7 +222,7 @@ function ResponsiveAppBar() {
                 <MenuItem key={setting.text} onClick={handleCloseUserMenu}>
                   <Typography
                     textAlign="center"
-                    onClick={() => navigate(setting.link)}
+                    onClick={setting.onClick}
                   >
                     {setting.text}
                   </Typography>
