@@ -14,6 +14,7 @@ import MenuItem from "@mui/material/MenuItem";
 import AdbIcon from "@mui/icons-material/Adb";
 import { NavLink, useNavigate } from "react-router-dom";
 import useAppContext from "../../context/AppContext";
+import { useAuth0 } from "@auth0/auth0-react";
 
 const pages = [
   {
@@ -52,7 +53,8 @@ function ResponsiveAppBar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
   const navigate = useNavigate();
-  
+  const { loginWithRedirect, user, isLoading } = useAuth0();
+
   const settings = [
     {
       text: "My Profile",
@@ -75,6 +77,7 @@ function ResponsiveAppBar() {
       },
     },
   ];
+
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
   };
@@ -121,7 +124,7 @@ function ResponsiveAppBar() {
           >
             Green Doctor
           </Typography>
-
+          {loggedIn ? (
           <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
             <IconButton
               size="large"
@@ -163,6 +166,7 @@ function ResponsiveAppBar() {
               ))}
             </Menu>
           </Box>
+          ): null}
           <Typography
             variant="h5"
             noWrap
@@ -181,6 +185,7 @@ function ResponsiveAppBar() {
           >
             Green Doctor
           </Typography>
+          {loggedIn ? (
           <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
             {pages.map((page) => (
               <Button
@@ -193,6 +198,9 @@ function ResponsiveAppBar() {
               </Button>
             ))}
           </Box>
+          ) : null}
+
+          {loggedIn ? (
           <Box sx={{ flexGrow: 0 }}>
             <Tooltip title="Open settings">
               <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
@@ -230,6 +238,48 @@ function ResponsiveAppBar() {
               ))}
             </Menu>
           </Box>
+          ) : (
+            <>
+            <Box sx={{ flexGrow: 1 }} />
+            <Box
+              sx={{
+                flexGrow: 0,
+                display: "flex",
+                justifyContent: "flex-end",
+              }}
+            >
+              <Button
+                variant="contained"
+                color="success"
+                onClick={() => navigate("/main/login")}
+                // onClick={(e) => loginWithRedirect() }
+                sx={{
+                  ml: 1,
+                  borderRadius: 5,
+                  textTransform: "none",
+                  fontSize: "18px",
+                  textShadow: "2px 2px 4px rgba(0, 0, 0, 0.8)",
+                }}
+              >
+                Sign In
+              </Button>
+              <Button
+                variant="contained"
+                color="success"
+                onClick={() => navigate("/main/signup")}
+                sx={{
+                  ml: 1,
+                  borderRadius: 5,
+                  textTransform: "none",
+                  fontSize: "18px",
+                  textShadow: "2px 2px 4px rgba(0, 0, 0, 0.8)",
+                }}
+              >
+                Get Started
+              </Button>
+            </Box>
+          </>
+          )}
         </Toolbar>
       </Container>
     </AppBar>

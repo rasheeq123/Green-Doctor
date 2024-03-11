@@ -25,7 +25,7 @@ import GoogleIcon from "@mui/icons-material/Google";
 
 const Login = () => {
   const [showPassword, setShowPassword] = React.useState(false);
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  // const [isLoggedIn, setIsLoggedIn] = useState(false);
   const handleClickShowPassword = () => setShowPassword((show) => !show);
 
   const handleMouseDownPassword = (event) => {
@@ -60,7 +60,6 @@ const Login = () => {
         });
         navigate("/main/home");
         setLoggedIn(true);
-        // setIsLoggedIn(true);
 
         const data = await res.json();
 

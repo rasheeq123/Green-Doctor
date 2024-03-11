@@ -48,8 +48,7 @@ const Navbar = ({}) => {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
   const navigate = useNavigate();
-  const { loginWithRedirect } = useAuth0();
-
+  const { loginWithRedirect, user, isLoading } = useAuth0();
 
   const settings = [
     {
@@ -261,8 +260,8 @@ const Navbar = ({}) => {
                 <Button
                   variant="contained"
                   color="success"
-                  onClick={() => navigate("/main/login")}
-                  // onClick={(e) => loginWithRedirect() }
+                  // onClick={() => navigate("/main/login")}
+                  onClick={(e) => loginWithRedirect() }
                   sx={{
                     ml: 1,
                     borderRadius: 5,
@@ -271,7 +270,7 @@ const Navbar = ({}) => {
                     textShadow: "2px 2px 4px rgba(0, 0, 0, 0.8)",
                   }}
                 >
-                  Sign In
+                  Login
                 </Button>
                 <Button
                   variant="contained"
@@ -285,7 +284,7 @@ const Navbar = ({}) => {
                     textShadow: "2px 2px 4px rgba(0, 0, 0, 0.8)",
                   }}
                 >
-                  Get Started
+                  Sign up
                 </Button>
               </Box>
             </>

@@ -14,18 +14,24 @@ import Prediction from "./components/user/Prediction";
 import History from "./components/user/History";
 import Dashboard from "./components/user/Dashboard";
 import { AppProvider } from "./context/AppContext";
-import { useAuth0 } from "@auth0/auth0-react";
+import { Auth0Provider, useAuth0 } from "@auth0/auth0-react";
 
 
 function App() {
   const {user , loginWithRedirect } = useAuth0();
-  console.log(user);
+  console.log("current user : " ,user);
   const theme = createTheme({});
 
   return (
     <>
       <ThemeProvider theme={theme}>
         <BrowserRouter>
+        <Auth0Provider
+        domain="dev-spgtplnzvs7tyejk.us.auth0.com"
+        clientId="szAycWeYU35FJ5t1GW3A631ThP59ENpo"
+        authorizationParams={{
+          redirect_uri: window.location.origin
+        }}>
           <AppProvider>
             <Routes>
               <Route path="/" element={<Navigate to="/main/home" />} />
@@ -49,6 +55,7 @@ function App() {
               </Route>
             </Routes>
           </AppProvider>
+          </Auth0Provider>
         </BrowserRouter>
       </ThemeProvider>
     </>
