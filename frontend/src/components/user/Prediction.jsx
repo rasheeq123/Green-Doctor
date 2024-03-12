@@ -395,7 +395,7 @@ const Prediction = () => {
           </Typography>
         </div>
       </Box>
-      <Container>
+      <Container sx={{mb:5}}>
         {/* <select className="form-control" onChange={e => setSelModel(e.target.value.toLowerCase())}>
         <option value="">Select a Model</option>
         {
