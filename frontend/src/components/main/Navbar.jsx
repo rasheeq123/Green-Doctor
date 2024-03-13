@@ -258,7 +258,7 @@ const Navbar = ({}) => {
                 }}
               >
                 <Button
-                  variant="contained"
+                  variant="outlined"
                   color="success"
                   // onClick={() => navigate("/main/login")}
                   onClick={(e) => loginWithRedirect() }
@@ -267,7 +267,7 @@ const Navbar = ({}) => {
                     borderRadius: 5,
                     textTransform: "none",
                     fontSize: "18px",
-                    textShadow: "2px 2px 4px rgba(0, 0, 0, 0.8)",
+                    // textShadow: "2px 2px 4px rgba(0, 0, 0, 0.8)",
                   }}
                 >
                   Login
@@ -284,7 +284,7 @@ const Navbar = ({}) => {
                     textShadow: "2px 2px 4px rgba(0, 0, 0, 0.8)",
                   }}
                 >
-                  Sign up
+                  Sign Up Free
                 </Button>
               </Box>
             </>

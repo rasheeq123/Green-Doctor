@@ -1,5 +1,5 @@
 import { Box, Button, Container, Grid, Typography, createTheme, styled, Paper } from "@mui/material";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
 
 const theme = createTheme();
@@ -21,16 +21,40 @@ const StyledPaper = styled(Paper)({
   // width: '60%', // Adjust the width as needed
   margin: 'auto', // Center the Paper within the Grid itemrash
 });
+
 const Home = () => {
+  const [index, setIndex] = useState(0);
+  const [loading, setLoading] = useState(true);
+  const [progress, setProgress] = useState(0);
+  const words = ['productive', 'efficient', 'confident'];
+  const images = ['/images/B1.jpg', '/images/G2.jpg', '/images/C1.jpg'];
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setIndex((prevIndex) => (prevIndex + 1) % words.length);
+    }, 5000);
+
+    return () => clearInterval(interval);
+  }, []);
   return (
     <>
-      <Box
+      <Container sx={{ height: "90vh",mt:15,}}>
+      <Grid container spacing={2}>
+      <Grid item xs={12} sm={6}>
+          <Typography variant="h2" >Green Doctor <br/> makes you more</Typography>
+          <Typography variant="h2" fontWeight="bold" sx={{color:'rgb(121, 140, 42)'}}>{words[index]}</Typography>
+        </Grid>
+        <Grid item xs={12} sm={6}>
+          <img src={images[index]} alt="Image" style={{ width: '100%', height: '90%', objectFit: 'center', borderRadius:"8px" }} />
+        </Grid>
+      </Grid>
+    </Container>
+    {/* <Box
         sx={{
           display: "flex",
           flexDirection: "column",
           justifyContent: "center",
           alignItems: "center",
-          backgroundAttachment: "fixed",
+          // backgroundAttachment: "fixed",
           backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.4)), url('/images/B3.jpg')`,
           backgroundRepeat: "no-repeat",
           backgroundSize: "cover",
@@ -61,7 +85,7 @@ const Home = () => {
         >
           Where Leaves Speak and We Listen.
         </Typography>
-      </Box>
+      </Box> */}
       <Typography variant="h2" textAlign={"center"} sx={{ mt: 5, mb: 10 }}>
         Boost your crop production
       </Typography>
