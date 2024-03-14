@@ -1,4 +1,13 @@
-import { Box, Button, Container, Grid, Typography, createTheme, styled, Paper } from "@mui/material";
+import {
+  Box,
+  Button,
+  Container,
+  Grid,
+  Typography,
+  createTheme,
+  styled,
+  Paper,
+} from "@mui/material";
 import React, { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
 
@@ -6,49 +15,50 @@ const theme = createTheme();
 
 const StyledPaper = styled(Paper)({
   padding: theme.spacing(0),
-  border: '1 px solid black',
-  transition: 'transform 0.3s ease-in-out',
-  '&:hover': {
-      transform: 'scale(1.1)', // Adjust the scale factor as needed
+  border: "1 px solid black",
+  transition: "transform 0.3s ease-in-out",
+  "&:hover": {
+    transform: "scale(1.1)",
   },
-  '& img': {
-    width: '100%',
-    height: 'auto',
-    display: 'block',
-    transition: 'transform 0.1s ease-in-out', // Added transition for the image
-    transform: 'scale(1)', // Set the default scale
+  "& img": {
+    width: "100%",
+    height: "auto",
+    display: "block",
+    transition: "transform 0.1s ease-in-out",
+    transform: "scale(1)",
   },
-  // width: '60%', // Adjust the width as needed
-  margin: 'auto', // Center the Paper within the Grid itemrash
+  // width: '60%',
+  margin: "auto",
 });
 
 const Home = () => {
   const [index, setIndex] = useState(0);
   const [loading, setLoading] = useState(true);
   const [progress, setProgress] = useState(0);
-  const words = ['productive', 'efficient', 'confident'];
-  const images = ['/images/B1.jpg', '/images/G2.jpg', '/images/C1.jpg'];
+  const words = ["productive", "efficient", "confident"];
+  const images = ["/images/B1.jpg", "/images/G2.jpg", "/images/C1.jpg"];
   useEffect(() => {
     const interval = setInterval(() => {
       setIndex((prevIndex) => (prevIndex + 1) % words.length);
-    }, 5000);
+    }, 2000);
 
     return () => clearInterval(interval);
   }, []);
   return (
     <>
-      <Container sx={{ height: "90vh",mt:15,}}>
+      {/* <Container sx={{ height: "90vh",mt:15}}>
       <Grid container spacing={2}>
       <Grid item xs={12} sm={6}>
           <Typography variant="h2" >Green Doctor <br/> makes you more</Typography>
           <Typography variant="h2" fontWeight="bold" sx={{color:'rgb(121, 140, 42)'}}>{words[index]}</Typography>
+          <Typography sx={{mt:"40px"}}>Green Doctor empowers farmers and urban gardeners, fostering the growth of our nation. With agriculture at its heart, our country thrives, cultivating prosperity and sustainable development.</Typography>
         </Grid>
         <Grid item xs={12} sm={6}>
           <img src={images[index]} alt="Image" style={{ width: '100%', height: '90%', objectFit: 'center', borderRadius:"8px" }} />
         </Grid>
       </Grid>
-    </Container>
-    {/* <Box
+      </Container> */}
+      <Box
         sx={{
           display: "flex",
           flexDirection: "column",
@@ -59,11 +69,11 @@ const Home = () => {
           backgroundRepeat: "no-repeat",
           backgroundSize: "cover",
           backgroundPosition: "center",
-          height: "100vh",  
+          height: "100vh",
         }}
       >
         <Typography
-          variant="h1" 
+          variant="h1"
           mt={0}
           sx={{
             color: "white",
@@ -85,7 +95,7 @@ const Home = () => {
         >
           Where Leaves Speak and We Listen.
         </Typography>
-      </Box> */}
+      </Box>
       <Typography variant="h2" textAlign={"center"} sx={{ mt: 5, mb: 10 }}>
         Boost your crop production
       </Typography>
@@ -128,22 +138,22 @@ const Home = () => {
             </Box>
           </Grid>
           <Grid item xs={12} sm={6}>
-          <StyledPaper>
-            <Container
-              sx={{
-                display: "flex",
-                backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.3)), url('/images/G1.jpg')`,
-                flexDirection: "column",
-                justifyContent: "center",
-                alignItems: "center",
-                borderRadius: 1,
-                minHeight: 500,
-                width: "100%",
-                // backgroundSize: '100% 100%', // Cover the entire Paper
-                backgroundSize: "cover",
-                backgroundPosition: "center",
-              }}
-            ></Container>
+            <StyledPaper>
+              <Container
+                sx={{
+                  display: "flex",
+                  backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.3)), url('/images/G1.jpg')`,
+                  flexDirection: "column",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  borderRadius: 1,
+                  minHeight: 500,
+                  width: "100%",
+                  // backgroundSize: '100% 100%',
+                  backgroundSize: "cover",
+                  backgroundPosition: "center",
+                }}
+              ></Container>
             </StyledPaper>
           </Grid>
         </Grid>
@@ -155,22 +165,21 @@ const Home = () => {
         <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
           <Grid item xs={12} sm={6}>
             <StyledPaper>
-            <Container
-              sx={{ 
-                display: "flex",
-                backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.3)), url('/images/G2.jpg')`,
-                flexDirection: "column",
-                justifyContent: "center",
-                alignItems: "center",
-                borderRadius: 1,
-                minHeight: 500,
-                width: "100%",
-                backgroundSize: "cover",
-                backgroundPosition: "center",
-                marginRight:"30px", 
-              }}
-              
-            ></Container>
+              <Container
+                sx={{
+                  display: "flex",
+                  backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.3)), url('/images/G2.jpg')`,
+                  flexDirection: "column",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  borderRadius: 1,
+                  minHeight: 500,
+                  width: "100%",
+                  backgroundSize: "cover",
+                  backgroundPosition: "center",
+                  marginRight: "30px",
+                }}
+              ></Container>
             </StyledPaper>
           </Grid>
           <Grid item xs={12} sm={6}>
@@ -181,7 +190,7 @@ const Home = () => {
                 display: "flex",
                 flexDirection: "column",
                 justifyContent: "center",
-                marginLeft:"50px"
+                marginLeft: "50px",
               }}
             >
               <Typography variant="h3" mb={2} fontWeight="semibold">
