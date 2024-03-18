@@ -149,7 +149,6 @@ const Home = () => {
                   borderRadius: 1,
                   minHeight: 500,
                   width: "100%",
-                  // backgroundSize: '100% 100%',
                   backgroundSize: "cover",
                   backgroundPosition: "center",
                 }}
