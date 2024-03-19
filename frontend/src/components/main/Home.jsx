@@ -64,7 +64,7 @@ const Home = () => {
           flexDirection: "column",
           justifyContent: "center",
           alignItems: "center",
-          // backgroundAttachment: "fixed",
+          backgroundAttachment: "fixed",
           backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.4)), url('/images/B3.jpg')`,
           backgroundRepeat: "no-repeat",
           backgroundSize: "cover",
