@@ -116,7 +116,7 @@ const Home = () => {
                 Diagnose your crop
               </Typography>
               <Typography variant="h4" mb={0}>
-                Take a photo of your sick crop and get a free diagnosis and
+                capture the infected area of your sick crop and get a free diagnosis,
                 treatment suggestions – all in a few seconds!
               </Typography>
               <NavLink to="/user/dashboard">
