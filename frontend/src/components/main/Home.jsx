@@ -7,9 +7,12 @@ import {
   createTheme,
   styled,
   Paper,
+  keyframes,
 } from "@mui/material";
 import React, { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
+import AccessAlarmsIcon from '@mui/icons-material/AccessAlarms';
+import HealthAndSafetySharpIcon from '@mui/icons-material/HealthAndSafetySharp';
 
 const theme = createTheme();
 
@@ -44,6 +47,28 @@ const Home = () => {
 
     return () => clearInterval(interval);
   }, []);
+  const beatFade = keyframes`
+  0% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+`;
+
+// Style for the icon with animation
+const iconStyle = {
+  fontSize: '3rem',
+  mb: 3,
+  animation: `${beatFade} 2s ease-in-out infinite`,
+};
+
   return (
     <>
       {/* <Container sx={{ height: "90vh",mt:15}}>
@@ -223,33 +248,39 @@ const Home = () => {
       </Container>
 
       {/* -------------------------GD in action---------------------------- */}
+      <Container>
       <Typography variant="h3" textAlign={"center"} sx={{ mt: 10 }}> Grow with Green Doctor</Typography>
       <Grid container spacing={2} sx={{mt:5}}>
       <Grid item xs={12} sm={6} md={3}>
         <Paper sx={{ p: 2, textAlign: 'center', bgcolor: '#f0f0f0', height: '100%' }}>
-          <h2>Column 1</h2>
-          <p>Get your crop diagnosed in 1.5 sec.</p>
+        <AccessAlarmsIcon sx={iconStyle}/>
+        <Typography variant="h3" mb={2} fontWeight="bold" fontSize="1.5rem"> 1.5 sec</Typography>
+        <h4>Get your crop diagnosed in 1.5 sec.</h4>
         </Paper>
       </Grid>
       <Grid item xs={12} sm={6} md={3}>
         <Paper sx={{ p: 2, textAlign: 'center', bgcolor: '#f0f0f0', height: '100%' }}>
-          <h2>Column 2</h2>
-          <p>You'll be able to detect 12+ different kinds of crops!</p>
+        <HealthAndSafetySharpIcon sx={iconStyle}/>
+        <Typography variant="h3" mb={2} fontWeight="bold" fontSize="1.5rem"> 12+</Typography>
+          <h4>You'll be able to detect 12+ different kinds of crops!</h4>
         </Paper>
       </Grid>
       <Grid item xs={12} sm={6} md={3}>
         <Paper sx={{ p: 2, textAlign: 'center', bgcolor: '#f0f0f0', height: '100%' }}>
-          <h2>Column 3</h2>
-          <p>Find the right treatment for more than 120+ diseases.</p>
+        <AccessAlarmsIcon sx={iconStyle}/>
+        <Typography variant="h3" mb={2} fontWeight="bold" fontSize="1.5rem"> 100+</Typography>
+          <h4>Find the right treatment for more than 100+ diseases.</h4>
         </Paper>
       </Grid>
       <Grid item xs={12} sm={6} md={3}>
         <Paper sx={{ p: 2, textAlign: 'center', bgcolor: '#f0f0f0', height: '100%' }}>
-          <h2>Column 4</h2>
-          <p>Farmers report an improvement in their farming of 90%.</p>
+        <AccessAlarmsIcon sx={iconStyle}/>
+        <Typography variant="h3" mb={2} fontWeight="bold" fontSize="1.5rem">90%</Typography>
+          <h4>Farmers report an improvement in their farming of 90%.</h4>
         </Paper>
       </Grid>
     </Grid>
+    </Container>
 
       {/* --------------------Frequently Asked section--------------------------------------- */}
 
