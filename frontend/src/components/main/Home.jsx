@@ -228,25 +228,25 @@ const Home = () => {
       <Grid item xs={12} sm={6} md={3}>
         <Paper sx={{ p: 2, textAlign: 'center', bgcolor: '#f0f0f0', height: '100%' }}>
           <h2>Column 1</h2>
-          <p>This is column 1 content.</p>
+          <p>Get your crop diagnosed in 1.5 sec.</p>
         </Paper>
       </Grid>
       <Grid item xs={12} sm={6} md={3}>
         <Paper sx={{ p: 2, textAlign: 'center', bgcolor: '#f0f0f0', height: '100%' }}>
           <h2>Column 2</h2>
-          <p>This is column 2 content.</p>
+          <p>You'll be able to detect 12+ different kinds of crops!</p>
         </Paper>
       </Grid>
       <Grid item xs={12} sm={6} md={3}>
         <Paper sx={{ p: 2, textAlign: 'center', bgcolor: '#f0f0f0', height: '100%' }}>
           <h2>Column 3</h2>
-          <p>This is column 3 content.</p>
+          <p>Find the right treatment for more than 120+ diseases.</p>
         </Paper>
       </Grid>
       <Grid item xs={12} sm={6} md={3}>
         <Paper sx={{ p: 2, textAlign: 'center', bgcolor: '#f0f0f0', height: '100%' }}>
           <h2>Column 4</h2>
-          <p>This is column 4 content.</p>
+          <p>Farmers report an improvement in their farming of 90%.</p>
         </Paper>
       </Grid>
     </Grid>
