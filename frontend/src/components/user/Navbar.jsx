@@ -22,11 +22,11 @@ const pages = [
     link: "/main/home",
   },
   {
-    text: "user",
+    text: "User",
     link: "/user/profile",
   },
   {
-    text: "prediction",
+    text: "Prediction",
     link: "/user/dashboard",
   },
 
@@ -34,22 +34,22 @@ const pages = [
     text: "History",
     link: "/user/history",
   },
-  {
-    text: "Signup",
-    link: "/main/signup",
-  },
-  {
-    text: "Login",
-    link: "/main/login",
-  },
-  {
-    text: "Expert",
-    link: "/admin",
-  },
-  {
-    text: "Admin",
-    link: "/admin",
-  },
+  // {
+  //   text: "Signup",
+  //   link: "/main/signup",
+  // },
+  // {
+  //   text: "Login",
+  //   link: "/main/login",
+  // },
+  // {
+  //   text: "Expert",
+  //   link: "/admin",
+  // },
+  // {
+  //   text: "Admin",
+  //   link: "/admin",
+  // },
 ];
 
 function ResponsiveAppBar() {
@@ -107,12 +107,12 @@ function ResponsiveAppBar() {
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <img
-            src="/images/GD_Logo-.png" // Update the path to your logo
+            src="/images/GD_Logo-.png"
             alt="Logo"
             style={{ marginRight: "10px", maxHeight: "40px" }}
           />
           <Typography
-            variant="h6"
+            variant="h5"
             noWrap
             component="a"
             href="/main/home"
@@ -120,10 +120,11 @@ function ResponsiveAppBar() {
               mr: 10,
               display: { xs: "none", md: "flex" },
               fontFamily: "Roboto",
-              fontWeight: 500,
-              // letterSpacing: '.3rem',
-              color: "black",
+              fontWeight: 545,
+              fontSize: "h4.fontSize",
+              color: "rgb(27, 94, 32)",
               textDecoration: "none",
+              textShadow: "2px 2px 3px rgba(0, 0, 0, 0.1)",
             }}
           >
             Green Doctor
@@ -182,8 +183,7 @@ function ResponsiveAppBar() {
               flexGrow: 1,
               fontFamily: "Roboto",
               fontWeight: 700,
-              // letterSpacing: '.3rem',
-              color: "black",
+              color: "rgb(27, 94, 32)",
               textDecoration: "none",
             }}
           >
@@ -196,7 +196,8 @@ function ResponsiveAppBar() {
                 onClick={() => navigate(page.link)}
                 key={page.text}
                 // onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: "black", display: "block", textTransform: "none", }}
+                sx={{ my: 2, color: "black", display: "block", 
+                fontSize: "16px",textTransform: "none", }}
               >
                 {page.text}
               </Button>
