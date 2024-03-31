@@ -26,21 +26,29 @@ const pages = [
     link: "/user/profile",
   },
   {
-    text: "Signup",
-    link: "/main/signup",
+    text: "Prediction",
+    link: "/user/dashboard",
   },
   {
-    text: "Login",
-    link: "/main/login",
+    text: "History",
+    link: "/user/history",
   },
-  {
-    text: "Expert",
-    link: "/admin",
-  },
-  {
-    text: "Admin",
-    link: "/admin",
-  },
+  // {
+  //   text: "Signup",
+  //   link: "/main/signup",
+  // },
+  // {
+  //   text: "Login",
+  //   link: "/main/login",
+  // },
+  // {
+  //   text: "Expert",
+  //   link: "/admin",
+  // },
+  // {
+  //   text: "Admin",
+  //   link: "/admin",
+  // },
 ];
 
 const Navbar = ({}) => {
@@ -115,7 +123,6 @@ const Navbar = ({}) => {
               color: "rgb(27, 94, 32)",
               textDecoration: "none",
               textShadow: "2px 2px 3px rgba(0, 0, 0, 0.1)",
-              // color:gree
             }}
           >
             Green Doctor
