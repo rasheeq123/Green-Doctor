@@ -13,6 +13,8 @@ import React, { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
 import AccessAlarmsIcon from '@mui/icons-material/AccessAlarms';
 import HealthAndSafetySharpIcon from '@mui/icons-material/HealthAndSafetySharp';
+import SpaSharpIcon from '@mui/icons-material/SpaSharp';
+import AutoGraphSharpIcon from '@mui/icons-material/AutoGraphSharp';
 
 const theme = createTheme();
 
@@ -33,21 +35,7 @@ const StyledPaper = styled(Paper)({
   // width: '60%',
   margin: "auto",
 });
-
-const Home = () => {
-  const [index, setIndex] = useState(0);
-  const [loading, setLoading] = useState(true);
-  const [progress, setProgress] = useState(0);
-  const words = ["productive", "efficient", "confident"];
-  const images = ["/images/B1.jpg", "/images/G2.jpg", "/images/C1.jpg"];
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setIndex((prevIndex) => (prevIndex + 1) % words.length);
-    }, 2000);
-
-    return () => clearInterval(interval);
-  }, []);
-  const beatFade = keyframes`
+const beatFade = keyframes`
   0% {
     opacity: 0;
     transform: scale(0.5);
@@ -61,13 +49,24 @@ const Home = () => {
     transform: scale(0.5);
   }
 `;
-
-// Style for the icon with animation
 const iconStyle = {
   fontSize: '3rem',
   mb: 3,
   animation: `${beatFade} 2s ease-in-out infinite`,
 };
+const Home = () => {
+  const [index, setIndex] = useState(0);
+  const [loading, setLoading] = useState(true);
+  const [progress, setProgress] = useState(0);
+  const words = ["productive", "efficient", "confident"];
+  const images = ["/images/B1.jpg", "/images/G2.jpg", "/images/C1.jpg"];
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setIndex((prevIndex) => (prevIndex + 1) % words.length);
+    }, 2000);
+
+    return () => clearInterval(interval);
+  }, []);
 
   return (
     <>
@@ -249,7 +248,7 @@ const iconStyle = {
 
       {/* -------------------------GD in action---------------------------- */}
       <Container>
-      <Typography variant="h3" textAlign={"center"} sx={{ mt: 10 }}> Grow with Green Doctor</Typography>
+      <Typography variant="h3" textAlign={"center"} sx={{ mt: 10 }}> Green Doctor in numbers</Typography>
       <Grid container spacing={2} sx={{mt:5}}>
       <Grid item xs={12} sm={6} md={3}>
         <Paper sx={{ p: 2, textAlign: 'center', bgcolor: '#f0f0f0', height: '100%' }}>
@@ -267,14 +266,14 @@ const iconStyle = {
       </Grid>
       <Grid item xs={12} sm={6} md={3}>
         <Paper sx={{ p: 2, textAlign: 'center', bgcolor: '#f0f0f0', height: '100%' }}>
-        <AccessAlarmsIcon sx={iconStyle}/>
+        <SpaSharpIcon sx={iconStyle}/>
         <Typography variant="h3" mb={2} fontWeight="bold" fontSize="1.5rem"> 100+</Typography>
           <h4>Find the right treatment for more than 100+ diseases.</h4>
         </Paper>
       </Grid>
       <Grid item xs={12} sm={6} md={3}>
         <Paper sx={{ p: 2, textAlign: 'center', bgcolor: '#f0f0f0', height: '100%' }}>
-        <AccessAlarmsIcon sx={iconStyle}/>
+        <AutoGraphSharpIcon sx={iconStyle}/>
         <Typography variant="h3" mb={2} fontWeight="bold" fontSize="1.5rem">90%</Typography>
           <h4>Farmers report an improvement in their farming of 90%.</h4>
         </Paper>
