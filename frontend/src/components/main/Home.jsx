@@ -251,28 +251,28 @@ const Home = () => {
       <Typography variant="h3" textAlign={"center"} sx={{ mt: 10 }}> Green Doctor in numbers</Typography>
       <Grid container spacing={2} sx={{mt:5}}>
       <Grid item xs={12} sm={6} md={3}>
-        <Paper sx={{ p: 2, textAlign: 'center', bgcolor: '#f0f0f0', height: '100%' }}>
+        <Paper sx={{ p: 2, textAlign: 'center', bgcolor: '#f0f0f0', height: '100%',boxShadow:'4' }}>
         <AccessAlarmsIcon sx={iconStyle}/>
         <Typography variant="h3" mb={2} fontWeight="bold" fontSize="1.5rem"> 1.5 sec</Typography>
         <h4>Get your crop diagnosed in 1.5 sec.</h4>
         </Paper>
       </Grid>
       <Grid item xs={12} sm={6} md={3}>
-        <Paper sx={{ p: 2, textAlign: 'center', bgcolor: '#f0f0f0', height: '100%' }}>
+        <Paper sx={{ p: 2, textAlign: 'center', bgcolor: '#f0f0f0', height: '100%',boxShadow:'4' }}>
         <HealthAndSafetySharpIcon sx={iconStyle}/>
         <Typography variant="h3" mb={2} fontWeight="bold" fontSize="1.5rem"> 12+</Typography>
           <h4>You'll be able to detect 12+ different kinds of crops!</h4>
         </Paper>
       </Grid>
       <Grid item xs={12} sm={6} md={3}>
-        <Paper sx={{ p: 2, textAlign: 'center', bgcolor: '#f0f0f0', height: '100%' }}>
+        <Paper sx={{ p: 2, textAlign: 'center', bgcolor: '#f0f0f0', height: '100%',boxShadow:'4' }}>
         <SpaSharpIcon sx={iconStyle}/>
         <Typography variant="h3" mb={2} fontWeight="bold" fontSize="1.5rem"> 100+</Typography>
           <h4>Find the right treatment for more than 100+ diseases.</h4>
         </Paper>
       </Grid>
       <Grid item xs={12} sm={6} md={3}>
-        <Paper sx={{ p: 2, textAlign: 'center', bgcolor: '#f0f0f0', height: '100%' }}>
+        <Paper sx={{ p: 2, textAlign: 'center', bgcolor: '#f0f0f0', height: '100%',boxShadow:'4' }}>
         <AutoGraphSharpIcon sx={iconStyle}/>
         <Typography variant="h3" mb={2} fontWeight="bold" fontSize="1.5rem">90%</Typography>
           <h4>Farmers report an improvement in their farming of 90%.</h4>
