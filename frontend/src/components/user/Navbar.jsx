@@ -22,7 +22,11 @@ const pages = [
     link: "/main/home",
   },
   {
-    text: "User",
+    text: "user",
+    link: "/user/profile",
+  },
+  {
+    text: "prediction",
     link: "/user/dashboard",
   },
 

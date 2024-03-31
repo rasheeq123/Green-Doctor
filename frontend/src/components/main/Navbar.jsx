@@ -23,7 +23,7 @@ const pages = [
   },
   {
     text: "User",
-    link: "/user/dashboard",
+    link: "/user/profile",
   },
   {
     text: "Signup",
