@@ -139,7 +139,7 @@ const Home = () => {
               <Typography variant="h3" fontWeight="semibold" mb={2}>
                 Diagnose your crop
               </Typography>
-              <Typography variant="h4" mb={0}>
+              <Typography variant="h4" mb={0} >
                 capture the infected area of your sick crop and get a free diagnosis,
                 treatment suggestions – all in a few seconds!
               </Typography>
@@ -254,28 +254,28 @@ const Home = () => {
         <Paper sx={{ p: 2, textAlign: 'center', bgcolor: '#f0f0f0', height: '100%',boxShadow:'4' }}>
         <AccessAlarmsIcon sx={iconStyle}/>
         <Typography variant="h3" mb={2} fontWeight="bold" fontSize="1.5rem"> 1.5 sec</Typography>
-        <h4>Get your crop diagnosed in 1.5 sec.</h4>
+        <Typography variant="h5" component="h4" color="textSecondary">Get your crop diagnosed in 1.5 sec.</Typography>
         </Paper>
       </Grid>
       <Grid item xs={12} sm={6} md={3}>
         <Paper sx={{ p: 2, textAlign: 'center', bgcolor: '#f0f0f0', height: '100%',boxShadow:'4' }}>
         <HealthAndSafetySharpIcon sx={iconStyle}/>
         <Typography variant="h3" mb={2} fontWeight="bold" fontSize="1.5rem"> 12+</Typography>
-          <h4>You'll be able to detect 12+ different kinds of crops!</h4>
+        <Typography variant="h5" component="h4" color="textSecondary">You'll be able to detect 12+ different kinds of crops!</Typography>
         </Paper>
       </Grid>
       <Grid item xs={12} sm={6} md={3}>
         <Paper sx={{ p: 2, textAlign: 'center', bgcolor: '#f0f0f0', height: '100%',boxShadow:'4' }}>
         <SpaSharpIcon sx={iconStyle}/>
         <Typography variant="h3" mb={2} fontWeight="bold" fontSize="1.5rem"> 100+</Typography>
-          <h4>Find the right treatment for more than 100+ diseases.</h4>
+          <Typography variant="h5" component="h4" color="textSecondary">Find the right treatment for more than 100+ diseases.</Typography>
         </Paper>
       </Grid>
       <Grid item xs={12} sm={6} md={3}>
         <Paper sx={{ p: 2, textAlign: 'center', bgcolor: '#f0f0f0', height: '100%',boxShadow:'4' }}>
         <AutoGraphSharpIcon sx={iconStyle}/>
         <Typography variant="h3" mb={2} fontWeight="bold" fontSize="1.5rem">93%</Typography>
-          <h4>Users report an improvement in their farming of 93%.</h4>
+        <Typography variant="h5" component="h4" color="textSecondary">Users report an improvement in their farming of 93%.</Typography>
         </Paper>
       </Grid>
     </Grid>
