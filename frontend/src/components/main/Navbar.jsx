@@ -260,8 +260,8 @@ const Navbar = ({}) => {
                 <Button
                   variant="outlined"
                   color="success"
-                  // onClick={() => navigate("/main/login")}
-                  onClick={(e) => loginWithRedirect() }
+                  onClick={() => navigate("/main/login")}
+                  // onClick={(e) => loginWithRedirect() }
                   sx={{
                     ml: 1,
                     borderRadius: 5,
