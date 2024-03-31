@@ -275,7 +275,7 @@ const Home = () => {
         <Paper sx={{ p: 2, textAlign: 'center', bgcolor: '#f0f0f0', height: '100%',boxShadow:'4' }}>
         <AutoGraphSharpIcon sx={iconStyle}/>
         <Typography variant="h3" mb={2} fontWeight="bold" fontSize="1.5rem">90%</Typography>
-          <h4>Farmers report an improvement in their farming of 90%.</h4>
+          <h4>Users report an improvement in their farming of 93%.</h4>
         </Paper>
       </Grid>
     </Grid>
