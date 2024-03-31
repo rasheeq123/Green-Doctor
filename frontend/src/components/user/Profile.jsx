@@ -30,7 +30,7 @@ const Profile = () => {
               <Typography variant="h3" mb={2} mt={2} fontSize="1.6rem">
                 Rasheeq Zehra
               </Typography>
-              <p>This is column 1 content.</p>
+              <p>user detail here</p>
             </Paper>
           </Grid>
           <Grid item xs={12} sm={6}>
@@ -43,8 +43,9 @@ const Profile = () => {
                 overflow: "hidden",
               }}
             >
-              <h2>Column 2</h2>
-              <p>This is column 2 content.</p>
+              <Typography variant="h3" mb={2} mt={20} fontSize="1.6rem">
+                Diagnosed graph here
+              </Typography>
             </Paper>
           </Grid>
           <Grid item xs={12} sm={6} md={3}>
