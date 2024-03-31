@@ -32,7 +32,7 @@ const StyledPaper = styled(Paper)({
     transform: "scale(1)", // Set the default scale
   },
   
-  margin: "auto", // Center the Paper within the Grid itemrash
+  margin: "auto", 
 });
 
 const UserDashboard = () => {
@@ -84,10 +84,9 @@ const UserDashboard = () => {
                     color: "black",
                     fontWeight: "800",
                     backgroundColor: "rgba(255, 255, 255, 0.5)",
-                    border: "2px solid transparent", // Initial border style
-                    transition: "border-color 0.3s ease", // Smooth transition for border color change
+                    border: "2px solid transparent", 
+                    transition: "border-color 0.3s ease", 
                   }}
-                  // Add hover effect
                   onMouseOver={(event) =>
                     (event.target.style.borderColor = "white")
                   }
@@ -170,10 +169,9 @@ const UserDashboard = () => {
                     color: "black",
                     fontWeight: "800",
                     backgroundColor: "rgba(255, 255, 255, 0.5)",
-                    border: "2px solid transparent", // Initial border style
-                    transition: "border-color 0.3s ease", // Smooth transition for border color change
+                    border: "2px solid transparent", 
+                    transition: "border-color 0.3s ease", 
                   }}
-                  // Add hover effect
                   onMouseOver={(event) =>
                     (event.target.style.borderColor = "white")
                   }
@@ -213,10 +211,9 @@ const UserDashboard = () => {
                     color: "black",
                     fontWeight: "800",
                     backgroundColor: "rgba(255, 255, 255, 0.5)",
-                    border: "2px solid transparent", // Initial border style
-                    transition: "border-color 0.3s ease", // Smooth transition for border color change
+                    border: "2px solid transparent", 
+                    transition: "border-color 0.3s ease", 
                   }}
-                  // Add hover effect
                   onMouseOver={(event) =>
                     (event.target.style.borderColor = "white")
                   }

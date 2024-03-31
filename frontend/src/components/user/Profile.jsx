@@ -1,5 +1,6 @@
-import { Avatar, Container, Grid, Paper, Typography } from "@mui/material";
+import { Avatar, Button, Container, Grid, Paper, Typography } from "@mui/material";
 import React from "react";
+import { NavLink } from "react-router-dom";
 
 const Profile = () => {
   return (
@@ -70,6 +71,10 @@ const Profile = () => {
               >
                 Grow with Confidence
               </Typography>
+              <NavLink to="/user/dashboard"><Button variant="contained" color="primary" sx={{mt:1, mb: 1,textTransform: "none",fontSize: "18px", borderRadius:5,width: "100%",}}> Go to prediction page</Button></NavLink>
+              <NavLink to="/user/history"><Button variant="contained" color="primary" sx={{mb: 1,textTransform: "none",fontSize: "18px", borderRadius:5,width: "100%"}}>Detailed Diagnosis</Button></NavLink>
+              <NavLink to="/main/home"><Button variant="contained" color="primary" sx={{mb: 1,textTransform: "none",fontSize: "18px", borderRadius:5,width: "100%"}}> Return to home page</Button></NavLink>
+              
             </Paper>
           </Grid>
         </Grid>
