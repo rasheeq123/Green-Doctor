@@ -8,7 +8,7 @@ import {
   Typography,
 } from "@mui/material";
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import {
   Chart,
   CategoryScale,
@@ -22,6 +22,8 @@ import {
   ArcElement,
 } from "chart.js";
 import { Bar, Line, Pie } from "react-chartjs-2";
+import LogoutIcon from '@mui/icons-material/Logout';
+import useAppContext from "../../context/AppContext";
 
 Chart.register(
   CategoryScale,
@@ -72,6 +74,13 @@ const chartData = {
 };
 
 const Profile = () => {
+  const { logout } = useAppContext();
+  const navigate = useNavigate();
+
+  const handleLogout = () => {
+    logout();
+    navigate("/main/home");
+  };
   return (
     <>
       <Container sx={{mt: 15, mb:5}}>
@@ -100,6 +109,10 @@ const Profile = () => {
                 Rasheeq Zehra
               </Typography>
               <p>user detail here</p>
+              <Button variant="text" sx={{textTransform:"none"}} onClick={handleLogout}>
+              <LogoutIcon /> 
+              Logout
+              </Button>
             </Paper>
           </Grid>
           <Grid item xs={12} sm={6}>
@@ -147,51 +160,47 @@ const Profile = () => {
                 Grow with Confidence
               </Typography>
                 <Box sx={{mt:20}}>
-              <NavLink to="/user/dashboard">
+                <NavLink to="/user/history">
                 <Button
-                  variant="contained"
+                  variant="outlined"
                   color="primary"
                   sx={{
-                    mt: 1,
-                    mb: 1,
                     textTransform: "none",
                     fontSize: "18px",
                     borderRadius: 5,
                     width: "100%",
-                  }}
-                >
-                  {" "}
-                  Go to prediction page
-                </Button>
-              </NavLink>
-              <NavLink to="/user/history">
-                <Button
-                  variant="contained"
-                  color="primary"
-                  sx={{
-                    mb: 1,
-                    textTransform: "none",
-                    fontSize: "18px",
-                    borderRadius: 5,
-                    width: "100%",
+                    mb:1,
                   }}
                 >
                   Detailed Diagnosis
                 </Button>
               </NavLink>
-              <NavLink to="/main/home">
+              <NavLink to="/user/dashboard">
                 <Button
-                  variant="contained"
+                  variant="outlined"
                   color="primary"
                   sx={{
-                    mb: 1,
+                    textTransform: "none",
+                    fontSize: "18px",
+                    borderRadius: 5,
+                    width: "100%",
+                    mb:1,
+                  }}
+                >
+                  Go to prediction page
+                </Button>
+              </NavLink>
+              <NavLink to="/main/home">
+                <Button
+                  variant="outlined"
+                  color="primary"
+                  sx={{
                     textTransform: "none",
                     fontSize: "18px",
                     borderRadius: 5,
                     width: "100%",
                   }}
                 >
-                  {" "}
                   Return to home page
                 </Button>
               </NavLink>
