@@ -1,5 +1,6 @@
 import {
   Avatar,
+  Box,
   Button,
   Container,
   Grid,
@@ -142,9 +143,10 @@ const Profile = () => {
                 mt={2}
                 fontSize="1.6rem"
                 color="textSecondary"
-              >
+                >
                 Grow with Confidence
               </Typography>
+                <Box sx={{mt:15}}>
               <NavLink to="/user/dashboard">
                 <Button
                   variant="contained"
@@ -193,6 +195,7 @@ const Profile = () => {
                   Return to home page
                 </Button>
               </NavLink>
+              </Box>
             </Paper>
           </Grid>
         </Grid>
