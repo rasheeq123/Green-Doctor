@@ -146,7 +146,7 @@ const Profile = () => {
                 >
                 Grow with Confidence
               </Typography>
-                <Box sx={{mt:15}}>
+                <Box sx={{mt:20}}>
               <NavLink to="/user/dashboard">
                 <Button
                   variant="contained"
