@@ -74,8 +74,8 @@ const chartData = {
 const Profile = () => {
   return (
     <>
-      <Container sx={{ mt: 15, mb: 15 }}>
-        <Grid container spacing={2} style={{ height: "500px" }}>
+      <Container sx={{mt: 15, mb:5}}>
+        <Grid container spacing={2}>
           <Grid item xs={12} sm={6} md={3}>
             <Paper
               sx={{
