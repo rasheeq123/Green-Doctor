@@ -148,18 +148,19 @@ const Profile = () => {
               <img
                 src="/images/GD_Logo-.png"
                 alt="Logo"
-                style={{ maxHeight: "150px" }}
+                style={{ maxHeight: "100px" }}
               />
               <Typography
                 variant="h3"
-                mb={2}
-                mt={2}
+                mb={1}
+                mt={1}
                 fontSize="1.6rem"
                 color="textSecondary"
                 >
                 Grow with Confidence
               </Typography>
-                <Box sx={{mt:20}}>
+              <Typography sx={{mb:2,textAlign:'center'}} color="textSecondary">We provide tailored treatment plans and proactive measures to combat plant disease.Designed for urban farmers, farmers and amateur gardener to protect their crops/plants and boost production.</Typography>
+                <Box sx={{mt:5}}>
                 <NavLink to="/user/history">
                 <Button
                   variant="outlined"
