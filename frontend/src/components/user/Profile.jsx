@@ -24,7 +24,7 @@ import {
 import { Bar, Line, Pie } from "react-chartjs-2";
 import LogoutIcon from '@mui/icons-material/Logout';
 import useAppContext from "../../context/AppContext";
-
+import WorkspacePremiumIcon from '@mui/icons-material/WorkspacePremium';
 Chart.register(
   CategoryScale,
   LinearScale,
@@ -160,7 +160,10 @@ const Profile = () => {
                 Grow with Confidence
               </Typography>
               <Typography sx={{mb:2,textAlign:'center'}} color="textSecondary">We provide tailored treatment plans and proactive measures to combat plant disease.Designed for urban farmers, farmers and amateur gardener to protect their crops/plants and boost production.</Typography>
-                <Box sx={{mt:5}}>
+              <Button variant="text" color="success" sx={{textTransform:"none", fontSize:'18px'}}> Premium
+              <WorkspacePremiumIcon />
+                </Button>
+                <Box sx={{mt:2}}>
                 <NavLink to="/user/history">
                 <Button
                   variant="outlined"
