@@ -163,7 +163,7 @@ const Profile = () => {
                 <NavLink to="/user/history">
                 <Button
                   variant="outlined"
-                  color="primary"
+                  color="secondary"
                   sx={{
                     textTransform: "none",
                     fontSize: "18px",
@@ -178,7 +178,7 @@ const Profile = () => {
               <NavLink to="/user/dashboard">
                 <Button
                   variant="outlined"
-                  color="primary"
+                  color="secondary"
                   sx={{
                     textTransform: "none",
                     fontSize: "18px",
@@ -193,7 +193,7 @@ const Profile = () => {
               <NavLink to="/main/home">
                 <Button
                   variant="outlined"
-                  color="primary"
+                  color="secondary"
                   sx={{
                     textTransform: "none",
                     fontSize: "18px",
