@@ -92,8 +92,8 @@ const Profile = () => {
                 sx={{
                   display: "block",
                   margin: "auto",
-                  width: 180,
-                  height: 180,
+                  width: 150,
+                  height: 150,
                 }}
               />
               <Typography variant="h3" mb={2} mt={2} fontSize="1.6rem">
