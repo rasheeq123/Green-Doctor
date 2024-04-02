@@ -65,7 +65,6 @@ const Navbar = ({}) => {
   const [anchorElUser, setAnchorElUser] = React.useState(null);
   const navigate = useNavigate();
   const { loginWithRedirect, user, isLoading } = useAuth0();
-  const [openModal, setOpenModal] = useState(false);
 
   const settings = [
     {
@@ -80,17 +79,13 @@ const Navbar = ({}) => {
       text: "My History",
       onClick: () => navigate("/user/history"),
     },
-    // {
-    //   text: "Logout",
-    //   onClick: () => {
-    //     console.log('logout');
-    //     logout(); 
-    //     navigate("/main/home");
-    //   },
-    // },
     {
       text: "Logout",
-      onClick: () => handleLogout(),
+      onClick: () => {
+        console.log('logout');
+        logout(); 
+        navigate("/main/home");
+      },
     },
   ];
 
@@ -108,23 +103,11 @@ const Navbar = ({}) => {
   const handleCloseUserMenu = () => {
     setAnchorElUser(null);
   };
-  
+
   const handleLogout = () => {
-    setOpenModal(true); // Open the modal when logout button is clicked
+    logout();
     handleCloseUserMenu();
   };
-
-  const handleCloseModal = () => {
-    setOpenModal(false); // Close the modal
-  };
-  const handleConfirmLogout = () => {
-    logout();
-    navigate("/main/home");
-  };
-  // const handleLogout = () => {
-  //   logout();
-  //   handleCloseUserMenu();
-  // };
   
   return (
     <AppBar elevation={5} position="fixed" sx={{ bgcolor: "#f0f8ff" }}>
@@ -281,48 +264,6 @@ const Navbar = ({}) => {
                   </MenuItem>
                 ))}
               </Menu>
-              <Modal open={openModal} onClose={handleCloseModal}>
-                <Paper
-                  sx={{
-                    position: "absolute",
-                    top: "50%",
-                    left: "50%",
-                    transform: "translate(-50%, -50%)",
-                    width: 400,
-                    bgcolor: "background.paper",
-                    boxShadow: 24,
-                    p: 4,
-                  }}
-                >
-                  <Typography variant="h5">Confirm Logout</Typography>
-                  <Typography sx={{ mt: 2 }}>
-                    Are you sure you want to logout?
-                  </Typography>
-                  <Box
-                    sx={{
-                      mt: 2,
-                      display: "flex",
-                      justifyContent: "space-between",
-                    }}
-                  >
-                    <Button
-                      variant="contained"
-                      color="success"
-                      sx={{}}
-                      onClick={handleConfirmLogout}
-                    >
-                      Yes, Logout
-                    </Button>
-                    <Button
-                      variant="contained"
-                      color="error"
-                      onClick={handleCloseModal}
-                    >
-                      Cancel
-                    </Button>
-                  </Box>
-                </Paper>
-              </Modal>
             </Box>
           ) : (
             <>
