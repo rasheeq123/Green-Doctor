@@ -118,7 +118,7 @@ const Profile = () => {
               <Typography variant="h3" mb={2} mt={2} fontSize="1.6rem">
                 Rasheeq Zehra
               </Typography>
-              <p>user detail here</p>
+              <p>Fetching user info....</p>
               <Modal open={openModal} onClose={handleCloseModal}>
                 <Paper
                   sx={{
