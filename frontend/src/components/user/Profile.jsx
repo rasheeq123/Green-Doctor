@@ -4,10 +4,11 @@ import {
   Button,
   Container,
   Grid,
+  Modal,
   Paper,
   Typography,
 } from "@mui/material";
-import React from "react";
+import React, { useState } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
 import {
   Chart,
@@ -22,10 +23,10 @@ import {
   ArcElement,
 } from "chart.js";
 import { Bar, Line, Pie } from "react-chartjs-2";
-import LogoutIcon from '@mui/icons-material/Logout';
+import LogoutIcon from "@mui/icons-material/Logout";
 import useAppContext from "../../context/AppContext";
-import WorkspacePremiumIcon from '@mui/icons-material/WorkspacePremium';
-import SendIcon from '@mui/icons-material/Send';
+import WorkspacePremiumIcon from "@mui/icons-material/WorkspacePremium";
+import SendIcon from "@mui/icons-material/Send";
 Chart.register(
   CategoryScale,
   LinearScale,
@@ -75,16 +76,24 @@ const chartData = {
 };
 
 const Profile = () => {
+  const [openModal, setOpenModal] = useState(false);
   const { logout } = useAppContext();
   const navigate = useNavigate();
 
   const handleLogout = () => {
+    setOpenModal(true); // Open the modal when logout button is clicked
+  };
+
+  const handleCloseModal = () => {
+    setOpenModal(false); // Close the modal
+  };
+  const handleConfirmLogout = () => {
     logout();
     navigate("/main/home");
   };
   return (
     <>
-      <Container sx={{mt: 15, mb:5}}>
+      <Container sx={{ mt: 15, mb: 5 }}>
         <Grid container spacing={2}>
           <Grid item xs={12} sm={6} md={3}>
             <Paper
@@ -110,15 +119,73 @@ const Profile = () => {
                 Rasheeq Zehra
               </Typography>
               <p>user detail here</p>
-              <Button variant="text" sx={{textTransform:"none"}} onClick={handleLogout}>
-              <LogoutIcon /> 
-              Logout
+              <Modal open={openModal} onClose={handleCloseModal}>
+                <Paper
+                  sx={{
+                    position: "absolute",
+                    top: "50%",
+                    left: "50%",
+                    transform: "translate(-50%, -50%)",
+                    width: 400,
+                    bgcolor: "background.paper",
+                    boxShadow: 24,
+                    p: 4,
+                  }}
+                >
+                  <Typography variant="h5">Confirm Logout</Typography>
+                  <Typography sx={{ mt: 2 }}>
+                    Are you sure you want to logout?
+                  </Typography>
+                  <Box
+                    sx={{
+                      mt: 2,
+                      display: "flex",
+                      justifyContent: "space-between",
+                    }}
+                  >
+                    <Button
+                      variant="contained"
+                      color="success"
+                      sx={{}}
+                      onClick={handleConfirmLogout}
+                    >
+                      Yes, Logout
+                    </Button>
+                    <Button
+                      variant="contained"
+                      color="error"
+                      onClick={handleCloseModal}
+                    >
+                      Cancel
+                    </Button>
+                  </Box>
+                </Paper>
+              </Modal>
+              <Button
+                variant="text"
+                sx={{ textTransform: "none" }}
+                onClick={handleLogout}
+              >
+                <LogoutIcon />
+                Logout
               </Button>
               {/* <Container sx={{mt:20}}> */}
               {/* <Paper sx={{boxShadow:12, height:100}}> */}
-                <Button variant="outlined" sx={{mt:6, textTransform:'none', width:'160px', fontSize:15, borderRadius:10}}>Talk to us<SendIcon fontSize="small"color="primary" sx={{ml:1}}/></Button>
+              <Button
+                variant="outlined"
+                sx={{
+                  mt: 6,
+                  textTransform: "none",
+                  width: "160px",
+                  fontSize: 15,
+                  borderRadius: 10,
+                }}
+              >
+                Talk to us
+                <SendIcon fontSize="small" color="primary" sx={{ ml: 1 }} />
+              </Button>
               {/* </Paper> */}
-            {/* </Container> */}
+              {/* </Container> */}
             </Paper>
           </Grid>
           <Grid item xs={12} sm={6}>
@@ -162,58 +229,72 @@ const Profile = () => {
                 mt={1}
                 fontSize="1.6rem"
                 color="textSecondary"
-                >
+              >
                 Grow with Confidence
               </Typography>
-              <Typography sx={{mb:2,textAlign:'center'}} color="textSecondary">We provide tailored treatment plans and proactive measures to combat plant disease.Designed for urban farmers, farmers and amateur gardener to protect their crops/plants and boost production.</Typography>
-              <Button variant="text" color="success" sx={{textTransform:"none", fontSize:'18px'}}> Premium
-              <WorkspacePremiumIcon />
-                </Button>
-                <Box sx={{mt:2}}>
+              <Typography
+                sx={{ mb: 2, textAlign: "center" }}
+                color="textSecondary"
+              >
+                We provide tailored treatment plans and proactive measures to
+                combat plant disease.Designed for urban farmers, farmers and
+                amateur gardener to protect their crops/plants and boost
+                production.
+              </Typography>
+              <Button
+                variant="text"
+                color="success"
+                sx={{ textTransform: "none", fontSize: "18px" }}
+              >
+                {" "}
+                Premium
+                <WorkspacePremiumIcon />
+              </Button>
+              <Box sx={{ mt: 2 }}>
                 <NavLink to="/user/history">
-                <Button
-                  variant="outlined"
-                  color="secondary"
-                  sx={{
-                    textTransform: "none",
-                    fontSize: "18px",
-                    borderRadius: 5,
-                    width: "100%",
-                    mb:1,
-                  }}
-                >
-                  Detailed Diagnosis
-                </Button>
-              </NavLink>
-              <NavLink to="/user/dashboard">
-                <Button
-                  variant="outlined"
-                  color="secondary"
-                  sx={{
-                    textTransform: "none",
-                    fontSize: "18px",
-                    borderRadius: 5,
-                    width: "100%",
-                    mb:1,
-                  }}
-                >
-                  Go to prediction page
-                </Button>
-              </NavLink>
-              <NavLink to="/main/home">
-                <Button
-                  variant="outlined"
-                  color="secondary"
-                  sx={{
-                    textTransform: "none",
-                    fontSize: "18px",
-                    borderRadius: 5,
-                    width: "100%",
-                  }}
-                >
-                  Return to home page
-                </Button>
-              </NavLink>
+                  <Button
+                    variant="outlined"
+                    color="secondary"
+                    sx={{
+                      textTransform: "none",
+                      fontSize: "18px",
+                      borderRadius: 5,
+                      width: "100%",
+                      mb: 1,
+                    }}
+                  >
+                    Detailed Diagnosis
+                  </Button>
+                </NavLink>
+                <NavLink to="/user/dashboard">
+                  <Button
+                    variant="outlined"
+                    color="secondary"
+                    sx={{
+                      textTransform: "none",
+                      fontSize: "18px",
+                      borderRadius: 5,
+                      width: "100%",
+                      mb: 1,
+                    }}
+                  >
+                    Go to prediction page
+                  </Button>
+                </NavLink>
+                <NavLink to="/main/home">
+                  <Button
+                    variant="outlined"
+                    color="secondary"
+                    sx={{
+                      textTransform: "none",
+                      fontSize: "18px",
+                      borderRadius: 5,
+                      width: "100%",
+                    }}
+                  >
+                    Return to home page
+                  </Button>
+                </NavLink>
               </Box>
             </Paper>
           </Grid>
