@@ -15,8 +15,9 @@ import AdbIcon from "@mui/icons-material/Adb";
 import { NavLink, useNavigate } from "react-router-dom";
 import useAppContext from "../../context/AppContext";
 import { useAuth0 } from "@auth0/auth0-react";
-import { Badge } from "@mui/material";
+import { Badge, Modal, Paper } from "@mui/material";
 import MailIcon from '@mui/icons-material/Mail';
+import { useState } from "react";
 
 const pages = [
   {
@@ -64,6 +65,7 @@ const Navbar = ({}) => {
   const [anchorElUser, setAnchorElUser] = React.useState(null);
   const navigate = useNavigate();
   const { loginWithRedirect, user, isLoading } = useAuth0();
+  const [openModal, setOpenModal] = useState(false);
 
   const settings = [
     {
@@ -78,13 +80,17 @@ const Navbar = ({}) => {
       text: "My History",
       onClick: () => navigate("/user/history"),
     },
+    // {
+    //   text: "Logout",
+    //   onClick: () => {
+    //     console.log('logout');
+    //     logout(); 
+    //     navigate("/main/home");
+    //   },
+    // },
     {
       text: "Logout",
-      onClick: () => {
-        console.log('logout');
-        logout(); 
-        navigate("/main/home");
-      },
+      onClick: () => handleLogout(),
     },
   ];
 
@@ -102,10 +108,23 @@ const Navbar = ({}) => {
   const handleCloseUserMenu = () => {
     setAnchorElUser(null);
   };
+  
   const handleLogout = () => {
-    logout();
+    setOpenModal(true); // Open the modal when logout button is clicked
     handleCloseUserMenu();
   };
+
+  const handleCloseModal = () => {
+    setOpenModal(false); // Close the modal
+  };
+  const handleConfirmLogout = () => {
+    logout();
+    navigate("/main/home");
+  };
+  // const handleLogout = () => {
+  //   logout();
+  //   handleCloseUserMenu();
+  // };
   
   return (
     <AppBar elevation={5} position="fixed" sx={{ bgcolor: "#f0f8ff" }}>
@@ -262,6 +281,48 @@ const Navbar = ({}) => {
                   </MenuItem>
                 ))}
               </Menu>
+              <Modal open={openModal} onClose={handleCloseModal}>
+                <Paper
+                  sx={{
+                    position: "absolute",
+                    top: "50%",
+                    left: "50%",
+                    transform: "translate(-50%, -50%)",
+                    width: 400,
+                    bgcolor: "background.paper",
+                    boxShadow: 24,
+                    p: 4,
+                  }}
+                >
+                  <Typography variant="h5">Confirm Logout</Typography>
+                  <Typography sx={{ mt: 2 }}>
+                    Are you sure you want to logout?
+                  </Typography>
+                  <Box
+                    sx={{
+                      mt: 2,
+                      display: "flex",
+                      justifyContent: "space-between",
+                    }}
+                  >
+                    <Button
+                      variant="contained"
+                      color="success"
+                      sx={{}}
+                      onClick={handleConfirmLogout}
+                    >
+                      Yes, Logout
+                    </Button>
+                    <Button
+                      variant="contained"
+                      color="error"
+                      onClick={handleCloseModal}
+                    >
+                      Cancel
+                    </Button>
+                  </Box>
+                </Paper>
+              </Modal>
             </Box>
           ) : (
             <>
