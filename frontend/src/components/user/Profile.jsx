@@ -81,11 +81,11 @@ const Profile = () => {
   const navigate = useNavigate();
 
   const handleLogout = () => {
-    setOpenModal(true); // Open the modal when logout button is clicked
+    setOpenModal(true);
   };
 
   const handleCloseModal = () => {
-    setOpenModal(false); // Close the modal
+    setOpenModal(false);
   };
   const handleConfirmLogout = () => {
     logout();
