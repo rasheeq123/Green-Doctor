@@ -22,10 +22,13 @@ import useAppContext from "../../context/AppContext";
 import { useFormik } from "formik";
 import Swal from "sweetalert2";
 import GoogleIcon from "@mui/icons-material/Google";
+import { useAuth0 } from "@auth0/auth0-react";
+
 
 const Login = () => {
   const [showPassword, setShowPassword] = React.useState(false);
   // const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const { loginWithRedirect, user, isLoading } = useAuth0();
   const handleClickShowPassword = () => setShowPassword((show) => !show);
 
   const handleMouseDownPassword = (event) => {
