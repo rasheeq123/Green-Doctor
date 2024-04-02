@@ -16,9 +16,8 @@ import { NavLink, useNavigate } from "react-router-dom";
 import useAppContext from "../../context/AppContext";
 import { useAuth0 } from "@auth0/auth0-react";
 import { Badge, Modal, Paper } from "@mui/material";
-import MailIcon from '@mui/icons-material/Mail';
+import MailIcon from "@mui/icons-material/Mail";
 import { useState } from "react";
-
 
 const pages = [
   {
@@ -39,26 +38,13 @@ const pages = [
     link: "/user/history",
   },
   {
-    // text: "Messages",
     link: "/user/messages",
-    icon: <Badge color="secondary" variant="dot"><MailIcon /></Badge>,
-  }
-  // {
-  //   text: "Signup",
-  //   link: "/main/signup",
-  // },
-  // {
-  //   text: "Login",
-  //   link: "/main/login",
-  // },
-  // {
-  //   text: "Expert",
-  //   link: "/admin",
-  // },
-  // {
-  //   text: "Admin",
-  //   link: "/admin",
-  // },
+    icon: (
+      <Badge color="secondary" variant="dot">
+        <MailIcon />
+      </Badge>
+    ),
+  },
 ];
 
 function ResponsiveAppBar() {
@@ -106,14 +92,14 @@ function ResponsiveAppBar() {
   const handleCloseUserMenu = () => {
     setAnchorElUser(null);
   };
-  
+
   const handleLogout = () => {
-    setOpenModal(true); // Open the modal when logout button is clicked
+    setOpenModal(true);
     handleCloseUserMenu();
   };
 
   const handleCloseModal = () => {
-    setOpenModal(false); // Close the modal
+    setOpenModal(false);
   };
   const handleConfirmLogout = () => {
     logout();
@@ -151,49 +137,49 @@ function ResponsiveAppBar() {
             Green Doctor
           </Typography>
           {loggedIn ? (
-          <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
-            <IconButton
-              size="large"
-              aria-label="account of current user"
-              aria-controls="menu-appbar"
-              aria-haspopup="true"
-              onClick={handleOpenNavMenu}
-              color="black"
-            >
-              <MenuIcon />
-            </IconButton>
-            <Menu
-              id="menu-appbar"
-              anchorEl={anchorElNav}
-              anchorOrigin={{
-                vertical: "bottom",
-                horizontal: "left",
-              }}
-              keepMounted
-              transformOrigin={{
-                vertical: "top",
-                horizontal: "left",
-              }}
-              open={Boolean(anchorElNav)}
-              onClose={handleCloseNavMenu}
-              sx={{
-                display: { xs: "block", md: "none" },
-              }}
-            >
-              {pages.map((page) => (
-                <MenuItem key={page.text} onClick={handleCloseNavMenu}>
-                  <Typography
-                    textAlign="center"
-                    onClick={() => navigate(page.link)}
-                  >
-                    {page.text}
-                    {page.icon}
-                  </Typography>
-                </MenuItem>
-              ))}
-            </Menu>
-          </Box>
-          ): null}
+            <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
+              <IconButton
+                size="large"
+                aria-label="account of current user"
+                aria-controls="menu-appbar"
+                aria-haspopup="true"
+                onClick={handleOpenNavMenu}
+                color="black"
+              >
+                <MenuIcon />
+              </IconButton>
+              <Menu
+                id="menu-appbar"
+                anchorEl={anchorElNav}
+                anchorOrigin={{
+                  vertical: "bottom",
+                  horizontal: "left",
+                }}
+                keepMounted
+                transformOrigin={{
+                  vertical: "top",
+                  horizontal: "left",
+                }}
+                open={Boolean(anchorElNav)}
+                onClose={handleCloseNavMenu}
+                sx={{
+                  display: { xs: "block", md: "none" },
+                }}
+              >
+                {pages.map((page) => (
+                  <MenuItem key={page.text} onClick={handleCloseNavMenu}>
+                    <Typography
+                      textAlign="center"
+                      onClick={() => navigate(page.link)}
+                    >
+                      {page.text}
+                      {page.icon}
+                    </Typography>
+                  </MenuItem>
+                ))}
+              </Menu>
+            </Box>
+          ) : null}
           <Typography
             variant="h5"
             noWrap
@@ -212,60 +198,62 @@ function ResponsiveAppBar() {
             Green Doctor
           </Typography>
           {loggedIn ? (
-          <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
-            {pages.map((page) => (
-              <Button
-                onClick={() => navigate(page.link)}
-                key={page.text}
-                // onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: "black", display: "block", 
-                fontSize: "16px",textTransform: "none", }}
-              >
-                {page.text}
-                {page.icon}
-              </Button>
-            ))}
-          </Box>
+            <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
+              {pages.map((page) => (
+                <Button
+                  onClick={() => navigate(page.link)}
+                  key={page.text}
+                  // onClick={handleCloseNavMenu}
+                  sx={{
+                    my: 2,
+                    color: "black",
+                    display: "block",
+                    fontSize: "16px",
+                    textTransform: "none",
+                  }}
+                >
+                  {page.text}
+                  {page.icon}
+                </Button>
+              ))}
+            </Box>
           ) : null}
 
           {loggedIn ? (
-          <Box sx={{ flexGrow: 0 }}>
-            <Tooltip title="Open settings">
-              <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                <Avatar
-                  alt="Remy Sharp"
-                  src="https://avatars.githubusercontent.com/u/108568853?v=4"
-                />
-              </IconButton>
-            </Tooltip>
-            <Menu
-              sx={{ mt: "45px" }}
-              id="menu-appbar"
-              anchorEl={anchorElUser}
-              anchorOrigin={{
-                vertical: "top",
-                horizontal: "right",
-              }}
-              keepMounted
-              transformOrigin={{
-                vertical: "top",
-                horizontal: "right",
-              }}
-              open={Boolean(anchorElUser)}
-              onClose={handleCloseUserMenu}
-            >
-              {settings.map((setting) => (
-                <MenuItem key={setting.text} onClick={handleCloseUserMenu}>
-                  <Typography
-                    textAlign="center"
-                    onClick={setting.onClick}
-                  >
-                    {setting.text}
-                  </Typography>
-                </MenuItem>
-              ))}
-            </Menu>
-            <Modal open={openModal} onClose={handleCloseModal}>
+            <Box sx={{ flexGrow: 0 }}>
+              <Tooltip title="Open settings">
+                <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
+                  <Avatar
+                    alt="Remy Sharp"
+                    src="https://avatars.githubusercontent.com/u/108568853?v=4"
+                  />
+                </IconButton>
+              </Tooltip>
+              <Menu
+                sx={{ mt: "45px" }}
+                id="menu-appbar"
+                anchorEl={anchorElUser}
+                anchorOrigin={{
+                  vertical: "top",
+                  horizontal: "right",
+                }}
+                keepMounted
+                transformOrigin={{
+                  vertical: "top",
+                  horizontal: "right",
+                }}
+                open={Boolean(anchorElUser)}
+                onClose={handleCloseUserMenu}
+              >
+                {settings.map((setting) => (
+                  <MenuItem key={setting.text} onClick={handleCloseUserMenu}>
+                    <Typography textAlign="center" onClick={setting.onClick}>
+                      {setting.text}
+                    </Typography>
+                  </MenuItem>
+                ))}
+              </Menu>
+              <Modal open={openModal} onClose={handleCloseModal}>
                 <Paper
                   sx={{
                     position: "absolute",
@@ -307,48 +295,48 @@ function ResponsiveAppBar() {
                   </Box>
                 </Paper>
               </Modal>
-          </Box>
+            </Box>
           ) : (
             <>
-            <Box sx={{ flexGrow: 1 }} />
-            <Box
-              sx={{
-                flexGrow: 0,
-                display: "flex",
-                justifyContent: "flex-end",
-              }}
-            >
-              <Button
-                variant="contained"
-                color="success"
-                onClick={() => navigate("/main/login")}
-                // onClick={(e) => loginWithRedirect() }
+              <Box sx={{ flexGrow: 1 }} />
+              <Box
                 sx={{
-                  ml: 1,
-                  borderRadius: 5,
-                  textTransform: "none",
-                  fontSize: "18px",
-                  textShadow: "2px 2px 4px rgba(0, 0, 0, 0.8)",
+                  flexGrow: 0,
+                  display: "flex",
+                  justifyContent: "flex-end",
                 }}
               >
-                Sign In
-              </Button>
-              <Button
-                variant="contained"
-                color="success"
-                onClick={() => navigate("/main/signup")}
-                sx={{
-                  ml: 1,
-                  borderRadius: 5,
-                  textTransform: "none",
-                  fontSize: "18px",
-                  textShadow: "2px 2px 4px rgba(0, 0, 0, 0.8)",
-                }}
-              >
-                Get Started
-              </Button>
-            </Box>
-          </>
+                <Button
+                  variant="contained"
+                  color="success"
+                  onClick={() => navigate("/main/login")}
+                  // onClick={(e) => loginWithRedirect() }
+                  sx={{
+                    ml: 1,
+                    borderRadius: 5,
+                    textTransform: "none",
+                    fontSize: "18px",
+                    textShadow: "2px 2px 4px rgba(0, 0, 0, 0.8)",
+                  }}
+                >
+                  Sign In
+                </Button>
+                <Button
+                  variant="contained"
+                  color="success"
+                  onClick={() => navigate("/main/signup")}
+                  sx={{
+                    ml: 1,
+                    borderRadius: 5,
+                    textTransform: "none",
+                    fontSize: "18px",
+                    textShadow: "2px 2px 4px rgba(0, 0, 0, 0.8)",
+                  }}
+                >
+                  Get Started
+                </Button>
+              </Box>
+            </>
           )}
         </Toolbar>
       </Container>
