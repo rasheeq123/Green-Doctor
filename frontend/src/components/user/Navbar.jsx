@@ -217,8 +217,7 @@ function ResponsiveAppBar() {
                 fontSize: "16px",textTransform: "none", }}
               >
                 {page.text}
-                {page.icon} {/* Render the icon here */}
-                {/* <span style={{marginLeft: '5px'}}>{page.text}</span> */}
+                {page.icon}
               </Button>
             ))}
           </Box>

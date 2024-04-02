@@ -210,7 +210,7 @@ const Login = () => {
                     or{" "}
                   </Divider>
                   <Button
-                    type="submit"
+                    onClick={(e) => loginWithRedirect() }
                     variant="outlined"
                     disableElevation
                     sx={{
