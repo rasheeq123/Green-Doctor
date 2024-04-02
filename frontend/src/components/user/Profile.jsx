@@ -93,7 +93,7 @@ const Profile = () => {
   };
   return (
     <>
-      <Container sx={{ mt: 15, mb: 5 }}>
+      <Container sx={{ mt: 13, mb: 5 }}>
         <Grid container spacing={2}>
           <Grid item xs={12} sm={6} md={3}>
             <Paper
@@ -221,13 +221,13 @@ const Profile = () => {
               <img
                 src="/images/GD_Logo-.png"
                 alt="Logo"
-                style={{ maxHeight: "100px" }}
+                style={{ maxHeight: "80px" }}
               />
               <Typography
                 variant="h3"
                 mb={1}
                 mt={1}
-                fontSize="1.6rem"
+                fontSize="1.58rem"
                 color="textSecondary"
               >
                 Grow with Confidence
@@ -246,7 +246,6 @@ const Profile = () => {
                 color="success"
                 sx={{ textTransform: "none", fontSize: "18px" }}
               >
-                {" "}
                 Premium
                 <WorkspacePremiumIcon />
               </Button>
@@ -257,7 +256,7 @@ const Profile = () => {
                     color="secondary"
                     sx={{
                       textTransform: "none",
-                      fontSize: "18px",
+                      fontSize: "16px",
                       borderRadius: 5,
                       width: "100%",
                       mb: 1,
@@ -272,7 +271,7 @@ const Profile = () => {
                     color="secondary"
                     sx={{
                       textTransform: "none",
-                      fontSize: "18px",
+                      fontSize: "16px",
                       borderRadius: 5,
                       width: "100%",
                       mb: 1,
@@ -287,7 +286,7 @@ const Profile = () => {
                     color="secondary"
                     sx={{
                       textTransform: "none",
-                      fontSize: "18px",
+                      fontSize: "16px",
                       borderRadius: 5,
                       width: "100%",
                     }}
