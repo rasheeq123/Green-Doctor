@@ -36,14 +36,14 @@ const pages = [
     text: "History",
     link: "/user/history",
   },
-  {
-    link: "/user/messages",
-    icon: (
-      <Badge color="secondary" variant="dot">
-        <MailIcon />
-      </Badge>
-    ),
-  },
+  // {
+  //   link: "/user/messages",
+  //   icon: (
+  //     <Badge color="secondary" variant="dot">
+  //       <MailIcon />
+  //     </Badge>
+  //   ),
+  // },
 ];
 
 const Navbar = ({}) => {
