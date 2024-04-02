@@ -15,6 +15,8 @@ import AdbIcon from "@mui/icons-material/Adb";
 import { NavLink, useNavigate } from "react-router-dom";
 import useAppContext from "../../context/AppContext";
 import { useAuth0 } from "@auth0/auth0-react";
+import { Badge } from "@mui/material";
+import MailIcon from '@mui/icons-material/Mail';
 
 const pages = [
   {
@@ -33,6 +35,11 @@ const pages = [
     text: "History",
     link: "/user/history",
   },
+  {
+    // text: "Messages",
+    link: "/user/messages",
+    icon: <Badge color="secondary" variant="dot"><MailIcon /></Badge>,
+  }
   // {
   //   text: "Signup",
   //   link: "/main/signup",
@@ -171,6 +178,7 @@ const Navbar = ({}) => {
                       onClick={() => navigate(page.link)}
                     >
                       {page.text}
+                      {page.icon}
                     </Typography>
                   </MenuItem>
                 ))}
@@ -211,6 +219,7 @@ const Navbar = ({}) => {
                   }}
                 >
                   {page.text}
+                  {page.icon}
                 </Button>
               ))}
             </Box>
