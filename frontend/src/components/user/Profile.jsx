@@ -25,6 +25,7 @@ import { Bar, Line, Pie } from "react-chartjs-2";
 import LogoutIcon from '@mui/icons-material/Logout';
 import useAppContext from "../../context/AppContext";
 import WorkspacePremiumIcon from '@mui/icons-material/WorkspacePremium';
+import SendIcon from '@mui/icons-material/Send';
 Chart.register(
   CategoryScale,
   LinearScale,
@@ -113,6 +114,11 @@ const Profile = () => {
               <LogoutIcon /> 
               Logout
               </Button>
+              <Container sx={{mt:20}}>
+              <Paper sx={{boxShadow:12, height:100}}>
+                <Button variant="outlined" sx={{mt:6, textTransform:'none', width:'160px', fontSize:15, borderRadius:10}}>Talk to us<SendIcon fontSize="small"color="primary" sx={{ml:1}}/></Button>
+              </Paper>
+            </Container>
             </Paper>
           </Grid>
           <Grid item xs={12} sm={6}>

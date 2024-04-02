@@ -15,6 +15,9 @@ import AdbIcon from "@mui/icons-material/Adb";
 import { NavLink, useNavigate } from "react-router-dom";
 import useAppContext from "../../context/AppContext";
 import { useAuth0 } from "@auth0/auth0-react";
+import { Badge } from "@mui/material";
+import MailIcon from '@mui/icons-material/Mail';
+
 
 const pages = [
   {
@@ -34,6 +37,11 @@ const pages = [
     text: "History",
     link: "/user/history",
   },
+  {
+    // text: "Messages",
+    link: "/user/messages",
+    icon: <Badge color="secondary" variant="dot"><MailIcon /></Badge>,
+  }
   // {
   //   text: "Signup",
   //   link: "/main/signup",
@@ -73,6 +81,10 @@ function ResponsiveAppBar() {
       onClick: () => navigate("/user/history"),
     },
     {
+      text: "My History",
+      onClick: () => navigate("/user/history"),
+    },
+    {
       text: "Logout",
       onClick: () => {
         console.log('logout');
@@ -80,6 +92,11 @@ function ResponsiveAppBar() {
         navigate("/main/home");
       },
     },
+    <Box sx={{ color: 'action.active' }}>
+    <Badge color="secondary" variant="dot">
+      <MailIcon />
+    </Badge>
+  </Box>
   ];
 
   const handleOpenNavMenu = (event) => {
@@ -200,6 +217,8 @@ function ResponsiveAppBar() {
                 fontSize: "16px",textTransform: "none", }}
               >
                 {page.text}
+                {page.icon} {/* Render the icon here */}
+                {/* <span style={{marginLeft: '5px'}}>{page.text}</span> */}
               </Button>
             ))}
           </Box>
