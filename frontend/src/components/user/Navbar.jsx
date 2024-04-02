@@ -81,8 +81,8 @@ function ResponsiveAppBar() {
       onClick: () => navigate("/user/history"),
     },
     {
-      text: "My History",
-      onClick: () => navigate("/user/history"),
+      text: "Messages",
+      onClick: () => navigate("/user/messages"),
     },
     {
       text: "Logout",
