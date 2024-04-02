@@ -183,6 +183,7 @@ function ResponsiveAppBar() {
                     onClick={() => navigate(page.link)}
                   >
                     {page.text}
+                    {page.icon}
                   </Typography>
                 </MenuItem>
               ))}
