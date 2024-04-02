@@ -16,7 +16,7 @@ import { NavLink, useNavigate } from "react-router-dom";
 import useAppContext from "../../context/AppContext";
 import { useAuth0 } from "@auth0/auth0-react";
 import { Badge, Modal, Paper } from "@mui/material";
-import MailIcon from '@mui/icons-material/Mail';
+import MailIcon from "@mui/icons-material/Mail";
 import { useState } from "react";
 
 const pages = [
@@ -37,26 +37,13 @@ const pages = [
     link: "/user/history",
   },
   {
-    // text: "Messages",
     link: "/user/messages",
-    icon: <Badge color="secondary" variant="dot"><MailIcon /></Badge>,
-  }
-  // {
-  //   text: "Signup",
-  //   link: "/main/signup",
-  // },
-  // {
-  //   text: "Login",
-  //   link: "/main/login",
-  // },
-  // {
-  //   text: "Expert",
-  //   link: "/admin",
-  // },
-  // {
-  //   text: "Admin",
-  //   link: "/admin",
-  // },
+    icon: (
+      <Badge color="secondary" variant="dot">
+        <MailIcon />
+      </Badge>
+    ),
+  },
 ];
 
 const Navbar = ({}) => {
@@ -79,14 +66,14 @@ const Navbar = ({}) => {
       text: "My History",
       onClick: () => navigate("/user/history"),
     },
-    {
-      text: "Logout",
-      onClick: () => {
-        console.log('logout');
-        logout(); 
-        navigate("/main/home");
-      },
-    },
+    // {
+    //   text: "Logout",
+    //   onClick: () => {
+    //     console.log("logout");
+    //     logout();
+    //     navigate("/main/home");
+    //   },
+    // },
   ];
 
   const handleOpenNavMenu = (event) => {
@@ -108,7 +95,7 @@ const Navbar = ({}) => {
     logout();
     handleCloseUserMenu();
   };
-  
+
   return (
     <AppBar elevation={5} position="fixed" sx={{ bgcolor: "#f0f8ff" }}>
       <Container maxWidth="xl">
@@ -255,10 +242,7 @@ const Navbar = ({}) => {
               >
                 {settings.map((setting) => (
                   <MenuItem key={setting.text} onClick={handleCloseUserMenu}>
-                    <Typography
-                      textAlign="center"
-                      onClick={setting.onClick}
-                    >
+                    <Typography textAlign="center" onClick={setting.onClick}>
                       {setting.text}
                     </Typography>
                   </MenuItem>
