@@ -6,7 +6,7 @@ const UserAuth = ({children}) => {
     const [currentUser, setCurrentUser] = useState(
         JSON.parse(sessionStorage.getItem('user'))
     );
-    if(currentUser != null){
+    if(currentUser!= null){
         return children;
     }else{
         Swal.fire({
