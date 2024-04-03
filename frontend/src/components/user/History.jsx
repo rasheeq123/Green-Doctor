@@ -46,7 +46,7 @@ const History = () => {
   };
 
   return (
-    <div className="vh-100 bg-body-secondary">
+    <div className="vh-100">
       <div className="container py-4 mt-2">
         <h1 className="text-center mb-4 mt-5 text-bold">
           Your Diagnosed History

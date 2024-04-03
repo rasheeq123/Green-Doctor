@@ -115,10 +115,10 @@ const Profile = () => {
                   height: 150,
                 }}
               />
-              <Typography variant="h3" mb={2} mt={2} fontSize="1.6rem">
+              <Typography variant="h3" mb={2} mt={2} fontSize="1.6rem" color="#333333">
                 Rasheeq Zehra
               </Typography>
-              <p>Fetching user info....</p>
+              <p style={{ color: '#333333' }}>Fetching user info....</p>
               <Modal open={openModal} onClose={handleCloseModal}>
                 <Paper
                   sx={{
@@ -162,7 +162,7 @@ const Profile = () => {
                 </Paper>
               </Modal>
               <Button
-                variant="text"
+                variant="contained"
                 sx={{ textTransform: "none" }}
                 onClick={handleLogout}
               >
@@ -172,7 +172,7 @@ const Profile = () => {
               {/* <Container sx={{mt:20}}> */}
               {/* <Paper sx={{boxShadow:12, height:100}}> */}
               <Button
-                variant="outlined"
+                variant="contained"
                 sx={{
                   mt: 6,
                   textTransform: "none",
@@ -182,7 +182,7 @@ const Profile = () => {
                 }}
               >
                 Talk to us
-                <SendIcon fontSize="small" color="primary" sx={{ ml: 1 }} />
+                <SendIcon fontSize="small" color="color: '#333333'" sx={{ ml: 1 }} />
               </Button>
               {/* </Paper> */}
               {/* </Container> */}
@@ -228,13 +228,13 @@ const Profile = () => {
                 mb={1}
                 mt={1}
                 fontSize="1.58rem"
-                color="textSecondary"
+                color="#333333"
               >
                 Grow with Confidence
               </Typography>
               <Typography
                 sx={{ mb: 2, textAlign: "center" }}
-                color="textSecondary"
+                color="#333333"
               >
                 We provide tailored treatment plans and proactive measures to
                 combat plant disease.Designed for urban farmers, farmers and
@@ -291,7 +291,7 @@ const Profile = () => {
                       width: "100%",
                     }}
                   >
-                    Return to home page
+                    Go to home page
                   </Button>
                 </NavLink>
               </Box>

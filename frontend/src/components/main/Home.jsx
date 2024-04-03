@@ -246,36 +246,37 @@ const Home = () => {
         </Grid>
       </Container>
 
-      {/* -------------------------GD in action---------------------------- */}
+      {/* -------------------------GD in Number---------------------------- */}
+
       <Container>
       <Typography variant="h3" textAlign={"center"} sx={{ mt: 10 }}> Green Doctor in numbers</Typography>
       <Grid container spacing={2} sx={{mt:5}}>
       <Grid item xs={12} sm={6} md={3}>
         <Paper sx={{ p: 2, textAlign: 'center', bgcolor: '#f0f0f0', height: '100%',boxShadow:'4' }}>
-        <AccessAlarmsIcon sx={iconStyle}/>
-        <Typography variant="h3" mb={2} fontWeight="bold" fontSize="1.5rem"> 1.5 sec</Typography>
-        <Typography variant="h5" component="h4" color="textSecondary">Get your crop diagnosed in 1.5 sec.</Typography>
+        <AccessAlarmsIcon sx={iconStyle} style={{ color: '#333333' }}/>
+        <Typography sx={{ color: '#333333' }} variant="h3" mb={2} fontWeight="bold" fontSize="1.5rem"> 1.5 sec</Typography>
+        <Typography sx={{ color: '#333333' }} variant="h5" component="h4" color="textSecondary">Get your crop diagnosed in 1.5 sec.</Typography>
         </Paper>
       </Grid>
       <Grid item xs={12} sm={6} md={3}>
         <Paper sx={{ p: 2, textAlign: 'center', bgcolor: '#f0f0f0', height: '100%',boxShadow:'4' }}>
-        <HealthAndSafetySharpIcon sx={iconStyle}/>
-        <Typography variant="h3" mb={2} fontWeight="bold" fontSize="1.5rem"> 12+</Typography>
-        <Typography variant="h5" component="h4" color="textSecondary">You'll be able to detect 12+ different kinds of crops!</Typography>
+        <HealthAndSafetySharpIcon sx={iconStyle} style={{ color: '#333333' }}/>
+        <Typography sx={{ color: '#333333' }} variant="h3" mb={2} fontWeight="bold" fontSize="1.5rem"> 12+</Typography>
+        <Typography sx={{ color: '#333333' }} variant="h5" component="h4" color="textSecondary">You'll be able to detect 12+ different kinds of crops!</Typography>
         </Paper>
       </Grid>
       <Grid item xs={12} sm={6} md={3}>
         <Paper sx={{ p: 2, textAlign: 'center', bgcolor: '#f0f0f0', height: '100%',boxShadow:'4' }}>
-        <SpaSharpIcon sx={iconStyle}/>
-        <Typography variant="h3" mb={2} fontWeight="bold" fontSize="1.5rem"> 100+</Typography>
-          <Typography variant="h5" component="h4" color="textSecondary">Find the right treatment for more than 100+ diseases.</Typography>
+        <SpaSharpIcon sx={iconStyle} style={{ color: '#333333' }}/>
+        <Typography sx={{ color: '#333333' }} variant="h3" mb={2} fontWeight="bold" fontSize="1.5rem"> 100+</Typography>
+          <Typography sx={{ color: '#333333' }} variant="h5" component="h4" color="textSecondary">Find the right treatment for more than 100+ diseases.</Typography>
         </Paper>
       </Grid>
       <Grid item xs={12} sm={6} md={3}>
         <Paper sx={{ p: 2, textAlign: 'center', bgcolor: '#f0f0f0', height: '100%',boxShadow:'4' }}>
-        <AutoGraphSharpIcon sx={iconStyle}/>
-        <Typography variant="h3" mb={2} fontWeight="bold" fontSize="1.5rem">93%</Typography>
-        <Typography variant="h5" component="h4" color="textSecondary">Users report an improvement in their farming of 93%.</Typography>
+        <AutoGraphSharpIcon sx={iconStyle} style={{ color: '#333333' }} />
+        <Typography sx={{ color: '#333333' }} variant="h3" mb={2} fontWeight="bold" fontSize="1.5rem">93%</Typography>
+        <Typography sx={{ color: '#333333' }} variant="h5" component="h4" color="textSecondary">Users report an improvement in their farming of 93%.</Typography>
         </Paper>
       </Grid>
     </Grid>
