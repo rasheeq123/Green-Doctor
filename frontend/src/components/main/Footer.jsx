@@ -22,19 +22,16 @@ const Footer = () => {
               <h6>Links</h6>
               <ul className="footer-links">
                 <li>
-                  <a href="/user">Prediction</a>
+                  <a href="/main/home">Home</a>
                 </li>
                 <li>
-                  <a href="/user">Diagnosis</a>
+                  <a href="/user/dashboard">Prediction</a>
                 </li>
                 <li>
-                  <a href="/user">Admin</a>
+                  <a href="/user/profile">Diagnosis</a>
                 </li>
                 <li>
-                  <a href="/user">Product</a>
-                </li>
-                <li>
-                  <a href="/user">Treatment</a>
+                  <a href="/user/dashboard">Messages</a>
                 </li>
               </ul>
             </div>
@@ -43,7 +40,7 @@ const Footer = () => {
                 <img
                   src="/images/GD_Logo-.png"
                   alt="Logo"
-                  style={{ marginRight: "0px", maxHeight: "150px" }}
+                  style={{ marginRight: "0px", maxHeight: "120px" }}
                 />
               </Tooltip>
             </div>
