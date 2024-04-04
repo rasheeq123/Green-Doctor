@@ -6,7 +6,7 @@ import Login from "./components/main/Login";
 import Signup from "./components/main/Signup";
 import User from "./components/user";
 import Profile from "./components/user/Profile";
-import { ThemeProvider, createTheme } from "@mui/material";
+import { AppBar, IconButton, ThemeProvider, Tooltip, createTheme } from "@mui/material";
 import Admin from "./components/admin";
 import ManageUser from "./components/admin/ManageUser";
 import ResetPassword from "./components/main/ResetPassword";
@@ -17,17 +17,39 @@ import { AppProvider } from "./context/AppContext";
 import { Auth0Provider, useAuth0 } from "@auth0/auth0-react";
 import CssBaseline from "@mui/material/CssBaseline";
 import { useState } from "react";
+import Brightness4Icon from "@mui/icons-material/Brightness4";
+import Brightness7Icon from "@mui/icons-material/Brightness7";
+import { NightsStay, WbSunny } from "@mui/icons-material";
+import ResponsiveAppBar from "./components/user/Navbar";
+import Navbar from "./components/main/Navbar";
 
 
 function App() {
   const {user , loginWithRedirect } = useAuth0();
   console.log("current user : " ,user);
   const theme = createTheme({});
+  const [toggleDarkMode, setToggleDarkMode] = useState(false);
 
+  const toggleDarkTheme = () => {
+    setToggleDarkMode(!toggleDarkMode);
+  };
+
+  const darkTheme = createTheme({
+    palette: {
+      mode: toggleDarkMode ? 'dark' : 'light',
+      primary: {
+        main: '#90caf9',
+      },
+      secondary: {
+        main: '#131052',
+      },
+    },
+  });
 
   return (
     <>
-      <ThemeProvider theme={theme}>
+      <ThemeProvider theme={darkTheme}>
+        <CssBaseline />
         <BrowserRouter>
         <Auth0Provider
         domain="dev-spgtplnzvs7tyejk.us.auth0.com"
