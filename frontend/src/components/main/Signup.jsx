@@ -24,6 +24,7 @@ import Swal from "sweetalert2";
 import GoogleIcon from "@mui/icons-material/Google";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { useAuth0 } from "@auth0/auth0-react";
 
 const SignupSchema = Yup.object().shape({
   name: Yup.string()
@@ -46,6 +47,7 @@ const SignupSchema = Yup.object().shape({
 const Signup = () => {
   const [showPassword, setShowPassword] = React.useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = React.useState(false);
+  const { loginWithRedirect, user, isLoading } = useAuth0();
 
   const handleClickShowPassword = () => setShowPassword((show) => !show);
   const handleClickShowConfirmPassword = () =>
@@ -267,7 +269,8 @@ const Signup = () => {
                       or{" "}
                     </Divider>
                     <Button
-                      type="submit"
+                    onClick={(e) => loginWithRedirect() }
+                      // type="submit"
                       variant="outlined"
                       disableElevation
                       sx={{
