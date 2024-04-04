@@ -46,7 +46,7 @@ const pages = [
   // },
 ];
 
-const Navbar = ({}) => {
+const Navbar = () => {
   const { loggedIn, setLoggedIn, logout } = useAppContext();
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
