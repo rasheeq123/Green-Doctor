@@ -163,20 +163,20 @@ const Profile = () => {
               </Modal>
               <Button
                 variant="contained"
-                sx={{ textTransform: "none" }}
+                sx={{ textTransform: "none",}}
                 onClick={handleLogout}
               >
                 <LogoutIcon />
                 Logout
               </Button>
-              {/* <Container sx={{mt:20}}> */}
+              <Container sx={{mt:0}}>
               {/* <Paper sx={{boxShadow:12, height:100}}> */}
               <Button
                 variant="contained"
                 sx={{
                   mt: 6,
                   textTransform: "none",
-                  width: "160px",
+                  width: { xs: "60%", sm: "160px" },
                   fontSize: 15,
                   borderRadius: 10,
                 }}
@@ -185,7 +185,7 @@ const Profile = () => {
                 <SendIcon fontSize="small" color="color: '#333333'" sx={{ ml: 1 }} />
               </Button>
               {/* </Paper> */}
-              {/* </Container> */}
+              </Container>
             </Paper>
           </Grid>
           <Grid item xs={12} sm={6}>
