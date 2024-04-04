@@ -118,13 +118,6 @@ function ResponsiveAppBar() {
   const darkTheme = createTheme({
     palette: {
       mode: toggleDarkMode ? 'dark' : 'light',
-      primary: {
-        main: '#90caf9',
-      },
-      secondary: {
-        main: '#131052',
-
-      },
     },
   });
 
