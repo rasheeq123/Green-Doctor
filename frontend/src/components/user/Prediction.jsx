@@ -80,7 +80,6 @@ const Prediction = () => {
     const selectedModel = event.target.value.toLowerCase();
     setSelModel(selectedModel);
 
-    // Show toaster notification
 
     toast.success(`Model ${selectedModel} selected`, {
       position: "top-right",
@@ -263,30 +262,23 @@ const Prediction = () => {
     uploadFile(file);
     const img = new Image();
 
-    // Validate if a file is selected
     if (file) {
-      // Create a FileReader to read the file
       const reader = new FileReader();
       console.log();
-      // Set up the FileReader onload event
       reader.onload = function (loadedEvent) {
-        // Set the image source to the uploaded image data
         console.log("loaded");
         img.src = loadedEvent.target.result;
         setSelImage(loadedEvent.target.result);
         setLoadedImage(img);
       };
-      // Read the file as a data URL
       reader.readAsDataURL(file);
     }
   };
 
-  // Function to check if the file type is a valid image type
   const isValidImageType = (file) => {
     const allowedTypes = ["image/jpeg", "image/png", "image/jpg"];
     return allowedTypes.includes(file.type);
   };
-  // Function to handle image removal
   const handleRemoveImage = () => {
     setSelImage(null);
     setLoadedImage(null);
@@ -579,7 +571,7 @@ const Prediction = () => {
                     fontSize: "18px",
                   }}
                   startIcon={<CloudUpload />}
-                  component="div" // Allows the button to act as a label for the input
+                  component="div" 
                 >
                   Upload Leaf Image
                 </Button>
