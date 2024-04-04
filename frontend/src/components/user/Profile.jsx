@@ -170,11 +170,10 @@ const Profile = () => {
                 Logout
               </Button>
               <Container sx={{mt:0}}>
-              {/* <Paper sx={{boxShadow:12, height:100}}> */}
               <Button
                 variant="contained"
                 sx={{
-                  mt: 6,
+                  mt: 2,
                   textTransform: "none",
                   width: { xs: "60%", sm: "160px" },
                   fontSize: 15,
@@ -184,7 +183,6 @@ const Profile = () => {
                 Talk to us
                 <SendIcon fontSize="small" color="color: '#333333'" sx={{ ml: 1 }} />
               </Button>
-              {/* </Paper> */}
               </Container>
             </Paper>
           </Grid>
