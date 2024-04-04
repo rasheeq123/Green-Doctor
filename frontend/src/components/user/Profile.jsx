@@ -162,11 +162,17 @@ const Profile = () => {
                 </Paper>
               </Modal>
               <Button
-                variant="contained"
-                sx={{ textTransform: "none",}}
+                variant="outlined"
+                sx={{
+                  mt: 2,
+                  textTransform: "none",
+                  width: { xs: "60%", sm: "160px" },
+                  fontSize: 15,
+                  borderRadius: 10,
+                }}
                 onClick={handleLogout}
               >
-                <LogoutIcon />
+                <LogoutIcon fontSize="small"  />
                 Logout
               </Button>
               <Container sx={{mt:0}}>
@@ -245,7 +251,7 @@ const Profile = () => {
                 sx={{ textTransform: "none", fontSize: "18px" }}
               >
                 Premium
-                <WorkspacePremiumIcon />
+                <WorkspacePremiumIcon fontSize="small"/>
               </Button>
               <Box sx={{ mt: 2 }}>
                 <NavLink to="/user/history">
