@@ -17,12 +17,7 @@ import { AppProvider } from "./context/AppContext";
 import { Auth0Provider, useAuth0 } from "@auth0/auth0-react";
 import CssBaseline from "@mui/material/CssBaseline";
 import { useState } from "react";
-import Brightness4Icon from "@mui/icons-material/Brightness4";
-import Brightness7Icon from "@mui/icons-material/Brightness7";
 import { NightsStay, WbSunny } from "@mui/icons-material";
-import ResponsiveAppBar from "./components/user/Navbar";
-import Navbar from "./components/main/Navbar";
-
 
 function App() {
   const {user , loginWithRedirect } = useAuth0();
