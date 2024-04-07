@@ -9,7 +9,6 @@ import {
   createTheme,
   Paper,
 } from "@mui/material";
-// import { ToastContainer, toast } from "react-toastify";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -28,8 +27,8 @@ const StyledPaper = styled(Paper)({
     width: "100%",
     height: "auto",
     display: "block",
-    transition: "transform 0.1s ease-in-out", // Added transition for the image
-    transform: "scale(1)", // Set the default scale
+    transition: "transform 0.1s ease-in-out", 
+    transform: "scale(1)", 
   },
   
   margin: "auto", 
@@ -74,7 +73,6 @@ const UserDashboard = () => {
               >
                 <Button
                   onClick={() => handleCategorySelect("flower")}
-                  // sx={{mt:29}}
                   component={Link}
                   to="/user/prediction/flower"
                   variant="contained"
@@ -126,10 +124,9 @@ const UserDashboard = () => {
                     color: "black",
                     fontWeight: "800",
                     backgroundColor: "rgba(255, 255, 255, 0.5)",
-                    border: "2px solid transparent", // Initial border style
-                    transition: "border-color 0.3s ease", // Smooth transition for border color change
+                    border: "2px solid transparent", 
+                    transition: "border-color 0.3s ease",
                   }}
-                  // Add hover effect
                   onMouseOver={(event) =>
                     (event.target.style.borderColor = "white")
                   }
