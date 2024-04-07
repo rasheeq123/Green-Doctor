@@ -70,7 +70,7 @@ const Home = () => {
 
   return (
     <>
-      {/* <Container sx={{ height: "90vh",mt:15}}>
+      <Container sx={{ height: "90vh",mt:15}}>
       <Grid container spacing={2}>
       <Grid item xs={12} sm={6}>
           <Typography variant="h2" >Green Doctor <br/> makes you more</Typography>
@@ -81,7 +81,7 @@ const Home = () => {
           <img src={images[index]} alt="Image" style={{ width: '100%', height: '90%', objectFit: 'center', borderRadius:"8px" }} />
         </Grid>
       </Grid>
-      </Container> */}
+      </Container>
       <Box
         sx={{
           display: "flex",
