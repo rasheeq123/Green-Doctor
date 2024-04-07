@@ -115,10 +115,16 @@ const Profile = () => {
                   height: 150,
                 }}
               />
-              <Typography variant="h3" mb={2} mt={2} fontSize="1.6rem" color="#333333">
+              <Typography
+                variant="h3"
+                mb={2}
+                mt={2}
+                fontSize="1.6rem"
+                color="#333333"
+              >
                 Rasheeq Zehra
               </Typography>
-              <p style={{ color: '#333333' }}>Fetching user info....</p>
+              <p style={{ color: "#333333" }}>Fetching user info....</p>
               <Modal open={openModal} onClose={handleCloseModal}>
                 <Paper
                   sx={{
@@ -172,23 +178,27 @@ const Profile = () => {
                 }}
                 onClick={handleLogout}
               >
-                <LogoutIcon fontSize="small"  />
+                <LogoutIcon fontSize="small" />
                 Logout
               </Button>
-              <Container sx={{mt:0}}>
-              <Button
-                variant="contained"
-                sx={{
-                  mt: 2,
-                  textTransform: "none",
-                  width: { xs: "60%", sm: "160px" },
-                  fontSize: 15,
-                  borderRadius: 10,
-                }}
-              >
-                Talk to us
-                <SendIcon fontSize="small" color="color: '#333333'" sx={{ ml: 1 }} />
-              </Button>
+              <Container sx={{ mt: 0 }}>
+                <Button
+                  variant="contained"
+                  sx={{
+                    mt: 2,
+                    textTransform: "none",
+                    width: { xs: "60%", sm: "160px" },
+                    fontSize: 15,
+                    borderRadius: 10,
+                  }}
+                >
+                  Talk to us
+                  <SendIcon
+                    fontSize="small"
+                    color="color: '#333333'"
+                    sx={{ ml: 1 }}
+                  />
+                </Button>
               </Container>
             </Paper>
           </Grid>
@@ -236,10 +246,7 @@ const Profile = () => {
               >
                 Grow with Confidence
               </Typography>
-              <Typography
-                sx={{ mb: 2, textAlign: "center" }}
-                color="#333333"
-              >
+              <Typography sx={{ mb: 2, textAlign: "center" }} color="#333333">
                 We provide tailored treatment plans and proactive measures to
                 combat plant disease.Designed for urban farmers, farmers and
                 amateur gardener to protect their crops/plants and boost
@@ -251,7 +258,7 @@ const Profile = () => {
                 sx={{ textTransform: "none", fontSize: "18px" }}
               >
                 Premium
-                <WorkspacePremiumIcon fontSize="small"/>
+                <WorkspacePremiumIcon fontSize="small" />
               </Button>
               <Box sx={{ mt: 2 }}>
                 <NavLink to="/user/history">
