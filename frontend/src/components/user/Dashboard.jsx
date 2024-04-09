@@ -8,6 +8,7 @@ import {
   styled,
   createTheme,
   Paper,
+  Box
 } from "@mui/material";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -56,7 +57,7 @@ const UserDashboard = () => {
       <Container sx={{ mb: 5, mt: 5 }}>
         <Grid container spacing={4} justifyContent="center">
           <Grid item xs={12} md={3}>
-            <StyledPaper>
+            <Box>
               <Container
                 sx={{
                   display: "flex",
@@ -95,10 +96,10 @@ const UserDashboard = () => {
                   Flowers
                 </Button>
               </Container>
-            </StyledPaper>
+            </Box>
           </Grid>
           <Grid item xs={12} md={3}>
-            <StyledPaper>
+            <Box>
               <Container
                 sx={{
                   display: "flex",
@@ -137,10 +138,10 @@ const UserDashboard = () => {
                   Fruits
                 </Button>
               </Container>
-            </StyledPaper>
+            </Box>
           </Grid>
           <Grid item xs={12} md={3}>
-            <StyledPaper>
+            <Box>
               <Container
                 sx={{
                   display: "flex",
@@ -179,10 +180,10 @@ const UserDashboard = () => {
                   Vegetables
                 </Button>
               </Container>
-            </StyledPaper>
+            </Box>
           </Grid>
           <Grid item xs={12} md={3}>
-            <StyledPaper>
+            <Box>
               <Container
                 sx={{
                   display: "flex",
@@ -221,7 +222,7 @@ const UserDashboard = () => {
                   Crops
                 </Button>
               </Container>
-            </StyledPaper>
+            </Box>
           </Grid>
         </Grid>
       </Container>
