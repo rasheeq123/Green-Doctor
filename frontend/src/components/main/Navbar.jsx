@@ -287,7 +287,6 @@ const Navbar = () => {
                     },
                   }}
                 >
-                  {/* Login */}
                   <span
                     style={{
                       position: "absolute",
@@ -313,7 +312,6 @@ const Navbar = () => {
                 >
                   Sign Up Free
                 </Button>
-              
               </Box>
             </>
           )}
