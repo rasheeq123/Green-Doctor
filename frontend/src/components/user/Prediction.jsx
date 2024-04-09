@@ -398,20 +398,23 @@ const Prediction = () => {
         <FormControlLabel
     control={
       <Checkbox
+      sx={{color:"grey"}}
         checked={saveHistoryOption}
         onChange={(e, v) => setsaveHistoryOption(v)}
       />
     }
     label="Save Diagnosed History"
   />
-        <FormControl required fullWidth sx={{ mt: 2 }}>
-          <InputLabel id="model-select">Select a Model</InputLabel>
+        <FormControl required fullWidth sx={{ mt: 2}}>
+          <InputLabel id="model-select" sx={{color:"grey"}}>Select a Model</InputLabel>
           <Select
             labelId="model-select"
             id="model-select-required"
             value={selModel}
             onChange={handleModelChange}
             label="Select a Model "
+            sx={{ color: "grey"}}
+            
           >
             <MenuItem value="">Select a Model</MenuItem>
             {AIModels.map((modelName) => (
