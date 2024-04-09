@@ -15,10 +15,12 @@ import AdbIcon from "@mui/icons-material/Adb";
 import { NavLink, useNavigate } from "react-router-dom";
 import useAppContext from "../../context/AppContext";
 import { useAuth0 } from "@auth0/auth0-react";
-import { Badge, Modal, Paper } from "@mui/material";
+import { Badge, Modal, Paper, CssBaseline, createTheme } from "@mui/material";
+import { NightsStay, WbSunny } from "@mui/icons-material";
 import MailIcon from "@mui/icons-material/Mail";
 import { useState } from "react";
 import { useEffect } from "react";
+import { ThemeProvider } from "@emotion/react";
 
 const pages = [
   {
@@ -48,6 +50,7 @@ const pages = [
 ];
 
 const Navbar = () => {
+  const [toggleDarkMode, setToggleDarkMode] = useState(false);
   const { loggedIn, setLoggedIn, logout } = useAppContext();
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
@@ -105,7 +108,18 @@ const Navbar = () => {
     return () => clearInterval(interval);
   }, []);
 
+  const toggleDarkTheme = () => {
+    setToggleDarkMode(!toggleDarkMode);
+  };
+  const darkTheme = createTheme({
+    palette: {
+      mode: toggleDarkMode ? 'dark' : 'light',
+    },
+  });
+
   return (
+    <ThemeProvider theme={darkTheme}>
+    <CssBaseline />
     <AppBar elevation={5} position="fixed" sx={{ bgcolor: "#f0f8ff" }}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
@@ -316,8 +330,24 @@ const Navbar = () => {
             </>
           )}
         </Toolbar>
+        <Tooltip
+          title={`Turn on ${
+            toggleDarkMode ? "light" : "dark"
+          } mode`}
+          arrow
+        >
+          {loggedIn ? (
+          <IconButton
+            onClick={toggleDarkTheme}
+            sx={{ position: "fixed", top: "16px", right: "80px", }}
+           >
+            {toggleDarkMode ? <WbSunny sx={{color:"#333333"}} /> : <NightsStay sx={{color:"#333333"}}/>}
+          </IconButton>
+          ):null}
+        </Tooltip>
       </Container>
     </AppBar>
+    </ThemeProvider>
   );
 };
 export default Navbar;

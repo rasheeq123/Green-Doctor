@@ -363,10 +363,7 @@ function ResponsiveAppBar() {
             onClick={toggleDarkTheme}
             sx={{ position: "fixed", top: "16px", right: "80px", }}
            >
-
-            {/* {toggleDarkMode ? <Brightness7Icon /> : <Brightness4Icon />} */}
             {toggleDarkMode ? <WbSunny sx={{color:"#333333"}} /> : <NightsStay sx={{color:"#333333"}}/>}
-
           </IconButton>
         </Tooltip>
       </Container>
