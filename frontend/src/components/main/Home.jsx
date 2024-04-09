@@ -249,8 +249,8 @@ const Home = () => {
       {/* -------------------------GD in Number---------------------------- */}
 
       <Container>
-      <Typography variant="h3" textAlign={"center"} sx={{ mt: 10 }}> Green Doctor in numbers</Typography>
-      <Grid container spacing={2} sx={{mt:5}}>
+      <Typography variant="h2" textAlign={"center"} sx={{ mt: 10 }}> Green Doctor in numbers</Typography>
+      <Grid container spacing={4} sx={{mt:5}}>
       <Grid item xs={12} sm={6} md={3}>
         <Paper sx={{ p: 2, textAlign: 'center', bgcolor: '#f0f0f0', height: '100%',boxShadow:'4' }}>
         <AccessAlarmsIcon sx={iconStyle} style={{ color: '#333333' }}/>
