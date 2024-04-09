@@ -152,9 +152,9 @@ const Home = () => {
                     width: "60%",
                     fontSize: "25px",
                     py: 1,
+                    backgroundColor: "rgb(33, 40, 189)",
                   }}
                   variant="contained"
-                  color="primary"
                 >
                   Get a free diagnosis
                 </Button>
@@ -234,9 +234,9 @@ const Home = () => {
                     width: "60%",
                     fontSize: "25px",
                     py: 1,
+                    backgroundColor: "rgb(33, 40, 189)",
                   }}
                   variant="contained"
-                  color="primary"
                 >
                   Get a free treatment
                 </Button>

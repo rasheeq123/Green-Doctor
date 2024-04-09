@@ -313,35 +313,7 @@ const Navbar = () => {
                 >
                   Sign Up Free
                 </Button>
-                {/* <Button
-                  variant="outlined"
-                  color="success"
-                  onClick={() => navigate("/main/signup")}
-                  sx={{
-                    ml: 1,
-                    borderRadius: 5,
-                    textTransform: "none",
-                    fontSize: "18px",
-                    overflow: "hidden",
-                    position: "relative",
-                    width: "100px",
-                    "&:hover": {
-                      color: "white",
-                      backgroundColor: "green",
-                    },
-                  }}
-                >
-                  <span
-                    style={{
-                      position: "absolute",
-                      // left: `${offset}%`,
-                      left: `${offset < 100 ? -offset : 200 - offset}%`,
-                      whiteSpace: "nowrap",
-                    }}
-                  >
-                    Sign Up
-                  </span>
-                </Button> */}
+              
               </Box>
             </>
           )}
