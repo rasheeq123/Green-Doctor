@@ -101,7 +101,7 @@ const Navbar = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setOffset((prevOffset) => (prevOffset + 1) % 200);
-    }, 15);
+    }, 13);
     return () => clearInterval(interval);
   }, []);
 
@@ -278,11 +278,28 @@ const Navbar = () => {
                     borderRadius: 5,
                     textTransform: "none",
                     fontSize: "18px",
+                    overflow: "hidden",
+                    position: "relative",
+                    width: "100px",
+                    "&:hover": {
+                      color: "white",
+                      backgroundColor: "green",
+                    },
                   }}
                 >
-                  Login
+                  {/* Login */}
+                  <span
+                    style={{
+                      position: "absolute",
+                      // left: `${offset}%`,
+                      left: `${offset < 100 ? -offset : 200 -offset}%`,
+                      whiteSpace: "nowrap",
+                    }}
+                  >
+                    Login
+                  </span>
                 </Button>
-                {/* <Button
+                <Button
                   variant="contained"
                   color="success"
                   onClick={() => navigate("/main/signup")}
@@ -295,8 +312,8 @@ const Navbar = () => {
                   }}
                 >
                   Sign Up Free
-                </Button> */}
-                <Button
+                </Button>
+                {/* <Button
                   variant="outlined"
                   color="success"
                   onClick={() => navigate("/main/signup")}
@@ -324,7 +341,7 @@ const Navbar = () => {
                   >
                     Sign Up
                   </span>
-                </Button>
+                </Button> */}
               </Box>
             </>
           )}
