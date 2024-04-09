@@ -16,7 +16,7 @@ import 'react-toastify/dist/ReactToastify.css';
 
 const theme = createTheme();
 
-const StyledPaper = styled(Paper)({
+const StyledBox = styled(Box)({
   padding: theme.spacing(0),
   border: "1 px solid black",
   transition: "transform 0.3s ease-in-out",
@@ -57,7 +57,7 @@ const UserDashboard = () => {
       <Container sx={{ mb: 5, mt: 5 }}>
         <Grid container spacing={4} justifyContent="center">
           <Grid item xs={12} md={3}>
-            <Box>
+            <StyledBox>
               <Container
                 sx={{
                   display: "flex",
@@ -96,10 +96,10 @@ const UserDashboard = () => {
                   Flowers
                 </Button>
               </Container>
-            </Box>
+            </StyledBox>
           </Grid>
           <Grid item xs={12} md={3}>
-            <Box>
+            <StyledBox>
               <Container
                 sx={{
                   display: "flex",
@@ -138,10 +138,10 @@ const UserDashboard = () => {
                   Fruits
                 </Button>
               </Container>
-            </Box>
+            </StyledBox>
           </Grid>
           <Grid item xs={12} md={3}>
-            <Box>
+            <StyledBox>
               <Container
                 sx={{
                   display: "flex",
@@ -180,10 +180,10 @@ const UserDashboard = () => {
                   Vegetables
                 </Button>
               </Container>
-            </Box>
+            </StyledBox>
           </Grid>
           <Grid item xs={12} md={3}>
-            <Box>
+            <StyledBox>
               <Container
                 sx={{
                   display: "flex",
@@ -222,7 +222,7 @@ const UserDashboard = () => {
                   Crops
                 </Button>
               </Container>
-            </Box>
+            </StyledBox>
           </Grid>
         </Grid>
       </Container>
