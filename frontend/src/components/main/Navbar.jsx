@@ -98,11 +98,10 @@ const Navbar = () => {
   };
   const [offset, setOffset] = useState(0);
 
-  // Update the offset every 100 milliseconds to create the animation effect
   useEffect(() => {
     const interval = setInterval(() => {
-      setOffset(prevOffset => (prevOffset + 1) % 200); // Adjust 100 based on the desired speed
-    }, 15); // Adjust the interval based on the desired speed
+      setOffset(prevOffset => (prevOffset + 1) % 200); 
+    }, 15); 
     return () => clearInterval(interval);
   }, []);
 
@@ -280,7 +279,6 @@ const Navbar = () => {
                     borderRadius: 5,
                     textTransform: "none",
                     fontSize: "18px",
-                    // textShadow: "2px 2px 4px rgba(0, 0, 0, 0.8)",
                   }}
                 >
                   Login
@@ -313,7 +311,7 @@ const Navbar = () => {
         width: "100px",
         '&:hover': {
           color: 'white',
-          backgroundColor: 'green' // Changing color on hover
+          backgroundColor: 'green' 
         }
       }}
     >
