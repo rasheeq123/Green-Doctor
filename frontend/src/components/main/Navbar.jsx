@@ -18,6 +18,7 @@ import { useAuth0 } from "@auth0/auth0-react";
 import { Badge, Modal, Paper } from "@mui/material";
 import MailIcon from "@mui/icons-material/Mail";
 import { useState } from "react";
+import { useEffect } from "react";
 
 const pages = [
   {
@@ -95,6 +96,16 @@ const Navbar = () => {
     logout();
     handleCloseUserMenu();
   };
+  const [offset, setOffset] = useState(0);
+
+  // Update the offset every 100 milliseconds to create the animation effect
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setOffset(prevOffset => (prevOffset + 1) % 200); // Adjust 100 based on the desired speed
+    }, 15); // Adjust the interval based on the desired speed
+    return () => clearInterval(interval);
+  }, []);
+
 
   return (
     <AppBar elevation={5} position="fixed" sx={{ bgcolor: "#f0f8ff" }}>
@@ -274,7 +285,7 @@ const Navbar = () => {
                 >
                   Login
                 </Button>
-                <Button
+                {/* <Button
                   variant="contained"
                   color="success"
                   onClick={() => navigate("/main/signup")}
@@ -287,7 +298,37 @@ const Navbar = () => {
                   }}
                 >
                   Sign Up Free
-                </Button>
+                </Button> */}
+                <Button 
+      variant="outlined"
+      color="success"
+      onClick={() => navigate("/main/signup")}
+      sx={{
+        ml: 1,
+        borderRadius: 5,
+        textTransform: "none",
+        fontSize: "18px",
+        overflow: "hidden",
+        position: "relative",
+        width: "100px",
+        '&:hover': {
+          color: 'white',
+          backgroundColor: 'green' // Changing color on hover
+        }
+      }}
+    >
+      <span
+        style={{
+          position: "absolute",
+          // left: `${offset}%`,
+          left: `${offset < 100 ? -offset : 200 - offset}%`,
+
+          whiteSpace: "nowrap"
+        }}
+      >
+        Sign Up 
+      </span>
+    </Button>
               </Box>
             </>
           )}
