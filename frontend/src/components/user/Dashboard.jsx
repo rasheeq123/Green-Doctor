@@ -85,6 +85,7 @@ const UserDashboard = () => {
                     backgroundColor: "rgba(255, 255, 255, 0.5)",
                     border: "2px solid transparent", 
                     transition: "border-color 0.3s ease", 
+                    textTransform: "none",
                   }}
                   onMouseOver={(event) =>
                     (event.target.style.borderColor = "white")
@@ -127,6 +128,7 @@ const UserDashboard = () => {
                     backgroundColor: "rgba(255, 255, 255, 0.5)",
                     border: "2px solid transparent", 
                     transition: "border-color 0.3s ease",
+                    textTransform: "none",
                   }}
                   onMouseOver={(event) =>
                     (event.target.style.borderColor = "white")
@@ -169,6 +171,7 @@ const UserDashboard = () => {
                     backgroundColor: "rgba(255, 255, 255, 0.5)",
                     border: "2px solid transparent", 
                     transition: "border-color 0.3s ease", 
+                    textTransform: "none",
                   }}
                   onMouseOver={(event) =>
                     (event.target.style.borderColor = "white")
@@ -211,6 +214,7 @@ const UserDashboard = () => {
                     backgroundColor: "rgba(255, 255, 255, 0.5)",
                     border: "2px solid transparent", 
                     transition: "border-color 0.3s ease", 
+                    textTransform: "none",
                   }}
                   onMouseOver={(event) =>
                     (event.target.style.borderColor = "white")

@@ -190,6 +190,7 @@ const Profile = () => {
                     width: { xs: "60%", sm: "160px" },
                     fontSize: 15,
                     borderRadius: 10,
+                    backgroundColor: "rgb(33, 40, 189)",
                   }}
                 >
                   Talk to us
