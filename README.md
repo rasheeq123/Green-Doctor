@@ -17,9 +17,6 @@
 ## :star2: About The Project
 ### :camera: Snapshots
 <div align="center"><img src="https://github.com/rasheeq123/Green-Doctor/blob/main/screenshot/Screenshot%202024-04-15%20214732.png" alt='image' width='800</div>
-<div align="center"> <img src="https://github.com/rasheeq123/Green-Doctor/blob/main/screenshot/Screenshot%202024-04-15%20214534.png" alt='image' width='800'/> </div>
-<div align="center"> <img src="https://github.com/rasheeq123/Green-Doctor/commit/d38ab0e68535e89b596c312c322854df7f161f7f" alt='image' width='800'/> </div>
-<div align="center"> <img src="https://github.com/rasheeq123/Green-Doctor/blob/main/screenshot/Screenshot%202024-04-15%20214635.png" alt='image' width='800'/></div>
 <div align="center"> <img src="https://github.com/rasheeq123/Green-Doctor/blob/main/screenshot/Screenshot%202024-04-15%20214714.png" alt='image' width='800'/> </div>
 <div align="center"> <img src="https://github.com/rasheeq123/Green-Doctor/blob/main/screenshot/Screenshot%202024-04-15%20214842.png" alt='image' width='800'/></div>
 <div align="center"> <img src="https://github.com/rasheeq123/Green-Doctor/blob/main/screenshot/Screenshot%202024-04-15%20214915.png" alt='image' width='800'/></div>
@@ -27,6 +24,8 @@
 <div align="center"> <img src="https://github.com/rasheeq123/Green-Doctor/blob/main/screenshot/Screenshot%202024-04-15%20215024.png" alt='image' width='800'/></div>
 <div align="center"> <img src="https://github.com/rasheeq123/Green-Doctor/blob/main/screenshot/Screenshot%202024-04-15%20215108.png" alt='image' width='800'/></div>
 <div align="center"> <img src="https://github.com/rasheeq123/Green-Doctor/blob/main/screenshot/Screenshot%202024-04-15%20215138.png" alt='image' width='800'/></div>
+<div align="center"> <img src="https://github.com/rasheeq123/Green-Doctor/blob/main/screenshot/Screenshot%202024-04-15%20214714.png" alt='image' width='800'/></div>
+
 <div align="center"> <img src="https://github.com/rasheeq123/Green-Doctor/blob/main/screenshot/Screenshot%202024-04-15%20215231.png" alt='image' width='800'/></div>
 <details> <summary>Database</summary> <ul>
 <li><a href="">MongoDB</a></li>
