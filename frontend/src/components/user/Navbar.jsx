@@ -40,7 +40,7 @@ const pages = [
     link: "/user/history",
   },
   {
-    link: "#",
+    link: "/user/chat",
     icon: (
       <Badge color="secondary" variant="dot">
         <MailIcon />
@@ -125,6 +125,7 @@ function ResponsiveAppBar() {
     <ThemeProvider theme={darkTheme}>
       <CssBaseline />
     <AppBar elevation={5} position="fixed" sx={{ bgcolor: "#f0f8ff", top: 0 }}>
+    {/* <AppBar elevation={5} position="fixed" sx={{ top: 0 }}> */}
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <img

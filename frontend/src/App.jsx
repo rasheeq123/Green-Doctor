@@ -18,6 +18,7 @@ import { Auth0Provider, useAuth0 } from "@auth0/auth0-react";
 import CssBaseline from "@mui/material/CssBaseline";
 import { useState } from "react";
 import { NightsStay, WbSunny } from "@mui/icons-material";
+import Chat from "./components/user/Chat";
 
 function App() {
   const {user , loginWithRedirect } = useAuth0();
@@ -62,6 +63,7 @@ function App() {
                 <Route path="prediction" element={<Prediction />} />
                 <Route path="history" element={<History />} />
                 <Route path="dashboard" element={<Dashboard />} />
+                <Route path="chat" element={<Chat />} />
               </Route>
 
               <Route path="admin" element={<Admin />}>
