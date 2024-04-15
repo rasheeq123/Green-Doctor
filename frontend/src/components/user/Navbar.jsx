@@ -73,7 +73,7 @@ function ResponsiveAppBar() {
     },
     {
       text: "Messages",
-      onClick: () => navigate("#"),
+      onClick: () => navigate("/user/chat"),
     },
     {
       text: "Logout",

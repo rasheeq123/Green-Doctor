@@ -91,7 +91,7 @@ function ChatApp() {
             </Box>
           ) : (
             <Typography variant="body1" color="text.secondary">
-              Please select an expert from the left sidebar.
+              Please select an expert from the left side.
             </Typography>
           )}
         </Container>
