@@ -16,8 +16,8 @@
 
 ## :star2: About The Project
 ### :camera: Snapshots
-<div align="center"><img src="https://github.com/rasheeq123/Green-Doctor/blob/main/screenshot/Screenshot%202024-04-15%20214732.png" alt='image' width='800</div>
-<div align="center"> <img src="https://github.com/rasheeq123/Green-Doctor/blob/main/screenshot/Screenshot%202024-04-15%20214714.png" alt='image' width='800'/> </div>
+<div align="center"> <img src="https://github.com/rasheeq123/Green-Doctor/blob/main/screenshot/Screenshot%202024-04-15%20214732.png" alt='image' width='800</div>
+<div align="center"> <img src="https://github.com/rasheeq123/Green-Doctor/blob/main/screenshot/Screenshot%202024-04-15%20214714.png" alt='image' width='800'/></div>
 <div align="center"> <img src="https://github.com/rasheeq123/Green-Doctor/blob/main/screenshot/Screenshot%202024-04-15%20214842.png" alt='image' width='800'/></div>
 <div align="center"> <img src="https://github.com/rasheeq123/Green-Doctor/blob/main/screenshot/Screenshot%202024-04-15%20214915.png" alt='image' width='800'/></div>
 <div align="center"> <img src="https://github.com/rasheeq123/Green-Doctor/blob/main/screenshot/Screenshot%202024-04-15%20214941.png" alt='image' width='800'/></div>
@@ -25,7 +25,6 @@
 <div align="center"> <img src="https://github.com/rasheeq123/Green-Doctor/blob/main/screenshot/Screenshot%202024-04-15%20215108.png" alt='image' width='800'/></div>
 <div align="center"> <img src="https://github.com/rasheeq123/Green-Doctor/blob/main/screenshot/Screenshot%202024-04-15%20215138.png" alt='image' width='800'/></div>
 <div align="center"> <img src="https://github.com/rasheeq123/Green-Doctor/blob/main/screenshot/Screenshot%202024-04-15%20214714.png" alt='image' width='800'/></div>
-
 <div align="center"> <img src="https://github.com/rasheeq123/Green-Doctor/blob/main/screenshot/Screenshot%202024-04-15%20215231.png" alt='image' width='800'/></div>
 <details> <summary>Database</summary> <ul>
 <li><a href="">MongoDB</a></li>
@@ -43,14 +42,13 @@
 - Light & Dark theme for better user experience
   
 ### :bangbang: Prerequisites
-
-
 - React
 - Vite
 - MongoDB
 - Node.js
 - Express
 - Postman API
+- Material UI
 - This project uses React + Vite and  npm as package manager.
 
 ## :toolbox: Getting Started
