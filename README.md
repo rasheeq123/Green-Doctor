@@ -40,6 +40,7 @@
 - User Authentication
 - Multiple Level of Access
 - Storage of previously diagnosed plant
+- Light & Dark theme for better user experience
   
 ### :bangbang: Prerequisites
 
