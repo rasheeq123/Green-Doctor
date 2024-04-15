@@ -182,8 +182,11 @@ const Profile = () => {
                 Logout
               </Button>
               <Container sx={{ mt: 0 }}>
+                <NavLink>
                 <Button
                   variant="contained"
+                  component={NavLink}
+                  to="/user/chat"
                   sx={{
                     mt: 2,
                     textTransform: "none",
@@ -200,6 +203,7 @@ const Profile = () => {
                     sx={{ ml: 1 }}
                   />
                 </Button>
+                </NavLink>
               </Container>
             </Paper>
           </Grid>
