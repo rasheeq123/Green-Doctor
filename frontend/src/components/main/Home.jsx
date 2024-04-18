@@ -285,7 +285,7 @@ const Home = () => {
       {/* --------------------Frequently Asked section--------------------------------------- */}
 
       <div className="accordion">
-        <Typography variant="h3" sx={{ mb: 5, mt: 10 }} textAlign={"center"}>
+        <Typography variant="h2" sx={{ mb: 5, mt: 10 }} textAlign={"center"}>
           Frequently Asked Questions
         </Typography>
         <div className="accordion-item">
