@@ -102,9 +102,6 @@ const Prediction = () => {
 
   const captureImage = useCallback(() => {
     const imageSrc = webcamRef.current.getScreenshot();
-    // Do something with the captured image (e.g., send it to a server)
-    // console.log(imageSrc);
-
     const img = new Image();
     img.src = imageSrc;
     setSelImage(imageSrc);
@@ -176,7 +173,7 @@ const Prediction = () => {
   };
 
   async function init() {
-    //apple model
+    // load the model and metadata
     const modelURL = modelPath + `/${selModel}/model.json`;
     const metadataURL = modelPath + `/${selModel}/metadata.json`;
 
