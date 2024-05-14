@@ -205,9 +205,6 @@ const Prediction = () => {
     console.log(prediction);
     let res = predictionResultExtractor(prediction);
     console.log(res);
-    // if (res.probability === 1) {
-    //   res = { className: 'Sorry! Unknown Plant', probability: 0 };
-    // }
     setResult(res);
     // saveHistory(predictionResultExtractor(prediction));
     Swal.fire({
