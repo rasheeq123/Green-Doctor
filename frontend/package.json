@@ -16,6 +16,7 @@
     "@mui/icons-material": "^5.14.16",
     "@mui/material": "^5.14.15",
     "@react-oauth/google": "^0.12.1",
+    "axios": "^1.7.2",
     "chart.js": "^4.4.2",
     "formik": "^2.4.5",
     "gapi-script": "^1.2.0",
