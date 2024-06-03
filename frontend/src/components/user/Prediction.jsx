@@ -41,7 +41,7 @@ import Swal from "sweetalert2";
 const options = {
   flower: ["rose", "sunflower"],
 
-  fruit: ["Apple", "Peach", "cherry", "guava", "strawberry", "grapes"],
+  fruit: ["Apple", "peach", "cherry", "guava", "strawberry", "grapes"],
   vegetable: ["Tomato", "pepper", "Potato"],
   crops: ["wheat", "corn"],
 
