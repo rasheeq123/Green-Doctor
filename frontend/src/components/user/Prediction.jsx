@@ -43,7 +43,7 @@ const options = {
 
   fruit: ["Apple", "Peach", "cherry", "Gauva"],
   vegetable: ["Tomato", "pepper", "Potato"],
-  crops: ["wheat", "rice", "corn"],
+  crops: ["wheat", "corn"],
 
   plants: ["aloevera"],
 };
