@@ -265,9 +265,9 @@ const Profile = () => {
                 Premium
                 <WorkspacePremiumIcon fontSize="small" />
               </Button>
-              <Box sx={{ mt: 2 }}>
+              <Box sx={{ mt: 6 }}>
                 <NavLink to="/user/history">
-                  <Button
+                  {/* <Button
                     variant="outlined"
                     color="secondary"
                     sx={{
@@ -279,7 +279,7 @@ const Profile = () => {
                     }}
                   >
                     Detailed Diagnosis
-                  </Button>
+                  </Button> */}
                 </NavLink>
                 <NavLink to="/user/dashboard">
                   <Button
