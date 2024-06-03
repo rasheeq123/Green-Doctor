@@ -252,10 +252,8 @@ const Profile = () => {
                 Grow with Confidence
               </Typography>
               <Typography sx={{ mb: 2, textAlign: "center" }} color="#333333">
-                We provide tailored treatment plans and proactive measures to
-                combat plant disease.Designed for urban farmers, farmers and
-                amateur gardener to protect their crops/plants and boost
-                production.
+              Green Doctor is a web Based Solution to identify and solve disease in plants/crops. 
+              Designed for urban farmers, farmers and amateur gardener to protect their crops/plants and boost production.
               </Typography>
               <Button
                 variant="text"
