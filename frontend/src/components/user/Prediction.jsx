@@ -39,7 +39,7 @@ import { red } from "@mui/material/colors";
 import Swal from "sweetalert2";
 
 const options = {
-  flower: ["rose"],
+  flower: ["rose", "sunflower"],
 
   fruit: ["Apple", "Peach"],
   vegetable: ["Tomato", "pepper", "Potato"],
