@@ -295,7 +295,7 @@ const Prediction = () => {
     } else if (result.className === "Sorry! Unknown Plant") {
       return (
         <p className="display-4 fw-bold text-warning text-center">
-          Sorry! Unknown Plant detected
+          Sorry! Unknown Image detected
         </p>
       );
     } else {
@@ -321,7 +321,7 @@ const Prediction = () => {
             >
               <Button
                 component={Link}
-                to="/user/cure"
+                to="/user/chat"
                 variant="contained"
                 color="success"
                 sx={{
@@ -333,7 +333,7 @@ const Prediction = () => {
                   width: "565px",
                 }}
               >
-                Find Cure for Your Disease{" "}
+                Expert Help for Your Needs{" "}
                 <i className="fa fa-arrow-right" aria-hidden="true"></i>
               </Button>
 
