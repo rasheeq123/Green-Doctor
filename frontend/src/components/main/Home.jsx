@@ -217,7 +217,7 @@ const Home = () => {
               }}
             >
               <Typography variant="h3" mb={2} fontWeight="semibold">
-                Find the right treatment
+                Find the right guidance
               </Typography>
               <Typography mb={0} variant="h4">
                 Get great deals on agricultural products from your local
@@ -238,7 +238,7 @@ const Home = () => {
                   }}
                   variant="contained"
                 >
-                  Get a free treatment
+                  Get a free guidance
                 </Button>
               </NavLink>
             </Box>
@@ -269,7 +269,7 @@ const Home = () => {
         <Paper sx={{ p: 2, textAlign: 'center', bgcolor: '#f0f0f0', height: '100%',boxShadow:'4' }}>
         <SpaSharpIcon sx={iconStyle} style={{ color: '#333333' }}/>
         <Typography sx={{ color: '#333333' }} variant="h3" mb={2} fontWeight="bold" fontSize="1.5rem"> 100+</Typography>
-          <Typography sx={{ color: '#333333' }} variant="h5" component="h4" color="textSecondary">Find the right treatment for more than 100+ diseases.</Typography>
+          <Typography sx={{ color: '#333333' }} variant="h5" component="h4" color="textSecondary">Find the right guidance for more than 100+ diseases.</Typography>
         </Paper>
       </Grid>
       <Grid item xs={12} sm={6} md={3}>
