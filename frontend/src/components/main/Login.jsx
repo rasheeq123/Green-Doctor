@@ -71,7 +71,7 @@ const Login = () => {
           navigate("/admin");
           sessionStorage.setItem("admin", JSON.stringify(data));
         } else {
-          navigate("/user/profile");
+          navigate("/main/home");
           sessionStorage.setItem("user", JSON.stringify(data));
         }
       } else if (res.status === 400) {
