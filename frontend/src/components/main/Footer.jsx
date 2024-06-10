@@ -28,10 +28,10 @@ const Footer = () => {
                   <a href="/user/dashboard">Prediction</a>
                 </li>
                 <li>
-                  <a href="/user/profile">Diagnosis</a>
+                  <a href="/user/History">History</a>
                 </li>
                 <li>
-                  <a href="/user/dashboard">Messages</a>
+                  <a href="/user/chat">Messages</a>
                 </li>
               </ul>
             </div>
