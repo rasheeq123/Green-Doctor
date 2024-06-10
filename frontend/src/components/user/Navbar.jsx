@@ -321,7 +321,8 @@ function ResponsiveAppBar() {
                   justifyContent: "flex-end",
                 }}
               >
-                <Button
+                {/* Note: commented code for deployment */}
+                {/* <Button
                   variant="contained"
                   color="success"
                   onClick={() => navigate("/main/login")}
@@ -335,8 +336,8 @@ function ResponsiveAppBar() {
                   }}
                 >
                   Sign In
-                </Button>
-                <Button
+                </Button> */}
+                {/* <Button
                   variant="contained"
                   color="success"
                   onClick={() => navigate("/main/signup")}
@@ -349,7 +350,7 @@ function ResponsiveAppBar() {
                   }}
                 >
                   Get Started
-                </Button>
+                </Button> */}
               </Box>
             </>
           )}
