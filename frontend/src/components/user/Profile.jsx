@@ -107,7 +107,7 @@ const Profile = () => {
             >
               <Avatar
                 alt="Remy Sharp"
-                src="https://avatars.githubusercontent.com/u/108568853?v=4"
+                // src="https://avatars.githubusercontent.com/u/108568853?v=4"
                 sx={{
                   display: "block",
                   margin: "auto",
@@ -122,7 +122,7 @@ const Profile = () => {
                 fontSize="1.6rem"
                 color="#333333"
               >
-                Rasheeq Zehra
+                Guest User
               </Typography>
               <p style={{ color: "#333333" }}>Fetching user info....</p>
               <Modal open={openModal} onClose={handleCloseModal}>
