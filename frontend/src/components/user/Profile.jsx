@@ -122,7 +122,7 @@ const Profile = () => {
                 fontSize="1.6rem"
                 color="#333333"
               >
-                Guest User
+                Guest User 
               </Typography>
               <p style={{ color: "#333333" }}>Fetching user info....</p>
               <Modal open={openModal} onClose={handleCloseModal}>
