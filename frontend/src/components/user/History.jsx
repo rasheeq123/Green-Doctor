@@ -10,8 +10,8 @@ const History = () => {
 
   const getpredictionData = async () => {
     const res = await fetch(
-      // `${import.meta.env.VITE_API_URL}/history/getbyuser/${currentUser._id}`, 
-      `${import.meta.env.VITE_API_URL}/history/getbyuser`, 
+      `${import.meta.env.VITE_API_URL}/history/getbyuser/${currentUser._id}`, 
+      // `${import.meta.env.VITE_API_URL}/history/getbyuser`, 
       {
         
         headers: {
