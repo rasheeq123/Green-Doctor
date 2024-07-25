@@ -24,7 +24,6 @@ import Swal from "sweetalert2";
 import GoogleIcon from "@mui/icons-material/Google";
 import { useAuth0 } from "@auth0/auth0-react";
 
-
 const Login = () => {
   const [showPassword, setShowPassword] = React.useState(false);
   // const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -88,41 +87,41 @@ const Login = () => {
         });
       }
       resetForm();
-    }, 
+    },
   });
   return (
     <Box
       sx={{
-        // background: 'linear-gradient(to right, #001F3F, #003366)',
-        backgroundImage:
-          "radial-gradient(" +
-          "circle at 20% 100%, " +
-          "rgba(184, 184, 184, 0.1) 0%, " +
-          "rgba(184, 184, 184, 0.1) 33%, " +
-          "rgba(96, 96, 96, 0.1) 33%, " +
-          "rgba(96, 96, 96, 0.1) 66%, " +
-          "rgba(7, 7, 7, 0.1) 66%, " +
-          "rgba(7, 7, 7, 0.1) 99%" +
-          "), " +
-          "linear-gradient(40deg, #040a22, #162561, #202e64, #6f7aa6)",
+        backgroundImage: `url(${"/images/GD_BG2.png"})`,
+        backgroundSize: "cover",
         minHeight: "100vh",
       }}
     >
       <Grid container sx={{ mt: 0 }}>
-        <Grid item md={4} sx={{ mx: "auto" }}>
+        <Grid
+          item
+          md={4}
+          sx={{
+            mx: "auto",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
           <Card
             sx={{
-              height: 510,
-              boxShadow: 25,
+              height: 500,
+              width: 380,
+              boxShadow: 20,
               borderRadius: 5,
-              p: 3,
+              p: 2,
               mt: 18,
               mb: 15,
             }}
           >
             <CardContent>
-              <Typography variant="h4" sx={{ textAlign: "center", mt: 0 }}>
-                Begin with Login
+              <Typography variant="h4" sx={{ textAlign: "center", mb: 2 }}>
+                Welcome Back!
               </Typography>
               <form onSubmit={loginform.handleSubmit}>
                 <TextField
@@ -213,7 +212,7 @@ const Login = () => {
                     or{" "}
                   </Divider>
                   <Button
-                    onClick={(e) => loginWithRedirect() }
+                    onClick={(e) => loginWithRedirect()}
                     variant="outlined"
                     disableElevation
                     sx={{

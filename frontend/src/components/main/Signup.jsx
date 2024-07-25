@@ -99,35 +99,48 @@ const Signup = () => {
   return (
     <Box
       sx={{
-        backgroundImage:
-          "radial-gradient(" +
-          "circle at 20% 100%, " +
-          "rgba(184, 184, 184, 0.1) 0%, " +
-          "rgba(184, 184, 184, 0.1) 33%, " +
-          "rgba(96, 96, 96, 0.1) 33%, " +
-          "rgba(96, 96, 96, 0.1) 66%, " +
-          "rgba(7, 7, 7, 0.1) 66%, " +
-          "rgba(7, 7, 7, 0.1) 99%" +
-          "), " +
-          "linear-gradient(40deg, #040a22, #162561, #202e64, #6f7aa6)",
+        backgroundImage: `url(${"/images/GD_BG2.png"})`,
+        backgroundSize: "cover",
+        // backgroundImage:
+        //   "radial-gradient(" +
+        //   "circle at 20% 100%, " +
+        //   "rgba(184, 184, 184, 0.1) 0%, " +
+        //   "rgba(184, 184, 184, 0.1) 33%, " +
+        //   "rgba(96, 96, 96, 0.1) 33%, " +
+        //   "rgba(96, 96, 96, 0.1) 66%, " +
+        //   "rgba(7, 7, 7, 0.1) 66%, " +
+        //   "rgba(7, 7, 7, 0.1) 99%" +
+        //   "), " +
+        //   "linear-gradient(40deg, #040a22, #162561, #202e64, #6f7aa6)",
         minHeight: "100vh",
       }}
     >
       <Box sx={{ boxShadow: 0, mt: 0 }}>
         <Grid container>
-          <Grid item md={5} sx={{ mx: "auto" }}>
+          <Grid
+            item
+            md={5}
+            sx={{
+              mx: "auto",
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+          >
             <Card
               sx={{
-                height: 590,
+                height: 560,
+                width: 400,
                 boxShadow: 5,
                 borderRadius: 3,
-                p: 3,
-                mt: 11,
+                p: 2,
+                mt: 14,
                 mb: 15,
               }}
             >
               <Typography variant="h4" sx={{ textAlign: "center", mt: 0 }}>
-                Sign Up for Unmatched Benefits
+                Sign Up
+                {/* for Unmatched Benefits */}
               </Typography>
               <CardContent>
                 <form onSubmit={signupform.handleSubmit}>
@@ -148,7 +161,7 @@ const Signup = () => {
                     variant="outlined"
                     color="success"
                     fullWidth
-                    sx={{ mt: 2 }}
+                    sx={{ mt: 1 }}
                     helperText={
                       signupform.touched.name && signupform.errors.name
                     }
@@ -269,7 +282,7 @@ const Signup = () => {
                       or{" "}
                     </Divider>
                     <Button
-                    onClick={(e) => loginWithRedirect() }
+                      onClick={(e) => loginWithRedirect()}
                       // type="submit"
                       variant="outlined"
                       disableElevation
