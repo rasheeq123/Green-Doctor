@@ -1,7 +1,7 @@
 
 <div align='center'>
 <h1>Green Doctor</h1>
-<p>Green Doctor is a web Based Solution to identify and solve disease in plants/crops. Provides tailored treatment plans and proactive measures to combat plant disease.Designed for urban farmers, farmers and amateur gardener to protect their crops/plants and boost production.
+<p>Green Doctor is a web-based solution to identify and solve diseases in plants/crops. Provides tailored treatment plans and proactive measures to combat plant disease. Designed for urban farmers and amateur gardeners to protect their crops/plants and boost production.
 </p>
 
 <h4> <a href=>View Demo</a> <span> · </span> <a href="https://github.com/omkarsharma2821/Green-Doctor/blob/master/README.md"> Documentation </a> <span> · </span> <a href="https://github.com/omkarsharma2821/Green-Doctor/issues"> Report Bug </a> <span> · </span> <a href="https://github.com/omkarsharma2821/Green-Doctor/issues"> Request Feature </a> </h4>
