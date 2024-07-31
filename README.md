@@ -17,7 +17,7 @@
 
 ## :star2: About The Project
 ### :camera: Snapshots
-<div align="center"><a href="https://green-doctor.onrender.com/" target="_blank"><img src="https://github.com/rasheeq123/Green-Doctor/blob/main/screenshot/Screenshot%202024-04-15%20214732.png" alt='image' width='800'/> </a></div>
+<div align="center"><a href="https://green-doctor.onrender.com/"><img src="https://github.com/rasheeq123/Green-Doctor/blob/main/screenshot/Screenshot%202024-04-15%20214732.png" alt='image' width='800'/> </a></div>
 <div align="center"> <img src="https://github.com/rasheeq123/Green-Doctor/blob/main/screenshot/Screenshot%202024-04-15%20214714.png" alt='image' width='800'/></div>
 <div align="center"> <img src="https://github.com/rasheeq123/Green-Doctor/blob/main/screenshot/Screenshot%202024-04-15%20214842.png" alt='image' width='800'/></div>
 <div align="center"> <img src="https://github.com/rasheeq123/Green-Doctor/blob/main/screenshot/Screenshot%202024-04-15%20214915.png" alt='image' width='800'/></div>
