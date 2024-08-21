@@ -101,6 +101,3 @@ Email - omkarsharma2821@gmail.com <br>
 Email - zehrarasheeq@gmail.com <br>
 Project Link: [GITHUB](https://github.com/omkarsharma2821/Green-Doctor) <br>
 Project Link: [GITHUB](https://github.com/rasheeq123/Green-Doctor) 
-
-
-## We are currently working on this project.
