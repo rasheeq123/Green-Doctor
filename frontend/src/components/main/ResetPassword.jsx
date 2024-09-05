@@ -95,22 +95,26 @@ const ResetPassword = () => {
             "rgba(7, 7, 7, 0.1) 99%" +
             "), " +
             "linear-gradient(40deg, #040a22, #162561, #202e64, #6f7aa6)",
-          height: "105vh",
+          height: "100vh",
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
         }}
       >
         <Box sx={{ mb: 15 }}>
           <Grid container>
-            <Grid item md={4} sx={{ mx: "auto" }}>
+            <Grid item md={4} sx={{  }}>
               <Card
                 sx={{
-                  height: 550,
+                  height: 370,
+                  width: 380,
                   boxShadow: 5,
                   borderRadius: 3,
                   p: 2,
-                  mt: 15,
+                  mt: 20,
                 }}
               >
-                <Typography variant="h4" sx={{ textAlign: "center" }}>
+                <Typography variant="h5" sx={{ textAlign: "center", mb:1, mt:2 }}>
                   Reset your password
                 </Typography>
                 <CardContent>
@@ -155,7 +159,7 @@ const ResetPassword = () => {
                     >
                       verify otp
                     </Button>
-                    <TextField
+                    {/* <TextField
                       id="text"
                       ref={otpRef}
                       required
@@ -185,7 +189,7 @@ const ResetPassword = () => {
                       // onClick={verifyOTP}
                     >
                       Reset Password
-                    </Button>
+                    </Button> */}
                   </form>
                 </CardContent>
               </Card>
