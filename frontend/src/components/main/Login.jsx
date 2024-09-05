@@ -9,6 +9,7 @@ import {
   IconButton,
   InputAdornment,
   InputLabel,
+  keyframes,
   OutlinedInput,
   Paper,
   TextField,
@@ -89,6 +90,10 @@ const Login = () => {
       resetForm();
     },
   });
+  const moveText = keyframes`
+    0% { transform: translateX(100%); }
+    100% { transform: translateX(-100%); }
+  `;
   return (
     <Box
       sx={{
@@ -110,19 +115,38 @@ const Login = () => {
         >
           <Card
             sx={{
-              height: 500,
+              height: 520,
               width: 380,
               boxShadow: 20,
               borderRadius: 5,
               p: 2,
-              mt: 18,
+              mt: 15,
               mb: 15,
             }}
           >
             <CardContent>
-              <Typography variant="h4" sx={{ textAlign: "center", mb: 2 }}>
+              <Typography variant="h4" sx={{ textAlign: "center", mb: 1 }}>
                 Welcome Back!
               </Typography>
+              <Box
+                sx={{
+                  width: "100%",
+                  overflow: "hidden",
+                  whiteSpace: "nowrap",
+                  textAlign: "center",
+                  mb: 1,
+                }}
+              >
+                <Typography
+                  variant="body1"
+                  sx={{
+                    display: "inline-block",
+                    animation: `${moveText} 10s linear infinite`,
+                  }}
+                >
+                  Demo Email: demouser@gmail.com | Demo Password: Demo123@
+                </Typography>
+              </Box>
               <form onSubmit={loginform.handleSubmit}>
                 <TextField
                   id="email"
@@ -205,7 +229,7 @@ const Login = () => {
                     </Button>
                   </NavLink>
                   <Divider
-                    sx={{ mt: 3 }}
+                    sx={{ mt: 2 }}
                     orientation="horizontal"
                     variant="fullWidth"
                   >
@@ -216,7 +240,7 @@ const Login = () => {
                     variant="outlined"
                     disableElevation
                     sx={{
-                      mt: 2,
+                      mt: 1,
                       borderRadius: 5,
                       textTransform: "none",
                       mb: 1,
@@ -239,6 +263,7 @@ const Login = () => {
                     </NavLink>
                   </p>
                 </Box>
+              
               </form>
             </CardContent>
           </Card>
